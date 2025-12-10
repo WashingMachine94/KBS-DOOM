@@ -60,6 +60,10 @@ ENTITY system_vga_display_0_0 IS
     clkb : OUT STD_LOGIC;
     doutb : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     enb : OUT STD_LOGIC;
+    addrPalette : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    clkPalette : OUT STD_LOGIC;
+    doutPalette : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    enPalette : OUT STD_LOGIC;
     VGA_R : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     VGA_G : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     VGA_B : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -78,6 +82,10 @@ ARCHITECTURE system_vga_display_0_0_arch OF system_vga_display_0_0 IS
       clkb : OUT STD_LOGIC;
       doutb : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       enb : OUT STD_LOGIC;
+      addrPalette : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      clkPalette : OUT STD_LOGIC;
+      doutPalette : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      enPalette : OUT STD_LOGIC;
       VGA_R : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
       VGA_G : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
       VGA_B : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -99,6 +107,10 @@ BEGIN
       clkb => clkb,
       doutb => doutb,
       enb => enb,
+      addrPalette => addrPalette,
+      clkPalette => clkPalette,
+      doutPalette => doutPalette,
+      enPalette => enPalette,
       VGA_R => VGA_R,
       VGA_G => VGA_G,
       VGA_B => VGA_B,

@@ -64,6 +64,7 @@ vhdl xil_defaultlib  \
 "../../../bd/system/ip/system_util_ds_buf_0_0/util_ds_buf.vhd" \
 "../../../bd/system/ip/system_util_ds_buf_0_0/sim/system_util_ds_buf_0_0.vhd" \
 "../../../bd/system/ip/system_vga_display_0_0/sim/system_vga_display_0_0.vhd" \
+"../../../bd/system/ip/system_axi_bram_ctrl_2_0/sim/system_axi_bram_ctrl_2_0.vhd" \
 "../../../bd/system/sim/system.vhd" \
 
 # Do not sort compile order

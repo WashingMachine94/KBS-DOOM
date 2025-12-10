@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
---Date        : Sun Dec  7 13:20:01 2025
+--Date        : Tue Dec  9 16:13:31 2025
 --Host        : LAPTOP-61978DQ3 running 64-bit major release  (build 9200)
 --Command     : generate_target system.bd
 --Design      : system
@@ -47,7 +47,7 @@ entity system is
     uart0_txd_o_0 : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=16,numReposBlks=16,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=2,da_clkrst_cnt=2,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=18,numReposBlks=18,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=2,da_clkrst_cnt=2,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of system : entity is "system.hwdef";
 end system;
@@ -198,7 +198,7 @@ architecture STRUCTURE of system is
     M00_AXI_rlast : in STD_LOGIC;
     M00_AXI_rvalid : in STD_LOGIC;
     M00_AXI_rready : out STD_LOGIC;
-    M01_AXI_awaddr : out STD_LOGIC_VECTOR ( 17 downto 0 );
+    M01_AXI_awaddr : out STD_LOGIC_VECTOR ( 11 downto 0 );
     M01_AXI_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     M01_AXI_awsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
     M01_AXI_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -216,7 +216,7 @@ architecture STRUCTURE of system is
     M01_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M01_AXI_bvalid : in STD_LOGIC;
     M01_AXI_bready : out STD_LOGIC;
-    M01_AXI_araddr : out STD_LOGIC_VECTOR ( 17 downto 0 );
+    M01_AXI_araddr : out STD_LOGIC_VECTOR ( 11 downto 0 );
     M01_AXI_arlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     M01_AXI_arsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
     M01_AXI_arburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -263,7 +263,40 @@ architecture STRUCTURE of system is
     M02_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M02_AXI_rlast : in STD_LOGIC;
     M02_AXI_rvalid : in STD_LOGIC;
-    M02_AXI_rready : out STD_LOGIC
+    M02_AXI_rready : out STD_LOGIC;
+    M03_AXI_awaddr : out STD_LOGIC_VECTOR ( 17 downto 0 );
+    M03_AXI_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    M03_AXI_awsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M03_AXI_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    M03_AXI_awlock : out STD_LOGIC_VECTOR ( 0 to 0 );
+    M03_AXI_awcache : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M03_AXI_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M03_AXI_awqos : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M03_AXI_awvalid : out STD_LOGIC;
+    M03_AXI_awready : in STD_LOGIC;
+    M03_AXI_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M03_AXI_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M03_AXI_wlast : out STD_LOGIC;
+    M03_AXI_wvalid : out STD_LOGIC;
+    M03_AXI_wready : in STD_LOGIC;
+    M03_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M03_AXI_bvalid : in STD_LOGIC;
+    M03_AXI_bready : out STD_LOGIC;
+    M03_AXI_araddr : out STD_LOGIC_VECTOR ( 17 downto 0 );
+    M03_AXI_arlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    M03_AXI_arsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M03_AXI_arburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    M03_AXI_arlock : out STD_LOGIC_VECTOR ( 0 to 0 );
+    M03_AXI_arcache : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M03_AXI_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M03_AXI_arqos : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M03_AXI_arvalid : out STD_LOGIC;
+    M03_AXI_arready : in STD_LOGIC;
+    M03_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    M03_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M03_AXI_rlast : in STD_LOGIC;
+    M03_AXI_rvalid : in STD_LOGIC;
+    M03_AXI_rready : out STD_LOGIC
   );
   end component system_smartconnect_0_1;
   component system_xlconcat_0_0 is
@@ -342,7 +375,7 @@ architecture STRUCTURE of system is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 17 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 11 downto 0 );
     s_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -359,7 +392,7 @@ architecture STRUCTURE of system is
     s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_bvalid : out STD_LOGIC;
     s_axi_bready : in STD_LOGIC;
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 17 downto 0 );
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 11 downto 0 );
     s_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -377,7 +410,7 @@ architecture STRUCTURE of system is
     bram_clk_a : out STD_LOGIC;
     bram_en_a : out STD_LOGIC;
     bram_we_a : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    bram_addr_a : out STD_LOGIC_VECTOR ( 17 downto 0 );
+    bram_addr_a : out STD_LOGIC_VECTOR ( 11 downto 0 );
     bram_wrdata_a : out STD_LOGIC_VECTOR ( 31 downto 0 );
     bram_rddata_a : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
@@ -512,6 +545,10 @@ architecture STRUCTURE of system is
     clkb : out STD_LOGIC;
     doutb : in STD_LOGIC_VECTOR ( 31 downto 0 );
     enb : out STD_LOGIC;
+    addrPalette : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    clkPalette : out STD_LOGIC;
+    doutPalette : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    enPalette : out STD_LOGIC;
     VGA_R : out STD_LOGIC_VECTOR ( 3 downto 0 );
     VGA_G : out STD_LOGIC_VECTOR ( 3 downto 0 );
     VGA_B : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -519,6 +556,62 @@ architecture STRUCTURE of system is
     VGA_VS : out STD_LOGIC
   );
   end component system_vga_display_0_0;
+  component system_axi_bram_ctrl_2_0 is
+  port (
+    s_axi_aclk : in STD_LOGIC;
+    s_axi_aresetn : in STD_LOGIC;
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 17 downto 0 );
+    s_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_awlock : in STD_LOGIC;
+    s_axi_awcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s_axi_awvalid : in STD_LOGIC;
+    s_axi_awready : out STD_LOGIC;
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_wlast : in STD_LOGIC;
+    s_axi_wvalid : in STD_LOGIC;
+    s_axi_wready : out STD_LOGIC;
+    s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_bvalid : out STD_LOGIC;
+    s_axi_bready : in STD_LOGIC;
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 17 downto 0 );
+    s_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axi_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s_axi_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_arlock : in STD_LOGIC;
+    s_axi_arcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s_axi_arvalid : in STD_LOGIC;
+    s_axi_arready : out STD_LOGIC;
+    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_rlast : out STD_LOGIC;
+    s_axi_rvalid : out STD_LOGIC;
+    s_axi_rready : in STD_LOGIC;
+    bram_rst_a : out STD_LOGIC;
+    bram_clk_a : out STD_LOGIC;
+    bram_en_a : out STD_LOGIC;
+    bram_we_a : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    bram_addr_a : out STD_LOGIC_VECTOR ( 17 downto 0 );
+    bram_wrdata_a : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    bram_rddata_a : in STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component system_axi_bram_ctrl_2_0;
+  component system_blk_mem_gen_2_0 is
+  port (
+    clka : in STD_LOGIC;
+    rsta : in STD_LOGIC;
+    ena : in STD_LOGIC;
+    wea : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    rsta_busy : out STD_LOGIC
+  );
+  end component system_blk_mem_gen_2_0;
   signal axi_bram_ctrl_0_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 16 downto 0 );
   signal axi_bram_ctrl_0_BRAM_PORTA_CLK : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_DIN : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -526,18 +619,26 @@ architecture STRUCTURE of system is
   signal axi_bram_ctrl_0_BRAM_PORTA_EN : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_RST : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_WE : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal axi_bram_ctrl_1_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal axi_bram_ctrl_1_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal axi_bram_ctrl_1_BRAM_PORTA_CLK : STD_LOGIC;
   signal axi_bram_ctrl_1_BRAM_PORTA_DIN : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_bram_ctrl_1_BRAM_PORTA_DOUT : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_bram_ctrl_1_BRAM_PORTA_EN : STD_LOGIC;
   signal axi_bram_ctrl_1_BRAM_PORTA_RST : STD_LOGIC;
   signal axi_bram_ctrl_1_BRAM_PORTA_WE : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal axi_bram_ctrl_2_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal axi_bram_ctrl_2_BRAM_PORTA_CLK : STD_LOGIC;
+  signal axi_bram_ctrl_2_BRAM_PORTA_DIN : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal axi_bram_ctrl_2_BRAM_PORTA_DOUT : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal axi_bram_ctrl_2_BRAM_PORTA_EN : STD_LOGIC;
+  signal axi_bram_ctrl_2_BRAM_PORTA_RST : STD_LOGIC;
+  signal axi_bram_ctrl_2_BRAM_PORTA_WE : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axis_data_fifo_0_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axis_data_fifo_0_M_AXIS_TLAST : STD_LOGIC;
   signal axis_data_fifo_0_M_AXIS_TREADY : STD_LOGIC;
   signal axis_data_fifo_0_M_AXIS_TVALID : STD_LOGIC;
   signal blk_mem_gen_0_doutb : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal blk_mem_gen_1_doutb : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal clk_wiz_0_VGA_CLK : STD_LOGIC;
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
   signal ilconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -611,7 +712,7 @@ architecture STRUCTURE of system is
   signal smartconnect_0_M00_AXI_WREADY : STD_LOGIC;
   signal smartconnect_0_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal smartconnect_0_M00_AXI_WVALID : STD_LOGIC;
-  signal smartconnect_0_M01_AXI_ARADDR : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal smartconnect_0_M01_AXI_ARADDR : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal smartconnect_0_M01_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal smartconnect_0_M01_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal smartconnect_0_M01_AXI_ARLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -620,7 +721,7 @@ architecture STRUCTURE of system is
   signal smartconnect_0_M01_AXI_ARREADY : STD_LOGIC;
   signal smartconnect_0_M01_AXI_ARSIZE : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal smartconnect_0_M01_AXI_ARVALID : STD_LOGIC;
-  signal smartconnect_0_M01_AXI_AWADDR : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal smartconnect_0_M01_AXI_AWADDR : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal smartconnect_0_M01_AXI_AWBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal smartconnect_0_M01_AXI_AWCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal smartconnect_0_M01_AXI_AWLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -673,9 +774,42 @@ architecture STRUCTURE of system is
   signal smartconnect_0_M02_AXI_WREADY : STD_LOGIC;
   signal smartconnect_0_M02_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal smartconnect_0_M02_AXI_WVALID : STD_LOGIC;
+  signal smartconnect_0_M03_AXI_ARADDR : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal smartconnect_0_M03_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal smartconnect_0_M03_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal smartconnect_0_M03_AXI_ARLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal smartconnect_0_M03_AXI_ARLOCK : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal smartconnect_0_M03_AXI_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal smartconnect_0_M03_AXI_ARREADY : STD_LOGIC;
+  signal smartconnect_0_M03_AXI_ARSIZE : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal smartconnect_0_M03_AXI_ARVALID : STD_LOGIC;
+  signal smartconnect_0_M03_AXI_AWADDR : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal smartconnect_0_M03_AXI_AWBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal smartconnect_0_M03_AXI_AWCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal smartconnect_0_M03_AXI_AWLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal smartconnect_0_M03_AXI_AWLOCK : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal smartconnect_0_M03_AXI_AWPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal smartconnect_0_M03_AXI_AWREADY : STD_LOGIC;
+  signal smartconnect_0_M03_AXI_AWSIZE : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal smartconnect_0_M03_AXI_AWVALID : STD_LOGIC;
+  signal smartconnect_0_M03_AXI_BREADY : STD_LOGIC;
+  signal smartconnect_0_M03_AXI_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal smartconnect_0_M03_AXI_BVALID : STD_LOGIC;
+  signal smartconnect_0_M03_AXI_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal smartconnect_0_M03_AXI_RLAST : STD_LOGIC;
+  signal smartconnect_0_M03_AXI_RREADY : STD_LOGIC;
+  signal smartconnect_0_M03_AXI_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal smartconnect_0_M03_AXI_RVALID : STD_LOGIC;
+  signal smartconnect_0_M03_AXI_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal smartconnect_0_M03_AXI_WLAST : STD_LOGIC;
+  signal smartconnect_0_M03_AXI_WREADY : STD_LOGIC;
+  signal smartconnect_0_M03_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal smartconnect_0_M03_AXI_WVALID : STD_LOGIC;
   signal util_ds_buf_0_BUFG_O : STD_LOGIC_VECTOR ( 0 to 0 );
   signal util_vector_logic_0_Res : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal vga_display_0_addrPalette : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal vga_display_0_addrb : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal vga_display_0_enPalette : STD_LOGIC;
   signal vga_display_0_enb : STD_LOGIC;
   signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 17 downto 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -684,7 +818,7 @@ architecture STRUCTURE of system is
   signal NLW_blk_mem_gen_0_rstb_busy_UNCONNECTED : STD_LOGIC;
   signal NLW_blk_mem_gen_1_rsta_busy_UNCONNECTED : STD_LOGIC;
   signal NLW_blk_mem_gen_1_rstb_busy_UNCONNECTED : STD_LOGIC;
-  signal NLW_blk_mem_gen_1_doutb_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_blk_mem_gen_2_rsta_busy_UNCONNECTED : STD_LOGIC;
   signal NLW_clk_wiz_0_locked_UNCONNECTED : STD_LOGIC;
   signal NLW_mig_7series_0_init_calib_complete_UNCONNECTED : STD_LOGIC;
   signal NLW_mig_7series_0_mmcm_locked_UNCONNECTED : STD_LOGIC;
@@ -699,6 +833,9 @@ architecture STRUCTURE of system is
   signal NLW_smartconnect_0_M01_AXI_awqos_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_smartconnect_0_M02_AXI_arqos_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_smartconnect_0_M02_AXI_awqos_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_smartconnect_0_M03_AXI_arqos_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_smartconnect_0_M03_AXI_awqos_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_vga_display_0_clkPalette_UNCONNECTED : STD_LOGIC;
   signal NLW_vga_display_0_clkb_UNCONNECTED : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of CLK100MHZ : signal is "xilinx.com:signal:clock:1.0 CLK.CLK100MHZ CLK";
@@ -767,7 +904,7 @@ axi_bram_ctrl_0: component system_axi_bram_ctrl_0_0
     );
 axi_bram_ctrl_1: component system_axi_bram_ctrl_1_0
      port map (
-      bram_addr_a(17 downto 0) => axi_bram_ctrl_1_BRAM_PORTA_ADDR(17 downto 0),
+      bram_addr_a(11 downto 0) => axi_bram_ctrl_1_BRAM_PORTA_ADDR(11 downto 0),
       bram_clk_a => axi_bram_ctrl_1_BRAM_PORTA_CLK,
       bram_en_a => axi_bram_ctrl_1_BRAM_PORTA_EN,
       bram_rddata_a(31 downto 0) => axi_bram_ctrl_1_BRAM_PORTA_DOUT(31 downto 0),
@@ -775,7 +912,7 @@ axi_bram_ctrl_1: component system_axi_bram_ctrl_1_0
       bram_we_a(3 downto 0) => axi_bram_ctrl_1_BRAM_PORTA_WE(3 downto 0),
       bram_wrdata_a(31 downto 0) => axi_bram_ctrl_1_BRAM_PORTA_DIN(31 downto 0),
       s_axi_aclk => util_ds_buf_0_BUFG_O(0),
-      s_axi_araddr(17 downto 0) => smartconnect_0_M01_AXI_ARADDR(17 downto 0),
+      s_axi_araddr(11 downto 0) => smartconnect_0_M01_AXI_ARADDR(11 downto 0),
       s_axi_arburst(1 downto 0) => smartconnect_0_M01_AXI_ARBURST(1 downto 0),
       s_axi_arcache(3 downto 0) => smartconnect_0_M01_AXI_ARCACHE(3 downto 0),
       s_axi_aresetn => proc_sys_reset_0_peripheral_aresetn(0),
@@ -785,7 +922,7 @@ axi_bram_ctrl_1: component system_axi_bram_ctrl_1_0
       s_axi_arready => smartconnect_0_M01_AXI_ARREADY,
       s_axi_arsize(2 downto 0) => smartconnect_0_M01_AXI_ARSIZE(2 downto 0),
       s_axi_arvalid => smartconnect_0_M01_AXI_ARVALID,
-      s_axi_awaddr(17 downto 0) => smartconnect_0_M01_AXI_AWADDR(17 downto 0),
+      s_axi_awaddr(11 downto 0) => smartconnect_0_M01_AXI_AWADDR(11 downto 0),
       s_axi_awburst(1 downto 0) => smartconnect_0_M01_AXI_AWBURST(1 downto 0),
       s_axi_awcache(3 downto 0) => smartconnect_0_M01_AXI_AWCACHE(3 downto 0),
       s_axi_awlen(7 downto 0) => smartconnect_0_M01_AXI_AWLEN(7 downto 0),
@@ -807,6 +944,49 @@ axi_bram_ctrl_1: component system_axi_bram_ctrl_1_0
       s_axi_wready => smartconnect_0_M01_AXI_WREADY,
       s_axi_wstrb(3 downto 0) => smartconnect_0_M01_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => smartconnect_0_M01_AXI_WVALID
+    );
+axi_bram_ctrl_2: component system_axi_bram_ctrl_2_0
+     port map (
+      bram_addr_a(17 downto 0) => axi_bram_ctrl_2_BRAM_PORTA_ADDR(17 downto 0),
+      bram_clk_a => axi_bram_ctrl_2_BRAM_PORTA_CLK,
+      bram_en_a => axi_bram_ctrl_2_BRAM_PORTA_EN,
+      bram_rddata_a(31 downto 0) => axi_bram_ctrl_2_BRAM_PORTA_DOUT(31 downto 0),
+      bram_rst_a => axi_bram_ctrl_2_BRAM_PORTA_RST,
+      bram_we_a(3 downto 0) => axi_bram_ctrl_2_BRAM_PORTA_WE(3 downto 0),
+      bram_wrdata_a(31 downto 0) => axi_bram_ctrl_2_BRAM_PORTA_DIN(31 downto 0),
+      s_axi_aclk => util_ds_buf_0_BUFG_O(0),
+      s_axi_araddr(17 downto 0) => smartconnect_0_M03_AXI_ARADDR(17 downto 0),
+      s_axi_arburst(1 downto 0) => smartconnect_0_M03_AXI_ARBURST(1 downto 0),
+      s_axi_arcache(3 downto 0) => smartconnect_0_M03_AXI_ARCACHE(3 downto 0),
+      s_axi_aresetn => proc_sys_reset_0_peripheral_aresetn(0),
+      s_axi_arlen(7 downto 0) => smartconnect_0_M03_AXI_ARLEN(7 downto 0),
+      s_axi_arlock => smartconnect_0_M03_AXI_ARLOCK(0),
+      s_axi_arprot(2 downto 0) => smartconnect_0_M03_AXI_ARPROT(2 downto 0),
+      s_axi_arready => smartconnect_0_M03_AXI_ARREADY,
+      s_axi_arsize(2 downto 0) => smartconnect_0_M03_AXI_ARSIZE(2 downto 0),
+      s_axi_arvalid => smartconnect_0_M03_AXI_ARVALID,
+      s_axi_awaddr(17 downto 0) => smartconnect_0_M03_AXI_AWADDR(17 downto 0),
+      s_axi_awburst(1 downto 0) => smartconnect_0_M03_AXI_AWBURST(1 downto 0),
+      s_axi_awcache(3 downto 0) => smartconnect_0_M03_AXI_AWCACHE(3 downto 0),
+      s_axi_awlen(7 downto 0) => smartconnect_0_M03_AXI_AWLEN(7 downto 0),
+      s_axi_awlock => smartconnect_0_M03_AXI_AWLOCK(0),
+      s_axi_awprot(2 downto 0) => smartconnect_0_M03_AXI_AWPROT(2 downto 0),
+      s_axi_awready => smartconnect_0_M03_AXI_AWREADY,
+      s_axi_awsize(2 downto 0) => smartconnect_0_M03_AXI_AWSIZE(2 downto 0),
+      s_axi_awvalid => smartconnect_0_M03_AXI_AWVALID,
+      s_axi_bready => smartconnect_0_M03_AXI_BREADY,
+      s_axi_bresp(1 downto 0) => smartconnect_0_M03_AXI_BRESP(1 downto 0),
+      s_axi_bvalid => smartconnect_0_M03_AXI_BVALID,
+      s_axi_rdata(31 downto 0) => smartconnect_0_M03_AXI_RDATA(31 downto 0),
+      s_axi_rlast => smartconnect_0_M03_AXI_RLAST,
+      s_axi_rready => smartconnect_0_M03_AXI_RREADY,
+      s_axi_rresp(1 downto 0) => smartconnect_0_M03_AXI_RRESP(1 downto 0),
+      s_axi_rvalid => smartconnect_0_M03_AXI_RVALID,
+      s_axi_wdata(31 downto 0) => smartconnect_0_M03_AXI_WDATA(31 downto 0),
+      s_axi_wlast => smartconnect_0_M03_AXI_WLAST,
+      s_axi_wready => smartconnect_0_M03_AXI_WREADY,
+      s_axi_wstrb(3 downto 0) => smartconnect_0_M03_AXI_WSTRB(3 downto 0),
+      s_axi_wvalid => smartconnect_0_M03_AXI_WVALID
     );
 axis_data_fifo_0: component system_axis_data_fifo_0_0
      port map (
@@ -845,23 +1025,35 @@ blk_mem_gen_0: component system_blk_mem_gen_0_0
     );
 blk_mem_gen_1: component system_blk_mem_gen_1_0
      port map (
-      addra(31 downto 18) => B"00000000000000",
-      addra(17 downto 0) => axi_bram_ctrl_1_BRAM_PORTA_ADDR(17 downto 0),
-      addrb(31 downto 0) => B"00000000000000000000000000000000",
+      addra(31 downto 12) => B"00000000000000000000",
+      addra(11 downto 0) => axi_bram_ctrl_1_BRAM_PORTA_ADDR(11 downto 0),
+      addrb(31 downto 0) => vga_display_0_addrPalette(31 downto 0),
       clka => axi_bram_ctrl_1_BRAM_PORTA_CLK,
-      clkb => '0',
+      clkb => clk_wiz_0_VGA_CLK,
       dina(31 downto 0) => axi_bram_ctrl_1_BRAM_PORTA_DIN(31 downto 0),
       dinb(31 downto 0) => B"00000000000000000000000000001000",
       douta(31 downto 0) => axi_bram_ctrl_1_BRAM_PORTA_DOUT(31 downto 0),
-      doutb(31 downto 0) => NLW_blk_mem_gen_1_doutb_UNCONNECTED(31 downto 0),
+      doutb(31 downto 0) => blk_mem_gen_1_doutb(31 downto 0),
       ena => axi_bram_ctrl_1_BRAM_PORTA_EN,
-      enb => '0',
+      enb => vga_display_0_enPalette,
       rsta => axi_bram_ctrl_1_BRAM_PORTA_RST,
       rsta_busy => NLW_blk_mem_gen_1_rsta_busy_UNCONNECTED,
       rstb => '0',
       rstb_busy => NLW_blk_mem_gen_1_rstb_busy_UNCONNECTED,
       wea(3 downto 0) => axi_bram_ctrl_1_BRAM_PORTA_WE(3 downto 0),
       web(3 downto 0) => B"0000"
+    );
+blk_mem_gen_2: component system_blk_mem_gen_2_0
+     port map (
+      addra(31 downto 18) => B"00000000000000",
+      addra(17 downto 0) => axi_bram_ctrl_2_BRAM_PORTA_ADDR(17 downto 0),
+      clka => axi_bram_ctrl_2_BRAM_PORTA_CLK,
+      dina(31 downto 0) => axi_bram_ctrl_2_BRAM_PORTA_DIN(31 downto 0),
+      douta(31 downto 0) => axi_bram_ctrl_2_BRAM_PORTA_DOUT(31 downto 0),
+      ena => axi_bram_ctrl_2_BRAM_PORTA_EN,
+      rsta => axi_bram_ctrl_2_BRAM_PORTA_RST,
+      rsta_busy => NLW_blk_mem_gen_2_rsta_busy_UNCONNECTED,
+      wea(3 downto 0) => axi_bram_ctrl_2_BRAM_PORTA_WE(3 downto 0)
     );
 clk_wiz_0: component system_clk_wiz_0_0
      port map (
@@ -1040,7 +1232,7 @@ smartconnect_0: component system_smartconnect_0_1
       M00_AXI_wready => smartconnect_0_M00_AXI_WREADY,
       M00_AXI_wstrb(15 downto 0) => smartconnect_0_M00_AXI_WSTRB(15 downto 0),
       M00_AXI_wvalid => smartconnect_0_M00_AXI_WVALID,
-      M01_AXI_araddr(17 downto 0) => smartconnect_0_M01_AXI_ARADDR(17 downto 0),
+      M01_AXI_araddr(11 downto 0) => smartconnect_0_M01_AXI_ARADDR(11 downto 0),
       M01_AXI_arburst(1 downto 0) => smartconnect_0_M01_AXI_ARBURST(1 downto 0),
       M01_AXI_arcache(3 downto 0) => smartconnect_0_M01_AXI_ARCACHE(3 downto 0),
       M01_AXI_arlen(7 downto 0) => smartconnect_0_M01_AXI_ARLEN(7 downto 0),
@@ -1050,7 +1242,7 @@ smartconnect_0: component system_smartconnect_0_1
       M01_AXI_arready => smartconnect_0_M01_AXI_ARREADY,
       M01_AXI_arsize(2 downto 0) => smartconnect_0_M01_AXI_ARSIZE(2 downto 0),
       M01_AXI_arvalid => smartconnect_0_M01_AXI_ARVALID,
-      M01_AXI_awaddr(17 downto 0) => smartconnect_0_M01_AXI_AWADDR(17 downto 0),
+      M01_AXI_awaddr(11 downto 0) => smartconnect_0_M01_AXI_AWADDR(11 downto 0),
       M01_AXI_awburst(1 downto 0) => smartconnect_0_M01_AXI_AWBURST(1 downto 0),
       M01_AXI_awcache(3 downto 0) => smartconnect_0_M01_AXI_AWCACHE(3 downto 0),
       M01_AXI_awlen(7 downto 0) => smartconnect_0_M01_AXI_AWLEN(7 downto 0),
@@ -1106,6 +1298,39 @@ smartconnect_0: component system_smartconnect_0_1
       M02_AXI_wready => smartconnect_0_M02_AXI_WREADY,
       M02_AXI_wstrb(3 downto 0) => smartconnect_0_M02_AXI_WSTRB(3 downto 0),
       M02_AXI_wvalid => smartconnect_0_M02_AXI_WVALID,
+      M03_AXI_araddr(17 downto 0) => smartconnect_0_M03_AXI_ARADDR(17 downto 0),
+      M03_AXI_arburst(1 downto 0) => smartconnect_0_M03_AXI_ARBURST(1 downto 0),
+      M03_AXI_arcache(3 downto 0) => smartconnect_0_M03_AXI_ARCACHE(3 downto 0),
+      M03_AXI_arlen(7 downto 0) => smartconnect_0_M03_AXI_ARLEN(7 downto 0),
+      M03_AXI_arlock(0) => smartconnect_0_M03_AXI_ARLOCK(0),
+      M03_AXI_arprot(2 downto 0) => smartconnect_0_M03_AXI_ARPROT(2 downto 0),
+      M03_AXI_arqos(3 downto 0) => NLW_smartconnect_0_M03_AXI_arqos_UNCONNECTED(3 downto 0),
+      M03_AXI_arready => smartconnect_0_M03_AXI_ARREADY,
+      M03_AXI_arsize(2 downto 0) => smartconnect_0_M03_AXI_ARSIZE(2 downto 0),
+      M03_AXI_arvalid => smartconnect_0_M03_AXI_ARVALID,
+      M03_AXI_awaddr(17 downto 0) => smartconnect_0_M03_AXI_AWADDR(17 downto 0),
+      M03_AXI_awburst(1 downto 0) => smartconnect_0_M03_AXI_AWBURST(1 downto 0),
+      M03_AXI_awcache(3 downto 0) => smartconnect_0_M03_AXI_AWCACHE(3 downto 0),
+      M03_AXI_awlen(7 downto 0) => smartconnect_0_M03_AXI_AWLEN(7 downto 0),
+      M03_AXI_awlock(0) => smartconnect_0_M03_AXI_AWLOCK(0),
+      M03_AXI_awprot(2 downto 0) => smartconnect_0_M03_AXI_AWPROT(2 downto 0),
+      M03_AXI_awqos(3 downto 0) => NLW_smartconnect_0_M03_AXI_awqos_UNCONNECTED(3 downto 0),
+      M03_AXI_awready => smartconnect_0_M03_AXI_AWREADY,
+      M03_AXI_awsize(2 downto 0) => smartconnect_0_M03_AXI_AWSIZE(2 downto 0),
+      M03_AXI_awvalid => smartconnect_0_M03_AXI_AWVALID,
+      M03_AXI_bready => smartconnect_0_M03_AXI_BREADY,
+      M03_AXI_bresp(1 downto 0) => smartconnect_0_M03_AXI_BRESP(1 downto 0),
+      M03_AXI_bvalid => smartconnect_0_M03_AXI_BVALID,
+      M03_AXI_rdata(31 downto 0) => smartconnect_0_M03_AXI_RDATA(31 downto 0),
+      M03_AXI_rlast => smartconnect_0_M03_AXI_RLAST,
+      M03_AXI_rready => smartconnect_0_M03_AXI_RREADY,
+      M03_AXI_rresp(1 downto 0) => smartconnect_0_M03_AXI_RRESP(1 downto 0),
+      M03_AXI_rvalid => smartconnect_0_M03_AXI_RVALID,
+      M03_AXI_wdata(31 downto 0) => smartconnect_0_M03_AXI_WDATA(31 downto 0),
+      M03_AXI_wlast => smartconnect_0_M03_AXI_WLAST,
+      M03_AXI_wready => smartconnect_0_M03_AXI_WREADY,
+      M03_AXI_wstrb(3 downto 0) => smartconnect_0_M03_AXI_WSTRB(3 downto 0),
+      M03_AXI_wvalid => smartconnect_0_M03_AXI_WVALID,
       S00_AXI_araddr(31 downto 0) => neorv32_vivado_ip_0_m_axi_ARADDR(31 downto 0),
       S00_AXI_arburst(1 downto 0) => neorv32_vivado_ip_0_m_axi_ARBURST(1 downto 0),
       S00_AXI_arcache(3 downto 0) => neorv32_vivado_ip_0_m_axi_ARCACHE(3 downto 0),
@@ -1160,9 +1385,13 @@ vga_display_0: component system_vga_display_0_0
       VGA_HS => VGA_HS,
       VGA_R(3 downto 0) => VGA_R(3 downto 0),
       VGA_VS => VGA_VS,
+      addrPalette(31 downto 0) => vga_display_0_addrPalette(31 downto 0),
       addrb(31 downto 0) => vga_display_0_addrb(31 downto 0),
+      clkPalette => NLW_vga_display_0_clkPalette_UNCONNECTED,
       clkb => NLW_vga_display_0_clkb_UNCONNECTED,
+      doutPalette(31 downto 0) => blk_mem_gen_1_doutb(31 downto 0),
       doutb(31 downto 0) => blk_mem_gen_0_doutb(31 downto 0),
+      enPalette => vga_display_0_enPalette,
       enb => vga_display_0_enb,
       pixel_clk => clk_wiz_0_VGA_CLK
     );

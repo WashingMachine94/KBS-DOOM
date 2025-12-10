@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.runs/synth_1/system_wrapper.tcl"
+  variable script "C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/system_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -58,7 +58,6 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
 set_param general.usePosixSpawnForFork 1
-set_param bd.open.in_stealth_mode 1
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
@@ -67,73 +66,78 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.cache/wt [current_project]
-set_property parent.project_path C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.cache/wt [current_project]
+set_property parent.project_path C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/lucas/AppData/Roaming/Xilinx/Vivado/2025.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys-a7-100t:part0:1.3 [current_project]
-set_property ip_repo_paths {
-  c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.srcs/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0
-  c:/Users/lucas/Desktop/testNEORV32/neorv32/rtl/system_integration/neorv32_vivado_ip_work
-} [current_project]
+set_property ip_repo_paths c:/Users/lucas/Documents/GitHub/KBS-DOOM/neorv32_vivado_ip_work [current_project]
 update_ip_catalog
-set_property ip_output_repo c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.cache/ip [current_project]
+set_property ip_output_repo c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/hdl/system_wrapper.vhd
-add_files C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.srcs/sources_1/bd/system/system.bd
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_axis_data_fifo_0_0/system_axis_data_fifo_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_1/bd_515b_psr0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_2/bd_515b_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_3/bd_515b_psr_aclk1_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_4/bd_515b_arsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_5/bd_515b_rsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_6/bd_515b_awsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_7/bd_515b_wsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_8/bd_515b_bsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_12/bd_515b_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_13/bd_515b_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_14/bd_515b_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_15/bd_515b_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_16/bd_515b_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_17/bd_515b_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_18/bd_515b_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_19/bd_515b_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_20/bd_515b_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_21/bd_515b_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_22/bd_515b_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_23/bd_515b_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_25/bd_515b_m01s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_26/bd_515b_m01arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_27/bd_515b_m01rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_28/bd_515b_m01awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_29/bd_515b_m01wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_30/bd_515b_m01bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_32/bd_515b_m02s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_33/bd_515b_m02arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_34/bd_515b_m02rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_35/bd_515b_m02awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_36/bd_515b_m02wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_37/bd_515b_m02bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_smartconnect_0_1/smartconnect.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_axi_bram_ctrl_0_0/system_axi_bram_ctrl_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_blk_mem_gen_0_0/system_blk_mem_gen_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_axi_bram_ctrl_1_0/system_axi_bram_ctrl_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_blk_mem_gen_1_0/system_blk_mem_gen_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_util_ds_buf_0_0/system_util_ds_buf_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_util_ds_buf_0_0/system_util_ds_buf_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_mig_7series_0_0/system_mig_7series_0_0/user_design/constraints/system_mig_7series_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_mig_7series_0_0/system_mig_7series_0_0/user_design/constraints/system_mig_7series_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/system_ooc.xdc]
+read_vhdl -library xil_defaultlib C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/hdl/system_wrapper.vhd
+add_files C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.srcs/sources_1/bd/system/system.bd
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_axis_data_fifo_0_0/system_axis_data_fifo_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_1/bd_515b_psr0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_2/bd_515b_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_3/bd_515b_psr_aclk1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_4/bd_515b_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_5/bd_515b_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_6/bd_515b_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_7/bd_515b_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_8/bd_515b_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_12/bd_515b_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_13/bd_515b_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_14/bd_515b_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_15/bd_515b_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_16/bd_515b_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_17/bd_515b_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_18/bd_515b_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_19/bd_515b_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_20/bd_515b_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_21/bd_515b_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_22/bd_515b_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_23/bd_515b_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_25/bd_515b_m01s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_26/bd_515b_m01arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_27/bd_515b_m01rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_28/bd_515b_m01awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_29/bd_515b_m01wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_30/bd_515b_m01bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_32/bd_515b_m02s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_33/bd_515b_m02arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_34/bd_515b_m02rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_35/bd_515b_m02awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_36/bd_515b_m02wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_37/bd_515b_m02bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_39/bd_515b_m03s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_40/bd_515b_m03arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_41/bd_515b_m03rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_42/bd_515b_m03awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_43/bd_515b_m03wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/bd_0/ip/ip_44/bd_515b_m03bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_smartconnect_0_1/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_axi_bram_ctrl_0_0/system_axi_bram_ctrl_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_blk_mem_gen_0_0/system_blk_mem_gen_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_axi_bram_ctrl_1_0/system_axi_bram_ctrl_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_blk_mem_gen_1_0/system_blk_mem_gen_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_util_ds_buf_0_0/system_util_ds_buf_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_util_ds_buf_0_0/system_util_ds_buf_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_mig_7series_0_0/system_mig_7series_0_0/user_design/constraints/system_mig_7series_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_mig_7series_0_0/system_mig_7series_0_0/user_design/constraints/system_mig_7series_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_axi_bram_ctrl_2_0/system_axi_bram_ctrl_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_blk_mem_gen_2_0/system_blk_mem_gen_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/system_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -144,14 +148,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-Master.xdc]
+read_xdc C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-Master.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.srcs/utils_1/imports/synth_1/system_wrapper.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.srcs/utils_1/imports/synth_1/system_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

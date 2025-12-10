@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Mon Dec  8 13:41:25 2025
+# Process ID         : 11548
+# Current directory  : C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/system_axi_bram_ctrl_1_0_synth_1
+# Command line       : vivado.exe -log system_axi_bram_ctrl_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_axi_bram_ctrl_1_0.tcl
+# Log file           : C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/system_axi_bram_ctrl_1_0_synth_1/system_axi_bram_ctrl_1_0.vds
+# Journal file       : C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/system_axi_bram_ctrl_1_0_synth_1\vivado.jou
+# Running On         : LAPTOP-61978DQ3
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16476 MB
+# Swap memory        : 28991 MB
+# Total Virtual      : 45467 MB
+# Available Virtual  : 19005 MB
+#-----------------------------------------------------------
+source system_axi_bram_ctrl_1_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 491.406 ; gain = 210.258
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lucas/Documents/GitHub/KBS-DOOM/neorv32_vivado_ip_work'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_axi_bram_ctrl_1_0, cache-ID = 44703ab2ca2507d3.
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  8 13:41:35 2025...

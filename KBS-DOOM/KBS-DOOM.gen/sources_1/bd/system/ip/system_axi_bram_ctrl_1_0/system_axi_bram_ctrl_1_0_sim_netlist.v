@@ -2,21 +2,21 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-// Date        : Thu Dec  4 17:58:00 2025
+// Date        : Mon Dec  8 13:21:49 2025
 // Host        : LAPTOP-61978DQ3 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top system_axi_bram_ctrl_1_0 -prefix
-//               system_axi_bram_ctrl_1_0_ system_axi_bram_ctrl_1_0_sim_netlist.v
-// Design      : system_axi_bram_ctrl_1_0
+//               system_axi_bram_ctrl_1_0_ system_axi_bram_ctrl_2_0_sim_netlist.v
+// Design      : system_axi_bram_ctrl_2_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7a100tcsg324-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* C_BRAM_ADDR_WIDTH = "16" *) (* C_BRAM_INST_MODE = "EXTERNAL" *) (* C_ECC = "0" *) 
+(* C_BRAM_ADDR_WIDTH = "10" *) (* C_BRAM_INST_MODE = "EXTERNAL" *) (* C_ECC = "0" *) 
 (* C_ECC_ONOFF_RESET_VALUE = "0" *) (* C_ECC_TYPE = "0" *) (* C_FAMILY = "artix7" *) 
-(* C_FAULT_INJECT = "0" *) (* C_MEMORY_DEPTH = "65536" *) (* C_RD_CMD_OPTIMIZATION = "0" *) 
-(* C_READ_LATENCY = "1" *) (* C_SINGLE_PORT_BRAM = "1" *) (* C_S_AXI_ADDR_WIDTH = "18" *) 
+(* C_FAULT_INJECT = "0" *) (* C_MEMORY_DEPTH = "1024" *) (* C_RD_CMD_OPTIMIZATION = "0" *) 
+(* C_READ_LATENCY = "1" *) (* C_SINGLE_PORT_BRAM = "1" *) (* C_S_AXI_ADDR_WIDTH = "12" *) 
 (* C_S_AXI_CTRL_ADDR_WIDTH = "32" *) (* C_S_AXI_CTRL_DATA_WIDTH = "32" *) (* C_S_AXI_DATA_WIDTH = "32" *) 
 (* C_S_AXI_ID_WIDTH = "1" *) (* C_S_AXI_PROTOCOL = "AXI4" *) (* C_S_AXI_SUPPORTS_NARROW_BURST = "0" *) 
 (* downgradeipidentifiedwarnings = "yes" *) 
@@ -95,7 +95,7 @@ module system_axi_bram_ctrl_1_0_axi_bram_ctrl
   output ecc_interrupt;
   output ecc_ue;
   input [0:0]s_axi_awid;
-  input [17:0]s_axi_awaddr;
+  input [11:0]s_axi_awaddr;
   input [7:0]s_axi_awlen;
   input [2:0]s_axi_awsize;
   input [1:0]s_axi_awburst;
@@ -114,7 +114,7 @@ module system_axi_bram_ctrl_1_0_axi_bram_ctrl
   output s_axi_bvalid;
   input s_axi_bready;
   input [0:0]s_axi_arid;
-  input [17:0]s_axi_araddr;
+  input [11:0]s_axi_araddr;
   input [7:0]s_axi_arlen;
   input [2:0]s_axi_arsize;
   input [1:0]s_axi_arburst;
@@ -149,32 +149,32 @@ module system_axi_bram_ctrl_1_0_axi_bram_ctrl
   output bram_clk_a;
   output bram_en_a;
   output [3:0]bram_we_a;
-  output [17:0]bram_addr_a;
+  output [11:0]bram_addr_a;
   output [31:0]bram_wrdata_a;
   input [31:0]bram_rddata_a;
   output bram_rst_b;
   output bram_clk_b;
   output bram_en_b;
   output [3:0]bram_we_b;
-  output [17:0]bram_addr_b;
+  output [11:0]bram_addr_b;
   output [31:0]bram_wrdata_b;
   input [31:0]bram_rddata_b;
 
   wire \<const0> ;
-  wire [17:2]\^bram_addr_a ;
+  wire [11:2]\^bram_addr_a ;
   wire bram_en_a;
   wire [31:0]bram_rddata_a;
   wire bram_rst_a;
   wire [3:0]bram_we_a;
   wire [31:0]bram_wrdata_a;
   wire s_axi_aclk;
-  wire [17:0]s_axi_araddr;
+  wire [11:0]s_axi_araddr;
   wire [1:0]s_axi_arburst;
   wire s_axi_aresetn;
   wire [7:0]s_axi_arlen;
   wire s_axi_arready;
   wire s_axi_arvalid;
-  wire [17:0]s_axi_awaddr;
+  wire [11:0]s_axi_awaddr;
   wire [1:0]s_axi_awburst;
   wire [7:0]s_axi_awlen;
   wire s_axi_awready;
@@ -191,15 +191,9 @@ module system_axi_bram_ctrl_1_0_axi_bram_ctrl
   wire [3:0]s_axi_wstrb;
   wire s_axi_wvalid;
 
-  assign bram_addr_a[17:2] = \^bram_addr_a [17:2];
+  assign bram_addr_a[11:2] = \^bram_addr_a [11:2];
   assign bram_addr_a[1] = \<const0> ;
   assign bram_addr_a[0] = \<const0> ;
-  assign bram_addr_b[17] = \<const0> ;
-  assign bram_addr_b[16] = \<const0> ;
-  assign bram_addr_b[15] = \<const0> ;
-  assign bram_addr_b[14] = \<const0> ;
-  assign bram_addr_b[13] = \<const0> ;
-  assign bram_addr_b[12] = \<const0> ;
   assign bram_addr_b[11] = \<const0> ;
   assign bram_addr_b[10] = \<const0> ;
   assign bram_addr_b[9] = \<const0> ;
@@ -313,14 +307,14 @@ module system_axi_bram_ctrl_1_0_axi_bram_ctrl
         .bram_we_a(bram_we_a),
         .bram_wrdata_a(bram_wrdata_a),
         .s_axi_aclk(s_axi_aclk),
-        .s_axi_araddr(s_axi_araddr[17:2]),
+        .s_axi_araddr(s_axi_araddr[11:2]),
         .s_axi_arburst(s_axi_arburst),
         .s_axi_aresetn(s_axi_aresetn),
         .s_axi_aresetn_0(bram_rst_a),
         .s_axi_arlen(s_axi_arlen),
         .s_axi_arready(s_axi_arready),
         .s_axi_arvalid(s_axi_arvalid),
-        .s_axi_awaddr(s_axi_awaddr[17:2]),
+        .s_axi_awaddr(s_axi_awaddr[11:2]),
         .s_axi_awburst(s_axi_awburst),
         .s_axi_awlen(s_axi_awlen[3:0]),
         .s_axi_awready(s_axi_awready),
@@ -367,7 +361,7 @@ module system_axi_bram_ctrl_1_0_axi_bram_ctrl_top
     s_axi_awburst);
   output \GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg ;
   output \GEN_NO_RD_CMD_OPT.axi_rlast_int_reg ;
-  output [15:0]Q;
+  output [9:0]Q;
   output s_axi_aresetn_0;
   output s_axi_awready;
   output s_axi_arready;
@@ -389,29 +383,29 @@ module system_axi_bram_ctrl_1_0_axi_bram_ctrl_top
   input [3:0]s_axi_wstrb;
   input [31:0]s_axi_wdata;
   input [31:0]bram_rddata_a;
-  input [15:0]s_axi_araddr;
-  input [15:0]s_axi_awaddr;
+  input [9:0]s_axi_araddr;
+  input [9:0]s_axi_awaddr;
   input [7:0]s_axi_arlen;
   input [3:0]s_axi_awlen;
   input [1:0]s_axi_awburst;
 
   wire \GEN_NO_RD_CMD_OPT.axi_rlast_int_reg ;
   wire \GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg ;
-  wire [15:0]Q;
+  wire [9:0]Q;
   wire axi_bvalid_int_reg;
   wire bram_en_a;
   wire [31:0]bram_rddata_a;
   wire [3:0]bram_we_a;
   wire [31:0]bram_wrdata_a;
   wire s_axi_aclk;
-  wire [15:0]s_axi_araddr;
+  wire [9:0]s_axi_araddr;
   wire [1:0]s_axi_arburst;
   wire s_axi_aresetn;
   wire s_axi_aresetn_0;
   wire [7:0]s_axi_arlen;
   wire s_axi_arready;
   wire s_axi_arvalid;
-  wire [15:0]s_axi_awaddr;
+  wire [9:0]s_axi_awaddr;
   wire [1:0]s_axi_awburst;
   wire [3:0]s_axi_awlen;
   wire s_axi_awready;
@@ -489,7 +483,7 @@ module system_axi_bram_ctrl_1_0_full_axi
     s_axi_awburst);
   output \GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg ;
   output \GEN_NO_RD_CMD_OPT.axi_rlast_int_reg ;
-  output [15:0]BRAM_Addr_A;
+  output [9:0]BRAM_Addr_A;
   output [0:0]SR;
   output s_axi_awready;
   output s_axi_arready;
@@ -511,29 +505,29 @@ module system_axi_bram_ctrl_1_0_full_axi
   input [3:0]s_axi_wstrb;
   input [31:0]s_axi_wdata;
   input [31:0]bram_rddata_a;
-  input [15:0]s_axi_araddr;
-  input [15:0]s_axi_awaddr;
+  input [9:0]s_axi_araddr;
+  input [9:0]s_axi_awaddr;
   input [7:0]s_axi_arlen;
   input [3:0]s_axi_awlen;
   input [1:0]s_axi_awburst;
 
   wire \ADDR_SNG_PORT.bram_addr_int[10]_i_2_n_0 ;
-  wire \ADDR_SNG_PORT.bram_addr_int[11]_i_3_n_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int[11]_i_8_n_0 ;
   wire \ADDR_SNG_PORT.bram_addr_int[4]_i_2_n_0 ;
   wire \ADDR_SNG_PORT.bram_addr_int[5]_i_2_n_0 ;
   wire \ADDR_SNG_PORT.bram_addr_int[7]_i_2_n_0 ;
   wire \ADDR_SNG_PORT.bram_addr_int[8]_i_2_n_0 ;
   wire \ADDR_SNG_PORT.bram_addr_int[9]_i_2_n_0 ;
-  wire \ADDR_SNG_PORT.sng_bram_addr_ld_en ;
   wire AW2Arb_Active_Clr;
   wire Arb2AR_Active;
   wire Arb2AW_Active;
-  wire [15:0]BRAM_Addr_A;
+  wire [9:0]BRAM_Addr_A;
   wire BRAM_En_B_i;
   wire [3:0]BRAM_WE_A_i;
   wire \GEN_ARB.I_SNG_PORT_n_6 ;
   wire \GEN_NO_RD_CMD_OPT.axi_rlast_int_reg ;
   wire \GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg ;
+  wire I_RD_CHNL_n_37;
   wire I_RD_CHNL_n_38;
   wire I_RD_CHNL_n_39;
   wire I_RD_CHNL_n_40;
@@ -545,19 +539,12 @@ module system_axi_bram_ctrl_1_0_full_axi
   wire I_RD_CHNL_n_46;
   wire I_RD_CHNL_n_47;
   wire I_RD_CHNL_n_48;
-  wire I_RD_CHNL_n_49;
-  wire I_RD_CHNL_n_50;
-  wire I_RD_CHNL_n_51;
-  wire I_RD_CHNL_n_52;
-  wire I_RD_CHNL_n_53;
-  wire I_RD_CHNL_n_54;
-  wire I_RD_CHNL_n_55;
   wire I_WR_CHNL_n_36;
-  wire I_WR_CHNL_n_37;
+  wire I_WR_CHNL_n_38;
   wire I_WR_CHNL_n_39;
   wire I_WR_CHNL_n_40;
   wire I_WR_CHNL_n_41;
-  wire I_WR_CHNL_n_57;
+  wire I_WR_CHNL_n_51;
   wire [0:0]SR;
   wire ar_active_d1;
   wire ar_active_re;
@@ -569,15 +556,15 @@ module system_axi_bram_ctrl_1_0_full_axi
   wire [3:0]bram_we_a;
   wire [31:0]bram_wrdata_a;
   wire curr_fixed_burst_reg;
-  wire [14:0]p_1_in;
+  wire [8:0]p_1_in;
   wire s_axi_aclk;
-  wire [15:0]s_axi_araddr;
+  wire [9:0]s_axi_araddr;
   wire [1:0]s_axi_arburst;
   wire s_axi_aresetn;
   wire [7:0]s_axi_arlen;
   wire s_axi_arready;
   wire s_axi_arvalid;
-  wire [15:0]s_axi_awaddr;
+  wire [9:0]s_axi_awaddr;
   wire [1:0]s_axi_awburst;
   wire [3:0]s_axi_awlen;
   wire s_axi_awready;
@@ -591,33 +578,33 @@ module system_axi_bram_ctrl_1_0_full_axi
   wire [3:0]s_axi_wstrb;
   wire s_axi_wvalid;
 
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT5 #(
     .INIT(32'h08000000)) 
     \ADDR_SNG_PORT.bram_addr_int[10]_i_2 
        (.I0(BRAM_Addr_A[7]),
         .I1(BRAM_Addr_A[4]),
-        .I2(I_WR_CHNL_n_40),
+        .I2(I_WR_CHNL_n_39),
         .I3(BRAM_Addr_A[5]),
         .I4(BRAM_Addr_A[6]),
         .O(\ADDR_SNG_PORT.bram_addr_int[10]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h0080000000000000)) 
-    \ADDR_SNG_PORT.bram_addr_int[11]_i_3 
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_8 
        (.I0(BRAM_Addr_A[8]),
         .I1(BRAM_Addr_A[6]),
         .I2(BRAM_Addr_A[5]),
-        .I3(I_WR_CHNL_n_40),
+        .I3(I_WR_CHNL_n_39),
         .I4(BRAM_Addr_A[4]),
         .I5(BRAM_Addr_A[7]),
-        .O(\ADDR_SNG_PORT.bram_addr_int[11]_i_3_n_0 ));
+        .O(\ADDR_SNG_PORT.bram_addr_int[11]_i_8_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
     \ADDR_SNG_PORT.bram_addr_int[4]_i_2 
        (.I0(BRAM_Addr_A[1]),
         .I1(BRAM_Addr_A[0]),
         .O(\ADDR_SNG_PORT.bram_addr_int[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \ADDR_SNG_PORT.bram_addr_int[5]_i_2 
@@ -625,7 +612,7 @@ module system_axi_bram_ctrl_1_0_full_axi
         .I1(BRAM_Addr_A[0]),
         .I2(BRAM_Addr_A[1]),
         .O(\ADDR_SNG_PORT.bram_addr_int[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT5 #(
     .INIT(32'h7FFFFFFF)) 
     \ADDR_SNG_PORT.bram_addr_int[7]_i_2 
@@ -645,141 +632,93 @@ module system_axi_bram_ctrl_1_0_full_axi
         .I4(BRAM_Addr_A[3]),
         .I5(BRAM_Addr_A[5]),
         .O(\ADDR_SNG_PORT.bram_addr_int[8]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     \ADDR_SNG_PORT.bram_addr_int[9]_i_2 
        (.I0(BRAM_Addr_A[6]),
         .I1(BRAM_Addr_A[5]),
-        .I2(I_WR_CHNL_n_40),
+        .I2(I_WR_CHNL_n_39),
         .I3(BRAM_Addr_A[4]),
         .O(\ADDR_SNG_PORT.bram_addr_int[9]_i_2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \ADDR_SNG_PORT.bram_addr_int_reg[10] 
        (.C(s_axi_aclk),
-        .CE(I_RD_CHNL_n_38),
-        .D(I_RD_CHNL_n_46),
+        .CE(I_RD_CHNL_n_47),
+        .D(I_RD_CHNL_n_38),
         .Q(BRAM_Addr_A[8]),
         .R(I_WR_CHNL_n_36));
   FDRE #(
     .INIT(1'b0)) 
     \ADDR_SNG_PORT.bram_addr_int_reg[11] 
        (.C(s_axi_aclk),
-        .CE(I_RD_CHNL_n_38),
-        .D(I_RD_CHNL_n_45),
+        .CE(I_RD_CHNL_n_47),
+        .D(I_RD_CHNL_n_37),
         .Q(BRAM_Addr_A[9]),
-        .R(I_WR_CHNL_n_36));
-  FDRE #(
-    .INIT(1'b0)) 
-    \ADDR_SNG_PORT.bram_addr_int_reg[12] 
-       (.C(s_axi_aclk),
-        .CE(\ADDR_SNG_PORT.sng_bram_addr_ld_en ),
-        .D(I_RD_CHNL_n_44),
-        .Q(BRAM_Addr_A[10]),
-        .R(I_WR_CHNL_n_36));
-  FDRE #(
-    .INIT(1'b0)) 
-    \ADDR_SNG_PORT.bram_addr_int_reg[13] 
-       (.C(s_axi_aclk),
-        .CE(\ADDR_SNG_PORT.sng_bram_addr_ld_en ),
-        .D(I_RD_CHNL_n_43),
-        .Q(BRAM_Addr_A[11]),
-        .R(I_WR_CHNL_n_36));
-  FDRE #(
-    .INIT(1'b0)) 
-    \ADDR_SNG_PORT.bram_addr_int_reg[14] 
-       (.C(s_axi_aclk),
-        .CE(\ADDR_SNG_PORT.sng_bram_addr_ld_en ),
-        .D(I_RD_CHNL_n_42),
-        .Q(BRAM_Addr_A[12]),
-        .R(I_WR_CHNL_n_36));
-  FDRE #(
-    .INIT(1'b0)) 
-    \ADDR_SNG_PORT.bram_addr_int_reg[15] 
-       (.C(s_axi_aclk),
-        .CE(\ADDR_SNG_PORT.sng_bram_addr_ld_en ),
-        .D(I_RD_CHNL_n_41),
-        .Q(BRAM_Addr_A[13]),
-        .R(I_WR_CHNL_n_36));
-  FDRE #(
-    .INIT(1'b0)) 
-    \ADDR_SNG_PORT.bram_addr_int_reg[16] 
-       (.C(s_axi_aclk),
-        .CE(\ADDR_SNG_PORT.sng_bram_addr_ld_en ),
-        .D(I_RD_CHNL_n_40),
-        .Q(BRAM_Addr_A[14]),
-        .R(I_WR_CHNL_n_36));
-  FDRE #(
-    .INIT(1'b0)) 
-    \ADDR_SNG_PORT.bram_addr_int_reg[17] 
-       (.C(s_axi_aclk),
-        .CE(\ADDR_SNG_PORT.sng_bram_addr_ld_en ),
-        .D(I_RD_CHNL_n_39),
-        .Q(BRAM_Addr_A[15]),
         .R(I_WR_CHNL_n_36));
   FDRE #(
     .INIT(1'b0)) 
     \ADDR_SNG_PORT.bram_addr_int_reg[2] 
        (.C(s_axi_aclk),
-        .CE(I_RD_CHNL_n_38),
-        .D(I_RD_CHNL_n_54),
+        .CE(I_RD_CHNL_n_47),
+        .D(I_RD_CHNL_n_46),
         .Q(BRAM_Addr_A[0]),
         .R(I_WR_CHNL_n_36));
   FDRE #(
     .INIT(1'b0)) 
     \ADDR_SNG_PORT.bram_addr_int_reg[3] 
        (.C(s_axi_aclk),
-        .CE(I_RD_CHNL_n_38),
-        .D(I_RD_CHNL_n_53),
+        .CE(I_RD_CHNL_n_47),
+        .D(I_RD_CHNL_n_45),
         .Q(BRAM_Addr_A[1]),
         .R(I_WR_CHNL_n_36));
   FDRE #(
     .INIT(1'b0)) 
     \ADDR_SNG_PORT.bram_addr_int_reg[4] 
        (.C(s_axi_aclk),
-        .CE(I_RD_CHNL_n_38),
-        .D(I_RD_CHNL_n_52),
+        .CE(I_RD_CHNL_n_47),
+        .D(I_RD_CHNL_n_44),
         .Q(BRAM_Addr_A[2]),
         .R(I_WR_CHNL_n_36));
   FDRE #(
     .INIT(1'b0)) 
     \ADDR_SNG_PORT.bram_addr_int_reg[5] 
        (.C(s_axi_aclk),
-        .CE(I_RD_CHNL_n_38),
-        .D(I_RD_CHNL_n_51),
+        .CE(I_RD_CHNL_n_47),
+        .D(I_RD_CHNL_n_43),
         .Q(BRAM_Addr_A[3]),
         .R(I_WR_CHNL_n_36));
   FDRE #(
     .INIT(1'b0)) 
     \ADDR_SNG_PORT.bram_addr_int_reg[6] 
        (.C(s_axi_aclk),
-        .CE(I_RD_CHNL_n_38),
-        .D(I_RD_CHNL_n_50),
+        .CE(I_RD_CHNL_n_47),
+        .D(I_RD_CHNL_n_42),
         .Q(BRAM_Addr_A[4]),
         .R(I_WR_CHNL_n_36));
   FDRE #(
     .INIT(1'b0)) 
     \ADDR_SNG_PORT.bram_addr_int_reg[7] 
        (.C(s_axi_aclk),
-        .CE(I_RD_CHNL_n_38),
-        .D(I_RD_CHNL_n_49),
+        .CE(I_RD_CHNL_n_47),
+        .D(I_RD_CHNL_n_41),
         .Q(BRAM_Addr_A[5]),
         .R(I_WR_CHNL_n_36));
   FDRE #(
     .INIT(1'b0)) 
     \ADDR_SNG_PORT.bram_addr_int_reg[8] 
        (.C(s_axi_aclk),
-        .CE(I_RD_CHNL_n_38),
-        .D(I_RD_CHNL_n_48),
+        .CE(I_RD_CHNL_n_47),
+        .D(I_RD_CHNL_n_40),
         .Q(BRAM_Addr_A[6]),
         .R(I_WR_CHNL_n_36));
   FDRE #(
     .INIT(1'b0)) 
     \ADDR_SNG_PORT.bram_addr_int_reg[9] 
        (.C(s_axi_aclk),
-        .CE(I_RD_CHNL_n_38),
-        .D(I_RD_CHNL_n_47),
+        .CE(I_RD_CHNL_n_47),
+        .D(I_RD_CHNL_n_39),
         .Q(BRAM_Addr_A[7]),
         .R(I_WR_CHNL_n_36));
   system_axi_bram_ctrl_1_0_sng_port_arb \GEN_ARB.I_SNG_PORT 
@@ -787,8 +726,8 @@ module system_axi_bram_ctrl_1_0_full_axi
         .Arb2AR_Active(Arb2AR_Active),
         .Arb2AW_Active(Arb2AW_Active),
         .E(aw_active_re),
-        .\FSM_sequential_arb_sm_cs_reg[0]_0 (I_RD_CHNL_n_55),
-        .\FSM_sequential_arb_sm_cs_reg[0]_1 (I_WR_CHNL_n_57),
+        .\FSM_sequential_arb_sm_cs_reg[0]_0 (I_RD_CHNL_n_48),
+        .\FSM_sequential_arb_sm_cs_reg[0]_1 (I_WR_CHNL_n_51),
         .\GEN_NO_RD_CMD_OPT.GEN_AR_SNG.ar_active_d1_reg (\GEN_NO_RD_CMD_OPT.axi_rlast_int_reg ),
         .Q(BRAM_WE_A_i),
         .ar_active_d1(ar_active_d1),
@@ -806,25 +745,25 @@ module system_axi_bram_ctrl_1_0_full_axi
         .s_axi_rready(s_axi_rready));
   system_axi_bram_ctrl_1_0_rd_chnl I_RD_CHNL
        (.\ADDR_SNG_PORT.bram_addr_int_reg[10] (\ADDR_SNG_PORT.bram_addr_int[10]_i_2_n_0 ),
-        .\ADDR_SNG_PORT.bram_addr_int_reg[11] (I_WR_CHNL_n_37),
-        .\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 (\ADDR_SNG_PORT.bram_addr_int[11]_i_3_n_0 ),
-        .\ADDR_SNG_PORT.bram_addr_int_reg[17] (p_1_in),
-        .\ADDR_SNG_PORT.bram_addr_int_reg[17]_0 (I_WR_CHNL_n_39),
+        .\ADDR_SNG_PORT.bram_addr_int_reg[11] (p_1_in),
+        .\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 (\ADDR_SNG_PORT.bram_addr_int[11]_i_8_n_0 ),
         .\ADDR_SNG_PORT.bram_addr_int_reg[2] (I_WR_CHNL_n_41),
+        .\ADDR_SNG_PORT.bram_addr_int_reg[2]_0 (I_WR_CHNL_n_40),
+        .\ADDR_SNG_PORT.bram_addr_int_reg[2]_1 (I_WR_CHNL_n_38),
         .\ADDR_SNG_PORT.bram_addr_int_reg[4] (\ADDR_SNG_PORT.bram_addr_int[4]_i_2_n_0 ),
         .\ADDR_SNG_PORT.bram_addr_int_reg[5] (\ADDR_SNG_PORT.bram_addr_int[5]_i_2_n_0 ),
-        .\ADDR_SNG_PORT.bram_addr_int_reg[6] (I_WR_CHNL_n_40),
+        .\ADDR_SNG_PORT.bram_addr_int_reg[6] (I_WR_CHNL_n_39),
         .\ADDR_SNG_PORT.bram_addr_int_reg[7] (\ADDR_SNG_PORT.bram_addr_int[7]_i_2_n_0 ),
         .\ADDR_SNG_PORT.bram_addr_int_reg[8] (\ADDR_SNG_PORT.bram_addr_int[8]_i_2_n_0 ),
         .\ADDR_SNG_PORT.bram_addr_int_reg[9] (\ADDR_SNG_PORT.bram_addr_int[9]_i_2_n_0 ),
         .Arb2AR_Active(Arb2AR_Active),
-        .BRAM_Addr_A(BRAM_Addr_A[9:0]),
         .BRAM_En_B_i(BRAM_En_B_i),
-        .D({I_RD_CHNL_n_39,I_RD_CHNL_n_40,I_RD_CHNL_n_41,I_RD_CHNL_n_42,I_RD_CHNL_n_43,I_RD_CHNL_n_44,I_RD_CHNL_n_45,I_RD_CHNL_n_46,I_RD_CHNL_n_47,I_RD_CHNL_n_48,I_RD_CHNL_n_49,I_RD_CHNL_n_50,I_RD_CHNL_n_51,I_RD_CHNL_n_52,I_RD_CHNL_n_53,I_RD_CHNL_n_54}),
-        .E({\ADDR_SNG_PORT.sng_bram_addr_ld_en ,I_RD_CHNL_n_38}),
+        .D({I_RD_CHNL_n_37,I_RD_CHNL_n_38,I_RD_CHNL_n_39,I_RD_CHNL_n_40,I_RD_CHNL_n_41,I_RD_CHNL_n_42,I_RD_CHNL_n_43,I_RD_CHNL_n_44,I_RD_CHNL_n_45,I_RD_CHNL_n_46}),
+        .E(I_RD_CHNL_n_47),
         .\GEN_NO_RD_CMD_OPT.GEN_AR_SNG.ar_active_d1_reg_0 (\GEN_ARB.I_SNG_PORT_n_6 ),
         .\GEN_NO_RD_CMD_OPT.axi_rlast_int_reg_0 (\GEN_NO_RD_CMD_OPT.axi_rlast_int_reg ),
         .\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg_0 (\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg ),
+        .Q(BRAM_Addr_A),
         .ar_active_d1(ar_active_d1),
         .ar_active_re(ar_active_re),
         .bram_rddata_a(bram_rddata_a),
@@ -837,9 +776,9 @@ module system_axi_bram_ctrl_1_0_full_axi
         .s_axi_arlen(s_axi_arlen),
         .s_axi_rdata(s_axi_rdata),
         .s_axi_rready(s_axi_rready),
-        .s_axi_rready_0(I_RD_CHNL_n_55));
+        .s_axi_rready_0(I_RD_CHNL_n_48));
   system_axi_bram_ctrl_1_0_wr_chnl I_WR_CHNL
-       (.\ADDR_SNG_PORT.bram_addr_int_reg[3] (I_WR_CHNL_n_40),
+       (.\ADDR_SNG_PORT.bram_addr_int_reg[3] (I_WR_CHNL_n_39),
         .AW2Arb_Active_Clr(AW2Arb_Active_Clr),
         .Arb2AW_Active(Arb2AW_Active),
         .BRAM_En_B_i(BRAM_En_B_i),
@@ -853,7 +792,7 @@ module system_axi_bram_ctrl_1_0_full_axi
         .bram_en_a(bram_en_a),
         .bram_wrdata_a(bram_wrdata_a),
         .curr_fixed_burst_reg(curr_fixed_burst_reg),
-        .curr_wrap_burst_reg_reg_0(I_WR_CHNL_n_39),
+        .curr_wrap_burst_reg_reg_0(I_WR_CHNL_n_38),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_aresetn(s_axi_aresetn),
         .s_axi_awaddr(s_axi_awaddr),
@@ -861,14 +800,14 @@ module system_axi_bram_ctrl_1_0_full_axi
         .s_axi_awburst(s_axi_awburst),
         .s_axi_awlen(s_axi_awlen),
         .s_axi_awvalid(s_axi_awvalid),
-        .s_axi_awvalid_0(I_WR_CHNL_n_57),
+        .s_axi_awvalid_0(I_WR_CHNL_n_51),
         .s_axi_bready(s_axi_bready),
         .s_axi_wdata(s_axi_wdata),
         .s_axi_wlast(s_axi_wlast),
         .s_axi_wready(s_axi_wready),
         .s_axi_wstrb(s_axi_wstrb),
         .s_axi_wvalid(s_axi_wvalid),
-        .s_axi_wvalid_0(I_WR_CHNL_n_37),
+        .s_axi_wvalid_0(I_WR_CHNL_n_40),
         .\save_init_bram_addr_ld_reg[3] (SR));
 endmodule
 
@@ -879,31 +818,31 @@ module system_axi_bram_ctrl_1_0_rd_chnl
     \GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg_0 ,
     \GEN_NO_RD_CMD_OPT.axi_rlast_int_reg_0 ,
     BRAM_En_B_i,
-    E,
     D,
+    E,
     s_axi_rready_0,
     s_axi_aclk,
     ar_active_re,
     \GEN_NO_RD_CMD_OPT.GEN_AR_SNG.ar_active_d1_reg_0 ,
+    Arb2AR_Active,
     s_axi_rready,
     s_axi_aresetn,
     s_axi_arburst,
-    Arb2AR_Active,
-    curr_fixed_burst_reg,
-    \ADDR_SNG_PORT.bram_addr_int_reg[11] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[17] ,
-    BRAM_Addr_A,
-    \ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[10] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[9] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[8] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[7] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[6] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[5] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[4] ,
+    Q,
     s_axi_araddr,
     \ADDR_SNG_PORT.bram_addr_int_reg[2] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[17]_0 ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[11] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[4] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[5] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[6] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[7] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[8] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[9] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[10] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ,
+    curr_fixed_burst_reg,
+    \ADDR_SNG_PORT.bram_addr_int_reg[2]_0 ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[2]_1 ,
     s_axi_arlen,
     bram_rddata_a);
   output s_axi_aresetn_0;
@@ -912,40 +851,40 @@ module system_axi_bram_ctrl_1_0_rd_chnl
   output \GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg_0 ;
   output \GEN_NO_RD_CMD_OPT.axi_rlast_int_reg_0 ;
   output BRAM_En_B_i;
-  output [1:0]E;
-  output [15:0]D;
+  output [9:0]D;
+  output [0:0]E;
   output s_axi_rready_0;
   input s_axi_aclk;
   input ar_active_re;
   input \GEN_NO_RD_CMD_OPT.GEN_AR_SNG.ar_active_d1_reg_0 ;
+  input Arb2AR_Active;
   input s_axi_rready;
   input s_axi_aresetn;
   input [1:0]s_axi_arburst;
-  input Arb2AR_Active;
-  input curr_fixed_burst_reg;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[11] ;
-  input [14:0]\ADDR_SNG_PORT.bram_addr_int_reg[17] ;
-  input [9:0]BRAM_Addr_A;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[10] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[9] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[8] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[7] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[6] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[5] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[4] ;
-  input [15:0]s_axi_araddr;
+  input [9:0]Q;
+  input [9:0]s_axi_araddr;
   input \ADDR_SNG_PORT.bram_addr_int_reg[2] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[17]_0 ;
+  input [8:0]\ADDR_SNG_PORT.bram_addr_int_reg[11] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[4] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[5] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[6] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[7] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[8] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[9] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[10] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ;
+  input curr_fixed_burst_reg;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[2]_0 ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[2]_1 ;
   input [7:0]s_axi_arlen;
   input [31:0]bram_rddata_a;
 
   wire \ADDR_SNG_PORT.bram_addr_int_reg[10] ;
-  wire \ADDR_SNG_PORT.bram_addr_int_reg[11] ;
+  wire [8:0]\ADDR_SNG_PORT.bram_addr_int_reg[11] ;
   wire \ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ;
-  wire [14:0]\ADDR_SNG_PORT.bram_addr_int_reg[17] ;
-  wire \ADDR_SNG_PORT.bram_addr_int_reg[17]_0 ;
   wire \ADDR_SNG_PORT.bram_addr_int_reg[2] ;
+  wire \ADDR_SNG_PORT.bram_addr_int_reg[2]_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int_reg[2]_1 ;
   wire \ADDR_SNG_PORT.bram_addr_int_reg[4] ;
   wire \ADDR_SNG_PORT.bram_addr_int_reg[5] ;
   wire \ADDR_SNG_PORT.bram_addr_int_reg[6] ;
@@ -953,23 +892,22 @@ module system_axi_bram_ctrl_1_0_rd_chnl
   wire \ADDR_SNG_PORT.bram_addr_int_reg[8] ;
   wire \ADDR_SNG_PORT.bram_addr_int_reg[9] ;
   wire Arb2AR_Active;
-  wire [9:0]BRAM_Addr_A;
   wire BRAM_En_B_i;
-  wire [15:0]D;
-  wire [1:0]E;
+  wire [9:0]D;
+  wire [0:0]E;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[0]_i_2_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[0]_i_3_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_1_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_2_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_4_n_0 ;
+  wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_5_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[2]_i_1_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[2]_i_2_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[2]_i_3_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[2]_i_4_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_1_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_3_n_0 ;
-  wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_4_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_5_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rlast_sm_cs[0]_i_1_n_0 ;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rlast_sm_cs[0]_i_2_n_0 ;
@@ -1013,16 +951,15 @@ module system_axi_bram_ctrl_1_0_rd_chnl
   wire \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[8].axi_rdata_int[8]_i_1_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[9].axi_rdata_int[9]_i_1_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_i_1_n_0 ;
+  wire \GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_i_2_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_i_1_n_0 ;
-  wire \GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_i_3_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_reg_n_0 ;
-  wire \GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_19 ;
-  wire \GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_2 ;
+  wire \GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_11 ;
+  wire \GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_12 ;
   wire \GEN_NO_RD_CMD_OPT.act_rd_burst_i_1_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_1_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_3_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_4_n_0 ;
-  wire \GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_5_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.axi_rlast_int_i_1_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.axi_rlast_int_i_2_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.axi_rlast_int_i_3_n_0 ;
@@ -1048,7 +985,6 @@ module system_axi_bram_ctrl_1_0_rd_chnl
   wire \GEN_NO_RD_CMD_OPT.brst_one_i_2_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.brst_zero_i_1_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.brst_zero_i_2_n_0 ;
-  wire \GEN_NO_RD_CMD_OPT.brst_zero_i_3_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.curr_wrap_burst_reg_i_1_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.disable_b2b_brst_i_2_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.disable_b2b_brst_i_3_n_0 ;
@@ -1058,6 +994,9 @@ module system_axi_bram_ctrl_1_0_rd_chnl
   wire \GEN_NO_RD_CMD_OPT.last_bram_addr_i_3_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.last_bram_addr_i_4_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.last_bram_addr_i_5_n_0 ;
+  wire \GEN_NO_RD_CMD_OPT.last_bram_addr_i_6_n_0 ;
+  wire \GEN_NO_RD_CMD_OPT.last_bram_addr_i_7_n_0 ;
+  wire \GEN_NO_RD_CMD_OPT.last_bram_addr_i_8_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.pend_rd_op_i_1_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.pend_rd_op_i_2_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.pend_rd_op_i_3_n_0 ;
@@ -1066,6 +1005,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
   wire \GEN_NO_RD_CMD_OPT.rddata_mux_sel_i_1_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.rddata_mux_sel_i_2_n_0 ;
   wire \GEN_NO_RD_CMD_OPT.rddata_mux_sel_i_3_n_0 ;
+  wire [9:0]Q;
   wire act_rd_burst;
   wire act_rd_burst_set;
   wire act_rd_burst_two;
@@ -1105,7 +1045,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
   wire rddata_mux_sel;
   wire [2:0]rlast_sm_cs;
   wire s_axi_aclk;
-  wire [15:0]s_axi_araddr;
+  wire [9:0]s_axi_araddr;
   wire [1:0]s_axi_arburst;
   wire s_axi_aresetn;
   wire s_axi_aresetn_0;
@@ -1121,7 +1061,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I1(rd_data_sm_cs[1]),
         .I2(rd_data_sm_cs[3]),
         .I3(rd_data_sm_cs[2]),
-        .I4(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3_n_0 ),
+        .I4(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_4_n_0 ),
         .I5(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[0]_i_3_n_0 ),
         .O(rd_data_sm_ns[0]));
   LUT6 #(
@@ -1145,14 +1085,14 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I5(act_rd_burst),
         .O(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[0]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h4445554544444444)) 
+    .INIT(64'h4454455544444444)) 
     \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_1 
        (.I0(rd_data_sm_cs[3]),
         .I1(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_2_n_0 ),
-        .I2(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3_n_0 ),
-        .I3(rd_data_sm_cs[2]),
-        .I4(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_4_n_0 ),
-        .I5(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_4_n_0 ),
+        .I2(rd_data_sm_cs[2]),
+        .I3(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3_n_0 ),
+        .I4(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_4_n_0 ),
+        .I5(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_5_n_0 ),
         .O(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h4044404440445054)) 
@@ -1164,19 +1104,29 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I4(brst_zero),
         .I5(end_brst_rd),
         .O(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h4000400040000000)) 
+    \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3 
+       (.I0(ar_active_d1),
+        .I1(Arb2AR_Active),
+        .I2(s_axi_rready),
+        .I3(\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg_0 ),
+        .I4(act_rd_burst_two),
+        .I5(act_rd_burst),
+        .O(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h1)) 
-    \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3 
+    \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_4 
        (.I0(\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_reg_n_0 ),
         .I1(axi_rd_burst),
-        .O(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+        .O(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h2)) 
-    \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_4 
+    \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_5 
        (.I0(rd_data_sm_cs[0]),
         .I1(rd_data_sm_cs[1]),
-        .O(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_4_n_0 ));
+        .O(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_5_n_0 ));
   LUT6 #(
     .INIT(64'h5444544444445544)) 
     \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[2]_i_1 
@@ -1207,7 +1157,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I4(s_axi_rready),
         .I5(ar_active_re),
         .O(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[2]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'h54)) 
     \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[2]_i_4 
@@ -1226,13 +1176,13 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I5(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_5_n_0 ),
         .O(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0080008000A00000)) 
+    .INIT(64'h8800880000000080)) 
     \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_2 
        (.I0(rd_data_sm_cs[0]),
-        .I1(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_5_n_0 ),
-        .I2(rd_data_sm_cs[2]),
-        .I3(rd_data_sm_cs[3]),
-        .I4(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_4_n_0 ),
+        .I1(end_brst_rd_clr_cmb),
+        .I2(ar_active_re),
+        .I3(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_5_n_0 ),
+        .I4(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_4_n_0 ),
         .I5(rd_data_sm_cs[1]),
         .O(rd_data_sm_ns[3]));
   LUT6 #(
@@ -1245,16 +1195,14 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I4(rd_data_sm_cs[0]),
         .I5(rd_data_sm_cs[1]),
         .O(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h4000400040000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
     \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_4 
-       (.I0(ar_active_d1),
-        .I1(Arb2AR_Active),
-        .I2(s_axi_rready),
-        .I3(\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg_0 ),
-        .I4(act_rd_burst_two),
-        .I5(act_rd_burst),
-        .O(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_4_n_0 ));
+       (.I0(rd_data_sm_cs[2]),
+        .I1(rd_data_sm_cs[3]),
+        .O(end_brst_rd_clr_cmb));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_5 
@@ -1340,7 +1288,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
   LUT6 #(
     .INIT(64'hFFFC300AFFFC3000)) 
     \FSM_sequential_GEN_NO_RD_CMD_OPT.rlast_sm_cs[2]_i_1 
-       (.I0(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3_n_0 ),
+       (.I0(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_4_n_0 ),
         .I1(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_5_n_0 ),
         .I2(rlast_sm_cs[1]),
         .I3(rlast_sm_cs[0]),
@@ -1400,7 +1348,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_BRST_MAX_WO_NARROW.brst_cnt_max_i_1_n_0 ),
         .Q(brst_cnt_max),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[0].axi_rdata_int[0]_i_1 
@@ -1416,7 +1364,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[0].axi_rdata_int[0]_i_1_n_0 ),
         .Q(s_axi_rdata[0]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[10].axi_rdata_int[10]_i_1 
@@ -1432,7 +1380,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[10].axi_rdata_int[10]_i_1_n_0 ),
         .Q(s_axi_rdata[10]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[11].axi_rdata_int[11]_i_1 
@@ -1448,7 +1396,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[11].axi_rdata_int[11]_i_1_n_0 ),
         .Q(s_axi_rdata[11]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[12].axi_rdata_int[12]_i_1 
@@ -1464,7 +1412,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[12].axi_rdata_int[12]_i_1_n_0 ),
         .Q(s_axi_rdata[12]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[13].axi_rdata_int[13]_i_1 
@@ -1480,7 +1428,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[13].axi_rdata_int[13]_i_1_n_0 ),
         .Q(s_axi_rdata[13]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[14].axi_rdata_int[14]_i_1 
@@ -1496,7 +1444,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[14].axi_rdata_int[14]_i_1_n_0 ),
         .Q(s_axi_rdata[14]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[15].axi_rdata_int[15]_i_1 
@@ -1512,7 +1460,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[15].axi_rdata_int[15]_i_1_n_0 ),
         .Q(s_axi_rdata[15]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[16].axi_rdata_int[16]_i_1 
@@ -1528,7 +1476,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[16].axi_rdata_int[16]_i_1_n_0 ),
         .Q(s_axi_rdata[16]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[17].axi_rdata_int[17]_i_1 
@@ -1544,7 +1492,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[17].axi_rdata_int[17]_i_1_n_0 ),
         .Q(s_axi_rdata[17]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[18].axi_rdata_int[18]_i_1 
@@ -1560,7 +1508,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[18].axi_rdata_int[18]_i_1_n_0 ),
         .Q(s_axi_rdata[18]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[19].axi_rdata_int[19]_i_1 
@@ -1576,7 +1524,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[19].axi_rdata_int[19]_i_1_n_0 ),
         .Q(s_axi_rdata[19]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[1].axi_rdata_int[1]_i_1 
@@ -1592,7 +1540,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(p_0_in),
         .Q(s_axi_rdata[1]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[20].axi_rdata_int[20]_i_1 
@@ -1608,7 +1556,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[20].axi_rdata_int[20]_i_1_n_0 ),
         .Q(s_axi_rdata[20]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[21].axi_rdata_int[21]_i_1 
@@ -1624,7 +1572,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[21].axi_rdata_int[21]_i_1_n_0 ),
         .Q(s_axi_rdata[21]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[22].axi_rdata_int[22]_i_1 
@@ -1640,7 +1588,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[22].axi_rdata_int[22]_i_1_n_0 ),
         .Q(s_axi_rdata[22]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[23].axi_rdata_int[23]_i_1 
@@ -1656,7 +1604,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[23].axi_rdata_int[23]_i_1_n_0 ),
         .Q(s_axi_rdata[23]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[24].axi_rdata_int[24]_i_1 
@@ -1672,7 +1620,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[24].axi_rdata_int[24]_i_1_n_0 ),
         .Q(s_axi_rdata[24]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[25].axi_rdata_int[25]_i_1 
@@ -1688,7 +1636,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[25].axi_rdata_int[25]_i_1_n_0 ),
         .Q(s_axi_rdata[25]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[26].axi_rdata_int[26]_i_1 
@@ -1704,7 +1652,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[26].axi_rdata_int[26]_i_1_n_0 ),
         .Q(s_axi_rdata[26]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[27].axi_rdata_int[27]_i_1 
@@ -1720,7 +1668,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[27].axi_rdata_int[27]_i_1_n_0 ),
         .Q(s_axi_rdata[27]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[28].axi_rdata_int[28]_i_1 
@@ -1736,7 +1684,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[28].axi_rdata_int[28]_i_1_n_0 ),
         .Q(s_axi_rdata[28]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[29].axi_rdata_int[29]_i_1 
@@ -1752,7 +1700,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[29].axi_rdata_int[29]_i_1_n_0 ),
         .Q(s_axi_rdata[29]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[2].axi_rdata_int[2]_i_1 
@@ -1768,7 +1716,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[2].axi_rdata_int[2]_i_1_n_0 ),
         .Q(s_axi_rdata[2]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[30].axi_rdata_int[30]_i_1 
@@ -1801,7 +1749,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I4(rd_data_sm_cs[1]),
         .I5(rd_data_sm_cs[0]),
         .O(axi_rdata_en));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_3 
@@ -1809,14 +1757,14 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I1(bram_rddata_a[31]),
         .I2(rddata_mux_sel),
         .O(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_4 
        (.I0(act_rd_burst_two),
         .I1(act_rd_burst),
         .O(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_5 
@@ -1831,7 +1779,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_3_n_0 ),
         .Q(s_axi_rdata[31]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[3].axi_rdata_int[3]_i_1 
@@ -1847,7 +1795,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[3].axi_rdata_int[3]_i_1_n_0 ),
         .Q(s_axi_rdata[3]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[4].axi_rdata_int[4]_i_1 
@@ -1863,7 +1811,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[4].axi_rdata_int[4]_i_1_n_0 ),
         .Q(s_axi_rdata[4]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[5].axi_rdata_int[5]_i_1 
@@ -1879,7 +1827,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[5].axi_rdata_int[5]_i_1_n_0 ),
         .Q(s_axi_rdata[5]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[6].axi_rdata_int[6]_i_1 
@@ -1895,7 +1843,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[6].axi_rdata_int[6]_i_1_n_0 ),
         .Q(s_axi_rdata[6]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[7].axi_rdata_int[7]_i_1 
@@ -1911,7 +1859,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[7].axi_rdata_int[7]_i_1_n_0 ),
         .Q(s_axi_rdata[7]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[8].axi_rdata_int[8]_i_1 
@@ -1927,7 +1875,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[8].axi_rdata_int[8]_i_1_n_0 ),
         .Q(s_axi_rdata[8]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[9].axi_rdata_int[9]_i_1 
@@ -1944,14 +1892,14 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .Q(s_axi_rdata[9]),
         .R(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAAAAAAAABAA)) 
+    .INIT(64'hAAAAAAAAAAABAAAA)) 
     \GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.rd_skid_buf[31]_i_1 
        (.I0(rd_skid_buf_ld_reg),
-        .I1(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_5_n_0 ),
-        .I2(rd_data_sm_cs[3]),
-        .I3(rd_data_sm_cs[2]),
-        .I4(rd_data_sm_cs[1]),
-        .I5(rd_data_sm_cs[0]),
+        .I1(rd_data_sm_cs[1]),
+        .I2(rd_data_sm_cs[0]),
+        .I3(rd_data_sm_cs[3]),
+        .I4(rd_data_sm_cs[2]),
+        .I5(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_5_n_0 ),
         .O(rd_skid_buf_ld));
   FDRE #(
     .INIT(1'b0)) 
@@ -2210,15 +2158,25 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .Q(rd_skid_buf[9]),
         .R(s_axi_aresetn_0));
   LUT6 #(
-    .INIT(64'h030003000000AA00)) 
+    .INIT(64'hF300F3000000AA00)) 
     \GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_i_1 
        (.I0(axi_rd_burst),
-        .I1(\GEN_NO_RD_CMD_OPT.brst_zero_i_2_n_0 ),
-        .I2(axi_rd_burst_two),
+        .I1(\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_i_2_n_0 ),
+        .I2(s_axi_arlen[3]),
         .I3(s_axi_aresetn),
         .I4(brst_zero),
         .I5(ar_active_re),
         .O(\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
+    \GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_i_2 
+       (.I0(s_axi_arlen[2]),
+        .I1(s_axi_arlen[1]),
+        .I2(s_axi_arlen[4]),
+        .I3(s_axi_arlen[7]),
+        .I4(s_axi_arlen[5]),
+        .I5(s_axi_arlen[6]),
+        .O(\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_i_2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_reg 
@@ -2237,25 +2195,13 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I4(ar_active_d1),
         .I5(Arb2AR_Active),
         .O(\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT5 #(
-    .INIT(32'h00000001)) 
+  LUT3 #(
+    .INIT(8'h08)) 
     \GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_i_2 
-       (.I0(s_axi_arlen[6]),
-        .I1(s_axi_arlen[7]),
-        .I2(s_axi_arlen[4]),
-        .I3(s_axi_arlen[5]),
-        .I4(\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_i_3_n_0 ),
-        .O(axi_rd_burst_two));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT4 #(
-    .INIT(16'hFFFD)) 
-    \GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_i_3 
        (.I0(s_axi_arlen[0]),
-        .I1(s_axi_arlen[3]),
-        .I2(s_axi_arlen[2]),
-        .I3(s_axi_arlen[1]),
-        .O(\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_i_3_n_0 ));
+        .I1(\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_i_2_n_0 ),
+        .I2(s_axi_arlen[3]),
+        .O(axi_rd_burst_two));
   FDRE #(
     .INIT(1'b0)) 
     \GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_reg 
@@ -2265,14 +2211,15 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .Q(\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_reg_n_0 ),
         .R(1'b0));
   system_axi_bram_ctrl_1_0_wrap_brst_0 \GEN_NO_RD_CMD_OPT.I_WRAP_BRST 
-       (.\ADDR_SNG_PORT.bram_addr_int[17]_i_8_0 (\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_reg_n_0 ),
+       (.\ADDR_SNG_PORT.bram_addr_int[11]_i_6_0 (\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_reg_n_0 ),
         .\ADDR_SNG_PORT.bram_addr_int_reg[10] (\ADDR_SNG_PORT.bram_addr_int_reg[10] ),
-        .\ADDR_SNG_PORT.bram_addr_int_reg[11] (\ADDR_SNG_PORT.bram_addr_int_reg[11] ),
-        .\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 (\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ),
-        .\ADDR_SNG_PORT.bram_addr_int_reg[17] (\ADDR_SNG_PORT.bram_addr_int_reg[17] ),
-        .\ADDR_SNG_PORT.bram_addr_int_reg[17]_0 (\ADDR_SNG_PORT.bram_addr_int_reg[17]_0 ),
-        .\ADDR_SNG_PORT.bram_addr_int_reg[17]_1 (ar_active_d1),
+        .\ADDR_SNG_PORT.bram_addr_int_reg[11] (Q),
+        .\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 (\ADDR_SNG_PORT.bram_addr_int_reg[11] ),
+        .\ADDR_SNG_PORT.bram_addr_int_reg[11]_1 (\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ),
         .\ADDR_SNG_PORT.bram_addr_int_reg[2] (\ADDR_SNG_PORT.bram_addr_int_reg[2] ),
+        .\ADDR_SNG_PORT.bram_addr_int_reg[2]_0 (\ADDR_SNG_PORT.bram_addr_int_reg[2]_0 ),
+        .\ADDR_SNG_PORT.bram_addr_int_reg[2]_1 (\ADDR_SNG_PORT.bram_addr_int_reg[2]_1 ),
+        .\ADDR_SNG_PORT.bram_addr_int_reg[2]_2 (ar_active_d1),
         .\ADDR_SNG_PORT.bram_addr_int_reg[4] (\ADDR_SNG_PORT.bram_addr_int_reg[4] ),
         .\ADDR_SNG_PORT.bram_addr_int_reg[5] (\ADDR_SNG_PORT.bram_addr_int_reg[5] ),
         .\ADDR_SNG_PORT.bram_addr_int_reg[6] (\ADDR_SNG_PORT.bram_addr_int_reg[6] ),
@@ -2280,11 +2227,10 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .\ADDR_SNG_PORT.bram_addr_int_reg[8] (\ADDR_SNG_PORT.bram_addr_int_reg[8] ),
         .\ADDR_SNG_PORT.bram_addr_int_reg[9] (\ADDR_SNG_PORT.bram_addr_int_reg[9] ),
         .Arb2AR_Active(Arb2AR_Active),
-        .BRAM_Addr_A(BRAM_Addr_A),
         .D(D),
         .E(E),
-        .\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] (\GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_2 ),
-        .\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg (\GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_19 ),
+        .\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] (\GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_11 ),
+        .\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg (\GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_12 ),
         .\GEN_NO_RD_CMD_OPT.bram_en_int_i_6 (\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg_0 ),
         .Q(rd_data_sm_cs),
         .SR(s_axi_aresetn_0),
@@ -2329,41 +2275,34 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I5(\GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_3_n_0 ),
         .O(\GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000004F40000)) 
+    .INIT(64'h0000010001010100)) 
     \GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_2 
-       (.I0(\GEN_NO_RD_CMD_OPT.brst_zero_i_2_n_0 ),
-        .I1(ar_active_re),
-        .I2(rd_data_sm_cs[0]),
-        .I3(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3_n_0 ),
-        .I4(\GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_4_n_0 ),
-        .I5(rd_data_sm_cs[3]),
+       (.I0(rd_data_sm_cs[3]),
+        .I1(rd_data_sm_cs[1]),
+        .I2(rd_data_sm_cs[2]),
+        .I3(\GEN_NO_RD_CMD_OPT.brst_zero_i_2_n_0 ),
+        .I4(rd_data_sm_cs[0]),
+        .I5(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_4_n_0 ),
         .O(act_rd_burst_set));
   LUT6 #(
     .INIT(64'h02000004FFFFFFFF)) 
     \GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_3 
        (.I0(rd_data_sm_cs[2]),
         .I1(rd_data_sm_cs[3]),
-        .I2(\GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_5_n_0 ),
+        .I2(\GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_4_n_0 ),
         .I3(rd_data_sm_cs[0]),
         .I4(rd_data_sm_cs[1]),
         .I5(s_axi_aresetn),
         .O(\GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
-  LUT2 #(
-    .INIT(4'h1)) 
-    \GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_4 
-       (.I0(rd_data_sm_cs[1]),
-        .I1(rd_data_sm_cs[2]),
-        .O(\GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
     .INIT(16'h1FFF)) 
-    \GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_5 
+    \GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_4 
        (.I0(act_rd_burst),
         .I1(act_rd_burst_two),
         .I2(\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg_0 ),
         .I3(s_axi_rready),
-        .O(\GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_5_n_0 ));
+        .O(\GEN_NO_RD_CMD_OPT.act_rd_burst_two_i_4_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \GEN_NO_RD_CMD_OPT.act_rd_burst_two_reg 
@@ -2382,13 +2321,14 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I4(\GEN_NO_RD_CMD_OPT.axi_rlast_int_reg_0 ),
         .I5(s_axi_aresetn),
         .O(\GEN_NO_RD_CMD_OPT.axi_rlast_int_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \GEN_NO_RD_CMD_OPT.axi_rlast_int_i_2 
        (.I0(rlast_sm_cs[0]),
         .I1(rlast_sm_cs[1]),
         .O(\GEN_NO_RD_CMD_OPT.axi_rlast_int_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \GEN_NO_RD_CMD_OPT.axi_rlast_int_i_3 
@@ -2450,7 +2390,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.axi_rvalid_int_i_1_n_0 ),
         .Q(\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg_0 ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
     .INIT(16'h0100)) 
     \GEN_NO_RD_CMD_OPT.axi_rvalid_set_i_1 
@@ -2468,12 +2408,12 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .Q(axi_rvalid_set),
         .R(s_axi_aresetn_0));
   LUT6 #(
-    .INIT(64'hFBFFFBFB0B000B0B)) 
+    .INIT(64'h00BBFFFB00BB000B)) 
     \GEN_NO_RD_CMD_OPT.bram_en_int_i_1 
        (.I0(\GEN_NO_RD_CMD_OPT.bram_en_int_i_2_n_0 ),
         .I1(\GEN_NO_RD_CMD_OPT.bram_en_int_i_3_n_0 ),
-        .I2(rd_data_sm_cs[3]),
-        .I3(\GEN_NO_RD_CMD_OPT.bram_en_int_i_4_n_0 ),
+        .I2(\GEN_NO_RD_CMD_OPT.bram_en_int_i_4_n_0 ),
+        .I3(rd_data_sm_cs[3]),
         .I4(\GEN_NO_RD_CMD_OPT.bram_en_int_i_5_n_0 ),
         .I5(BRAM_En_B_i),
         .O(\GEN_NO_RD_CMD_OPT.bram_en_int_i_1_n_0 ));
@@ -2490,7 +2430,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
   LUT6 #(
     .INIT(64'hFEFEFEF2FFFFFFFF)) 
     \GEN_NO_RD_CMD_OPT.bram_en_int_i_3 
-       (.I0(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3_n_0 ),
+       (.I0(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_4_n_0 ),
         .I1(rd_data_sm_cs[1]),
         .I2(rd_data_sm_cs[2]),
         .I3(brst_zero),
@@ -2498,24 +2438,24 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I5(rd_data_sm_cs[0]),
         .O(\GEN_NO_RD_CMD_OPT.bram_en_int_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h220022003FCF3FCC)) 
+    .INIT(64'hAAAAFFFF00A08A8A)) 
     \GEN_NO_RD_CMD_OPT.bram_en_int_i_4 
-       (.I0(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_4_n_0 ),
-        .I1(rd_data_sm_cs[1]),
-        .I2(\GEN_NO_RD_CMD_OPT.bram_en_int_i_7_n_0 ),
-        .I3(rd_data_sm_cs[0]),
-        .I4(ar_active_re),
-        .I5(rd_data_sm_cs[2]),
+       (.I0(\GEN_NO_RD_CMD_OPT.bram_en_int_i_7_n_0 ),
+        .I1(\GEN_NO_RD_CMD_OPT.bram_en_int_i_8_n_0 ),
+        .I2(rd_data_sm_cs[2]),
+        .I3(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3_n_0 ),
+        .I4(rd_data_sm_cs[0]),
+        .I5(rd_data_sm_cs[1]),
         .O(\GEN_NO_RD_CMD_OPT.bram_en_int_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hEFFFEFEF22222222)) 
+    .INIT(64'h7F00FF007F000000)) 
     \GEN_NO_RD_CMD_OPT.bram_en_int_i_5 
-       (.I0(rd_data_sm_cs[1]),
-        .I1(rd_data_sm_cs[0]),
-        .I2(rd_data_sm_cs[2]),
-        .I3(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[3]_i_5_n_0 ),
-        .I4(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_5_n_0 ),
-        .I5(\GEN_NO_RD_CMD_OPT.bram_en_int_i_8_n_0 ),
+       (.I0(rd_data_sm_cs[0]),
+        .I1(brst_one),
+        .I2(\GEN_NO_RD_CMD_OPT.bram_en_int_i_8_n_0 ),
+        .I3(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_3_n_0 ),
+        .I4(rd_data_sm_cs[1]),
+        .I5(ar_active_re),
         .O(\GEN_NO_RD_CMD_OPT.bram_en_int_i_5_n_0 ));
   LUT6 #(
     .INIT(64'hFF7DFC7DCF4DCC4D)) 
@@ -2525,27 +2465,26 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I2(rd_data_sm_cs[2]),
         .I3(rd_data_sm_cs[1]),
         .I4(\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_reg_n_0 ),
-        .I5(\GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_19 ),
+        .I5(\GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_12 ),
         .O(\GEN_NO_RD_CMD_OPT.bram_en_int_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h0111000000000000)) 
-    \GEN_NO_RD_CMD_OPT.bram_en_int_i_7 
-       (.I0(end_brst_rd),
-        .I1(brst_zero),
-        .I2(s_axi_rready),
-        .I3(\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg_0 ),
-        .I4(rd_data_sm_cs[1]),
-        .I5(brst_one),
-        .O(\GEN_NO_RD_CMD_OPT.bram_en_int_i_7_n_0 ));
-  LUT6 #(
     .INIT(64'h007FFFFFFFFFFFFF)) 
-    \GEN_NO_RD_CMD_OPT.bram_en_int_i_8 
+    \GEN_NO_RD_CMD_OPT.bram_en_int_i_7 
        (.I0(pend_rd_op),
         .I1(\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg_0 ),
         .I2(s_axi_rready),
         .I3(ar_active_re),
         .I4(rd_data_sm_cs[2]),
         .I5(rd_data_sm_cs[1]),
+        .O(\GEN_NO_RD_CMD_OPT.bram_en_int_i_7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT4 #(
+    .INIT(16'h0007)) 
+    \GEN_NO_RD_CMD_OPT.bram_en_int_i_8 
+       (.I0(\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg_0 ),
+        .I1(s_axi_rready),
+        .I2(brst_zero),
+        .I3(end_brst_rd),
         .O(\GEN_NO_RD_CMD_OPT.bram_en_int_i_8_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -2555,6 +2494,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.bram_en_int_i_1_n_0 ),
         .Q(BRAM_En_B_i),
         .R(s_axi_aresetn_0));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
     .INIT(16'h08FB)) 
     \GEN_NO_RD_CMD_OPT.brst_cnt[0]_i_1 
@@ -2621,7 +2561,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I4(\GEN_NO_RD_CMD_OPT.brst_cnt_reg [4]),
         .I5(\GEN_NO_RD_CMD_OPT.brst_cnt_reg [5]),
         .O(p_0_in__0[6]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \GEN_NO_RD_CMD_OPT.brst_cnt[6]_i_2 
@@ -2635,7 +2575,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
     \GEN_NO_RD_CMD_OPT.brst_cnt[7]_i_1 
        (.I0(ar_active_d1),
         .I1(Arb2AR_Active),
-        .I2(\GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_2 ),
+        .I2(\GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_11 ),
         .O(\GEN_NO_RD_CMD_OPT.brst_cnt[7]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFB08FB08FB0808FB)) 
@@ -2647,7 +2587,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I4(\GEN_NO_RD_CMD_OPT.brst_cnt[7]_i_3_n_0 ),
         .I5(\GEN_NO_RD_CMD_OPT.brst_cnt[7]_i_4_n_0 ),
         .O(p_0_in__0[7]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \GEN_NO_RD_CMD_OPT.brst_cnt[7]_i_3 
@@ -2738,7 +2678,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
   LUT6 #(
     .INIT(64'h4444004444400040)) 
     \GEN_NO_RD_CMD_OPT.brst_one_i_1 
-       (.I0(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_5_n_0 ),
+       (.I0(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_6_n_0 ),
         .I1(s_axi_aresetn),
         .I2(brst_one),
         .I3(ar_active_re),
@@ -2748,7 +2688,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
   LUT6 #(
     .INIT(64'h0000000000020000)) 
     \GEN_NO_RD_CMD_OPT.brst_one_i_2 
-       (.I0(\GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_2 ),
+       (.I0(\GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_11 ),
         .I1(\GEN_NO_RD_CMD_OPT.brst_cnt[7]_i_4_n_0 ),
         .I2(\GEN_NO_RD_CMD_OPT.brst_cnt_reg [7]),
         .I3(\GEN_NO_RD_CMD_OPT.brst_cnt_reg [2]),
@@ -2763,35 +2703,25 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.brst_one_i_1_n_0 ),
         .Q(brst_one),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFBFBFB0000000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT4 #(
+    .INIT(16'h00E0)) 
     \GEN_NO_RD_CMD_OPT.brst_zero_i_1 
+       (.I0(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_6_n_0 ),
+        .I1(brst_zero),
+        .I2(s_axi_aresetn),
+        .I3(\GEN_NO_RD_CMD_OPT.brst_zero_i_2_n_0 ),
+        .O(\GEN_NO_RD_CMD_OPT.brst_zero_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT5 #(
+    .INIT(32'h44404444)) 
+    \GEN_NO_RD_CMD_OPT.brst_zero_i_2 
        (.I0(ar_active_d1),
         .I1(Arb2AR_Active),
-        .I2(\GEN_NO_RD_CMD_OPT.brst_zero_i_2_n_0 ),
-        .I3(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_5_n_0 ),
-        .I4(brst_zero),
-        .I5(s_axi_aresetn),
-        .O(\GEN_NO_RD_CMD_OPT.brst_zero_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT5 #(
-    .INIT(32'h00000002)) 
-    \GEN_NO_RD_CMD_OPT.brst_zero_i_2 
-       (.I0(\GEN_NO_RD_CMD_OPT.brst_zero_i_3_n_0 ),
-        .I1(s_axi_arlen[0]),
-        .I2(s_axi_arlen[3]),
-        .I3(s_axi_arlen[1]),
-        .I4(s_axi_arlen[2]),
+        .I2(s_axi_arlen[0]),
+        .I3(s_axi_arlen[3]),
+        .I4(\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_i_2_n_0 ),
         .O(\GEN_NO_RD_CMD_OPT.brst_zero_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \GEN_NO_RD_CMD_OPT.brst_zero_i_3 
-       (.I0(s_axi_arlen[5]),
-        .I1(s_axi_arlen[4]),
-        .I2(s_axi_arlen[7]),
-        .I3(s_axi_arlen[6]),
-        .O(\GEN_NO_RD_CMD_OPT.brst_zero_i_3_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \GEN_NO_RD_CMD_OPT.brst_zero_reg 
@@ -2800,7 +2730,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(\GEN_NO_RD_CMD_OPT.brst_zero_i_1_n_0 ),
         .Q(brst_zero),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \GEN_NO_RD_CMD_OPT.curr_fixed_burst_reg_i_1 
@@ -2815,7 +2745,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(curr_fixed_burst),
         .Q(curr_fixed_burst_reg_0),
         .R(s_axi_aresetn_0));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \GEN_NO_RD_CMD_OPT.curr_wrap_burst_reg_i_1 
@@ -2904,53 +2834,75 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .Q(end_brst_rd),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hFFFFFFFF75550000)) 
+    .INIT(64'hFFFFFFFFFF800000)) 
     \GEN_NO_RD_CMD_OPT.last_bram_addr_i_1 
        (.I0(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_2_n_0 ),
-        .I1(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_3_n_0 ),
-        .I2(s_axi_rready),
-        .I3(\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg_0 ),
-        .I4(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_4_n_0 ),
-        .I5(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_5_n_0 ),
+        .I1(ar_active_re),
+        .I2(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_3_n_0 ),
+        .I3(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_4_n_0 ),
+        .I4(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_5_n_0 ),
+        .I5(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_6_n_0 ),
         .O(last_bram_addr0));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT5 #(
-    .INIT(32'hFFEFFFFF)) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
     \GEN_NO_RD_CMD_OPT.last_bram_addr_i_2 
+       (.I0(\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_i_2_n_0 ),
+        .I1(s_axi_arlen[3]),
+        .I2(s_axi_arlen[0]),
+        .O(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h1)) 
+    \GEN_NO_RD_CMD_OPT.last_bram_addr_i_3 
        (.I0(rd_data_sm_cs[3]),
         .I1(rd_data_sm_cs[2]),
-        .I2(Arb2AR_Active),
-        .I3(ar_active_d1),
-        .I4(\GEN_NO_RD_CMD_OPT.brst_zero_i_2_n_0 ),
-        .O(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFF0027FFFFFF77FF)) 
-    \GEN_NO_RD_CMD_OPT.last_bram_addr_i_3 
-       (.I0(ar_active_re),
-        .I1(\GEN_NO_RD_CMD_OPT.brst_zero_i_2_n_0 ),
-        .I2(pend_rd_op),
-        .I3(rd_data_sm_cs[2]),
-        .I4(rd_data_sm_cs[3]),
-        .I5(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3_n_0 ),
         .O(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT6 #(
+    .INIT(64'h0000000030340004)) 
+    \GEN_NO_RD_CMD_OPT.last_bram_addr_i_4 
+       (.I0(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_7_n_0 ),
+        .I1(rd_data_sm_cs[2]),
+        .I2(rd_data_sm_cs[3]),
+        .I3(\GEN_NO_RD_CMD_OPT.brst_zero_i_2_n_0 ),
+        .I4(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_4_n_0 ),
+        .I5(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_8_n_0 ),
+        .O(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'h81)) 
-    \GEN_NO_RD_CMD_OPT.last_bram_addr_i_4 
+    \GEN_NO_RD_CMD_OPT.last_bram_addr_i_5 
        (.I0(rd_data_sm_cs[0]),
         .I1(rd_data_sm_cs[1]),
         .I2(rd_data_sm_cs[2]),
-        .O(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_4_n_0 ));
+        .O(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_5_n_0 ));
   LUT6 #(
     .INIT(64'h0000000000000040)) 
-    \GEN_NO_RD_CMD_OPT.last_bram_addr_i_5 
+    \GEN_NO_RD_CMD_OPT.last_bram_addr_i_6 
        (.I0(\GEN_NO_RD_CMD_OPT.brst_cnt_reg [1]),
         .I1(\GEN_NO_RD_CMD_OPT.brst_cnt_reg [0]),
-        .I2(\GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_2 ),
+        .I2(\GEN_NO_RD_CMD_OPT.I_WRAP_BRST_n_11 ),
         .I3(\GEN_NO_RD_CMD_OPT.brst_cnt[7]_i_4_n_0 ),
         .I4(\GEN_NO_RD_CMD_OPT.brst_cnt_reg [7]),
         .I5(\GEN_NO_RD_CMD_OPT.brst_cnt_reg [2]),
-        .O(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_5_n_0 ));
+        .O(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT3 #(
+    .INIT(8'h45)) 
+    \GEN_NO_RD_CMD_OPT.last_bram_addr_i_7 
+       (.I0(pend_rd_op),
+        .I1(ar_active_d1),
+        .I2(Arb2AR_Active),
+        .O(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFF7FFF77777FFF7)) 
+    \GEN_NO_RD_CMD_OPT.last_bram_addr_i_8 
+       (.I0(\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg_0 ),
+        .I1(s_axi_rready),
+        .I2(\GEN_NO_RD_CMD_OPT.GEN_RD_BURST_NORL.axi_rd_burst_two_reg_n_0 ),
+        .I3(axi_rd_burst),
+        .I4(Arb2AR_Active),
+        .I5(ar_active_d1),
+        .O(\GEN_NO_RD_CMD_OPT.last_bram_addr_i_8_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \GEN_NO_RD_CMD_OPT.last_bram_addr_reg 
@@ -2960,16 +2912,16 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .Q(last_bram_addr),
         .R(s_axi_aresetn_0));
   LUT6 #(
-    .INIT(64'h444444444440FF00)) 
+    .INIT(64'h55005500F0F05530)) 
     \GEN_NO_RD_CMD_OPT.pend_rd_op_i_1 
        (.I0(\GEN_NO_RD_CMD_OPT.pend_rd_op_i_2_n_0 ),
-        .I1(ar_active_re),
-        .I2(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_3_n_0 ),
-        .I3(pend_rd_op),
-        .I4(axi_rvalid_set_cmb),
-        .I5(\GEN_NO_RD_CMD_OPT.pend_rd_op_i_3_n_0 ),
+        .I1(\GEN_NO_RD_CMD_OPT.axi_rlast_int_reg_0 ),
+        .I2(pend_rd_op),
+        .I3(ar_active_re),
+        .I4(\GEN_NO_RD_CMD_OPT.pend_rd_op_i_3_n_0 ),
+        .I5(\GEN_NO_RD_CMD_OPT.pend_rd_op_i_4_n_0 ),
         .O(\GEN_NO_RD_CMD_OPT.pend_rd_op_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT5 #(
     .INIT(32'hFFFFFF0E)) 
     \GEN_NO_RD_CMD_OPT.pend_rd_op_i_2 
@@ -2979,39 +2931,35 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .I3(rd_data_sm_cs[3]),
         .I4(rd_data_sm_cs[1]),
         .O(\GEN_NO_RD_CMD_OPT.pend_rd_op_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAAAAAAEAAAAAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT4 #(
+    .INIT(16'hFEFF)) 
     \GEN_NO_RD_CMD_OPT.pend_rd_op_i_3 
-       (.I0(\GEN_NO_RD_CMD_OPT.pend_rd_op_i_4_n_0 ),
-        .I1(\GEN_NO_RD_CMD_OPT.pend_rd_op_i_5_n_0 ),
+       (.I0(rd_data_sm_cs[1]),
+        .I1(rd_data_sm_cs[0]),
         .I2(rd_data_sm_cs[3]),
-        .I3(rd_data_sm_cs[1]),
-        .I4(pend_rd_op),
-        .I5(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_5_n_0 ),
+        .I3(rd_data_sm_cs[2]),
         .O(\GEN_NO_RD_CMD_OPT.pend_rd_op_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h1010100010001000)) 
+    .INIT(64'hFFFF400000000000)) 
     \GEN_NO_RD_CMD_OPT.pend_rd_op_i_4 
-       (.I0(rd_data_sm_cs[0]),
-        .I1(rd_data_sm_cs[1]),
+       (.I0(\GEN_NO_RD_CMD_OPT.GEN_RDATA_NO_ECC.GEN_RDATA_NO_RL_NO_ECC.GEN_RDATA[31].axi_rdata_int[31]_i_5_n_0 ),
+        .I1(pend_rd_op),
         .I2(end_brst_rd_clr_cmb),
-        .I3(ar_active_re),
-        .I4(pend_rd_op),
-        .I5(\GEN_NO_RD_CMD_OPT.axi_rlast_int_reg_0 ),
+        .I3(rd_data_sm_cs[1]),
+        .I4(\GEN_NO_RD_CMD_OPT.pend_rd_op_i_5_n_0 ),
+        .I5(rd_data_sm_cs[0]),
         .O(\GEN_NO_RD_CMD_OPT.pend_rd_op_i_4_n_0 ));
-  LUT2 #(
-    .INIT(4'h8)) 
+  LUT6 #(
+    .INIT(64'h0101010001000100)) 
     \GEN_NO_RD_CMD_OPT.pend_rd_op_i_5 
-       (.I0(rd_data_sm_cs[0]),
-        .I1(rd_data_sm_cs[2]),
+       (.I0(rd_data_sm_cs[3]),
+        .I1(rd_data_sm_cs[1]),
+        .I2(rd_data_sm_cs[2]),
+        .I3(pend_rd_op),
+        .I4(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs[1]_i_4_n_0 ),
+        .I5(ar_active_re),
         .O(\GEN_NO_RD_CMD_OPT.pend_rd_op_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \GEN_NO_RD_CMD_OPT.pend_rd_op_i_6 
-       (.I0(rd_data_sm_cs[2]),
-        .I1(rd_data_sm_cs[3]),
-        .O(end_brst_rd_clr_cmb));
   FDRE #(
     .INIT(1'b0)) 
     \GEN_NO_RD_CMD_OPT.pend_rd_op_reg 
@@ -3038,6 +2986,7 @@ module system_axi_bram_ctrl_1_0_rd_chnl
         .D(rd_skid_buf_ld_cmb),
         .Q(rd_skid_buf_ld_reg),
         .R(s_axi_aresetn_0));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'hFD01)) 
     \GEN_NO_RD_CMD_OPT.rddata_mux_sel_i_1 
@@ -3384,20 +3333,20 @@ module system_axi_bram_ctrl_1_0_sng_port_arb
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h2)) 
-    \save_init_bram_addr_ld[17]_i_1 
+    \save_init_bram_addr_ld[11]_i_1 
        (.I0(Arb2AW_Active),
         .I1(aw_active_d1),
         .O(E));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h2)) 
-    \save_init_bram_addr_ld[17]_i_1__0 
+    \save_init_bram_addr_ld[11]_i_1__0 
        (.I0(Arb2AR_Active),
         .I1(ar_active_d1),
         .O(ar_active_re));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "system_axi_bram_ctrl_1_0,axi_bram_ctrl,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_bram_ctrl,Vivado 2025.1" *) 
+(* CHECK_LICENSE_TYPE = "system_axi_bram_ctrl_2_0,axi_bram_ctrl,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_bram_ctrl,Vivado 2025.1" *) 
 (* NotValidForBitStream *)
 module system_axi_bram_ctrl_1_0
    (s_axi_aclk,
@@ -3442,7 +3391,7 @@ module system_axi_bram_ctrl_1_0
     bram_rddata_a);
   (* x_interface_info = "xilinx.com:signal:clock:1.0 CLKIF CLK" *) (* x_interface_mode = "slave CLKIF" *) (* x_interface_parameter = "XIL_INTERFACENAME CLKIF, ASSOCIATED_BUSIF S_AXI:S_AXI_CTRL, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN system_CLK100MHZ, INSERT_VIP 0" *) input s_axi_aclk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 RSTIF RST" *) (* x_interface_mode = "slave RSTIF" *) (* x_interface_parameter = "XIL_INTERFACENAME RSTIF, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_mode = "slave S_AXI" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 18, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN system_CLK100MHZ, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [17:0]s_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_mode = "slave S_AXI" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 12, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN system_CLK100MHZ, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [11:0]s_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWLEN" *) input [7:0]s_axi_awlen;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWSIZE" *) input [2:0]s_axi_awsize;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWBURST" *) input [1:0]s_axi_awburst;
@@ -3459,7 +3408,7 @@ module system_axi_bram_ctrl_1_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BRESP" *) output [1:0]s_axi_bresp;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BVALID" *) output s_axi_bvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BREADY" *) input s_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) input [17:0]s_axi_araddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) input [11:0]s_axi_araddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARLEN" *) input [7:0]s_axi_arlen;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARSIZE" *) input [2:0]s_axi_arsize;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARBURST" *) input [1:0]s_axi_arburst;
@@ -3473,16 +3422,16 @@ module system_axi_bram_ctrl_1_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RLAST" *) output s_axi_rlast;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) input s_axi_rready;
-  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA RST" *) (* x_interface_mode = "master BRAM_PORTA" *) (* x_interface_parameter = "XIL_INTERFACENAME BRAM_PORTA, MASTER_TYPE BRAM_CTRL, MEM_SIZE 262144, MEM_WIDTH 32, MEM_ECC NONE, READ_WRITE_MODE READ_WRITE, READ_LATENCY 1" *) output bram_rst_a;
+  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA RST" *) (* x_interface_mode = "master BRAM_PORTA" *) (* x_interface_parameter = "XIL_INTERFACENAME BRAM_PORTA, MASTER_TYPE BRAM_CTRL, MEM_SIZE 4096, MEM_WIDTH 32, MEM_ECC NONE, READ_WRITE_MODE READ_WRITE, READ_LATENCY 1" *) output bram_rst_a;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK" *) output bram_clk_a;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA EN" *) output bram_en_a;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA WE" *) output [3:0]bram_we_a;
-  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *) output [17:0]bram_addr_a;
+  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *) output [11:0]bram_addr_a;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN" *) output [31:0]bram_wrdata_a;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT" *) input [31:0]bram_rddata_a;
 
   wire \<const0> ;
-  wire [17:2]\^bram_addr_a ;
+  wire [11:2]\^bram_addr_a ;
   wire bram_clk_a;
   wire bram_en_a;
   wire [31:0]bram_rddata_a;
@@ -3490,13 +3439,13 @@ module system_axi_bram_ctrl_1_0
   wire [3:0]bram_we_a;
   wire [31:0]bram_wrdata_a;
   wire s_axi_aclk;
-  wire [17:0]s_axi_araddr;
+  wire [11:0]s_axi_araddr;
   wire [1:0]s_axi_arburst;
   wire s_axi_aresetn;
   wire [7:0]s_axi_arlen;
   wire s_axi_arready;
   wire s_axi_arvalid;
-  wire [17:0]s_axi_awaddr;
+  wire [11:0]s_axi_awaddr;
   wire [1:0]s_axi_awburst;
   wire [7:0]s_axi_awlen;
   wire s_axi_awready;
@@ -3523,7 +3472,7 @@ module system_axi_bram_ctrl_1_0
   wire NLW_U0_s_axi_ctrl_rvalid_UNCONNECTED;
   wire NLW_U0_s_axi_ctrl_wready_UNCONNECTED;
   wire [1:0]NLW_U0_bram_addr_a_UNCONNECTED;
-  wire [17:0]NLW_U0_bram_addr_b_UNCONNECTED;
+  wire [11:0]NLW_U0_bram_addr_b_UNCONNECTED;
   wire [3:0]NLW_U0_bram_we_b_UNCONNECTED;
   wire [31:0]NLW_U0_bram_wrdata_b_UNCONNECTED;
   wire [0:0]NLW_U0_s_axi_bid_UNCONNECTED;
@@ -3534,7 +3483,7 @@ module system_axi_bram_ctrl_1_0
   wire [0:0]NLW_U0_s_axi_rid_UNCONNECTED;
   wire [1:0]NLW_U0_s_axi_rresp_UNCONNECTED;
 
-  assign bram_addr_a[17:2] = \^bram_addr_a [17:2];
+  assign bram_addr_a[11:2] = \^bram_addr_a [11:2];
   assign bram_addr_a[1] = \<const0> ;
   assign bram_addr_a[0] = \<const0> ;
   assign s_axi_bresp[1] = \<const0> ;
@@ -3543,18 +3492,18 @@ module system_axi_bram_ctrl_1_0
   assign s_axi_rresp[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  (* C_BRAM_ADDR_WIDTH = "16" *) 
+  (* C_BRAM_ADDR_WIDTH = "10" *) 
   (* C_BRAM_INST_MODE = "EXTERNAL" *) 
   (* C_ECC = "0" *) 
   (* C_ECC_ONOFF_RESET_VALUE = "0" *) 
   (* C_ECC_TYPE = "0" *) 
   (* C_FAMILY = "artix7" *) 
   (* C_FAULT_INJECT = "0" *) 
-  (* C_MEMORY_DEPTH = "65536" *) 
+  (* C_MEMORY_DEPTH = "1024" *) 
   (* C_RD_CMD_OPTIMIZATION = "0" *) 
   (* C_READ_LATENCY = "1" *) 
   (* C_SINGLE_PORT_BRAM = "1" *) 
-  (* C_S_AXI_ADDR_WIDTH = "18" *) 
+  (* C_S_AXI_ADDR_WIDTH = "12" *) 
   (* C_S_AXI_CTRL_ADDR_WIDTH = "32" *) 
   (* C_S_AXI_CTRL_DATA_WIDTH = "32" *) 
   (* C_S_AXI_DATA_WIDTH = "32" *) 
@@ -3564,7 +3513,7 @@ module system_axi_bram_ctrl_1_0
   (* downgradeipidentifiedwarnings = "yes" *) 
   system_axi_bram_ctrl_1_0_axi_bram_ctrl U0
        (.bram_addr_a({\^bram_addr_a ,NLW_U0_bram_addr_a_UNCONNECTED[1:0]}),
-        .bram_addr_b(NLW_U0_bram_addr_b_UNCONNECTED[17:0]),
+        .bram_addr_b(NLW_U0_bram_addr_b_UNCONNECTED[11:0]),
         .bram_clk_a(bram_clk_a),
         .bram_clk_b(NLW_U0_bram_clk_b_UNCONNECTED),
         .bram_en_a(bram_en_a),
@@ -3580,7 +3529,7 @@ module system_axi_bram_ctrl_1_0
         .ecc_interrupt(NLW_U0_ecc_interrupt_UNCONNECTED),
         .ecc_ue(NLW_U0_ecc_ue_UNCONNECTED),
         .s_axi_aclk(s_axi_aclk),
-        .s_axi_araddr({s_axi_araddr[17:2],1'b0,1'b0}),
+        .s_axi_araddr({s_axi_araddr[11:2],1'b0,1'b0}),
         .s_axi_arburst(s_axi_arburst),
         .s_axi_arcache({1'b0,1'b0,1'b0,1'b0}),
         .s_axi_aresetn(s_axi_aresetn),
@@ -3591,7 +3540,7 @@ module system_axi_bram_ctrl_1_0
         .s_axi_arready(s_axi_arready),
         .s_axi_arsize({1'b0,1'b0,1'b0}),
         .s_axi_arvalid(s_axi_arvalid),
-        .s_axi_awaddr({s_axi_awaddr[17:2],1'b0,1'b0}),
+        .s_axi_awaddr({s_axi_awaddr[11:2],1'b0,1'b0}),
         .s_axi_awburst(s_axi_awburst),
         .s_axi_awcache({1'b0,1'b0,1'b0,1'b0}),
         .s_axi_awid(1'b0),
@@ -3641,10 +3590,10 @@ module system_axi_bram_ctrl_1_0_wr_chnl
     axi_bvalid_int_reg_0,
     curr_fixed_burst_reg,
     SR,
-    s_axi_wvalid_0,
     AW2Arb_Active_Clr,
     curr_wrap_burst_reg_reg_0,
     \ADDR_SNG_PORT.bram_addr_int_reg[3] ,
+    s_axi_wvalid_0,
     s_axi_awaddr_2_sp_1,
     D,
     s_axi_awvalid_0,
@@ -3656,12 +3605,12 @@ module system_axi_bram_ctrl_1_0_wr_chnl
     s_axi_wdata,
     s_axi_wlast,
     s_axi_wvalid,
-    E,
     s_axi_aresetn,
+    E,
     s_axi_bready,
     s_axi_awaddr,
-    Q,
     s_axi_awvalid,
+    Q,
     s_axi_awlen,
     BRAM_En_B_i,
     s_axi_awburst,
@@ -3672,12 +3621,12 @@ module system_axi_bram_ctrl_1_0_wr_chnl
   output axi_bvalid_int_reg_0;
   output curr_fixed_burst_reg;
   output [0:0]SR;
-  output s_axi_wvalid_0;
   output AW2Arb_Active_Clr;
   output curr_wrap_burst_reg_reg_0;
   output \ADDR_SNG_PORT.bram_addr_int_reg[3] ;
+  output s_axi_wvalid_0;
   output s_axi_awaddr_2_sp_1;
-  output [14:0]D;
+  output [8:0]D;
   output s_axi_awvalid_0;
   output bram_en_a;
   output [3:0]\GEN_WR_NO_ECC.bram_we_int_reg[3]_0 ;
@@ -3687,12 +3636,12 @@ module system_axi_bram_ctrl_1_0_wr_chnl
   input [31:0]s_axi_wdata;
   input s_axi_wlast;
   input s_axi_wvalid;
-  input [0:0]E;
   input s_axi_aresetn;
+  input [0:0]E;
   input s_axi_bready;
-  input [15:0]s_axi_awaddr;
-  input [3:0]Q;
+  input [9:0]s_axi_awaddr;
   input s_axi_awvalid;
+  input [3:0]Q;
   input [3:0]s_axi_awlen;
   input BRAM_En_B_i;
   input [1:0]s_axi_awburst;
@@ -3704,7 +3653,7 @@ module system_axi_bram_ctrl_1_0_wr_chnl
   wire Arb2AW_Active;
   wire BRAM_En_A_i;
   wire BRAM_En_B_i;
-  wire [14:0]D;
+  wire [8:0]D;
   wire [0:0]E;
   wire \FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs[0]_i_1_n_0 ;
   wire \FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs[1]_i_1_n_0 ;
@@ -3716,8 +3665,8 @@ module system_axi_bram_ctrl_1_0_wr_chnl
   wire \FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg_n_0_[1] ;
   wire \GEN_WR_NO_ECC.bram_we_int[3]_i_1_n_0 ;
   wire [3:0]\GEN_WR_NO_ECC.bram_we_int_reg[3]_0 ;
-  wire I_WRAP_BRST_n_19;
-  wire I_WRAP_BRST_n_20;
+  wire I_WRAP_BRST_n_13;
+  wire I_WRAP_BRST_n_14;
   wire [3:0]Q;
   wire [0:0]SR;
   wire aw_active_d1;
@@ -3743,7 +3692,7 @@ module system_axi_bram_ctrl_1_0_wr_chnl
   wire curr_wrap_burst_reg_reg_0;
   wire s_axi_aclk;
   wire s_axi_aresetn;
-  wire [15:0]s_axi_awaddr;
+  wire [9:0]s_axi_awaddr;
   wire s_axi_awaddr_2_sn_1;
   wire [1:0]s_axi_awburst;
   wire [3:0]s_axi_awlen;
@@ -3760,10 +3709,10 @@ module system_axi_bram_ctrl_1_0_wr_chnl
   wire wrdata_reg_ld;
 
   assign s_axi_awaddr_2_sp_1 = s_axi_awaddr_2_sn_1;
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT2 #(
     .INIT(4'h8)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_4 
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_5 
        (.I0(s_axi_wvalid),
         .I1(\FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg_n_0_[1] ),
         .O(s_axi_wvalid_0));
@@ -3787,7 +3736,7 @@ module system_axi_bram_ctrl_1_0_wr_chnl
         .I4(\FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs[1]_i_2_n_0 ),
         .I5(\FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg_n_0_[1] ),
         .O(\FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT5 #(
     .INIT(32'hFFFFEAAA)) 
     \FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs[1]_i_2 
@@ -3815,7 +3764,7 @@ module system_axi_bram_ctrl_1_0_wr_chnl
         .I2(axi_wr_burst),
         .I3(\FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg_n_0_[0] ),
         .O(\FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT4 #(
     .INIT(16'hE000)) 
     \FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs[2]_i_3 
@@ -3869,7 +3818,7 @@ module system_axi_bram_ctrl_1_0_wr_chnl
         .D(axi_wdata_full_cmb),
         .Q(axi_wdata_full_reg),
         .R(\save_init_bram_addr_ld_reg[3] ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT5 #(
     .INIT(32'hEAEAC000)) 
     \GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.bram_en_int_i_1 
@@ -4210,8 +4159,9 @@ module system_axi_bram_ctrl_1_0_wr_chnl
         .Q(\GEN_WR_NO_ECC.bram_we_int_reg[3]_0 [3]),
         .R(\GEN_WR_NO_ECC.bram_we_int[3]_i_1_n_0 ));
   system_axi_bram_ctrl_1_0_wrap_brst I_WRAP_BRST
-       (.\ADDR_SNG_PORT.bram_addr_int_reg[17] (s_axi_wvalid_0),
-        .\ADDR_SNG_PORT.bram_addr_int_reg[17]_0 (AW2Arb_Active_Clr),
+       (.\ADDR_SNG_PORT.bram_addr_int_reg[11] (\FSM_onehot_GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg_n_0_[1] ),
+        .\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 (AW2Arb_Active_Clr),
+        .\ADDR_SNG_PORT.bram_addr_int_reg[11]_1 (s_axi_wvalid_0),
         .\ADDR_SNG_PORT.bram_addr_int_reg[3] (\ADDR_SNG_PORT.bram_addr_int_reg[3] ),
         .Arb2AW_Active(Arb2AW_Active),
         .D(D),
@@ -4219,11 +4169,11 @@ module system_axi_bram_ctrl_1_0_wr_chnl
         .Q(Q),
         .SR(SR),
         .curr_fixed_burst_reg(curr_fixed_burst_reg),
-        .curr_fixed_burst_reg_reg(I_WRAP_BRST_n_20),
+        .curr_fixed_burst_reg_reg(I_WRAP_BRST_n_14),
         .curr_fixed_burst_reg_reg_0(aw_active_d1),
         .curr_wrap_burst_reg(curr_wrap_burst_reg),
         .curr_wrap_burst_reg_reg(curr_wrap_burst_reg_reg_0),
-        .curr_wrap_burst_reg_reg_0(I_WRAP_BRST_n_19),
+        .curr_wrap_burst_reg_reg_0(I_WRAP_BRST_n_13),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_aresetn(s_axi_aresetn),
         .s_axi_awaddr(s_axi_awaddr),
@@ -4231,6 +4181,7 @@ module system_axi_bram_ctrl_1_0_wr_chnl
         .s_axi_awburst(s_axi_awburst),
         .s_axi_awlen(s_axi_awlen),
         .s_axi_awvalid(s_axi_awvalid),
+        .s_axi_wvalid(s_axi_wvalid),
         .\save_init_bram_addr_ld_reg[3]_0 (\save_init_bram_addr_ld_reg[3] ));
   FDRE #(
     .INIT(1'b0)) 
@@ -4375,7 +4326,7 @@ module system_axi_bram_ctrl_1_0_wr_chnl
     curr_fixed_burst_reg_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(I_WRAP_BRST_n_20),
+        .D(I_WRAP_BRST_n_14),
         .Q(curr_fixed_burst_reg),
         .R(1'b0));
   FDRE #(
@@ -4383,7 +4334,7 @@ module system_axi_bram_ctrl_1_0_wr_chnl
     curr_wrap_burst_reg_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(I_WRAP_BRST_n_19),
+        .D(I_WRAP_BRST_n_13),
         .Q(curr_wrap_burst_reg),
         .R(1'b0));
 endmodule
@@ -4397,11 +4348,13 @@ module system_axi_bram_ctrl_1_0_wrap_brst
     curr_wrap_burst_reg_reg_0,
     curr_fixed_burst_reg_reg,
     curr_fixed_burst_reg,
-    \ADDR_SNG_PORT.bram_addr_int_reg[17] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[17]_0 ,
-    E,
+    s_axi_wvalid,
+    \ADDR_SNG_PORT.bram_addr_int_reg[11] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ,
     s_axi_aresetn,
+    E,
     curr_wrap_burst_reg,
+    \ADDR_SNG_PORT.bram_addr_int_reg[11]_1 ,
     s_axi_awaddr,
     curr_fixed_burst_reg_reg_0,
     Arb2AW_Active,
@@ -4415,16 +4368,18 @@ module system_axi_bram_ctrl_1_0_wrap_brst
   output curr_wrap_burst_reg_reg;
   output \ADDR_SNG_PORT.bram_addr_int_reg[3] ;
   output s_axi_awaddr_2_sp_1;
-  output [14:0]D;
+  output [8:0]D;
   output curr_wrap_burst_reg_reg_0;
   output curr_fixed_burst_reg_reg;
   input curr_fixed_burst_reg;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[17] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[17]_0 ;
-  input [0:0]E;
+  input s_axi_wvalid;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[11] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ;
   input s_axi_aresetn;
+  input [0:0]E;
   input curr_wrap_burst_reg;
-  input [15:0]s_axi_awaddr;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[11]_1 ;
+  input [9:0]s_axi_awaddr;
   input curr_fixed_burst_reg_reg_0;
   input Arb2AW_Active;
   input [3:0]Q;
@@ -4434,14 +4389,14 @@ module system_axi_bram_ctrl_1_0_wrap_brst
   input \save_init_bram_addr_ld_reg[3]_0 ;
   input s_axi_aclk;
 
-  wire \ADDR_SNG_PORT.bram_addr_int[17]_i_10_n_0 ;
-  wire \ADDR_SNG_PORT.bram_addr_int[17]_i_11_n_0 ;
-  wire \ADDR_SNG_PORT.bram_addr_int[17]_i_5_n_0 ;
-  wire \ADDR_SNG_PORT.bram_addr_int_reg[17] ;
-  wire \ADDR_SNG_PORT.bram_addr_int_reg[17]_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int[11]_i_10_n_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int[11]_i_9_n_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int_reg[11] ;
+  wire \ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int_reg[11]_1 ;
   wire \ADDR_SNG_PORT.bram_addr_int_reg[3] ;
   wire Arb2AW_Active;
-  wire [14:0]D;
+  wire [8:0]D;
   wire [0:0]E;
   wire [3:0]Q;
   wire [0:0]SR;
@@ -4451,75 +4406,66 @@ module system_axi_bram_ctrl_1_0_wrap_brst
   wire curr_wrap_burst_reg;
   wire curr_wrap_burst_reg_reg;
   wire curr_wrap_burst_reg_reg_0;
-  wire [15:1]data0;
+  wire [9:1]data0;
   wire s_axi_aclk;
   wire s_axi_aresetn;
-  wire [15:0]s_axi_awaddr;
+  wire [9:0]s_axi_awaddr;
   wire s_axi_awaddr_2_sn_1;
   wire [1:0]s_axi_awburst;
   wire [3:0]s_axi_awlen;
   wire s_axi_awvalid;
-  wire \save_init_bram_addr_ld[17]_i_3_n_0 ;
+  wire s_axi_wvalid;
+  wire \save_init_bram_addr_ld[11]_i_3_n_0 ;
   wire \save_init_bram_addr_ld_reg[3]_0 ;
   wire [2:0]wrap_burst_total;
-  wire \wrap_burst_total[0]_i_1__0_n_0 ;
-  wire \wrap_burst_total[1]_i_1__0_n_0 ;
+  wire \wrap_burst_total[0]_i_1_n_0 ;
+  wire \wrap_burst_total[1]_i_1_n_0 ;
   wire \wrap_burst_total[2]_i_1_n_0 ;
 
   assign s_axi_awaddr_2_sp_1 = s_axi_awaddr_2_sn_1;
   LUT6 #(
-    .INIT(64'h00B00030FFFFFFFF)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_1 
+    .INIT(64'hBF000000FFFFFFFF)) 
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_1 
        (.I0(curr_fixed_burst_reg),
-        .I1(\ADDR_SNG_PORT.bram_addr_int_reg[17] ),
-        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[17]_0 ),
-        .I3(E),
-        .I4(\ADDR_SNG_PORT.bram_addr_int[17]_i_5_n_0 ),
+        .I1(s_axi_wvalid),
+        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[11] ),
+        .I3(\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ),
+        .I4(curr_wrap_burst_reg_reg),
         .I5(s_axi_aresetn),
         .O(SR));
   LUT6 #(
     .INIT(64'h000000008FA00000)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_10 
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_10 
        (.I0(Q[1]),
         .I1(Q[2]),
         .I2(wrap_burst_total[1]),
         .I3(wrap_burst_total[0]),
         .I4(Q[0]),
         .I5(wrap_burst_total[2]),
-        .O(\ADDR_SNG_PORT.bram_addr_int[17]_i_10_n_0 ));
-  LUT3 #(
-    .INIT(8'h04)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_11 
-       (.I0(wrap_burst_total[1]),
-        .I1(wrap_burst_total[2]),
-        .I2(wrap_burst_total[0]),
-        .O(\ADDR_SNG_PORT.bram_addr_int[17]_i_11_n_0 ));
-  LUT6 #(
-    .INIT(64'h55555555FFFFFDFF)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_5 
-       (.I0(curr_wrap_burst_reg),
-        .I1(\ADDR_SNG_PORT.bram_addr_int_reg[3] ),
-        .I2(wrap_burst_total[0]),
-        .I3(wrap_burst_total[2]),
-        .I4(wrap_burst_total[1]),
-        .I5(\ADDR_SNG_PORT.bram_addr_int[17]_i_10_n_0 ),
-        .O(\ADDR_SNG_PORT.bram_addr_int[17]_i_5_n_0 ));
+        .O(\ADDR_SNG_PORT.bram_addr_int[11]_i_10_n_0 ));
   LUT6 #(
     .INIT(64'h1111515555555555)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_6 
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_4 
        (.I0(E),
         .I1(curr_wrap_burst_reg),
         .I2(\ADDR_SNG_PORT.bram_addr_int_reg[3] ),
-        .I3(\ADDR_SNG_PORT.bram_addr_int[17]_i_11_n_0 ),
-        .I4(\ADDR_SNG_PORT.bram_addr_int[17]_i_10_n_0 ),
-        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[17] ),
+        .I3(\ADDR_SNG_PORT.bram_addr_int[11]_i_9_n_0 ),
+        .I4(\ADDR_SNG_PORT.bram_addr_int[11]_i_10_n_0 ),
+        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[11]_1 ),
         .O(curr_wrap_burst_reg_reg));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_9 
+       (.I0(wrap_burst_total[1]),
+        .I1(wrap_burst_total[2]),
+        .I2(wrap_burst_total[0]),
+        .O(\ADDR_SNG_PORT.bram_addr_int[11]_i_9_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT2 #(
     .INIT(4'h8)) 
-    \ADDR_SNG_PORT.bram_addr_int[2]_i_2 
+    \ADDR_SNG_PORT.bram_addr_int[2]_i_3 
        (.I0(s_axi_awaddr[0]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
+        .I1(\save_init_bram_addr_ld[11]_i_3_n_0 ),
         .O(s_axi_awaddr_2_sn_1));
   LUT4 #(
     .INIT(16'h7FFF)) 
@@ -4549,84 +4495,36 @@ module system_axi_bram_ctrl_1_0_wrap_brst
         .I4(s_axi_awburst[1]),
         .I5(SR),
         .O(curr_wrap_burst_reg_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \save_init_bram_addr_ld[10]_i_1 
        (.I0(s_axi_awaddr[8]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
+        .I1(\save_init_bram_addr_ld[11]_i_3_n_0 ),
         .I2(data0[8]),
         .O(D[7]));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \save_init_bram_addr_ld[11]_i_1 
+    \save_init_bram_addr_ld[11]_i_2 
        (.I0(s_axi_awaddr[9]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
+        .I1(\save_init_bram_addr_ld[11]_i_3_n_0 ),
         .I2(data0[9]),
         .O(D[8]));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \save_init_bram_addr_ld[12]_i_1 
-       (.I0(s_axi_awaddr[10]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
-        .I2(data0[10]),
-        .O(D[9]));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \save_init_bram_addr_ld[13]_i_1 
-       (.I0(s_axi_awaddr[11]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
-        .I2(data0[11]),
-        .O(D[10]));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \save_init_bram_addr_ld[14]_i_1 
-       (.I0(s_axi_awaddr[12]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
-        .I2(data0[12]),
-        .O(D[11]));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \save_init_bram_addr_ld[15]_i_1 
-       (.I0(s_axi_awaddr[13]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
-        .I2(data0[13]),
-        .O(D[12]));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \save_init_bram_addr_ld[16]_i_1 
-       (.I0(s_axi_awaddr[14]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
-        .I2(data0[14]),
-        .O(D[13]));
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \save_init_bram_addr_ld[17]_i_2 
-       (.I0(s_axi_awaddr[15]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
-        .I2(data0[15]),
-        .O(D[14]));
   LUT6 #(
     .INIT(64'h4F4F444FFFFFFFFF)) 
-    \save_init_bram_addr_ld[17]_i_3 
+    \save_init_bram_addr_ld[11]_i_3 
        (.I0(curr_fixed_burst_reg_reg_0),
         .I1(Arb2AW_Active),
-        .I2(\ADDR_SNG_PORT.bram_addr_int[17]_i_10_n_0 ),
-        .I3(\ADDR_SNG_PORT.bram_addr_int[17]_i_11_n_0 ),
+        .I2(\ADDR_SNG_PORT.bram_addr_int[11]_i_10_n_0 ),
+        .I3(\ADDR_SNG_PORT.bram_addr_int[11]_i_9_n_0 ),
         .I4(\ADDR_SNG_PORT.bram_addr_int_reg[3] ),
         .I5(curr_wrap_burst_reg),
-        .O(\save_init_bram_addr_ld[17]_i_3_n_0 ));
+        .O(\save_init_bram_addr_ld[11]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hB8B88888B888B8B8)) 
     \save_init_bram_addr_ld[3]_i_1 
        (.I0(s_axi_awaddr[1]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
+        .I1(\save_init_bram_addr_ld[11]_i_3_n_0 ),
         .I2(data0[1]),
         .I3(wrap_burst_total[0]),
         .I4(wrap_burst_total[2]),
@@ -4636,7 +4534,7 @@ module system_axi_bram_ctrl_1_0_wrap_brst
     .INIT(64'hB8B8B88888B8B8B8)) 
     \save_init_bram_addr_ld[4]_i_1 
        (.I0(s_axi_awaddr[2]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
+        .I1(\save_init_bram_addr_ld[11]_i_3_n_0 ),
         .I2(data0[2]),
         .I3(wrap_burst_total[0]),
         .I4(wrap_burst_total[1]),
@@ -4646,42 +4544,42 @@ module system_axi_bram_ctrl_1_0_wrap_brst
     .INIT(64'hB8B8B8B8B888B8B8)) 
     \save_init_bram_addr_ld[5]_i_1 
        (.I0(s_axi_awaddr[3]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
+        .I1(\save_init_bram_addr_ld[11]_i_3_n_0 ),
         .I2(data0[3]),
         .I3(wrap_burst_total[0]),
         .I4(wrap_burst_total[2]),
         .I5(wrap_burst_total[1]),
         .O(D[2]));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \save_init_bram_addr_ld[6]_i_1 
        (.I0(s_axi_awaddr[4]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
+        .I1(\save_init_bram_addr_ld[11]_i_3_n_0 ),
         .I2(data0[4]),
         .O(D[3]));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \save_init_bram_addr_ld[7]_i_1 
        (.I0(s_axi_awaddr[5]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
+        .I1(\save_init_bram_addr_ld[11]_i_3_n_0 ),
         .I2(data0[5]),
         .O(D[4]));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \save_init_bram_addr_ld[8]_i_1 
        (.I0(s_axi_awaddr[6]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
+        .I1(\save_init_bram_addr_ld[11]_i_3_n_0 ),
         .I2(data0[6]),
         .O(D[5]));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \save_init_bram_addr_ld[9]_i_1 
        (.I0(s_axi_awaddr[7]),
-        .I1(\save_init_bram_addr_ld[17]_i_3_n_0 ),
+        .I1(\save_init_bram_addr_ld[11]_i_3_n_0 ),
         .I2(data0[7]),
         .O(D[6]));
   FDRE #(
@@ -4699,54 +4597,6 @@ module system_axi_bram_ctrl_1_0_wrap_brst
         .CE(E),
         .D(D[8]),
         .Q(data0[9]),
-        .R(\save_init_bram_addr_ld_reg[3]_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \save_init_bram_addr_ld_reg[12] 
-       (.C(s_axi_aclk),
-        .CE(E),
-        .D(D[9]),
-        .Q(data0[10]),
-        .R(\save_init_bram_addr_ld_reg[3]_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \save_init_bram_addr_ld_reg[13] 
-       (.C(s_axi_aclk),
-        .CE(E),
-        .D(D[10]),
-        .Q(data0[11]),
-        .R(\save_init_bram_addr_ld_reg[3]_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \save_init_bram_addr_ld_reg[14] 
-       (.C(s_axi_aclk),
-        .CE(E),
-        .D(D[11]),
-        .Q(data0[12]),
-        .R(\save_init_bram_addr_ld_reg[3]_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \save_init_bram_addr_ld_reg[15] 
-       (.C(s_axi_aclk),
-        .CE(E),
-        .D(D[12]),
-        .Q(data0[13]),
-        .R(\save_init_bram_addr_ld_reg[3]_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \save_init_bram_addr_ld_reg[16] 
-       (.C(s_axi_aclk),
-        .CE(E),
-        .D(D[13]),
-        .Q(data0[14]),
-        .R(\save_init_bram_addr_ld_reg[3]_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \save_init_bram_addr_ld_reg[17] 
-       (.C(s_axi_aclk),
-        .CE(E),
-        .D(D[14]),
-        .Q(data0[15]),
         .R(\save_init_bram_addr_ld_reg[3]_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -4804,25 +4654,25 @@ module system_axi_bram_ctrl_1_0_wrap_brst
         .D(D[6]),
         .Q(data0[7]),
         .R(\save_init_bram_addr_ld_reg[3]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT5 #(
     .INIT(32'h00900000)) 
-    \wrap_burst_total[0]_i_1__0 
+    \wrap_burst_total[0]_i_1 
        (.I0(s_axi_awlen[1]),
         .I1(s_axi_awlen[2]),
         .I2(s_axi_awvalid),
         .I3(s_axi_awlen[3]),
         .I4(s_axi_awlen[0]),
-        .O(\wrap_burst_total[0]_i_1__0_n_0 ));
+        .O(\wrap_burst_total[0]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h0080)) 
-    \wrap_burst_total[1]_i_1__0 
+    \wrap_burst_total[1]_i_1 
        (.I0(s_axi_awlen[1]),
         .I1(s_axi_awvalid),
         .I2(s_axi_awlen[0]),
         .I3(s_axi_awlen[3]),
-        .O(\wrap_burst_total[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+        .O(\wrap_burst_total[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     \wrap_burst_total[2]_i_1 
@@ -4837,7 +4687,7 @@ module system_axi_bram_ctrl_1_0_wrap_brst
     \wrap_burst_total_reg[0] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\wrap_burst_total[0]_i_1__0_n_0 ),
+        .D(\wrap_burst_total[0]_i_1_n_0 ),
         .Q(wrap_burst_total[0]),
         .R(\save_init_bram_addr_ld_reg[3]_0 ));
   FDRE #(
@@ -4845,7 +4695,7 @@ module system_axi_bram_ctrl_1_0_wrap_brst
     \wrap_burst_total_reg[1] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\wrap_burst_total[1]_i_1__0_n_0 ),
+        .D(\wrap_burst_total[1]_i_1_n_0 ),
         .Q(wrap_burst_total[1]),
         .R(\save_init_bram_addr_ld_reg[3]_0 ));
   FDRE #(
@@ -4860,33 +4710,33 @@ endmodule
 
 (* ORIG_REF_NAME = "wrap_brst" *) 
 module system_axi_bram_ctrl_1_0_wrap_brst_0
-   (E,
+   (D,
+    E,
     \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ,
-    D,
     \GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg ,
     SR,
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_8_0 ,
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_6_0 ,
     axi_rd_burst,
     Q,
-    curr_fixed_burst_reg,
     \ADDR_SNG_PORT.bram_addr_int_reg[11] ,
-    Arb2AR_Active,
-    curr_fixed_burst_reg_0,
-    \ADDR_SNG_PORT.bram_addr_int_reg[17] ,
-    BRAM_Addr_A,
-    \ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[10] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[9] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[8] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[7] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[6] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[5] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[4] ,
     s_axi_araddr,
+    Arb2AR_Active,
     \ADDR_SNG_PORT.bram_addr_int_reg[2] ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[17]_0 ,
-    \ADDR_SNG_PORT.bram_addr_int_reg[17]_1 ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[4] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[5] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[6] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[7] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[8] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[9] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[10] ,
+    \ADDR_SNG_PORT.bram_addr_int_reg[11]_1 ,
+    curr_fixed_burst_reg,
+    \ADDR_SNG_PORT.bram_addr_int_reg[2]_0 ,
+    curr_fixed_burst_reg_0,
+    \ADDR_SNG_PORT.bram_addr_int_reg[2]_1 ,
     curr_wrap_burst_reg,
+    \ADDR_SNG_PORT.bram_addr_int_reg[2]_2 ,
     \GEN_NO_RD_CMD_OPT.bram_en_int_i_6 ,
     s_axi_rready,
     brst_zero,
@@ -4895,33 +4745,33 @@ module system_axi_bram_ctrl_1_0_wrap_brst_0
     s_axi_arlen,
     ar_active_re,
     s_axi_aclk);
-  output [1:0]E;
+  output [9:0]D;
+  output [0:0]E;
   output \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ;
-  output [15:0]D;
   output \GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg ;
   output [0:0]SR;
-  input \ADDR_SNG_PORT.bram_addr_int[17]_i_8_0 ;
+  input \ADDR_SNG_PORT.bram_addr_int[11]_i_6_0 ;
   input axi_rd_burst;
   input [3:0]Q;
-  input curr_fixed_burst_reg;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[11] ;
+  input [9:0]\ADDR_SNG_PORT.bram_addr_int_reg[11] ;
+  input [9:0]s_axi_araddr;
   input Arb2AR_Active;
-  input curr_fixed_burst_reg_0;
-  input [14:0]\ADDR_SNG_PORT.bram_addr_int_reg[17] ;
-  input [9:0]BRAM_Addr_A;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[10] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[9] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[8] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[7] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[6] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[5] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[4] ;
-  input [15:0]s_axi_araddr;
   input \ADDR_SNG_PORT.bram_addr_int_reg[2] ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[17]_0 ;
-  input \ADDR_SNG_PORT.bram_addr_int_reg[17]_1 ;
+  input [8:0]\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[4] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[5] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[6] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[7] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[8] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[9] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[10] ;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[11]_1 ;
+  input curr_fixed_burst_reg;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[2]_0 ;
+  input curr_fixed_burst_reg_0;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[2]_1 ;
   input curr_wrap_burst_reg;
+  input \ADDR_SNG_PORT.bram_addr_int_reg[2]_2 ;
   input \GEN_NO_RD_CMD_OPT.bram_en_int_i_6 ;
   input s_axi_rready;
   input brst_zero;
@@ -4931,20 +4781,21 @@ module system_axi_bram_ctrl_1_0_wrap_brst_0
   input ar_active_re;
   input s_axi_aclk;
 
-  wire \ADDR_SNG_PORT.bram_addr_int[17]_i_12_n_0 ;
-  wire \ADDR_SNG_PORT.bram_addr_int[17]_i_13_n_0 ;
-  wire \ADDR_SNG_PORT.bram_addr_int[17]_i_14_n_0 ;
-  wire \ADDR_SNG_PORT.bram_addr_int[17]_i_16_n_0 ;
-  wire \ADDR_SNG_PORT.bram_addr_int[17]_i_7_n_0 ;
-  wire \ADDR_SNG_PORT.bram_addr_int[17]_i_8_0 ;
-  wire \ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int[11]_i_11_n_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int[11]_i_12_n_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int[11]_i_14_n_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int[11]_i_6_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int[11]_i_7_n_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int[2]_i_2_n_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int[2]_i_4_n_0 ;
   wire \ADDR_SNG_PORT.bram_addr_int_reg[10] ;
-  wire \ADDR_SNG_PORT.bram_addr_int_reg[11] ;
-  wire \ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ;
-  wire [14:0]\ADDR_SNG_PORT.bram_addr_int_reg[17] ;
-  wire \ADDR_SNG_PORT.bram_addr_int_reg[17]_0 ;
-  wire \ADDR_SNG_PORT.bram_addr_int_reg[17]_1 ;
+  wire [9:0]\ADDR_SNG_PORT.bram_addr_int_reg[11] ;
+  wire [8:0]\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int_reg[11]_1 ;
   wire \ADDR_SNG_PORT.bram_addr_int_reg[2] ;
+  wire \ADDR_SNG_PORT.bram_addr_int_reg[2]_0 ;
+  wire \ADDR_SNG_PORT.bram_addr_int_reg[2]_1 ;
+  wire \ADDR_SNG_PORT.bram_addr_int_reg[2]_2 ;
   wire \ADDR_SNG_PORT.bram_addr_int_reg[4] ;
   wire \ADDR_SNG_PORT.bram_addr_int_reg[5] ;
   wire \ADDR_SNG_PORT.bram_addr_int_reg[6] ;
@@ -4952,14 +4803,13 @@ module system_axi_bram_ctrl_1_0_wrap_brst_0
   wire \ADDR_SNG_PORT.bram_addr_int_reg[8] ;
   wire \ADDR_SNG_PORT.bram_addr_int_reg[9] ;
   wire Arb2AR_Active;
-  wire [9:0]BRAM_Addr_A;
-  wire [15:0]D;
-  wire [1:0]E;
+  wire [9:0]D;
+  wire [0:0]E;
   wire \FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ;
   wire \GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg ;
   wire \GEN_NO_RD_CMD_OPT.bram_en_int_i_6 ;
   wire [3:0]Q;
-  wire [15:1]RdChnl_BRAM_Addr_Ld;
+  wire [9:1]RdChnl_BRAM_Addr_Ld;
   wire [0:0]SR;
   wire ar_active_re;
   wire axi_rd_burst;
@@ -4969,21 +4819,16 @@ module system_axi_bram_ctrl_1_0_wrap_brst_0
   wire curr_wrap_burst_reg;
   wire end_brst_rd;
   wire s_axi_aclk;
-  wire [15:0]s_axi_araddr;
+  wire [9:0]s_axi_araddr;
   wire s_axi_aresetn;
   wire [3:0]s_axi_arlen;
   wire s_axi_rready;
+  wire \save_init_bram_addr_ld[11]_i_3__0_n_0 ;
   wire \save_init_bram_addr_ld[3]_i_2_n_0 ;
   wire \save_init_bram_addr_ld[4]_i_2_n_0 ;
   wire \save_init_bram_addr_ld[5]_i_2_n_0 ;
   wire \save_init_bram_addr_ld_reg_n_0_[10] ;
   wire \save_init_bram_addr_ld_reg_n_0_[11] ;
-  wire \save_init_bram_addr_ld_reg_n_0_[12] ;
-  wire \save_init_bram_addr_ld_reg_n_0_[13] ;
-  wire \save_init_bram_addr_ld_reg_n_0_[14] ;
-  wire \save_init_bram_addr_ld_reg_n_0_[15] ;
-  wire \save_init_bram_addr_ld_reg_n_0_[16] ;
-  wire \save_init_bram_addr_ld_reg_n_0_[17] ;
   wire \save_init_bram_addr_ld_reg_n_0_[3] ;
   wire \save_init_bram_addr_ld_reg_n_0_[4] ;
   wire \save_init_bram_addr_ld_reg_n_0_[5] ;
@@ -4991,264 +4836,194 @@ module system_axi_bram_ctrl_1_0_wrap_brst_0
   wire \save_init_bram_addr_ld_reg_n_0_[7] ;
   wire \save_init_bram_addr_ld_reg_n_0_[8] ;
   wire \save_init_bram_addr_ld_reg_n_0_[9] ;
-  wire \wrap_burst_total[0]_i_1_n_0 ;
-  wire \wrap_burst_total[1]_i_1_n_0 ;
+  wire \wrap_burst_total[0]_i_1__0_n_0 ;
+  wire \wrap_burst_total[1]_i_1__0_n_0 ;
   wire \wrap_burst_total[2]_i_1__0_n_0 ;
   wire \wrap_burst_total_reg_n_0_[0] ;
   wire \wrap_burst_total_reg_n_0_[1] ;
   wire \wrap_burst_total_reg_n_0_[2] ;
 
   LUT6 #(
-    .INIT(64'hB800B8FFB8FFB800)) 
+    .INIT(64'h6F606F6F6F606060)) 
     \ADDR_SNG_PORT.bram_addr_int[10]_i_1 
-       (.I0(RdChnl_BRAM_Addr_Ld[8]),
-        .I1(Arb2AR_Active),
-        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[17] [7]),
-        .I3(E[1]),
-        .I4(BRAM_Addr_A[8]),
-        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[10] ),
+       (.I0(\ADDR_SNG_PORT.bram_addr_int_reg[11] [8]),
+        .I1(\ADDR_SNG_PORT.bram_addr_int_reg[10] ),
+        .I2(\ADDR_SNG_PORT.bram_addr_int[11]_i_7_n_0 ),
+        .I3(RdChnl_BRAM_Addr_Ld[8]),
+        .I4(Arb2AR_Active),
+        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 [7]),
         .O(D[8]));
-  LUT6 #(
-    .INIT(64'hAABAFFBAAABAAABA)) 
-    \ADDR_SNG_PORT.bram_addr_int[11]_i_1 
-       (.I0(E[1]),
-        .I1(curr_fixed_burst_reg),
-        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[11] ),
-        .I3(Arb2AR_Active),
-        .I4(curr_fixed_burst_reg_0),
-        .I5(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
-        .O(E[0]));
-  LUT6 #(
-    .INIT(64'hB800B8FFB8FFB800)) 
-    \ADDR_SNG_PORT.bram_addr_int[11]_i_2 
-       (.I0(RdChnl_BRAM_Addr_Ld[9]),
-        .I1(Arb2AR_Active),
-        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[17] [8]),
-        .I3(E[1]),
-        .I4(BRAM_Addr_A[9]),
-        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 ),
-        .O(D[9]));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT5 #(
-    .INIT(32'hB8FFB800)) 
-    \ADDR_SNG_PORT.bram_addr_int[12]_i_1 
-       (.I0(s_axi_araddr[10]),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ),
-        .I2(\save_init_bram_addr_ld_reg_n_0_[12] ),
-        .I3(Arb2AR_Active),
-        .I4(\ADDR_SNG_PORT.bram_addr_int_reg[17] [9]),
-        .O(D[10]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT5 #(
-    .INIT(32'hB8FFB800)) 
-    \ADDR_SNG_PORT.bram_addr_int[13]_i_1 
-       (.I0(s_axi_araddr[11]),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ),
-        .I2(\save_init_bram_addr_ld_reg_n_0_[13] ),
-        .I3(Arb2AR_Active),
-        .I4(\ADDR_SNG_PORT.bram_addr_int_reg[17] [10]),
-        .O(D[11]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT5 #(
-    .INIT(32'hB8FFB800)) 
-    \ADDR_SNG_PORT.bram_addr_int[14]_i_1 
-       (.I0(s_axi_araddr[12]),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ),
-        .I2(\save_init_bram_addr_ld_reg_n_0_[14] ),
-        .I3(Arb2AR_Active),
-        .I4(\ADDR_SNG_PORT.bram_addr_int_reg[17] [11]),
-        .O(D[12]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT5 #(
-    .INIT(32'hB8FFB800)) 
-    \ADDR_SNG_PORT.bram_addr_int[15]_i_1 
-       (.I0(s_axi_araddr[13]),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ),
-        .I2(\save_init_bram_addr_ld_reg_n_0_[15] ),
-        .I3(Arb2AR_Active),
-        .I4(\ADDR_SNG_PORT.bram_addr_int_reg[17] [12]),
-        .O(D[13]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT5 #(
-    .INIT(32'hB8FFB800)) 
-    \ADDR_SNG_PORT.bram_addr_int[16]_i_1 
-       (.I0(s_axi_araddr[14]),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ),
-        .I2(\save_init_bram_addr_ld_reg_n_0_[16] ),
-        .I3(Arb2AR_Active),
-        .I4(\ADDR_SNG_PORT.bram_addr_int_reg[17] [13]),
-        .O(D[14]));
-  LUT6 #(
-    .INIT(64'h5040004010400040)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_12 
-       (.I0(\wrap_burst_total_reg_n_0_[2] ),
-        .I1(\wrap_burst_total_reg_n_0_[0] ),
-        .I2(BRAM_Addr_A[0]),
-        .I3(\wrap_burst_total_reg_n_0_[1] ),
-        .I4(BRAM_Addr_A[1]),
-        .I5(BRAM_Addr_A[2]),
-        .O(\ADDR_SNG_PORT.bram_addr_int[17]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'h0EFF)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_13 
-       (.I0(\ADDR_SNG_PORT.bram_addr_int[17]_i_8_0 ),
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_11 
+       (.I0(\ADDR_SNG_PORT.bram_addr_int[11]_i_6_0 ),
         .I1(axi_rd_burst),
         .I2(Q[1]),
         .I3(Q[0]),
-        .O(\ADDR_SNG_PORT.bram_addr_int[17]_i_13_n_0 ));
+        .O(\ADDR_SNG_PORT.bram_addr_int[11]_i_11_n_0 ));
   LUT3 #(
     .INIT(8'hEA)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_14 
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_12 
        (.I0(Q[3]),
         .I1(Q[2]),
         .I2(Q[0]),
-        .O(\ADDR_SNG_PORT.bram_addr_int[17]_i_14_n_0 ));
+        .O(\ADDR_SNG_PORT.bram_addr_int[11]_i_12_n_0 ));
   LUT4 #(
     .INIT(16'hFFF7)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_15 
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_13 
        (.I0(\GEN_NO_RD_CMD_OPT.bram_en_int_i_6 ),
         .I1(s_axi_rready),
         .I2(brst_zero),
         .I3(end_brst_rd),
         .O(\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'hAABA)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_16 
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_14 
        (.I0(Q[0]),
         .I1(Q[2]),
         .I2(Q[1]),
-        .I3(\ADDR_SNG_PORT.bram_addr_int[17]_i_8_0 ),
-        .O(\ADDR_SNG_PORT.bram_addr_int[17]_i_16_n_0 ));
+        .I3(\ADDR_SNG_PORT.bram_addr_int[11]_i_6_0 ),
+        .O(\ADDR_SNG_PORT.bram_addr_int[11]_i_14_n_0 ));
   LUT6 #(
-    .INIT(64'hFF5D5D5D5D5D5D5D)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_2 
-       (.I0(\ADDR_SNG_PORT.bram_addr_int_reg[17]_0 ),
-        .I1(Arb2AR_Active),
-        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[17]_1 ),
-        .I3(\ADDR_SNG_PORT.bram_addr_int[17]_i_7_n_0 ),
-        .I4(curr_wrap_burst_reg),
-        .I5(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
-        .O(E[1]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT5 #(
-    .INIT(32'hB8FFB800)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_3 
-       (.I0(s_axi_araddr[15]),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ),
-        .I2(\save_init_bram_addr_ld_reg_n_0_[17] ),
-        .I3(Arb2AR_Active),
-        .I4(\ADDR_SNG_PORT.bram_addr_int_reg[17] [14]),
-        .O(D[15]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT5 #(
-    .INIT(32'hAAAAAABA)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_7 
-       (.I0(\ADDR_SNG_PORT.bram_addr_int[17]_i_12_n_0 ),
-        .I1(\wrap_burst_total_reg_n_0_[1] ),
-        .I2(\wrap_burst_total_reg_n_0_[2] ),
-        .I3(\wrap_burst_total_reg_n_0_[0] ),
-        .I4(\ADDR_SNG_PORT.bram_addr_int_reg[6] ),
-        .O(\ADDR_SNG_PORT.bram_addr_int[17]_i_7_n_0 ));
+    .INIT(64'h04F40404FFFFFFFF)) 
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_2 
+       (.I0(curr_fixed_burst_reg),
+        .I1(\ADDR_SNG_PORT.bram_addr_int_reg[2]_0 ),
+        .I2(Arb2AR_Active),
+        .I3(curr_fixed_burst_reg_0),
+        .I4(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
+        .I5(\ADDR_SNG_PORT.bram_addr_int[11]_i_7_n_0 ),
+        .O(E));
+  LUT6 #(
+    .INIT(64'h6F606F6F6F606060)) 
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_3 
+       (.I0(\ADDR_SNG_PORT.bram_addr_int_reg[11] [9]),
+        .I1(\ADDR_SNG_PORT.bram_addr_int_reg[11]_1 ),
+        .I2(\ADDR_SNG_PORT.bram_addr_int[11]_i_7_n_0 ),
+        .I3(RdChnl_BRAM_Addr_Ld[9]),
+        .I4(Arb2AR_Active),
+        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 [8]),
+        .O(D[9]));
   LUT6 #(
     .INIT(64'h2222323200000200)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_8 
-       (.I0(\ADDR_SNG_PORT.bram_addr_int[17]_i_13_n_0 ),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_14_n_0 ),
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_6 
+       (.I0(\ADDR_SNG_PORT.bram_addr_int[11]_i_11_n_0 ),
+        .I1(\ADDR_SNG_PORT.bram_addr_int[11]_i_12_n_0 ),
         .I2(Q[1]),
         .I3(Q[2]),
         .I4(\GEN_NO_RD_CMD_OPT.axi_rvalid_int_reg ),
-        .I5(\ADDR_SNG_PORT.bram_addr_int[17]_i_16_n_0 ),
+        .I5(\ADDR_SNG_PORT.bram_addr_int[11]_i_14_n_0 ),
         .O(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ));
-  LUT5 #(
-    .INIT(32'h7777F7FF)) 
-    \ADDR_SNG_PORT.bram_addr_int[17]_i_9 
-       (.I0(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
-        .I1(curr_wrap_burst_reg),
-        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[6] ),
-        .I3(\save_init_bram_addr_ld[5]_i_2_n_0 ),
-        .I4(\ADDR_SNG_PORT.bram_addr_int[17]_i_12_n_0 ),
-        .O(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ));
   LUT6 #(
-    .INIT(64'h8F8000008F80FFFF)) 
+    .INIT(64'h2AAA2AAA00002AAA)) 
+    \ADDR_SNG_PORT.bram_addr_int[11]_i_7 
+       (.I0(\ADDR_SNG_PORT.bram_addr_int_reg[2]_1 ),
+        .I1(\save_init_bram_addr_ld[11]_i_3__0_n_0 ),
+        .I2(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
+        .I3(curr_wrap_burst_reg),
+        .I4(Arb2AR_Active),
+        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[2]_2 ),
+        .O(\ADDR_SNG_PORT.bram_addr_int[11]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h555555550CFF0C00)) 
     \ADDR_SNG_PORT.bram_addr_int[2]_i_1 
-       (.I0(s_axi_araddr[0]),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ),
-        .I2(Arb2AR_Active),
-        .I3(\ADDR_SNG_PORT.bram_addr_int_reg[2] ),
-        .I4(E[1]),
-        .I5(BRAM_Addr_A[0]),
+       (.I0(\ADDR_SNG_PORT.bram_addr_int_reg[11] [0]),
+        .I1(s_axi_araddr[0]),
+        .I2(\ADDR_SNG_PORT.bram_addr_int[2]_i_2_n_0 ),
+        .I3(Arb2AR_Active),
+        .I4(\ADDR_SNG_PORT.bram_addr_int_reg[2] ),
+        .I5(\ADDR_SNG_PORT.bram_addr_int[11]_i_7_n_0 ),
         .O(D[0]));
+  LUT5 #(
+    .INIT(32'hF4000000)) 
+    \ADDR_SNG_PORT.bram_addr_int[2]_i_2 
+       (.I0(\ADDR_SNG_PORT.bram_addr_int_reg[6] ),
+        .I1(\save_init_bram_addr_ld[5]_i_2_n_0 ),
+        .I2(\ADDR_SNG_PORT.bram_addr_int[2]_i_4_n_0 ),
+        .I3(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
+        .I4(curr_wrap_burst_reg),
+        .O(\ADDR_SNG_PORT.bram_addr_int[2]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hB800B8FFB8FFB800)) 
+    .INIT(64'h5040004010400040)) 
+    \ADDR_SNG_PORT.bram_addr_int[2]_i_4 
+       (.I0(\wrap_burst_total_reg_n_0_[2] ),
+        .I1(\wrap_burst_total_reg_n_0_[0] ),
+        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[11] [0]),
+        .I3(\wrap_burst_total_reg_n_0_[1] ),
+        .I4(\ADDR_SNG_PORT.bram_addr_int_reg[11] [1]),
+        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[11] [2]),
+        .O(\ADDR_SNG_PORT.bram_addr_int[2]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h6F606F6F6F606060)) 
     \ADDR_SNG_PORT.bram_addr_int[3]_i_1 
-       (.I0(RdChnl_BRAM_Addr_Ld[1]),
-        .I1(Arb2AR_Active),
-        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[17] [0]),
-        .I3(E[1]),
-        .I4(BRAM_Addr_A[1]),
-        .I5(BRAM_Addr_A[0]),
+       (.I0(\ADDR_SNG_PORT.bram_addr_int_reg[11] [1]),
+        .I1(\ADDR_SNG_PORT.bram_addr_int_reg[11] [0]),
+        .I2(\ADDR_SNG_PORT.bram_addr_int[11]_i_7_n_0 ),
+        .I3(RdChnl_BRAM_Addr_Ld[1]),
+        .I4(Arb2AR_Active),
+        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 [0]),
         .O(D[1]));
   LUT6 #(
-    .INIT(64'hB800B8FFB8FFB800)) 
+    .INIT(64'h6F606F6F6F606060)) 
     \ADDR_SNG_PORT.bram_addr_int[4]_i_1 
-       (.I0(RdChnl_BRAM_Addr_Ld[2]),
-        .I1(Arb2AR_Active),
-        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[17] [1]),
-        .I3(E[1]),
-        .I4(BRAM_Addr_A[2]),
-        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[4] ),
+       (.I0(\ADDR_SNG_PORT.bram_addr_int_reg[11] [2]),
+        .I1(\ADDR_SNG_PORT.bram_addr_int_reg[4] ),
+        .I2(\ADDR_SNG_PORT.bram_addr_int[11]_i_7_n_0 ),
+        .I3(RdChnl_BRAM_Addr_Ld[2]),
+        .I4(Arb2AR_Active),
+        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 [1]),
         .O(D[2]));
   LUT6 #(
-    .INIT(64'hB8FFB800B800B8FF)) 
+    .INIT(64'h9F909F9F9F909090)) 
     \ADDR_SNG_PORT.bram_addr_int[5]_i_1 
-       (.I0(RdChnl_BRAM_Addr_Ld[3]),
-        .I1(Arb2AR_Active),
-        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[17] [2]),
-        .I3(E[1]),
-        .I4(BRAM_Addr_A[3]),
-        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[5] ),
+       (.I0(\ADDR_SNG_PORT.bram_addr_int_reg[11] [3]),
+        .I1(\ADDR_SNG_PORT.bram_addr_int_reg[5] ),
+        .I2(\ADDR_SNG_PORT.bram_addr_int[11]_i_7_n_0 ),
+        .I3(RdChnl_BRAM_Addr_Ld[3]),
+        .I4(Arb2AR_Active),
+        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 [2]),
         .O(D[3]));
   LUT6 #(
-    .INIT(64'hB8FFB800B800B8FF)) 
+    .INIT(64'h9F909F9F9F909090)) 
     \ADDR_SNG_PORT.bram_addr_int[6]_i_1 
-       (.I0(RdChnl_BRAM_Addr_Ld[4]),
-        .I1(Arb2AR_Active),
-        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[17] [3]),
-        .I3(E[1]),
-        .I4(BRAM_Addr_A[4]),
-        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[6] ),
+       (.I0(\ADDR_SNG_PORT.bram_addr_int_reg[11] [4]),
+        .I1(\ADDR_SNG_PORT.bram_addr_int_reg[6] ),
+        .I2(\ADDR_SNG_PORT.bram_addr_int[11]_i_7_n_0 ),
+        .I3(RdChnl_BRAM_Addr_Ld[4]),
+        .I4(Arb2AR_Active),
+        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 [3]),
         .O(D[4]));
   LUT6 #(
-    .INIT(64'hB8FFB800B800B8FF)) 
+    .INIT(64'h9F909F9F9F909090)) 
     \ADDR_SNG_PORT.bram_addr_int[7]_i_1 
-       (.I0(RdChnl_BRAM_Addr_Ld[5]),
-        .I1(Arb2AR_Active),
-        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[17] [4]),
-        .I3(E[1]),
-        .I4(BRAM_Addr_A[5]),
-        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[7] ),
+       (.I0(\ADDR_SNG_PORT.bram_addr_int_reg[11] [5]),
+        .I1(\ADDR_SNG_PORT.bram_addr_int_reg[7] ),
+        .I2(\ADDR_SNG_PORT.bram_addr_int[11]_i_7_n_0 ),
+        .I3(RdChnl_BRAM_Addr_Ld[5]),
+        .I4(Arb2AR_Active),
+        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 [4]),
         .O(D[5]));
   LUT6 #(
-    .INIT(64'hB8FFB800B800B8FF)) 
+    .INIT(64'h9F909F9F9F909090)) 
     \ADDR_SNG_PORT.bram_addr_int[8]_i_1 
-       (.I0(RdChnl_BRAM_Addr_Ld[6]),
-        .I1(Arb2AR_Active),
-        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[17] [5]),
-        .I3(E[1]),
-        .I4(\ADDR_SNG_PORT.bram_addr_int_reg[8] ),
-        .I5(BRAM_Addr_A[6]),
+       (.I0(\ADDR_SNG_PORT.bram_addr_int_reg[8] ),
+        .I1(\ADDR_SNG_PORT.bram_addr_int_reg[11] [6]),
+        .I2(\ADDR_SNG_PORT.bram_addr_int[11]_i_7_n_0 ),
+        .I3(RdChnl_BRAM_Addr_Ld[6]),
+        .I4(Arb2AR_Active),
+        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 [5]),
         .O(D[6]));
   LUT6 #(
-    .INIT(64'hB800B8FFB8FFB800)) 
+    .INIT(64'h6F606F6F6F606060)) 
     \ADDR_SNG_PORT.bram_addr_int[9]_i_1 
-       (.I0(RdChnl_BRAM_Addr_Ld[7]),
-        .I1(Arb2AR_Active),
-        .I2(\ADDR_SNG_PORT.bram_addr_int_reg[17] [6]),
-        .I3(E[1]),
-        .I4(BRAM_Addr_A[7]),
-        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[9] ),
+       (.I0(\ADDR_SNG_PORT.bram_addr_int_reg[11] [7]),
+        .I1(\ADDR_SNG_PORT.bram_addr_int_reg[9] ),
+        .I2(\ADDR_SNG_PORT.bram_addr_int[11]_i_7_n_0 ),
+        .I3(RdChnl_BRAM_Addr_Ld[7]),
+        .I4(Arb2AR_Active),
+        .I5(\ADDR_SNG_PORT.bram_addr_int_reg[11]_0 [6]),
         .O(D[7]));
   LUT1 #(
     .INIT(2'h1)) 
@@ -5256,81 +5031,43 @@ module system_axi_bram_ctrl_1_0_wrap_brst_0
        (.I0(s_axi_aresetn),
         .O(SR));
   LUT5 #(
-    .INIT(32'hEAAA2AAA)) 
+    .INIT(32'hBFFF8000)) 
     \save_init_bram_addr_ld[10]_i_1__0 
-       (.I0(s_axi_araddr[8]),
-        .I1(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
-        .I2(curr_wrap_burst_reg),
-        .I3(\ADDR_SNG_PORT.bram_addr_int[17]_i_7_n_0 ),
-        .I4(\save_init_bram_addr_ld_reg_n_0_[10] ),
+       (.I0(\save_init_bram_addr_ld_reg_n_0_[10] ),
+        .I1(\save_init_bram_addr_ld[11]_i_3__0_n_0 ),
+        .I2(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
+        .I3(curr_wrap_burst_reg),
+        .I4(s_axi_araddr[8]),
         .O(RdChnl_BRAM_Addr_Ld[8]));
   LUT5 #(
-    .INIT(32'hEAAA2AAA)) 
-    \save_init_bram_addr_ld[11]_i_1__0 
-       (.I0(s_axi_araddr[9]),
-        .I1(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
-        .I2(curr_wrap_burst_reg),
-        .I3(\ADDR_SNG_PORT.bram_addr_int[17]_i_7_n_0 ),
-        .I4(\save_init_bram_addr_ld_reg_n_0_[11] ),
+    .INIT(32'hBFFF8000)) 
+    \save_init_bram_addr_ld[11]_i_2__0 
+       (.I0(\save_init_bram_addr_ld_reg_n_0_[11] ),
+        .I1(\save_init_bram_addr_ld[11]_i_3__0_n_0 ),
+        .I2(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
+        .I3(curr_wrap_burst_reg),
+        .I4(s_axi_araddr[9]),
         .O(RdChnl_BRAM_Addr_Ld[9]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \save_init_bram_addr_ld[12]_i_1__0 
-       (.I0(s_axi_araddr[10]),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ),
-        .I2(\save_init_bram_addr_ld_reg_n_0_[12] ),
-        .O(RdChnl_BRAM_Addr_Ld[10]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \save_init_bram_addr_ld[13]_i_1__0 
-       (.I0(s_axi_araddr[11]),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ),
-        .I2(\save_init_bram_addr_ld_reg_n_0_[13] ),
-        .O(RdChnl_BRAM_Addr_Ld[11]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \save_init_bram_addr_ld[14]_i_1__0 
-       (.I0(s_axi_araddr[12]),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ),
-        .I2(\save_init_bram_addr_ld_reg_n_0_[14] ),
-        .O(RdChnl_BRAM_Addr_Ld[12]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \save_init_bram_addr_ld[15]_i_1__0 
-       (.I0(s_axi_araddr[13]),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ),
-        .I2(\save_init_bram_addr_ld_reg_n_0_[15] ),
-        .O(RdChnl_BRAM_Addr_Ld[13]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \save_init_bram_addr_ld[16]_i_1__0 
-       (.I0(s_axi_araddr[14]),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ),
-        .I2(\save_init_bram_addr_ld_reg_n_0_[16] ),
-        .O(RdChnl_BRAM_Addr_Ld[14]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \save_init_bram_addr_ld[17]_i_2__0 
-       (.I0(s_axi_araddr[15]),
-        .I1(\ADDR_SNG_PORT.bram_addr_int[17]_i_9_n_0 ),
-        .I2(\save_init_bram_addr_ld_reg_n_0_[17] ),
-        .O(RdChnl_BRAM_Addr_Ld[15]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
-    .INIT(32'hEAAA2AAA)) 
+    .INIT(32'hAAAAAABA)) 
+    \save_init_bram_addr_ld[11]_i_3__0 
+       (.I0(\ADDR_SNG_PORT.bram_addr_int[2]_i_4_n_0 ),
+        .I1(\wrap_burst_total_reg_n_0_[1] ),
+        .I2(\wrap_burst_total_reg_n_0_[2] ),
+        .I3(\wrap_burst_total_reg_n_0_[0] ),
+        .I4(\ADDR_SNG_PORT.bram_addr_int_reg[6] ),
+        .O(\save_init_bram_addr_ld[11]_i_3__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hBFFF8000)) 
     \save_init_bram_addr_ld[3]_i_1__0 
-       (.I0(s_axi_araddr[1]),
-        .I1(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
-        .I2(curr_wrap_burst_reg),
-        .I3(\ADDR_SNG_PORT.bram_addr_int[17]_i_7_n_0 ),
-        .I4(\save_init_bram_addr_ld[3]_i_2_n_0 ),
+       (.I0(\save_init_bram_addr_ld[3]_i_2_n_0 ),
+        .I1(\save_init_bram_addr_ld[11]_i_3__0_n_0 ),
+        .I2(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
+        .I3(curr_wrap_burst_reg),
+        .I4(s_axi_araddr[1]),
         .O(RdChnl_BRAM_Addr_Ld[1]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'hA08A)) 
     \save_init_bram_addr_ld[3]_i_2 
@@ -5340,15 +5077,15 @@ module system_axi_bram_ctrl_1_0_wrap_brst_0
         .I3(\wrap_burst_total_reg_n_0_[1] ),
         .O(\save_init_bram_addr_ld[3]_i_2_n_0 ));
   LUT5 #(
-    .INIT(32'hEAAA2AAA)) 
+    .INIT(32'hBFFF8000)) 
     \save_init_bram_addr_ld[4]_i_1__0 
-       (.I0(s_axi_araddr[2]),
-        .I1(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
-        .I2(curr_wrap_burst_reg),
-        .I3(\ADDR_SNG_PORT.bram_addr_int[17]_i_7_n_0 ),
-        .I4(\save_init_bram_addr_ld[4]_i_2_n_0 ),
+       (.I0(\save_init_bram_addr_ld[4]_i_2_n_0 ),
+        .I1(\save_init_bram_addr_ld[11]_i_3__0_n_0 ),
+        .I2(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
+        .I3(curr_wrap_burst_reg),
+        .I4(s_axi_araddr[2]),
         .O(RdChnl_BRAM_Addr_Ld[2]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'hA82A)) 
     \save_init_bram_addr_ld[4]_i_2 
@@ -5358,14 +5095,14 @@ module system_axi_bram_ctrl_1_0_wrap_brst_0
         .I3(\wrap_burst_total_reg_n_0_[2] ),
         .O(\save_init_bram_addr_ld[4]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h2AAA2AAAEAAA2AAA)) 
+    .INIT(64'h2FFFFFFF20000000)) 
     \save_init_bram_addr_ld[5]_i_1__0 
-       (.I0(s_axi_araddr[3]),
-        .I1(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
-        .I2(curr_wrap_burst_reg),
-        .I3(\ADDR_SNG_PORT.bram_addr_int[17]_i_7_n_0 ),
-        .I4(\save_init_bram_addr_ld_reg_n_0_[5] ),
-        .I5(\save_init_bram_addr_ld[5]_i_2_n_0 ),
+       (.I0(\save_init_bram_addr_ld_reg_n_0_[5] ),
+        .I1(\save_init_bram_addr_ld[5]_i_2_n_0 ),
+        .I2(\save_init_bram_addr_ld[11]_i_3__0_n_0 ),
+        .I3(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
+        .I4(curr_wrap_burst_reg),
+        .I5(s_axi_araddr[3]),
         .O(RdChnl_BRAM_Addr_Ld[3]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
@@ -5376,40 +5113,40 @@ module system_axi_bram_ctrl_1_0_wrap_brst_0
         .I2(\wrap_burst_total_reg_n_0_[0] ),
         .O(\save_init_bram_addr_ld[5]_i_2_n_0 ));
   LUT5 #(
-    .INIT(32'hEAAA2AAA)) 
+    .INIT(32'hBFFF8000)) 
     \save_init_bram_addr_ld[6]_i_1__0 
-       (.I0(s_axi_araddr[4]),
-        .I1(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
-        .I2(curr_wrap_burst_reg),
-        .I3(\ADDR_SNG_PORT.bram_addr_int[17]_i_7_n_0 ),
-        .I4(\save_init_bram_addr_ld_reg_n_0_[6] ),
+       (.I0(\save_init_bram_addr_ld_reg_n_0_[6] ),
+        .I1(\save_init_bram_addr_ld[11]_i_3__0_n_0 ),
+        .I2(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
+        .I3(curr_wrap_burst_reg),
+        .I4(s_axi_araddr[4]),
         .O(RdChnl_BRAM_Addr_Ld[4]));
   LUT5 #(
-    .INIT(32'hEAAA2AAA)) 
+    .INIT(32'hBFFF8000)) 
     \save_init_bram_addr_ld[7]_i_1__0 
-       (.I0(s_axi_araddr[5]),
-        .I1(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
-        .I2(curr_wrap_burst_reg),
-        .I3(\ADDR_SNG_PORT.bram_addr_int[17]_i_7_n_0 ),
-        .I4(\save_init_bram_addr_ld_reg_n_0_[7] ),
+       (.I0(\save_init_bram_addr_ld_reg_n_0_[7] ),
+        .I1(\save_init_bram_addr_ld[11]_i_3__0_n_0 ),
+        .I2(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
+        .I3(curr_wrap_burst_reg),
+        .I4(s_axi_araddr[5]),
         .O(RdChnl_BRAM_Addr_Ld[5]));
   LUT5 #(
-    .INIT(32'hEAAA2AAA)) 
+    .INIT(32'hBFFF8000)) 
     \save_init_bram_addr_ld[8]_i_1__0 
-       (.I0(s_axi_araddr[6]),
-        .I1(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
-        .I2(curr_wrap_burst_reg),
-        .I3(\ADDR_SNG_PORT.bram_addr_int[17]_i_7_n_0 ),
-        .I4(\save_init_bram_addr_ld_reg_n_0_[8] ),
+       (.I0(\save_init_bram_addr_ld_reg_n_0_[8] ),
+        .I1(\save_init_bram_addr_ld[11]_i_3__0_n_0 ),
+        .I2(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
+        .I3(curr_wrap_burst_reg),
+        .I4(s_axi_araddr[6]),
         .O(RdChnl_BRAM_Addr_Ld[6]));
   LUT5 #(
-    .INIT(32'hEAAA2AAA)) 
+    .INIT(32'hBFFF8000)) 
     \save_init_bram_addr_ld[9]_i_1__0 
-       (.I0(s_axi_araddr[7]),
-        .I1(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
-        .I2(curr_wrap_burst_reg),
-        .I3(\ADDR_SNG_PORT.bram_addr_int[17]_i_7_n_0 ),
-        .I4(\save_init_bram_addr_ld_reg_n_0_[9] ),
+       (.I0(\save_init_bram_addr_ld_reg_n_0_[9] ),
+        .I1(\save_init_bram_addr_ld[11]_i_3__0_n_0 ),
+        .I2(\FSM_sequential_GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg[1] ),
+        .I3(curr_wrap_burst_reg),
+        .I4(s_axi_araddr[7]),
         .O(RdChnl_BRAM_Addr_Ld[7]));
   FDRE #(
     .INIT(1'b0)) 
@@ -5426,54 +5163,6 @@ module system_axi_bram_ctrl_1_0_wrap_brst_0
         .CE(ar_active_re),
         .D(RdChnl_BRAM_Addr_Ld[9]),
         .Q(\save_init_bram_addr_ld_reg_n_0_[11] ),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \save_init_bram_addr_ld_reg[12] 
-       (.C(s_axi_aclk),
-        .CE(ar_active_re),
-        .D(RdChnl_BRAM_Addr_Ld[10]),
-        .Q(\save_init_bram_addr_ld_reg_n_0_[12] ),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \save_init_bram_addr_ld_reg[13] 
-       (.C(s_axi_aclk),
-        .CE(ar_active_re),
-        .D(RdChnl_BRAM_Addr_Ld[11]),
-        .Q(\save_init_bram_addr_ld_reg_n_0_[13] ),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \save_init_bram_addr_ld_reg[14] 
-       (.C(s_axi_aclk),
-        .CE(ar_active_re),
-        .D(RdChnl_BRAM_Addr_Ld[12]),
-        .Q(\save_init_bram_addr_ld_reg_n_0_[14] ),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \save_init_bram_addr_ld_reg[15] 
-       (.C(s_axi_aclk),
-        .CE(ar_active_re),
-        .D(RdChnl_BRAM_Addr_Ld[13]),
-        .Q(\save_init_bram_addr_ld_reg_n_0_[15] ),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \save_init_bram_addr_ld_reg[16] 
-       (.C(s_axi_aclk),
-        .CE(ar_active_re),
-        .D(RdChnl_BRAM_Addr_Ld[14]),
-        .Q(\save_init_bram_addr_ld_reg_n_0_[16] ),
-        .R(SR));
-  FDRE #(
-    .INIT(1'b0)) 
-    \save_init_bram_addr_ld_reg[17] 
-       (.C(s_axi_aclk),
-        .CE(ar_active_re),
-        .D(RdChnl_BRAM_Addr_Ld[15]),
-        .Q(\save_init_bram_addr_ld_reg_n_0_[17] ),
         .R(SR));
   FDRE #(
     .INIT(1'b0)) 
@@ -5531,23 +5220,23 @@ module system_axi_bram_ctrl_1_0_wrap_brst_0
         .D(RdChnl_BRAM_Addr_Ld[7]),
         .Q(\save_init_bram_addr_ld_reg_n_0_[9] ),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
-    .INIT(16'h0900)) 
-    \wrap_burst_total[0]_i_1 
-       (.I0(s_axi_arlen[1]),
-        .I1(s_axi_arlen[2]),
-        .I2(s_axi_arlen[3]),
-        .I3(s_axi_arlen[0]),
-        .O(\wrap_burst_total[0]_i_1_n_0 ));
-  LUT3 #(
-    .INIT(8'h08)) 
-    \wrap_burst_total[1]_i_1 
-       (.I0(s_axi_arlen[1]),
+    .INIT(16'h4004)) 
+    \wrap_burst_total[0]_i_1__0 
+       (.I0(s_axi_arlen[3]),
         .I1(s_axi_arlen[0]),
-        .I2(s_axi_arlen[3]),
-        .O(\wrap_burst_total[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+        .I2(s_axi_arlen[2]),
+        .I3(s_axi_arlen[1]),
+        .O(\wrap_burst_total[0]_i_1__0_n_0 ));
+  LUT3 #(
+    .INIT(8'h20)) 
+    \wrap_burst_total[1]_i_1__0 
+       (.I0(s_axi_arlen[1]),
+        .I1(s_axi_arlen[3]),
+        .I2(s_axi_arlen[0]),
+        .O(\wrap_burst_total[1]_i_1__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \wrap_burst_total[2]_i_1__0 
@@ -5561,7 +5250,7 @@ module system_axi_bram_ctrl_1_0_wrap_brst_0
     \wrap_burst_total_reg[0] 
        (.C(s_axi_aclk),
         .CE(ar_active_re),
-        .D(\wrap_burst_total[0]_i_1_n_0 ),
+        .D(\wrap_burst_total[0]_i_1__0_n_0 ),
         .Q(\wrap_burst_total_reg_n_0_[0] ),
         .R(SR));
   FDRE #(
@@ -5569,7 +5258,7 @@ module system_axi_bram_ctrl_1_0_wrap_brst_0
     \wrap_burst_total_reg[1] 
        (.C(s_axi_aclk),
         .CE(ar_active_re),
-        .D(\wrap_burst_total[1]_i_1_n_0 ),
+        .D(\wrap_burst_total[1]_i_1__0_n_0 ),
         .Q(\wrap_burst_total_reg_n_0_[1] ),
         .R(SR));
   FDRE #(
