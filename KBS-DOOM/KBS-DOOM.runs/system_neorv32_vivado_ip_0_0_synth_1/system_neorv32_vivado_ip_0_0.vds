@@ -3,28 +3,28 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Thu Dec  4 18:04:19 2025
-# Process ID         : 23492
-# Current directory  : C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.runs/system_neorv32_vivado_ip_0_0_synth_1
+# Start of session at: Wed Dec 10 10:36:44 2025
+# Process ID         : 14784
+# Current directory  : C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/system_neorv32_vivado_ip_0_0_synth_1
 # Command line       : vivado.exe -log system_neorv32_vivado_ip_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_neorv32_vivado_ip_0_0.tcl
-# Log file           : C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.runs/system_neorv32_vivado_ip_0_0_synth_1/system_neorv32_vivado_ip_0_0.vds
-# Journal file       : C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.runs/system_neorv32_vivado_ip_0_0_synth_1\vivado.jou
-# Running On         : LAPTOP-61978DQ3
+# Log file           : C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/system_neorv32_vivado_ip_0_0_synth_1/system_neorv32_vivado_ip_0_0.vds
+# Journal file       : C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/system_neorv32_vivado_ip_0_0_synth_1\vivado.jou
+# Running On         : DESKTOP-NOIGLTL
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26100
-# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics         
-# CPU Frequency      : 3194 MHz
-# CPU Physical cores : 8
-# CPU Logical cores  : 16
-# Host memory        : 16476 MB
-# Swap memory        : 30811 MB
-# Total Virtual      : 47288 MB
-# Available Virtual  : 10517 MB
+# Processor Detail   : Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz
+# CPU Frequency      : 2112 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16942 MB
+# Swap memory        : 8540 MB
+# Total Virtual      : 25482 MB
+# Available Virtual  : 5208 MB
 #-----------------------------------------------------------
 source system_neorv32_vivado_ip_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 495.285 ; gain = 213.199
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.srcs/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lucas/Desktop/testNEORV32/neorv32/rtl/system_integration/neorv32_vivado_ip_work'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/KBS_CE/neorv32/rtl/system_integration/neorv32_vivado_ip_work'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/data/ip'.
 Command: synth_design -top system_neorv32_vivado_ip_0_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -33,11 +33,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 50668
+INFO: [Synth 8-7075] Helper process launched with PID 26256
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1201.133 ; gain = 491.855
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1201.895 ; gain = 493.211
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'system_neorv32_vivado_ip_0_0' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/synth/system_neorv32_vivado_ip_0_0.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'system_neorv32_vivado_ip_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/synth/system_neorv32_vivado_ip_0_0.vhd:115]
 	Parameter CLOCK_FREQUENCY bound to: 100000000 - type: integer 
 	Parameter DUAL_CORE_EN bound to: 0 - type: bool 
 	Parameter BOOT_MODE_SELECT bound to: 0 - type: integer 
@@ -86,8 +86,8 @@ INFO: [Synth 8-638] synthesizing module 'system_neorv32_vivado_ip_0_0' [c:/Users
 	Parameter IMEM_SIZE bound to: 32768 - type: integer 
 	Parameter IMEM_OUTREG_EN bound to: 1 - type: bool 
 	Parameter DMEM_EN bound to: 0 - type: bool 
-	Parameter DMEM_SIZE bound to: 262144 - type: integer 
-	Parameter DMEM_OUTREG_EN bound to: 1 - type: bool 
+	Parameter DMEM_SIZE bound to: 8192 - type: integer 
+	Parameter DMEM_OUTREG_EN bound to: 0 - type: bool 
 	Parameter ICACHE_EN bound to: 1 - type: bool 
 	Parameter ICACHE_NUM_BLOCKS bound to: 4 - type: integer 
 	Parameter DCACHE_EN bound to: 1 - type: bool 
@@ -98,7 +98,7 @@ INFO: [Synth 8-638] synthesizing module 'system_neorv32_vivado_ip_0_0' [c:/Users
 	Parameter XBUS_TIMEOUT bound to: 2048 - type: integer 
 	Parameter XBUS_REGSTAGE_EN bound to: 1 - type: bool 
 	Parameter IO_GPIO_EN bound to: 1 - type: bool 
-	Parameter IO_GPIO_IN_NUM bound to: 32 - type: integer 
+	Parameter IO_GPIO_IN_NUM bound to: 16 - type: integer 
 	Parameter IO_GPIO_OUT_NUM bound to: 16 - type: integer 
 	Parameter IO_CLINT_EN bound to: 0 - type: bool 
 	Parameter IO_UART0_EN bound to: 1 - type: bool 
@@ -134,8 +134,8 @@ INFO: [Synth 8-638] synthesizing module 'system_neorv32_vivado_ip_0_0' [c:/Users
 	Parameter IO_SLINK_TX_FIFO bound to: 1 - type: integer 
 	Parameter IO_TRACER_EN bound to: 0 - type: bool 
 	Parameter IO_TRACER_BUFFER bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'neorv32_vivado_ip' declared at 'c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32_vivado_ip.vhd:23' bound to instance 'U0' of component 'neorv32_vivado_ip' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/synth/system_neorv32_vivado_ip_0_0.vhd:365]
-INFO: [Synth 8-638] synthesizing module 'neorv32_vivado_ip' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32_vivado_ip.vhd:265]
+INFO: [Synth 8-3491] module 'neorv32_vivado_ip' declared at 'c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32_vivado_ip.vhd:23' bound to instance 'U0' of component 'neorv32_vivado_ip' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/synth/system_neorv32_vivado_ip_0_0.vhd:365]
+INFO: [Synth 8-638] synthesizing module 'neorv32_vivado_ip' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32_vivado_ip.vhd:265]
 	Parameter CLOCK_FREQUENCY bound to: 100000000 - type: integer 
 	Parameter DUAL_CORE_EN bound to: 0 - type: bool 
 	Parameter BOOT_MODE_SELECT bound to: 0 - type: integer 
@@ -184,8 +184,8 @@ INFO: [Synth 8-638] synthesizing module 'neorv32_vivado_ip' [c:/Users/lucas/Docu
 	Parameter IMEM_SIZE bound to: 32768 - type: integer 
 	Parameter IMEM_OUTREG_EN bound to: 1 - type: bool 
 	Parameter DMEM_EN bound to: 0 - type: bool 
-	Parameter DMEM_SIZE bound to: 262144 - type: integer 
-	Parameter DMEM_OUTREG_EN bound to: 1 - type: bool 
+	Parameter DMEM_SIZE bound to: 8192 - type: integer 
+	Parameter DMEM_OUTREG_EN bound to: 0 - type: bool 
 	Parameter ICACHE_EN bound to: 1 - type: bool 
 	Parameter ICACHE_NUM_BLOCKS bound to: 4 - type: integer 
 	Parameter DCACHE_EN bound to: 1 - type: bool 
@@ -196,7 +196,7 @@ INFO: [Synth 8-638] synthesizing module 'neorv32_vivado_ip' [c:/Users/lucas/Docu
 	Parameter XBUS_TIMEOUT bound to: 2048 - type: integer 
 	Parameter XBUS_REGSTAGE_EN bound to: 1 - type: bool 
 	Parameter IO_DISABLE_SYSINFO bound to: 0 - type: bool 
-	Parameter IO_GPIO_NUM bound to: 32 - type: integer 
+	Parameter IO_GPIO_NUM bound to: 16 - type: integer 
 	Parameter IO_CLINT_EN bound to: 0 - type: bool 
 	Parameter IO_UART0_EN bound to: 1 - type: bool 
 	Parameter IO_UART0_RX_FIFO bound to: 64 - type: integer 
@@ -229,161 +229,145 @@ INFO: [Synth 8-638] synthesizing module 'neorv32_vivado_ip' [c:/Users/lucas/Docu
 	Parameter IO_SLINK_TX_FIFO bound to: 1 - type: integer 
 	Parameter IO_TRACER_EN bound to: 0 - type: bool 
 	Parameter IO_TRACER_BUFFER bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'neorv32_top' declared at 'c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_top.vhd:21' bound to instance 'neorv32_top_inst' of component 'neorv32_top' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32_vivado_ip.vhd:359]
-INFO: [Synth 8-638] synthesizing module 'neorv32_top' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_top.vhd:249]
-INFO: [Synth 8-638] synthesizing module 'neorv32_sys_reset' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_sys.vhd:34]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_sys_reset' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_sys.vhd:34]
-INFO: [Synth 8-638] synthesizing module 'neorv32_sys_clock' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_sys.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_sys_clock' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_sys.vhd:106]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu.vhd:98]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_frontend' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_frontend.vhd:40]
+INFO: [Synth 8-3491] module 'neorv32_top' declared at 'c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_top.vhd:21' bound to instance 'neorv32_top_inst' of component 'neorv32_top' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32_vivado_ip.vhd:359]
+INFO: [Synth 8-638] synthesizing module 'neorv32_top' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_top.vhd:249]
+INFO: [Synth 8-638] synthesizing module 'neorv32_sys_reset' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_sys.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_sys_reset' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_sys.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'neorv32_sys_clock' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_sys.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_sys_clock' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_sys.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_frontend' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_frontend.vhd:40]
 	Parameter AWIDTH bound to: 1 - type: integer 
 	Parameter DWIDTH bound to: 17 - type: integer 
-INFO: [Synth 8-3491] module 'neorv32_cpu_frontend_ipb' declared at 'c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_frontend.vhd:314' bound to instance 'ipb_inst' of component 'neorv32_cpu_frontend_ipb' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_frontend.vhd:170]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_frontend_ipb' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_frontend.vhd:335]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_frontend_ipb' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_frontend.vhd:335]
+INFO: [Synth 8-3491] module 'neorv32_cpu_frontend_ipb' declared at 'c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_frontend.vhd:314' bound to instance 'ipb_inst' of component 'neorv32_cpu_frontend_ipb' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_frontend.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_frontend_ipb' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_frontend.vhd:335]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_frontend_ipb' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_frontend.vhd:335]
 	Parameter AWIDTH bound to: 1 - type: integer 
 	Parameter DWIDTH bound to: 17 - type: integer 
-INFO: [Synth 8-3491] module 'neorv32_cpu_frontend_ipb' declared at 'c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_frontend.vhd:314' bound to instance 'ipb_inst' of component 'neorv32_cpu_frontend_ipb' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_frontend.vhd:170]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_frontend' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_frontend.vhd:40]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_control' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:100]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_control' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:100]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_regfile' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_regfile.vhd:47]
-INFO: [Synth 8-638] synthesizing module 'neorv32_prim_sdpram' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:269]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_sdpram' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:269]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_regfile' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_regfile.vhd:47]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_alu' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_alu.vhd:60]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_alu.vhd:139]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_cp_shifter' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_cp_shifter.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_cp_shifter' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_cp_shifter.vhd:39]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_cp_muldiv' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_cp_muldiv.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_cp_muldiv' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_cp_muldiv.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_alu' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_alu.vhd:60]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_lsu' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_lsu.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_lsu' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_lsu.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu.vhd:98]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cache' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cache.vhd:45]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cache.vhd:172]
+INFO: [Synth 8-3491] module 'neorv32_cpu_frontend_ipb' declared at 'c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_frontend.vhd:314' bound to instance 'ipb_inst' of component 'neorv32_cpu_frontend_ipb' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_frontend.vhd:170]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_frontend' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_frontend.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_control' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:100]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_control' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_regfile' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_regfile.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_sdpram' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:269]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_sdpram' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:269]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_regfile' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_regfile.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_alu' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_alu.vhd:60]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_alu.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_cp_shifter' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_cp_shifter.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_cp_shifter' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_cp_shifter.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_cp_muldiv' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_cp_muldiv.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_cp_muldiv' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_cp_muldiv.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_alu' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_alu.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cpu_lsu' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_lsu.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu_lsu' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_lsu.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cpu' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cache' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cache.vhd:45]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cache.vhd:172]
 	Parameter NUM_BLOCKS bound to: 4 - type: integer 
 	Parameter BLOCK_SIZE bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'neorv32_cache_memory' declared at 'c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cache.vhd:360' bound to instance 'neorv32_cache_memory_inst' of component 'neorv32_cache_memory' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cache.vhd:317]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cache_memory' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cache.vhd:384]
-INFO: [Synth 8-638] synthesizing module 'neorv32_prim_spram' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:186]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_spram' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:186]
-INFO: [Synth 8-638] synthesizing module 'neorv32_prim_spram__parameterized0' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:186]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_spram__parameterized0' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:186]
-INFO: [Synth 8-638] synthesizing module 'neorv32_prim_spram__parameterized1' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:186]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_spram__parameterized1' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:186]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cache_memory' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cache.vhd:384]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cache' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cache.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'neorv32_cache__parameterized0' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cache.vhd:45]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cache.vhd:172]
+INFO: [Synth 8-3491] module 'neorv32_cache_memory' declared at 'c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cache.vhd:360' bound to instance 'neorv32_cache_memory_inst' of component 'neorv32_cache_memory' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cache.vhd:317]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cache_memory' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cache.vhd:384]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_spram' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_spram' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_spram__parameterized0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_spram__parameterized0' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_spram__parameterized1' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_spram__parameterized1' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cache_memory' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cache.vhd:384]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cache' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cache.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'neorv32_cache__parameterized0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cache.vhd:45]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cache.vhd:172]
 	Parameter NUM_BLOCKS bound to: 4 - type: integer 
 	Parameter BLOCK_SIZE bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'neorv32_cache_memory' declared at 'c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cache.vhd:360' bound to instance 'neorv32_cache_memory_inst' of component 'neorv32_cache_memory' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cache.vhd:317]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_cache__parameterized0' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cache.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'neorv32_bus_switch' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_bus.vhd:35]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_switch' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_bus.vhd:35]
-INFO: [Synth 8-638] synthesizing module 'neorv32_bus_gateway' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_bus.vhd:319]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_gateway' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_bus.vhd:319]
-INFO: [Synth 8-638] synthesizing module 'neorv32_imem' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_imem.vhd:33]
-INFO: [Synth 8-638] synthesizing module 'neorv32_prim_spram__parameterized2' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:186]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_spram__parameterized2' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:186]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_imem' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_imem.vhd:33]
-INFO: [Synth 8-638] synthesizing module 'neorv32_xbus' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_xbus.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'neorv32_bus_reg' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_bus.vhd:202]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_reg' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_bus.vhd:202]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_xbus' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_xbus.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'neorv32_bus_io_switch' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_bus.vhd:569]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_io_switch' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_bus.vhd:569]
-INFO: [Synth 8-638] synthesizing module 'neorv32_boot_rom' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_boot_rom.vhd:28]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_boot_rom' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_boot_rom.vhd:28]
-INFO: [Synth 8-638] synthesizing module 'neorv32_gpio' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:32]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:120]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_gpio' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_gpio.vhd:32]
-INFO: [Synth 8-638] synthesizing module 'neorv32_uart' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_uart.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'neorv32_prim_fifo' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_fifo' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_uart' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_uart.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'neorv32_spi' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_spi.vhd:36]
-INFO: [Synth 8-638] synthesizing module 'neorv32_prim_fifo__parameterized0' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_fifo__parameterized0' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:46]
-INFO: [Synth 8-638] synthesizing module 'neorv32_prim_fifo__parameterized1' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_fifo__parameterized1' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_spi' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_spi.vhd:36]
-INFO: [Synth 8-638] synthesizing module 'neorv32_slink' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_slink.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'neorv32_prim_fifo__parameterized2' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_fifo__parameterized2' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_prim.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_slink' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_slink.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'neorv32_sysinfo' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_sysinfo.vhd:67]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_sysinfo' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_sysinfo.vhd:67]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_top' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_top.vhd:249]
+INFO: [Synth 8-3491] module 'neorv32_cache_memory' declared at 'c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cache.vhd:360' bound to instance 'neorv32_cache_memory_inst' of component 'neorv32_cache_memory' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cache.vhd:317]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_cache__parameterized0' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cache.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_switch' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_bus.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_switch' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_bus.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_gateway' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_bus.vhd:319]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_gateway' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_bus.vhd:319]
+INFO: [Synth 8-638] synthesizing module 'neorv32_imem' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_imem.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_spram__parameterized2' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_spram__parameterized2' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:186]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_imem' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_imem.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'neorv32_xbus' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_xbus.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_reg' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_bus.vhd:202]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_reg' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_bus.vhd:202]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_xbus' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_xbus.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'neorv32_bus_io_switch' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_bus.vhd:569]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_bus_io_switch' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_bus.vhd:569]
+INFO: [Synth 8-638] synthesizing module 'neorv32_boot_rom' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_boot_rom.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_boot_rom' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_boot_rom.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'neorv32_gpio' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:32]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-226] default block is never used [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:120]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_gpio' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_gpio.vhd:32]
+INFO: [Synth 8-638] synthesizing module 'neorv32_uart' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_uart.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_fifo' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_fifo' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_uart' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_uart.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'neorv32_spi' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_spi.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_fifo__parameterized0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_fifo__parameterized0' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_fifo__parameterized1' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_fifo__parameterized1' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_spi' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_spi.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'neorv32_slink' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_slink.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'neorv32_prim_fifo__parameterized2' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_prim_fifo__parameterized2' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_prim.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_slink' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_slink.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'neorv32_sysinfo' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_sysinfo.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_sysinfo' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_sysinfo.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_top' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_top.vhd:249]
 	Parameter BURST_EN bound to: 1 - type: bool 
 	Parameter BURST_LEN bound to: 64 - type: integer 
-INFO: [Synth 8-3491] module 'xbus2axi4_bridge' declared at 'c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/xbus2axi4_bridge.vhd:18' bound to instance 'axi4_bridge_inst' of component 'xbus2axi4_bridge' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32_vivado_ip.vhd:622]
-INFO: [Synth 8-638] synthesizing module 'xbus2axi4_bridge' [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/xbus2axi4_bridge.vhd:75]
-INFO: [Synth 8-256] done synthesizing module 'xbus2axi4_bridge' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/xbus2axi4_bridge.vhd:75]
-INFO: [Synth 8-256] done synthesizing module 'neorv32_vivado_ip' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32_vivado_ip.vhd:265]
-INFO: [Synth 8-256] done synthesizing module 'system_neorv32_vivado_ip_0_0' (0#1) [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/synth/system_neorv32_vivado_ip_0_0.vhd:115]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[if_reset] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[if_ready] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[pc_cur] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[pc_nxt] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[pc_ret] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rs1] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rs2] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rd] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[alu_imm] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[lsu_mo_we] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[lsu_priv] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[csr_we] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[csr_re] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[csr_addr] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[csr_wdata] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cnt_event] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_funct3] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_funct12] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_opcode] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_priv] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_trap] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_sync_exc] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_debug] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:261]
-WARNING: [Synth 8-6014] Unused sequential element csr_reg[mcounteren_cy] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:1047]
-WARNING: [Synth 8-6014] Unused sequential element csr_reg[mcounteren_ir] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:1047]
-WARNING: [Synth 8-6014] Unused sequential element csr_reg[dpc] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:1047]
-WARNING: [Synth 8-6014] Unused sequential element csr_reg[dscratch0] was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_cpu_control.vhd:1047]
-WARNING: [Synth 8-6014] Unused sequential element sel_q_reg was removed.  [c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ipshared/177a/src/neorv32/neorv32_bus.vhd:50]
+INFO: [Synth 8-3491] module 'xbus2axi4_bridge' declared at 'c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/xbus2axi4_bridge.vhd:18' bound to instance 'axi4_bridge_inst' of component 'xbus2axi4_bridge' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32_vivado_ip.vhd:622]
+INFO: [Synth 8-638] synthesizing module 'xbus2axi4_bridge' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/xbus2axi4_bridge.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'xbus2axi4_bridge' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/xbus2axi4_bridge.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'neorv32_vivado_ip' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32_vivado_ip.vhd:265]
+INFO: [Synth 8-256] done synthesizing module 'system_neorv32_vivado_ip_0_0' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/synth/system_neorv32_vivado_ip_0_0.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[if_reset] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[if_ready] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[pc_cur] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[pc_nxt] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[pc_ret] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rs1] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rs2] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[rf_rd] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[alu_imm] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[lsu_mo_we] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[lsu_priv] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[csr_we] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[csr_re] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[csr_addr] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[csr_wdata] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cnt_event] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_funct3] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_funct12] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[ir_opcode] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_priv] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_trap] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_sync_exc] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element ctrl_reg[cpu_debug] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:261]
+WARNING: [Synth 8-6014] Unused sequential element csr_reg[mcounteren_cy] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:1047]
+WARNING: [Synth 8-6014] Unused sequential element csr_reg[mcounteren_ir] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:1047]
+WARNING: [Synth 8-6014] Unused sequential element csr_reg[dpc] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:1047]
+WARNING: [Synth 8-6014] Unused sequential element csr_reg[dscratch0] was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd:1047]
+WARNING: [Synth 8-6014] Unused sequential element sel_q_reg was removed.  [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/ad4d/src/neorv32/neorv32_bus.vhd:50]
 WARNING: [Synth 8-7129] Port bus_req_i[meta][2] in module neorv32_sysinfo is either unconnected or has no load
 WARNING: [Synth 8-7129] Port bus_req_i[meta][1] in module neorv32_sysinfo is either unconnected or has no load
 WARNING: [Synth 8-7129] Port bus_req_i[meta][0] in module neorv32_sysinfo is either unconnected or has no load
@@ -486,45 +470,45 @@ WARNING: [Synth 8-7129] Port bus_req_i[addr][26] in module neorv32_spi is either
 WARNING: [Synth 8-7129] Port bus_req_i[addr][25] in module neorv32_spi is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1371.840 ; gain = 662.562
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1371.219 ; gain = 662.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1371.840 ; gain = 662.562
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1371.219 ; gain = 662.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1371.840 ; gain = 662.562
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1371.219 ; gain = 662.535
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 1371.840 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.153 . Memory (MB): peak = 1371.219 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1446.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1451.641 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 1446.641 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.142 . Memory (MB): peak = 1453.969 ; gain = 2.328
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1446.641 ; gain = 737.363
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1453.969 ; gain = 745.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1446.641 ; gain = 737.363
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1453.969 ; gain = 745.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1446.641 ; gain = 737.363
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1453.969 ; gain = 745.285
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'fetch_reg[state]' in module 'neorv32_cpu_frontend'
 INFO: [Synth 8-802] inferred FSM for state register 'exe_engine_reg[state]' in module 'neorv32_cpu_control'
@@ -624,7 +608,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'keeper_reg[state]' using e
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'xbus2axi4_bridge'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1446.641 ; gain = 737.363
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1453.969 ; gain = 745.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -646,10 +630,10 @@ Detailed RTL Component Info :
 +---Registers : 
 	               64 Bit    Registers := 1     
 	               37 Bit    Registers := 2     
-	               32 Bit    Registers := 42    
+	               32 Bit    Registers := 34    
 	               24 Bit    Registers := 6     
 	               20 Bit    Registers := 2     
-	               16 Bit    Registers := 1     
+	               16 Bit    Registers := 9     
 	               12 Bit    Registers := 4     
 	               10 Bit    Registers := 4     
 	                9 Bit    Registers := 5     
@@ -673,11 +657,12 @@ Detailed RTL Component Info :
 	   2 Input   64 Bit        Muxes := 1     
 	   2 Input   33 Bit        Muxes := 3     
 	   3 Input   32 Bit        Muxes := 2     
-	   2 Input   32 Bit        Muxes := 48    
+	   2 Input   32 Bit        Muxes := 46    
 	  12 Input   32 Bit        Muxes := 2     
 	   4 Input   32 Bit        Muxes := 2     
 	   8 Input   32 Bit        Muxes := 8     
-	   6 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   6 Input   16 Bit        Muxes := 1     
 	   2 Input   12 Bit        Muxes := 1     
 	   3 Input   12 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 5     
@@ -711,7 +696,7 @@ Detailed RTL Component Info :
 	  12 Input    1 Bit        Muxes := 24    
 	   8 Input    1 Bit        Muxes := 32    
 	   6 Input    1 Bit        Muxes := 4     
-	   4 Input    1 Bit        Muxes := 43    
+	   4 Input    1 Bit        Muxes := 27    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -765,7 +750,7 @@ INFO: [Synth 8-12589] Found 1 bits of RAM  (\U0/neorv32_top_inst /\core_complex_
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[3]) is unused and will be removed from module neorv32_bus_switch.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[0]) is unused and will be removed from module neorv32_bus_switch.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1464.543 ; gain = 755.266
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 1464.777 ; gain = 756.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -820,13 +805,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1563.121 ; gain = 853.844
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:19 . Memory (MB): peak = 1567.383 ; gain = 858.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1572.344 ; gain = 863.066
+Finished Timing Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 1576.141 ; gain = 867.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -874,7 +859,7 @@ INFO: [Synth 8-7052] The timing for the instance U0/neorv32_top_inst/core_comple
 INFO: [Synth 8-7052] The timing for the instance U0/neorv32_top_inst/core_complex_gen[0].neorv32_cpu_inst/neorv32_cpu_regfile_inst/register_file_fpga.reg_file_inst/sdpram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance U0/neorv32_top_inst/io_system.neorv32_boot_rom_enabled.neorv32_boot_rom_inst/rdata_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1617.270 ; gain = 907.992
+Finished Technology Mapping : Time (s): cpu = 00:01:19 ; elapsed = 00:01:22 . Memory (MB): peak = 1618.969 ; gain = 910.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -892,37 +877,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1802.723 ; gain = 1093.445
+Finished IO Insertion : Time (s): cpu = 00:01:28 ; elapsed = 00:01:31 . Memory (MB): peak = 1808.438 ; gain = 1099.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1802.723 ; gain = 1093.445
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:28 ; elapsed = 00:01:31 . Memory (MB): peak = 1808.438 ; gain = 1099.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1802.723 ; gain = 1093.445
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:28 ; elapsed = 00:01:32 . Memory (MB): peak = 1808.438 ; gain = 1099.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1802.723 ; gain = 1093.445
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:28 ; elapsed = 00:01:32 . Memory (MB): peak = 1808.438 ; gain = 1099.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1806.715 ; gain = 1097.438
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:28 ; elapsed = 00:01:32 . Memory (MB): peak = 1812.430 ; gain = 1103.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1806.715 ; gain = 1097.438
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:28 ; elapsed = 00:01:32 . Memory (MB): peak = 1812.430 ; gain = 1103.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -941,10 +926,10 @@ Report Cell Usage:
 |1     |CARRY4   |    77|
 |2     |LUT1     |    36|
 |3     |LUT2     |   143|
-|4     |LUT3     |   294|
-|5     |LUT4     |   460|
-|6     |LUT5     |   718|
-|7     |LUT6     |   742|
+|4     |LUT3     |   278|
+|5     |LUT4     |   454|
+|6     |LUT5     |   717|
+|7     |LUT6     |   676|
 |8     |MUXF7    |     4|
 |9     |MUXF8    |     2|
 |10    |RAM16X1S |    48|
@@ -952,23 +937,23 @@ Report Cell Usage:
 |12    |RAM64M   |     6|
 |13    |RAM64X1S |    66|
 |14    |RAMB36E1 |    10|
-|17    |FDCE     |  1850|
+|17    |FDCE     |  1706|
 |18    |FDPE     |    50|
 |19    |FDRE     |   130|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1806.715 ; gain = 1097.438
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:28 ; elapsed = 00:01:32 . Memory (MB): peak = 1812.430 ; gain = 1103.746
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2197 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 1806.715 ; gain = 1022.637
-Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1806.715 ; gain = 1097.438
+Synthesis finished with 0 errors, 0 critical warnings and 2229 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:10 ; elapsed = 00:01:27 . Memory (MB): peak = 1812.430 ; gain = 1020.996
+Synthesis Optimization Complete : Time (s): cpu = 00:01:28 ; elapsed = 00:01:32 . Memory (MB): peak = 1812.430 ; gain = 1103.746
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1815.875 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 1813.344 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 219 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1819.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1816.172 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 126 instances were transformed.
   RAM16X1S => RAM32X1S (RAMS32): 48 instances
@@ -976,16 +961,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64M => RAM64M (RAMD64E(x4)): 6 instances
   RAM64X1S => RAM64X1S (RAMS64E): 66 instances
 
-Synth Design complete | Checksum: 9d9e53fb
+Synth Design complete | Checksum: 4859c2a4
 INFO: [Common 17-83] Releasing license: Synthesis
-193 Infos, 131 Warnings, 0 Critical Warnings and 0 Errors encountered.
+176 Infos, 131 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1819.570 ; gain = 1309.367
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1819.570 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.runs/system_neorv32_vivado_ip_0_0_synth_1/system_neorv32_vivado_ip_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_neorv32_vivado_ip_0_0, cache-ID = e7caf856d9003a2a
+synth_design: Time (s): cpu = 00:01:35 ; elapsed = 00:01:40 . Memory (MB): peak = 1816.172 ; gain = 1301.852
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1816.172 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/system_neorv32_vivado_ip_0_0_synth_1/system_neorv32_vivado_ip_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_neorv32_vivado_ip_0_0, cache-ID = 29d44745559038d9
 INFO: [Coretcl 2-1174] Renamed 53 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1819.570 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.runs/system_neorv32_vivado_ip_0_0_synth_1/system_neorv32_vivado_ip_0_0.dcp' has been generated.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1816.172 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/system_neorv32_vivado_ip_0_0_synth_1/system_neorv32_vivado_ip_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file system_neorv32_vivado_ip_0_0_utilization_synth.rpt -pb system_neorv32_vivado_ip_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec  4 18:05:21 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 10 10:38:44 2025...

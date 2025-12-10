@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7C7D2C03C86D19EC",
+      "boundary_crc": "0xDBCF52AC7B692AC7",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../KBS-DOOM.gen/sources_1/bd/system",
       "name": "system",
@@ -14,7 +14,6 @@
       "neorv32_vivado_ip_0": "",
       "axis_data_fifo_0": "",
       "smartconnect_0": "",
-      "xlconcat_0": "",
       "axi_bram_ctrl_0": "",
       "blk_mem_gen_0": "",
       "axi_bram_ctrl_1": "",
@@ -26,7 +25,9 @@
       "mig_7series_0": "",
       "clk_wiz_0": "",
       "util_vector_logic_0": "",
-      "vga_display_0": ""
+      "vga_display_0": "",
+      "PS2Receiver_0": "",
+      "ps2_sync_0": ""
     },
     "interface_ports": {
       "ddr2_sdram": {
@@ -194,17 +195,6 @@
       "CPU_RESETN": {
         "direction": "I"
       },
-      "SW": {
-        "direction": "I",
-        "left": "0",
-        "right": "15"
-      },
-      "BTNL": {
-        "direction": "I"
-      },
-      "BTNR": {
-        "direction": "I"
-      },
       "uart0_rxd_i_0": {
         "direction": "I"
       },
@@ -250,6 +240,26 @@
       },
       "VGA_VS": {
         "direction": "O"
+      },
+      "PS2_DATA": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "PS2_CLK": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -292,7 +302,7 @@
             "value": "true"
           },
           "IO_GPIO_IN_NUM": {
-            "value": "32"
+            "value": "16"
           },
           "IO_GPIO_OUT_NUM": {
             "value": "16"
@@ -544,19 +554,6 @@
                 "value_src": "default"
               }
             }
-          }
-        }
-      },
-      "xlconcat_0": {
-        "vlnv": "xilinx.com:ip:xlconcat:2.1",
-        "ip_revision": "7",
-        "xci_name": "system_xlconcat_0_0",
-        "xci_path": "ip\\system_xlconcat_0_0\\system_xlconcat_0_0.xci",
-        "inst_hier_path": "xlconcat_0",
-        "has_run_ip_tcl": "true",
-        "parameters": {
-          "NUM_PORTS": {
-            "value": "3"
           }
         }
       },
@@ -841,6 +838,100 @@
             "direction": "O"
           }
         }
+      },
+      "PS2Receiver_0": {
+        "vlnv": "xilinx.com:module_ref:PS2Receiver:1.0",
+        "ip_revision": "1",
+        "xci_name": "system_PS2Receiver_0_0",
+        "xci_path": "ip\\system_PS2Receiver_0_0\\system_PS2Receiver_0_0.xci",
+        "inst_hier_path": "PS2Receiver_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PS2Receiver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "system_CLK100MHZ",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "kclk": {
+            "direction": "I"
+          },
+          "kdata": {
+            "direction": "I"
+          },
+          "keycode": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "ps2_sync_0": {
+        "vlnv": "xilinx.com:module_ref:ps2_sync:1.0",
+        "ip_revision": "1",
+        "xci_name": "system_ps2_sync_0_0",
+        "xci_path": "ip\\system_ps2_sync_0_0\\system_ps2_sync_0_0.xci",
+        "inst_hier_path": "ps2_sync_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ps2_sync",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "system_CLK100MHZ",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ps2_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "system_PS2_CLK",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ps2_data": {
+            "direction": "I",
+            "parameters": {
+              "LAYERED_METADATA": {
+                "value": "undef",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "clk_fall": {
+            "direction": "O"
+          },
+          "data_sync": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -907,28 +998,30 @@
           "clk_wiz_0/resetn"
         ]
       },
-      "BTNL_1": {
-        "ports": [
-          "BTNL",
-          "xlconcat_0/In0"
-        ]
-      },
-      "BTNR_1": {
-        "ports": [
-          "BTNR",
-          "xlconcat_0/In1"
-        ]
-      },
       "CLK100MHZ_1": {
         "ports": [
           "CLK100MHZ",
-          "util_ds_buf_0/BUFG_I"
+          "util_ds_buf_0/BUFG_I",
+          "PS2Receiver_0/clk",
+          "ps2_sync_0/clk"
         ]
       },
-      "SW_1": {
+      "PS2Receiver_0_keycode": {
         "ports": [
-          "SW",
-          "xlconcat_0/In2"
+          "PS2Receiver_0/keycode",
+          "neorv32_vivado_ip_0/gpio_i"
+        ]
+      },
+      "PS2_CLK_1": {
+        "ports": [
+          "PS2_CLK",
+          "ps2_sync_0/ps2_clk"
+        ]
+      },
+      "PS2_DATA_1": {
+        "ports": [
+          "PS2_DATA",
+          "ps2_sync_0/ps2_data"
         ]
       },
       "blk_mem_gen_0_doutb": {
@@ -1009,6 +1102,18 @@
           "neorv32_vivado_ip_0/resetn"
         ]
       },
+      "ps2_sync_0_clk_fall": {
+        "ports": [
+          "ps2_sync_0/clk_fall",
+          "PS2Receiver_0/kclk"
+        ]
+      },
+      "ps2_sync_0_data_sync": {
+        "ports": [
+          "ps2_sync_0/data_sync",
+          "PS2Receiver_0/kdata"
+        ]
+      },
       "spi_dat_i_0_1": {
         "ports": [
           "spi_dat_i_0",
@@ -1080,12 +1185,6 @@
         "ports": [
           "vga_display_0/enb",
           "blk_mem_gen_0/enb"
-        ]
-      },
-      "xlconcat_0_dout": {
-        "ports": [
-          "xlconcat_0/dout",
-          "neorv32_vivado_ip_0/gpio_i"
         ]
       },
       "xlconstant_0_dout": {

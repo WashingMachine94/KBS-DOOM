@@ -1078,11 +1078,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Nov 28 12:34:43 UTC 2025</spirit:value>
+            <spirit:value>Tue Dec 09 13:06:15 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:08009bad</spirit:value>
+            <spirit:value>9:29cd2541</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1097,11 +1097,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Nov 28 12:34:43 UTC 2025</spirit:value>
+            <spirit:value>Tue Dec 09 13:06:15 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:474e797f</spirit:value>
+            <spirit:value>9:ab5e5f68</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1112,7 +1112,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:474e797f</spirit:value>
+            <spirit:value>9:ab5e5f68</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1126,11 +1126,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 04 17:05:21 UTC 2025</spirit:value>
+            <spirit:value>Wed Dec 10 09:38:44 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:474e797f</spirit:value>
+            <spirit:value>9:ab5e5f68</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1141,7 +1141,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:474e797f</spirit:value>
+            <spirit:value>9:ab5e5f68</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1157,11 +1157,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 04 17:03:26 UTC 2025</spirit:value>
+            <spirit:value>Wed Dec 10 09:35:00 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:08009bad</spirit:value>
+            <spirit:value>9:29cd2541</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1177,11 +1177,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Dec 04 17:03:26 UTC 2025</spirit:value>
+            <spirit:value>Wed Dec 10 09:35:00 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:474e797f</spirit:value>
+            <spirit:value>9:ab5e5f68</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2007,7 +2007,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.IO_GPIO_IN_NUM&apos;)) - 1)">31</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.IO_GPIO_IN_NUM&apos;)) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3102,7 +3102,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>DMEM_SIZE</spirit:name>
         <spirit:displayName>Dmem Size</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DMEM_SIZE" spirit:minimum="0" spirit:rangeType="long">262144</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DMEM_SIZE" spirit:minimum="0" spirit:rangeType="long">8192</spirit:value>
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
@@ -3114,7 +3114,7 @@
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>DMEM_OUTREG_EN</spirit:name>
         <spirit:displayName>Dmem Outreg En</spirit:displayName>
-        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DMEM_OUTREG_EN">true</spirit:value>
+        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DMEM_OUTREG_EN">false</spirit:value>
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
@@ -3211,7 +3211,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>IO_GPIO_IN_NUM</spirit:name>
         <spirit:displayName>Io Gpio In Num</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.IO_GPIO_IN_NUM" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">32</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.IO_GPIO_IN_NUM" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">16</spirit:value>
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
@@ -3538,532 +3538,532 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_application_image.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_application_image.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_package.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_package.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_bootloader_image.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_bootloader_image.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_boot_rom.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_boot_rom.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_bus.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_bus.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_prim.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_prim.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cache.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cache.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cfs.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cfs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_clint.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_clint.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_decompressor.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_decompressor.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_frontend.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_frontend.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_control.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_hwtrig.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_hwtrig.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_counters.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_counters.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_regfile.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_regfile.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_shifter.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_shifter.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_muldiv.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_muldiv.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_bitmanip.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_bitmanip.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_fpu.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_fpu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_cfu.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_cfu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_cond.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_cond.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_crypto.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_crypto.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_alu.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_alu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_lsu.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_lsu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_pmp.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_pmp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_trace.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_trace.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_debug_auth.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_debug_auth.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_debug_dm.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_debug_dm.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_debug_dtm.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_debug_dtm.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_dma.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_dma.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_dmem.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_dmem.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_gpio.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_gpio.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_gptmr.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_gptmr.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_imem.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_imem.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_neoled.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_neoled.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_onewire.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_onewire.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_pwm.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_pwm.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_sdi.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_sdi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_slink.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_slink.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_spi.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_spi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_sys.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_sys.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_sysinfo.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_sysinfo.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_xbus.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_xbus.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_wdt.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_wdt.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_uart.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_uart.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_twi.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_twi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_twd.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_twd.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_trng.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_trng.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_tracer.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_tracer.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_top.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_top.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/xbus2axi4_bridge.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/xbus2axi4_bridge.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32_vivado_ip.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32_vivado_ip.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_application_image.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_application_image.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_package.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_package.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_bootloader_image.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_bootloader_image.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_boot_rom.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_boot_rom.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_bus.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_bus.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_prim.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_prim.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cache.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cache.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cfs.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cfs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_clint.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_clint.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_decompressor.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_decompressor.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_frontend.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_frontend.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_control.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_control.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_hwtrig.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_hwtrig.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_counters.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_counters.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_regfile.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_regfile.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_shifter.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_shifter.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_muldiv.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_muldiv.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_bitmanip.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_bitmanip.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_fpu.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_fpu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_cfu.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_cfu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_cond.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_cond.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_cp_crypto.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_cp_crypto.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_alu.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_alu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_lsu.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_lsu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_pmp.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_pmp.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu_trace.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu_trace.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_cpu.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_cpu.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_debug_auth.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_debug_auth.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_debug_dm.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_debug_dm.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_debug_dtm.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_debug_dtm.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_dma.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_dma.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_dmem.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_dmem.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_gpio.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_gpio.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_gptmr.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_gptmr.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_imem.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_imem.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_neoled.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_neoled.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_onewire.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_onewire.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_pwm.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_pwm.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_sdi.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_sdi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_slink.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_slink.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_spi.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_spi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_sys.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_sys.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_sysinfo.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_sysinfo.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_xbus.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_xbus.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_wdt.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_wdt.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_uart.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_uart.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_twi.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_twi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_twd.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_twd.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_trng.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_trng.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_tracer.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_tracer.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32/neorv32_top.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32/neorv32_top.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>neorv32</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/xbus2axi4_bridge.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/xbus2axi4_bridge.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/177a/src/neorv32_vivado_ip.vhd</spirit:name>
+        <spirit:name>../../ipshared/ad4d/src/neorv32_vivado_ip.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -4456,7 +4456,7 @@
     <spirit:parameter>
       <spirit:name>DMEM_SIZE</spirit:name>
       <spirit:displayName>DMEM size (bytes)</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DMEM_SIZE" spirit:minimum="0" spirit:rangeType="long">262144</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DMEM_SIZE" spirit:minimum="0" spirit:rangeType="long">8192</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -4468,7 +4468,7 @@
     <spirit:parameter>
       <spirit:name>DMEM_OUTREG_EN</spirit:name>
       <spirit:displayName>Output register stage</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.DMEM_OUTREG_EN">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.DMEM_OUTREG_EN">false</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -4565,7 +4565,7 @@
     <spirit:parameter>
       <spirit:name>IO_GPIO_IN_NUM</spirit:name>
       <spirit:displayName>Inputs (IRQ-capable)</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.IO_GPIO_IN_NUM" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">32</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.IO_GPIO_IN_NUM" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">16</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -4968,7 +4968,7 @@
       <xilinx:xilinxVersion>2025.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="5bdb1db5"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="68e94c68"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8086999a"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e7429b5a"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="fd09017e"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="4192bb0a"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="a3c7c11d"/>

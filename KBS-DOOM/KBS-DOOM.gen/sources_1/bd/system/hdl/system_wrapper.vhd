@@ -2,8 +2,8 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
---Date        : Sun Dec  7 13:20:01 2025
---Host        : LAPTOP-61978DQ3 running 64-bit major release  (build 9200)
+--Date        : Wed Dec 10 10:35:00 2025
+--Host        : DESKTOP-NOIGLTL running 64-bit major release  (build 9200)
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
 --Purpose     : IP block netlist
@@ -14,11 +14,10 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity system_wrapper is
   port (
-    BTNL : in STD_LOGIC;
-    BTNR : in STD_LOGIC;
     CLK100MHZ : in STD_LOGIC;
     CPU_RESETN : in STD_LOGIC;
-    SW : in STD_LOGIC_VECTOR ( 0 to 15 );
+    PS2_CLK : in STD_LOGIC;
+    PS2_DATA : in STD_LOGIC;
     VGA_B : out STD_LOGIC_VECTOR ( 3 downto 0 );
     VGA_G : out STD_LOGIC_VECTOR ( 3 downto 0 );
     VGA_HS : out STD_LOGIC;
@@ -67,9 +66,6 @@ architecture STRUCTURE of system_wrapper is
     ddr2_sdram_odt : out STD_LOGIC_VECTOR ( 0 to 0 );
     CLK100MHZ : in STD_LOGIC;
     CPU_RESETN : in STD_LOGIC;
-    SW : in STD_LOGIC_VECTOR ( 0 to 15 );
-    BTNL : in STD_LOGIC;
-    BTNR : in STD_LOGIC;
     uart0_rxd_i_0 : in STD_LOGIC;
     uart0_txd_o_0 : out STD_LOGIC;
     spi_clk_o_0 : out STD_LOGIC;
@@ -81,17 +77,18 @@ architecture STRUCTURE of system_wrapper is
     VGA_G : out STD_LOGIC_VECTOR ( 3 downto 0 );
     VGA_B : out STD_LOGIC_VECTOR ( 3 downto 0 );
     VGA_HS : out STD_LOGIC;
-    VGA_VS : out STD_LOGIC
+    VGA_VS : out STD_LOGIC;
+    PS2_DATA : in STD_LOGIC;
+    PS2_CLK : in STD_LOGIC
   );
   end component system;
 begin
 system_i: component system
      port map (
-      BTNL => BTNL,
-      BTNR => BTNR,
       CLK100MHZ => CLK100MHZ,
       CPU_RESETN => CPU_RESETN,
-      SW(0 to 15) => SW(0 to 15),
+      PS2_CLK => PS2_CLK,
+      PS2_DATA => PS2_DATA,
       VGA_B(3 downto 0) => VGA_B(3 downto 0),
       VGA_G(3 downto 0) => VGA_G(3 downto 0),
       VGA_HS => VGA_HS,

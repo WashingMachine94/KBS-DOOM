@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_mig_7series_0_0/system_mig_7series_0_0/user_design/constraints/system_mig_7series_0_0.xdc rfile:../../../ddr2_test.gen/sources_1/bd/system/ip/system_mig_7series_0_0/system_mig_7series_0_0/user_design/constraints/system_mig_7series_0_0.xdc id:1 order:EARLY} [current_design]
+set_property SRC_FILE_INFO {cfile:c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_mig_7series_0_0/system_mig_7series_0_0/user_design/constraints/system_mig_7series_0_0.xdc rfile:../../../KBS-DOOM.gen/sources_1/bd/system/ip/system_mig_7series_0_0/system_mig_7series_0_0/user_design/constraints/system_mig_7series_0_0.xdc id:1 order:EARLY} [current_design]
 set_property src_info {type:XDC file:1 line:41 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R7 [get_ports {ddr2_dq[0]}]
 set_property src_info {type:XDC file:1 line:47 export:INPUT save:INPUT read:READ} [current_design]

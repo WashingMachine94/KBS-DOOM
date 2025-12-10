@@ -1,0 +1,207 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Tue Dec  9 14:05:32 2025
+| Host         : DESKTOP-NOIGLTL running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_neorv32_vivado_ip_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the update of system_neorv32_vivado_ip_0_0 (NEORV32:user:neorv32_vivado_ip:1.0 (Rev. 1)) to current project options.
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+An attempt to modify the value of disabled parameter 'DMEM_SIZE' from '8192' to '262144' has been ignored for IP 'system_neorv32_vivado_ip_0_0'
+
+An attempt to modify the value of disabled parameter 'DMEM_OUTREG_EN' from 'false' to 'true' has been ignored for IP 'system_neorv32_vivado_ip_0_0'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv NEORV32:user:neorv32_vivado_ip:1.0 -user_name system_neorv32_vivado_ip_0_0
+set_property -dict "\
+  CONFIG.BOOT_ADDR_CUSTOM {0x00000000} \
+  CONFIG.BOOT_MODE_SELECT {0} \
+  CONFIG.CACHE_BLOCK_SIZE {64} \
+  CONFIG.CACHE_BURSTS_EN {true} \
+  CONFIG.CLOCK_FREQUENCY {100000000} \
+  CONFIG.CPU_CONSTT_BR_EN {false} \
+  CONFIG.CPU_FAST_MUL_EN {false} \
+  CONFIG.CPU_FAST_SHIFT_EN {false} \
+  CONFIG.CPU_RF_HW_RST_EN {false} \
+  CONFIG.Component_Name {system_neorv32_vivado_ip_0_0} \
+  CONFIG.DCACHE_EN {true} \
+  CONFIG.DCACHE_NUM_BLOCKS {4} \
+  CONFIG.DMEM_EN {false} \
+  CONFIG.DMEM_OUTREG_EN {true} \
+  CONFIG.DMEM_SIZE {262144} \
+  CONFIG.DUAL_CORE_EN {false} \
+  CONFIG.HPM_CNT_WIDTH {40} \
+  CONFIG.HPM_NUM_CNTS {0} \
+  CONFIG.ICACHE_EN {true} \
+  CONFIG.ICACHE_NUM_BLOCKS {4} \
+  CONFIG.IMEM_EN {true} \
+  CONFIG.IMEM_OUTREG_EN {true} \
+  CONFIG.IMEM_SIZE {32768} \
+  CONFIG.IO_CFS_EN {false} \
+  CONFIG.IO_CLINT_EN {false} \
+  CONFIG.IO_DMA_DSC_FIFO {4} \
+  CONFIG.IO_DMA_EN {false} \
+  CONFIG.IO_GPIO_EN {true} \
+  CONFIG.IO_GPIO_IN_NUM {32} \
+  CONFIG.IO_GPIO_OUT_NUM {16} \
+  CONFIG.IO_GPTMR_EN {false} \
+  CONFIG.IO_GPTMR_NUM {1} \
+  CONFIG.IO_NEOLED_EN {false} \
+  CONFIG.IO_NEOLED_TX_FIFO {1} \
+  CONFIG.IO_ONEWIRE_EN {false} \
+  CONFIG.IO_PWM_EN {false} \
+  CONFIG.IO_PWM_NUM {1} \
+  CONFIG.IO_SDI_EN {false} \
+  CONFIG.IO_SDI_FIFO {1} \
+  CONFIG.IO_SLINK_EN {true} \
+  CONFIG.IO_SLINK_RX_FIFO {1} \
+  CONFIG.IO_SLINK_TX_FIFO {1} \
+  CONFIG.IO_SPI_EN {true} \
+  CONFIG.IO_SPI_FIFO {1} \
+  CONFIG.IO_TRACER_BUFFER {1} \
+  CONFIG.IO_TRACER_EN {false} \
+  CONFIG.IO_TRNG_EN {false} \
+  CONFIG.IO_TRNG_FIFO {1} \
+  CONFIG.IO_TWD_EN {false} \
+  CONFIG.IO_TWD_RX_FIFO {1} \
+  CONFIG.IO_TWD_TX_FIFO {1} \
+  CONFIG.IO_TWI_EN {false} \
+  CONFIG.IO_TWI_FIFO {1} \
+  CONFIG.IO_UART0_EN {true} \
+  CONFIG.IO_UART0_RX_FIFO {64} \
+  CONFIG.IO_UART0_TX_FIFO {64} \
+  CONFIG.IO_UART1_EN {false} \
+  CONFIG.IO_UART1_RX_FIFO {1} \
+  CONFIG.IO_UART1_TX_FIFO {1} \
+  CONFIG.IO_WDT_EN {false} \
+  CONFIG.OCD_AUTHENTICATION {false} \
+  CONFIG.OCD_EN {false} \
+  CONFIG.OCD_JEDEC_ID {"00000000000"} \
+  CONFIG.OCD_NUM_HW_TRIGGERS {0} \
+  CONFIG.PMP_MIN_GRANULARITY {4} \
+  CONFIG.PMP_NAP_MODE_EN {false} \
+  CONFIG.PMP_NUM_REGIONS {0} \
+  CONFIG.PMP_TOR_MODE_EN {false} \
+  CONFIG.RISCV_ISA_C {false} \
+  CONFIG.RISCV_ISA_E {false} \
+  CONFIG.RISCV_ISA_M {true} \
+  CONFIG.RISCV_ISA_U {false} \
+  CONFIG.RISCV_ISA_Zaamo {false} \
+  CONFIG.RISCV_ISA_Zalrsc {false} \
+  CONFIG.RISCV_ISA_Zba {false} \
+  CONFIG.RISCV_ISA_Zbb {false} \
+  CONFIG.RISCV_ISA_Zbkb {false} \
+  CONFIG.RISCV_ISA_Zbkc {false} \
+  CONFIG.RISCV_ISA_Zbkx {false} \
+  CONFIG.RISCV_ISA_Zbs {false} \
+  CONFIG.RISCV_ISA_Zcb {false} \
+  CONFIG.RISCV_ISA_Zfinx {false} \
+  CONFIG.RISCV_ISA_Zibi {false} \
+  CONFIG.RISCV_ISA_Zicntr {false} \
+  CONFIG.RISCV_ISA_Zicond {false} \
+  CONFIG.RISCV_ISA_Zihpm {false} \
+  CONFIG.RISCV_ISA_Zimop {false} \
+  CONFIG.RISCV_ISA_Zknd {false} \
+  CONFIG.RISCV_ISA_Zkne {false} \
+  CONFIG.RISCV_ISA_Zknh {false} \
+  CONFIG.RISCV_ISA_Zksed {false} \
+  CONFIG.RISCV_ISA_Zksh {false} \
+  CONFIG.RISCV_ISA_Zmmul {false} \
+  CONFIG.RISCV_ISA_Zxcfu {false} \
+  CONFIG.XBUS_EN {true} \
+  CONFIG.XBUS_REGSTAGE_EN {true} \
+  CONFIG.XBUS_TIMEOUT {2048} \
+  CONFIG.clk.ASSOCIATED_BUSIF {s0_axis:s1_axis:m_axi} \
+  CONFIG.clk.ASSOCIATED_PORT {} \
+  CONFIG.clk.ASSOCIATED_RESET {resetn} \
+  CONFIG.clk.CLK_DOMAIN {system_CLK100MHZ} \
+  CONFIG.clk.FREQ_HZ {100000000} \
+  CONFIG.clk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.clk.INSERT_VIP {0} \
+  CONFIG.clk.PHASE {0.0} \
+  CONFIG.m_axi.ADDR_WIDTH {32} \
+  CONFIG.m_axi.ARUSER_WIDTH {0} \
+  CONFIG.m_axi.AWUSER_WIDTH {0} \
+  CONFIG.m_axi.BUSER_WIDTH {0} \
+  CONFIG.m_axi.CLK_DOMAIN {system_CLK100MHZ} \
+  CONFIG.m_axi.DATA_WIDTH {32} \
+  CONFIG.m_axi.FREQ_HZ {100000000} \
+  CONFIG.m_axi.HAS_BRESP {1} \
+  CONFIG.m_axi.HAS_BURST {1} \
+  CONFIG.m_axi.HAS_CACHE {1} \
+  CONFIG.m_axi.HAS_LOCK {0} \
+  CONFIG.m_axi.HAS_PROT {1} \
+  CONFIG.m_axi.HAS_QOS {0} \
+  CONFIG.m_axi.HAS_REGION {0} \
+  CONFIG.m_axi.HAS_RRESP {1} \
+  CONFIG.m_axi.HAS_WSTRB {1} \
+  CONFIG.m_axi.ID_WIDTH {0} \
+  CONFIG.m_axi.INSERT_VIP {0} \
+  CONFIG.m_axi.MAX_BURST_LENGTH {256} \
+  CONFIG.m_axi.NUM_READ_OUTSTANDING {2} \
+  CONFIG.m_axi.NUM_READ_THREADS {1} \
+  CONFIG.m_axi.NUM_WRITE_OUTSTANDING {2} \
+  CONFIG.m_axi.NUM_WRITE_THREADS {1} \
+  CONFIG.m_axi.PHASE {0.0} \
+  CONFIG.m_axi.PROTOCOL {AXI4} \
+  CONFIG.m_axi.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.m_axi.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.m_axi.RUSER_WIDTH {0} \
+  CONFIG.m_axi.SUPPORTS_NARROW_BURST {1} \
+  CONFIG.m_axi.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.m_axi.WUSER_WIDTH {0} \
+  CONFIG.ocd_resetn.INSERT_VIP {0} \
+  CONFIG.ocd_resetn.POLARITY {ACTIVE_LOW} \
+  CONFIG.resetn.INSERT_VIP {0} \
+  CONFIG.resetn.POLARITY {ACTIVE_LOW} \
+  CONFIG.s0_axis.CLK_DOMAIN {system_CLK100MHZ} \
+  CONFIG.s0_axis.FREQ_HZ {100000000} \
+  CONFIG.s0_axis.HAS_TKEEP {0} \
+  CONFIG.s0_axis.HAS_TLAST {1} \
+  CONFIG.s0_axis.HAS_TREADY {1} \
+  CONFIG.s0_axis.HAS_TSTRB {0} \
+  CONFIG.s0_axis.INSERT_VIP {0} \
+  CONFIG.s0_axis.LAYERED_METADATA {undef} \
+  CONFIG.s0_axis.PHASE {0.0} \
+  CONFIG.s0_axis.TDATA_NUM_BYTES {4} \
+  CONFIG.s0_axis.TDEST_WIDTH {4} \
+  CONFIG.s0_axis.TID_WIDTH {0} \
+  CONFIG.s0_axis.TUSER_WIDTH {0} \
+  CONFIG.s1_axis.CLK_DOMAIN {system_CLK100MHZ} \
+  CONFIG.s1_axis.FREQ_HZ {100000000} \
+  CONFIG.s1_axis.HAS_TKEEP {0} \
+  CONFIG.s1_axis.HAS_TLAST {1} \
+  CONFIG.s1_axis.HAS_TREADY {1} \
+  CONFIG.s1_axis.HAS_TSTRB {0} \
+  CONFIG.s1_axis.INSERT_VIP {0} \
+  CONFIG.s1_axis.LAYERED_METADATA {undef} \
+  CONFIG.s1_axis.PHASE {0.0} \
+  CONFIG.s1_axis.TDATA_NUM_BYTES {4} \
+  CONFIG.s1_axis.TDEST_WIDTH {0} \
+  CONFIG.s1_axis.TID_WIDTH {4} \
+  CONFIG.s1_axis.TUSER_WIDTH {0} \
+  CONFIG.wdt_resetn.INSERT_VIP {0} \
+  CONFIG.wdt_resetn.POLARITY {ACTIVE_LOW} " [get_ips system_neorv32_vivado_ip_0_0]
+
+

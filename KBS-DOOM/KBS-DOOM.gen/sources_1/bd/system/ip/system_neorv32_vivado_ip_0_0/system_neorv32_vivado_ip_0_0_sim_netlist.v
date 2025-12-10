@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-// Date        : Thu Dec  4 18:05:21 2025
-// Host        : LAPTOP-61978DQ3 running 64-bit major release  (build 9200)
+// Date        : Wed Dec 10 10:38:43 2025
+// Host        : DESKTOP-NOIGLTL running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/system_neorv32_vivado_ip_0_0_sim_netlist.v
+//               c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/system_neorv32_vivado_ip_0_0_sim_netlist.v
 // Design      : system_neorv32_vivado_ip_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -113,7 +113,7 @@ module system_neorv32_vivado_ip_0_0
   (* x_interface_info = "xilinx.com:interface:axis:1.0 s1_axis TDATA" *) input [31:0]s1_axis_tdata;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 s1_axis TLAST" *) input s1_axis_tlast;
   output [15:0]gpio_o;
-  input [31:0]gpio_i;
+  input [15:0]gpio_i;
   output uart0_txd_o;
   input uart0_rxd_i;
   output uart0_rtsn_o;
@@ -129,7 +129,7 @@ module system_neorv32_vivado_ip_0_0
   wire \<const0> ;
   wire \<const1> ;
   wire clk;
-  wire [31:0]gpio_i;
+  wire [15:0]gpio_i;
   wire [15:0]gpio_o;
   wire [0:0]\^m_axi_arlen ;
   wire m_axi_arready;
@@ -1239,7 +1239,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     \request_reg_enabled.device_req_o_reg[addr][3] ,
     \request_reg_enabled.device_req_o_reg[addr][3]_0 ,
     \request_reg_enabled.device_req_o_reg[addr][4] ,
-    \port_in_reg[31] ,
+    \port_in_reg[15] ,
     \request_reg_enabled.device_req_o_reg[data][0] ,
     \iodev_req[8][stb] ,
     \request_reg_enabled.device_req_o_reg[data][1] ,
@@ -1278,8 +1278,8 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     \w_pnt_reg[0] ,
     \w_pnt_reg[0]_0 ,
     p_1_in,
-    \bus_rsp_o_reg[data][31]_0 ,
-    \bus_rsp_o_reg[data][31]_1 ,
+    \bus_rsp_o_reg[data][15]_0 ,
+    gpio_o,
     \bus_rsp_o_reg[data][0] ,
     \bus_rsp_o_reg[data][1] ,
     \bus_rsp_o_reg[data][2] ,
@@ -1295,39 +1295,23 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     \bus_rsp_o_reg[data][12] ,
     \bus_rsp_o_reg[data][13] ,
     \bus_rsp_o_reg[data][14] ,
-    \bus_rsp_o_reg[data][15]_0 ,
-    \bus_rsp_o_reg[data][16] ,
-    \bus_rsp_o_reg[data][17]_0 ,
-    \bus_rsp_o_reg[data][18] ,
-    \bus_rsp_o_reg[data][19]_0 ,
-    \bus_rsp_o_reg[data][20] ,
-    \bus_rsp_o_reg[data][21] ,
-    \bus_rsp_o_reg[data][22] ,
-    \bus_rsp_o_reg[data][23] ,
-    \bus_rsp_o_reg[data][24] ,
-    \bus_rsp_o_reg[data][25] ,
-    \bus_rsp_o_reg[data][26] ,
-    \bus_rsp_o_reg[data][27] ,
-    \bus_rsp_o_reg[data][28] ,
-    \bus_rsp_o_reg[data][29] ,
-    \bus_rsp_o_reg[data][30]_0 ,
-    \bus_rsp_o_reg[data][31]_2 ,
+    \bus_rsp_o_reg[data][15]_1 ,
     \ctrl_reg[enable]__0_0 ,
     \ctrl_reg[cpha]__0 ,
     \bus_rsp_o_reg[data][2]_0 ,
     \bus_rsp_o_reg[data][7]_0 ,
     \bus_rsp_o_reg[data][5]_1 ,
     \bus_rsp_o_reg[data][9]_0 ,
+    \bus_rsp_o_reg[data][16] ,
     \bus_rsp_o_reg[data][16]_0 ,
-    \bus_rsp_o_reg[data][16]_1 ,
     r_pnt,
     w_pnt,
-    \bus_rsp_o_reg[data][30]_1 ,
+    \bus_rsp_o_reg[data][30]_0 ,
     empty,
-    \bus_rsp_o_reg[data][31]_3 ,
-    \bus_rsp_o_reg[data][31]_4 ,
+    \bus_rsp_o_reg[data][31]_0 ,
+    \bus_rsp_o_reg[data][31]_1 ,
     \bus_rsp_o_reg[data][0]_0 ,
-    \bus_rsp_o_reg[data][31]_5 ,
+    \bus_rsp_o_reg[data][31]_2 ,
     \bus_rsp_o_reg[data][3]_0 ,
     \bus_rsp_o_reg[data][9]_1 ,
     \bus_rsp_o_reg[data][11]_0 ,
@@ -1336,7 +1320,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     \ctrl_reg[irq_rx_full]__0_2 ,
     \ctrl_reg[irq_tx_empty]__0_3 ,
     \ctrl_reg[irq_tx_nfull]__0_4 ,
-    \bus_rsp_o_reg[data][31]_6 ,
+    \bus_rsp_o_reg[data][31]_3 ,
     \iodev_rsp[2][ack] ,
     \bus_rsp_o[ack] ,
     \iodev_rsp[11][ack] ,
@@ -1346,9 +1330,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     \response_reg_enabled.host_rsp_o_reg[data][31] ,
     DOADO,
     \response_reg_enabled.host_rsp_o_reg[data][31]_0 ,
+    \response_reg_enabled.host_rsp_o_reg[data][15] ,
     \response_reg_enabled.host_rsp_o_reg[data][31]_1 ,
     \response_reg_enabled.host_rsp_o_reg[data][31]_2 ,
-    \response_reg_enabled.host_rsp_o_reg[data][31]_3 ,
     clk,
     rstn_sys,
     \dev_30_rsp_i[err] ,
@@ -1362,7 +1346,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
   output \iodev_req[11][stb] ;
   output [0:0]E;
   output \iodev_req[2][stb] ;
-  output [31:0]D;
+  output [15:0]D;
   output \iodev_req[4][stb] ;
   output [31:0]\dev_12_req_o[data] ;
   output [25:0]\request_reg_enabled.device_req_o_reg[rw] ;
@@ -1375,7 +1359,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
   output [0:0]\request_reg_enabled.device_req_o_reg[addr][3] ;
   output [0:0]\request_reg_enabled.device_req_o_reg[addr][3]_0 ;
   output [0:0]\request_reg_enabled.device_req_o_reg[addr][4] ;
-  output [31:0]\port_in_reg[31] ;
+  output [15:0]\port_in_reg[15] ;
   output \request_reg_enabled.device_req_o_reg[data][0] ;
   output \iodev_req[8][stb] ;
   output \request_reg_enabled.device_req_o_reg[data][1] ;
@@ -1414,8 +1398,8 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
   input \w_pnt_reg[0] ;
   input \w_pnt_reg[0]_0 ;
   input [0:0]p_1_in;
-  input [31:0]\bus_rsp_o_reg[data][31]_0 ;
-  input [31:0]\bus_rsp_o_reg[data][31]_1 ;
+  input [15:0]\bus_rsp_o_reg[data][15]_0 ;
+  input [15:0]gpio_o;
   input \bus_rsp_o_reg[data][0] ;
   input \bus_rsp_o_reg[data][1] ;
   input \bus_rsp_o_reg[data][2] ;
@@ -1431,39 +1415,23 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
   input \bus_rsp_o_reg[data][12] ;
   input \bus_rsp_o_reg[data][13] ;
   input \bus_rsp_o_reg[data][14] ;
-  input \bus_rsp_o_reg[data][15]_0 ;
-  input \bus_rsp_o_reg[data][16] ;
-  input \bus_rsp_o_reg[data][17]_0 ;
-  input \bus_rsp_o_reg[data][18] ;
-  input \bus_rsp_o_reg[data][19]_0 ;
-  input \bus_rsp_o_reg[data][20] ;
-  input \bus_rsp_o_reg[data][21] ;
-  input \bus_rsp_o_reg[data][22] ;
-  input \bus_rsp_o_reg[data][23] ;
-  input \bus_rsp_o_reg[data][24] ;
-  input \bus_rsp_o_reg[data][25] ;
-  input \bus_rsp_o_reg[data][26] ;
-  input \bus_rsp_o_reg[data][27] ;
-  input \bus_rsp_o_reg[data][28] ;
-  input \bus_rsp_o_reg[data][29] ;
-  input \bus_rsp_o_reg[data][30]_0 ;
-  input \bus_rsp_o_reg[data][31]_2 ;
+  input \bus_rsp_o_reg[data][15]_1 ;
   input \ctrl_reg[enable]__0_0 ;
   input \ctrl_reg[cpha]__0 ;
   input \bus_rsp_o_reg[data][2]_0 ;
   input [7:0]\bus_rsp_o_reg[data][7]_0 ;
   input [2:0]\bus_rsp_o_reg[data][5]_1 ;
   input [3:0]\bus_rsp_o_reg[data][9]_0 ;
+  input \bus_rsp_o_reg[data][16] ;
   input \bus_rsp_o_reg[data][16]_0 ;
-  input \bus_rsp_o_reg[data][16]_1 ;
   input r_pnt;
   input w_pnt;
-  input [0:0]\bus_rsp_o_reg[data][30]_1 ;
+  input [0:0]\bus_rsp_o_reg[data][30]_0 ;
   input empty;
-  input \bus_rsp_o_reg[data][31]_3 ;
-  input \bus_rsp_o_reg[data][31]_4 ;
+  input \bus_rsp_o_reg[data][31]_0 ;
+  input \bus_rsp_o_reg[data][31]_1 ;
   input \bus_rsp_o_reg[data][0]_0 ;
-  input [30:0]\bus_rsp_o_reg[data][31]_5 ;
+  input [30:0]\bus_rsp_o_reg[data][31]_2 ;
   input [2:0]\bus_rsp_o_reg[data][3]_0 ;
   input \bus_rsp_o_reg[data][9]_1 ;
   input \bus_rsp_o_reg[data][11]_0 ;
@@ -1472,7 +1440,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
   input \ctrl_reg[irq_rx_full]__0_2 ;
   input \ctrl_reg[irq_tx_empty]__0_3 ;
   input \ctrl_reg[irq_tx_nfull]__0_4 ;
-  input [31:0]\bus_rsp_o_reg[data][31]_6 ;
+  input [31:0]\bus_rsp_o_reg[data][31]_3 ;
   input \iodev_rsp[2][ack] ;
   input \bus_rsp_o[ack] ;
   input \iodev_rsp[11][ack] ;
@@ -1482,9 +1450,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
   input [31:0]\response_reg_enabled.host_rsp_o_reg[data][31] ;
   input [31:0]DOADO;
   input [14:0]\response_reg_enabled.host_rsp_o_reg[data][31]_0 ;
+  input [15:0]\response_reg_enabled.host_rsp_o_reg[data][15] ;
   input [31:0]\response_reg_enabled.host_rsp_o_reg[data][31]_1 ;
-  input [31:0]\response_reg_enabled.host_rsp_o_reg[data][31]_2 ;
-  input [25:0]\response_reg_enabled.host_rsp_o_reg[data][31]_3 ;
+  input [25:0]\response_reg_enabled.host_rsp_o_reg[data][31]_2 ;
   input clk;
   input rstn_sys;
   input \dev_30_rsp_i[err] ;
@@ -1493,7 +1461,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
   input [31:0]\main_req_i[data] ;
   input \bus_req_i[rw] ;
 
-  wire [31:0]D;
+  wire [15:0]D;
   wire [31:0]DOADO;
   wire [0:0]E;
   wire I48;
@@ -1510,39 +1478,22 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
   wire \bus_rsp_o_reg[data][13] ;
   wire \bus_rsp_o_reg[data][14] ;
   wire [9:0]\bus_rsp_o_reg[data][15] ;
-  wire \bus_rsp_o_reg[data][15]_0 ;
+  wire [15:0]\bus_rsp_o_reg[data][15]_0 ;
+  wire \bus_rsp_o_reg[data][15]_1 ;
   wire \bus_rsp_o_reg[data][16] ;
   wire \bus_rsp_o_reg[data][16]_0 ;
-  wire \bus_rsp_o_reg[data][16]_1 ;
   wire \bus_rsp_o_reg[data][17] ;
-  wire \bus_rsp_o_reg[data][17]_0 ;
-  wire \bus_rsp_o_reg[data][18] ;
   wire \bus_rsp_o_reg[data][19] ;
-  wire \bus_rsp_o_reg[data][19]_0 ;
   wire \bus_rsp_o_reg[data][1] ;
-  wire \bus_rsp_o_reg[data][20] ;
-  wire \bus_rsp_o_reg[data][21] ;
-  wire \bus_rsp_o_reg[data][22] ;
-  wire \bus_rsp_o_reg[data][23] ;
-  wire \bus_rsp_o_reg[data][24] ;
-  wire \bus_rsp_o_reg[data][25] ;
-  wire \bus_rsp_o_reg[data][26] ;
-  wire \bus_rsp_o_reg[data][27] ;
-  wire \bus_rsp_o_reg[data][28] ;
-  wire \bus_rsp_o_reg[data][29] ;
   wire \bus_rsp_o_reg[data][2] ;
   wire \bus_rsp_o_reg[data][2]_0 ;
   wire \bus_rsp_o_reg[data][30] ;
-  wire \bus_rsp_o_reg[data][30]_0 ;
-  wire [0:0]\bus_rsp_o_reg[data][30]_1 ;
+  wire [0:0]\bus_rsp_o_reg[data][30]_0 ;
   wire \bus_rsp_o_reg[data][31] ;
-  wire [31:0]\bus_rsp_o_reg[data][31]_0 ;
-  wire [31:0]\bus_rsp_o_reg[data][31]_1 ;
-  wire \bus_rsp_o_reg[data][31]_2 ;
-  wire \bus_rsp_o_reg[data][31]_3 ;
-  wire \bus_rsp_o_reg[data][31]_4 ;
-  wire [30:0]\bus_rsp_o_reg[data][31]_5 ;
-  wire [31:0]\bus_rsp_o_reg[data][31]_6 ;
+  wire \bus_rsp_o_reg[data][31]_0 ;
+  wire \bus_rsp_o_reg[data][31]_1 ;
+  wire [30:0]\bus_rsp_o_reg[data][31]_2 ;
+  wire [31:0]\bus_rsp_o_reg[data][31]_3 ;
   wire \bus_rsp_o_reg[data][3] ;
   wire [2:0]\bus_rsp_o_reg[data][3]_0 ;
   wire \bus_rsp_o_reg[data][4] ;
@@ -1576,6 +1527,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
   wire \dev_12_req_o[rw] ;
   wire \dev_30_rsp_i[err] ;
   wire empty;
+  wire [15:0]gpio_o;
   wire \iodev_req[11][stb] ;
   wire \iodev_req[17][stb] ;
   wire \iodev_req[2][stb] ;
@@ -1594,7 +1546,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
   wire [31:0]\main_rsp_o[data] ;
   wire \main_rsp_o[err] ;
   wire [0:0]p_1_in;
-  wire [31:0]\port_in_reg[31] ;
+  wire [15:0]\port_in_reg[15] ;
   wire r_pnt;
   wire re0;
   wire \request_reg_enabled.device_req_o_reg[addr][2] ;
@@ -1619,13 +1571,8 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
   wire \request_reg_enabled.device_req_o_reg[rw]_6 ;
   wire [0:0]\request_reg_enabled.device_req_o_reg[rw]_7 ;
   wire \response_reg_enabled.host_rsp_o[data][0]_i_2_n_0 ;
-  wire \response_reg_enabled.host_rsp_o[data][16]_i_2_n_0 ;
-  wire \response_reg_enabled.host_rsp_o[data][17]_i_2_n_0 ;
-  wire \response_reg_enabled.host_rsp_o[data][18]_i_2_n_0 ;
   wire \response_reg_enabled.host_rsp_o[data][1]_i_2_n_0 ;
   wire \response_reg_enabled.host_rsp_o[data][2]_i_2_n_0 ;
-  wire \response_reg_enabled.host_rsp_o[data][30]_i_2_n_0 ;
-  wire \response_reg_enabled.host_rsp_o[data][31]_i_2_n_0 ;
   wire \response_reg_enabled.host_rsp_o[data][3]_i_2_n_0 ;
   wire \response_reg_enabled.host_rsp_o[data][4]_i_2_n_0 ;
   wire \response_reg_enabled.host_rsp_o[data][5]_i_2_n_0 ;
@@ -1633,11 +1580,11 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
   wire \response_reg_enabled.host_rsp_o[data][7]_i_2_n_0 ;
   wire \response_reg_enabled.host_rsp_o[data][8]_i_2_n_0 ;
   wire \response_reg_enabled.host_rsp_o[data][9]_i_2_n_0 ;
+  wire [15:0]\response_reg_enabled.host_rsp_o_reg[data][15] ;
   wire [31:0]\response_reg_enabled.host_rsp_o_reg[data][31] ;
   wire [14:0]\response_reg_enabled.host_rsp_o_reg[data][31]_0 ;
   wire [31:0]\response_reg_enabled.host_rsp_o_reg[data][31]_1 ;
-  wire [31:0]\response_reg_enabled.host_rsp_o_reg[data][31]_2 ;
-  wire [25:0]\response_reg_enabled.host_rsp_o_reg[data][31]_3 ;
+  wire [25:0]\response_reg_enabled.host_rsp_o_reg[data][31]_2 ;
   wire rstn_sys;
   wire \rx_fifo[avail] ;
   wire rx_last;
@@ -1674,38 +1621,21 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
         .\bus_rsp_o_reg[data][14] (\bus_rsp_o_reg[data][14] ),
         .\bus_rsp_o_reg[data][15] (\bus_rsp_o_reg[data][15] ),
         .\bus_rsp_o_reg[data][15]_0 (\bus_rsp_o_reg[data][15]_0 ),
+        .\bus_rsp_o_reg[data][15]_1 (\bus_rsp_o_reg[data][15]_1 ),
         .\bus_rsp_o_reg[data][16] (\bus_rsp_o_reg[data][16] ),
         .\bus_rsp_o_reg[data][16]_0 (\bus_rsp_o_reg[data][16]_0 ),
-        .\bus_rsp_o_reg[data][16]_1 (\bus_rsp_o_reg[data][16]_1 ),
         .\bus_rsp_o_reg[data][17] (\bus_rsp_o_reg[data][17] ),
-        .\bus_rsp_o_reg[data][17]_0 (\bus_rsp_o_reg[data][17]_0 ),
-        .\bus_rsp_o_reg[data][18] (\bus_rsp_o_reg[data][18] ),
         .\bus_rsp_o_reg[data][19] (\bus_rsp_o_reg[data][19] ),
-        .\bus_rsp_o_reg[data][19]_0 (\bus_rsp_o_reg[data][19]_0 ),
         .\bus_rsp_o_reg[data][1] (\bus_rsp_o_reg[data][1] ),
-        .\bus_rsp_o_reg[data][20] (\bus_rsp_o_reg[data][20] ),
-        .\bus_rsp_o_reg[data][21] (\bus_rsp_o_reg[data][21] ),
-        .\bus_rsp_o_reg[data][22] (\bus_rsp_o_reg[data][22] ),
-        .\bus_rsp_o_reg[data][23] (\bus_rsp_o_reg[data][23] ),
-        .\bus_rsp_o_reg[data][24] (\bus_rsp_o_reg[data][24] ),
-        .\bus_rsp_o_reg[data][25] (\bus_rsp_o_reg[data][25] ),
-        .\bus_rsp_o_reg[data][26] (\bus_rsp_o_reg[data][26] ),
-        .\bus_rsp_o_reg[data][27] (\bus_rsp_o_reg[data][27] ),
-        .\bus_rsp_o_reg[data][28] (\bus_rsp_o_reg[data][28] ),
-        .\bus_rsp_o_reg[data][29] (\bus_rsp_o_reg[data][29] ),
         .\bus_rsp_o_reg[data][2] (\bus_rsp_o_reg[data][2] ),
         .\bus_rsp_o_reg[data][2]_0 (\bus_rsp_o_reg[data][2]_0 ),
         .\bus_rsp_o_reg[data][30] (\bus_rsp_o_reg[data][30] ),
         .\bus_rsp_o_reg[data][30]_0 (\bus_rsp_o_reg[data][30]_0 ),
-        .\bus_rsp_o_reg[data][30]_1 (\bus_rsp_o_reg[data][30]_1 ),
         .\bus_rsp_o_reg[data][31] (\bus_rsp_o_reg[data][31] ),
         .\bus_rsp_o_reg[data][31]_0 (\bus_rsp_o_reg[data][31]_0 ),
         .\bus_rsp_o_reg[data][31]_1 (\bus_rsp_o_reg[data][31]_1 ),
         .\bus_rsp_o_reg[data][31]_2 (\bus_rsp_o_reg[data][31]_2 ),
         .\bus_rsp_o_reg[data][31]_3 (\bus_rsp_o_reg[data][31]_3 ),
-        .\bus_rsp_o_reg[data][31]_4 (\bus_rsp_o_reg[data][31]_4 ),
-        .\bus_rsp_o_reg[data][31]_5 (\bus_rsp_o_reg[data][31]_5 ),
-        .\bus_rsp_o_reg[data][31]_6 (\bus_rsp_o_reg[data][31]_6 ),
         .\bus_rsp_o_reg[data][3] (\bus_rsp_o_reg[data][3] ),
         .\bus_rsp_o_reg[data][3]_0 (\bus_rsp_o_reg[data][3]_0 ),
         .\bus_rsp_o_reg[data][4] (\bus_rsp_o_reg[data][4] ),
@@ -1741,13 +1671,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
         .\device_rsp_i[ack] (\main_rsp[ack] ),
         .\device_rsp_i[data] (\main_rsp[data] ),
         .empty(empty),
+        .gpio_o(gpio_o),
         .\main_req_i[addr] (\main_req_i[addr] ),
         .\main_req_i[data] (\main_req_i[data] ),
         .\main_rsp_o[ack] (\main_rsp_o[ack] ),
         .\main_rsp_o[data] (\main_rsp_o[data] ),
         .\main_rsp_o[err] (\main_rsp_o[err] ),
         .p_1_in(p_1_in),
-        .\port_in_reg[31] (\port_in_reg[31] ),
+        .\port_in_reg[15] (\port_in_reg[15] ),
         .r_pnt(r_pnt),
         .re0(re0),
         .\request_reg_enabled.device_req_o_reg[addr][16]_0 (\iodev_req[4][stb] ),
@@ -1796,9 +1727,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     .INIT(16'hFFFE)) 
     \response_reg_enabled.host_rsp_o[data][0]_i_2 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [0]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [0]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [0]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [0]),
+        .I1(\response_reg_enabled.host_rsp_o_reg[data][15] [0]),
+        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [0]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [0]),
         .O(\response_reg_enabled.host_rsp_o[data][0]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFEA)) 
@@ -1806,9 +1737,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [10]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[10]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [10]),
-        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [10]),
-        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [10]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [10]),
+        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [10]),
+        .I5(\response_reg_enabled.host_rsp_o_reg[data][15] [10]),
         .O(\main_rsp[data] [10]));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFEA)) 
@@ -1816,9 +1747,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [11]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[11]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [11]),
-        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [11]),
-        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [11]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [11]),
+        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [11]),
+        .I5(\response_reg_enabled.host_rsp_o_reg[data][15] [11]),
         .O(\main_rsp[data] [11]));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFEA)) 
@@ -1826,9 +1757,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [12]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[12]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [12]),
-        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [12]),
-        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [12]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [12]),
+        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [12]),
+        .I5(\response_reg_enabled.host_rsp_o_reg[data][15] [12]),
         .O(\main_rsp[data] [12]));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFEA)) 
@@ -1836,9 +1767,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [13]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[13]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [13]),
-        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [13]),
-        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [13]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [13]),
+        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [13]),
+        .I5(\response_reg_enabled.host_rsp_o_reg[data][15] [13]),
         .O(\main_rsp[data] [13]));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFEA)) 
@@ -1846,9 +1777,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [14]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[14]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [14]),
-        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [14]),
-        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [14]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [14]),
+        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [14]),
+        .I5(\response_reg_enabled.host_rsp_o_reg[data][15] [14]),
         .O(\main_rsp[data] [14]));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFEA)) 
@@ -1856,67 +1787,48 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [15]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[15]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [15]),
-        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [15]),
-        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [15]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [15]),
+        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [15]),
+        .I5(\response_reg_enabled.host_rsp_o_reg[data][15] [15]),
         .O(\main_rsp[data] [15]));
-  LUT4 #(
-    .INIT(16'hFFEA)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFEA)) 
     \response_reg_enabled.host_rsp_o[data][16]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [16]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[16]),
-        .I3(\response_reg_enabled.host_rsp_o[data][16]_i_2_n_0 ),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [16]),
+        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [16]),
+        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [10]),
         .O(\main_rsp[data] [16]));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \response_reg_enabled.host_rsp_o[data][16]_i_2 
-       (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [10]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [16]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [16]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [16]),
-        .O(\response_reg_enabled.host_rsp_o[data][16]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFEA)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFEA)) 
     \response_reg_enabled.host_rsp_o[data][17]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [17]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[17]),
-        .I3(\response_reg_enabled.host_rsp_o[data][17]_i_2_n_0 ),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [17]),
+        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [17]),
+        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [11]),
         .O(\main_rsp[data] [17]));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \response_reg_enabled.host_rsp_o[data][17]_i_2 
-       (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [11]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [17]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [17]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [17]),
-        .O(\response_reg_enabled.host_rsp_o[data][17]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFEA)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFEA)) 
     \response_reg_enabled.host_rsp_o[data][18]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [18]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[18]),
-        .I3(\response_reg_enabled.host_rsp_o[data][18]_i_2_n_0 ),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [18]),
+        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [18]),
+        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [12]),
         .O(\main_rsp[data] [18]));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \response_reg_enabled.host_rsp_o[data][18]_i_2 
-       (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [12]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [18]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [18]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [18]),
-        .O(\response_reg_enabled.host_rsp_o[data][18]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFEA)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFEA)) 
     \response_reg_enabled.host_rsp_o[data][19]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [19]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[19]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [19]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [19]),
         .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [19]),
-        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [19]),
         .O(\main_rsp[data] [19]));
   LUT4 #(
     .INIT(16'hFFEA)) 
@@ -1930,103 +1842,93 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     .INIT(16'hFFFE)) 
     \response_reg_enabled.host_rsp_o[data][1]_i_2 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [1]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [1]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [1]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [1]),
+        .I1(\response_reg_enabled.host_rsp_o_reg[data][15] [1]),
+        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [1]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [1]),
         .O(\response_reg_enabled.host_rsp_o[data][1]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFEA)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFEA)) 
     \response_reg_enabled.host_rsp_o[data][20]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [20]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[20]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [20]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [20]),
         .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [20]),
-        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [20]),
         .O(\main_rsp[data] [20]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFEA)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFEA)) 
     \response_reg_enabled.host_rsp_o[data][21]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [21]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[21]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [21]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [21]),
         .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [21]),
-        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [21]),
         .O(\main_rsp[data] [21]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFEA)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFEA)) 
     \response_reg_enabled.host_rsp_o[data][22]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [22]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[22]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [22]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [22]),
         .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [22]),
-        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [22]),
         .O(\main_rsp[data] [22]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFEA)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFEA)) 
     \response_reg_enabled.host_rsp_o[data][23]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [23]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[23]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [23]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [23]),
         .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [23]),
-        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [23]),
         .O(\main_rsp[data] [23]));
-  LUT5 #(
-    .INIT(32'hFFFFFFEA)) 
+  LUT4 #(
+    .INIT(16'hFFEA)) 
     \response_reg_enabled.host_rsp_o[data][24]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [24]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[24]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [24]),
-        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [24]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [24]),
         .O(\main_rsp[data] [24]));
-  LUT5 #(
-    .INIT(32'hFFFFFFEA)) 
+  LUT4 #(
+    .INIT(16'hFFEA)) 
     \response_reg_enabled.host_rsp_o[data][25]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [25]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[25]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [25]),
-        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [25]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [25]),
         .O(\main_rsp[data] [25]));
-  LUT5 #(
-    .INIT(32'hFFFFFFEA)) 
+  LUT4 #(
+    .INIT(16'hFFEA)) 
     \response_reg_enabled.host_rsp_o[data][26]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [26]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[26]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [26]),
-        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [26]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [26]),
         .O(\main_rsp[data] [26]));
-  LUT5 #(
-    .INIT(32'hFFFFFFEA)) 
+  LUT4 #(
+    .INIT(16'hFFEA)) 
     \response_reg_enabled.host_rsp_o[data][27]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [27]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[27]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [27]),
-        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [27]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [27]),
         .O(\main_rsp[data] [27]));
-  LUT5 #(
-    .INIT(32'hFFFFFFEA)) 
+  LUT4 #(
+    .INIT(16'hFFEA)) 
     \response_reg_enabled.host_rsp_o[data][28]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [28]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[28]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [28]),
-        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [28]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [28]),
         .O(\main_rsp[data] [28]));
-  LUT5 #(
-    .INIT(32'hFFFFFFEA)) 
+  LUT4 #(
+    .INIT(16'hFFEA)) 
     \response_reg_enabled.host_rsp_o[data][29]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [29]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[29]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [29]),
-        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [29]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [29]),
         .O(\main_rsp[data] [29]));
   LUT4 #(
     .INIT(16'hFFEA)) 
@@ -2040,42 +1942,30 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     .INIT(16'hFFFE)) 
     \response_reg_enabled.host_rsp_o[data][2]_i_2 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [2]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [2]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [2]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [2]),
+        .I1(\response_reg_enabled.host_rsp_o_reg[data][15] [2]),
+        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [2]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [2]),
         .O(\response_reg_enabled.host_rsp_o[data][2]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFEA)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFEA)) 
     \response_reg_enabled.host_rsp_o[data][30]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [30]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[30]),
-        .I3(\response_reg_enabled.host_rsp_o[data][30]_i_2_n_0 ),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [24]),
+        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [30]),
+        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [13]),
         .O(\main_rsp[data] [30]));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \response_reg_enabled.host_rsp_o[data][30]_i_2 
-       (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [13]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [30]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [30]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [24]),
-        .O(\response_reg_enabled.host_rsp_o[data][30]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFEA)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFEA)) 
     \response_reg_enabled.host_rsp_o[data][31]_i_1 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31] [31]),
         .I1(\bus_rsp_o[ack] ),
         .I2(DOADO[31]),
-        .I3(\response_reg_enabled.host_rsp_o[data][31]_i_2_n_0 ),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [25]),
+        .I4(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [31]),
+        .I5(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [14]),
         .O(\main_rsp[data] [31]));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \response_reg_enabled.host_rsp_o[data][31]_i_2 
-       (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [14]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [31]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [31]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [25]),
-        .O(\response_reg_enabled.host_rsp_o[data][31]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hFFEA)) 
     \response_reg_enabled.host_rsp_o[data][3]_i_1 
@@ -2088,9 +1978,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     .INIT(16'hFFFE)) 
     \response_reg_enabled.host_rsp_o[data][3]_i_2 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [3]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [3]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [3]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [3]),
+        .I1(\response_reg_enabled.host_rsp_o_reg[data][15] [3]),
+        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [3]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [3]),
         .O(\response_reg_enabled.host_rsp_o[data][3]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hFFEA)) 
@@ -2104,9 +1994,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     .INIT(16'hFFFE)) 
     \response_reg_enabled.host_rsp_o[data][4]_i_2 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [4]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [4]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [4]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [4]),
+        .I1(\response_reg_enabled.host_rsp_o_reg[data][15] [4]),
+        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [4]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [4]),
         .O(\response_reg_enabled.host_rsp_o[data][4]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hFFEA)) 
@@ -2120,9 +2010,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     .INIT(16'hFFFE)) 
     \response_reg_enabled.host_rsp_o[data][5]_i_2 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [5]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [5]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [5]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [5]),
+        .I1(\response_reg_enabled.host_rsp_o_reg[data][15] [5]),
+        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [5]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [5]),
         .O(\response_reg_enabled.host_rsp_o[data][5]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hFFEA)) 
@@ -2136,9 +2026,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     .INIT(16'hFFFE)) 
     \response_reg_enabled.host_rsp_o[data][6]_i_2 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [6]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [6]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [6]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [6]),
+        .I1(\response_reg_enabled.host_rsp_o_reg[data][15] [6]),
+        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [6]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [6]),
         .O(\response_reg_enabled.host_rsp_o[data][6]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hFFEA)) 
@@ -2152,9 +2042,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     .INIT(16'hFFFE)) 
     \response_reg_enabled.host_rsp_o[data][7]_i_2 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [7]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [7]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [7]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [7]),
+        .I1(\response_reg_enabled.host_rsp_o_reg[data][15] [7]),
+        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [7]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [7]),
         .O(\response_reg_enabled.host_rsp_o[data][7]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hFFEA)) 
@@ -2168,9 +2058,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     .INIT(16'hFFFE)) 
     \response_reg_enabled.host_rsp_o[data][8]_i_2 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [8]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [8]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [8]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [8]),
+        .I1(\response_reg_enabled.host_rsp_o_reg[data][15] [8]),
+        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [8]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [8]),
         .O(\response_reg_enabled.host_rsp_o[data][8]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hFFEA)) 
@@ -2184,9 +2074,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
     .INIT(16'hFFFE)) 
     \response_reg_enabled.host_rsp_o[data][9]_i_2 
        (.I0(\response_reg_enabled.host_rsp_o_reg[data][31]_0 [9]),
-        .I1(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [9]),
-        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [9]),
-        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_3 [9]),
+        .I1(\response_reg_enabled.host_rsp_o_reg[data][15] [9]),
+        .I2(\response_reg_enabled.host_rsp_o_reg[data][31]_1 [9]),
+        .I3(\response_reg_enabled.host_rsp_o_reg[data][31]_2 [9]),
         .O(\response_reg_enabled.host_rsp_o[data][9]_i_2_n_0 ));
 endmodule
 
@@ -2378,7 +2268,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg
         .I4(\request_reg_enabled.device_req_o_reg[stb]_0 ),
         .I5(arvalid_reg),
         .O(awvalid));
-  (* SOFT_HLUTNM = "soft_lutpair273" *) 
+  (* SOFT_HLUTNM = "soft_lutpair274" *) 
   LUT4 #(
     .INIT(16'hB888)) 
     locked_i_1
@@ -2847,231 +2737,231 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg
         .CLR(rstn_sys),
         .D(\request_reg_enabled.device_req_o_reg[stb]_2 ),
         .Q(\request_reg_enabled.device_req_o_reg[stb]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair289" *) 
+  (* SOFT_HLUTNM = "soft_lutpair290" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[ack]_i_1 
        (.I0(pending_reg),
         .I1(\bus_rsp[ack]0 ),
         .O(\bus_rsp[ack] ));
-  (* SOFT_HLUTNM = "soft_lutpair273" *) 
+  (* SOFT_HLUTNM = "soft_lutpair274" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][0]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[0]),
         .O(\response_reg_enabled.host_rsp_o[data][0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair278" *) 
+  (* SOFT_HLUTNM = "soft_lutpair279" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][10]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[10]),
         .O(\response_reg_enabled.host_rsp_o[data][10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair279" *) 
+  (* SOFT_HLUTNM = "soft_lutpair280" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][11]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[11]),
         .O(\response_reg_enabled.host_rsp_o[data][11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair279" *) 
+  (* SOFT_HLUTNM = "soft_lutpair280" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][12]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[12]),
         .O(\response_reg_enabled.host_rsp_o[data][12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair280" *) 
+  (* SOFT_HLUTNM = "soft_lutpair281" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][13]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[13]),
         .O(\response_reg_enabled.host_rsp_o[data][13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair280" *) 
+  (* SOFT_HLUTNM = "soft_lutpair281" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][14]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[14]),
         .O(\response_reg_enabled.host_rsp_o[data][14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair281" *) 
+  (* SOFT_HLUTNM = "soft_lutpair282" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][15]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[15]),
         .O(\response_reg_enabled.host_rsp_o[data][15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair281" *) 
+  (* SOFT_HLUTNM = "soft_lutpair282" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][16]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[16]),
         .O(\response_reg_enabled.host_rsp_o[data][16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair282" *) 
+  (* SOFT_HLUTNM = "soft_lutpair283" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][17]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[17]),
         .O(\response_reg_enabled.host_rsp_o[data][17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair282" *) 
+  (* SOFT_HLUTNM = "soft_lutpair283" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][18]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[18]),
         .O(\response_reg_enabled.host_rsp_o[data][18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair283" *) 
+  (* SOFT_HLUTNM = "soft_lutpair284" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][19]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[19]),
         .O(\response_reg_enabled.host_rsp_o[data][19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair274" *) 
+  (* SOFT_HLUTNM = "soft_lutpair275" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][1]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[1]),
         .O(\response_reg_enabled.host_rsp_o[data][1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair283" *) 
+  (* SOFT_HLUTNM = "soft_lutpair284" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][20]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[20]),
         .O(\response_reg_enabled.host_rsp_o[data][20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair284" *) 
+  (* SOFT_HLUTNM = "soft_lutpair285" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][21]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[21]),
         .O(\response_reg_enabled.host_rsp_o[data][21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair284" *) 
+  (* SOFT_HLUTNM = "soft_lutpair285" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][22]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[22]),
         .O(\response_reg_enabled.host_rsp_o[data][22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair285" *) 
+  (* SOFT_HLUTNM = "soft_lutpair286" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][23]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[23]),
         .O(\response_reg_enabled.host_rsp_o[data][23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair285" *) 
+  (* SOFT_HLUTNM = "soft_lutpair286" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][24]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[24]),
         .O(\response_reg_enabled.host_rsp_o[data][24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair286" *) 
+  (* SOFT_HLUTNM = "soft_lutpair287" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][25]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[25]),
         .O(\response_reg_enabled.host_rsp_o[data][25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair286" *) 
+  (* SOFT_HLUTNM = "soft_lutpair287" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][26]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[26]),
         .O(\response_reg_enabled.host_rsp_o[data][26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair287" *) 
+  (* SOFT_HLUTNM = "soft_lutpair288" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][27]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[27]),
         .O(\response_reg_enabled.host_rsp_o[data][27]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair287" *) 
+  (* SOFT_HLUTNM = "soft_lutpair288" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][28]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[28]),
         .O(\response_reg_enabled.host_rsp_o[data][28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair288" *) 
+  (* SOFT_HLUTNM = "soft_lutpair289" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][29]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[29]),
         .O(\response_reg_enabled.host_rsp_o[data][29]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair274" *) 
+  (* SOFT_HLUTNM = "soft_lutpair275" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][2]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[2]),
         .O(\response_reg_enabled.host_rsp_o[data][2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair288" *) 
+  (* SOFT_HLUTNM = "soft_lutpair289" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][30]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[30]),
         .O(\response_reg_enabled.host_rsp_o[data][30]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair289" *) 
+  (* SOFT_HLUTNM = "soft_lutpair290" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][31]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[31]),
         .O(\response_reg_enabled.host_rsp_o[data][31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair275" *) 
+  (* SOFT_HLUTNM = "soft_lutpair276" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][3]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[3]),
         .O(\response_reg_enabled.host_rsp_o[data][3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair275" *) 
+  (* SOFT_HLUTNM = "soft_lutpair276" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][4]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[4]),
         .O(\response_reg_enabled.host_rsp_o[data][4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair276" *) 
+  (* SOFT_HLUTNM = "soft_lutpair277" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][5]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[5]),
         .O(\response_reg_enabled.host_rsp_o[data][5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair276" *) 
+  (* SOFT_HLUTNM = "soft_lutpair277" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][6]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[6]),
         .O(\response_reg_enabled.host_rsp_o[data][6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair277" *) 
+  (* SOFT_HLUTNM = "soft_lutpair278" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][7]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[7]),
         .O(\response_reg_enabled.host_rsp_o[data][7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair277" *) 
+  (* SOFT_HLUTNM = "soft_lutpair278" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][8]_i_1 
        (.I0(pending_reg),
         .I1(m_axi_rdata[8]),
         .O(\response_reg_enabled.host_rsp_o[data][8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair278" *) 
+  (* SOFT_HLUTNM = "soft_lutpair279" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \response_reg_enabled.host_rsp_o[data][9]_i_1 
@@ -3340,7 +3230,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     \request_reg_enabled.device_req_o_reg[addr][3]_0 ,
     \request_reg_enabled.device_req_o_reg[addr][3]_1 ,
     \request_reg_enabled.device_req_o_reg[addr][4]_0 ,
-    \port_in_reg[31] ,
+    \port_in_reg[15] ,
     \request_reg_enabled.device_req_o_reg[data][0]_0 ,
     \request_reg_enabled.device_req_o_reg[addr][16]_1 ,
     \request_reg_enabled.device_req_o_reg[data][1]_0 ,
@@ -3379,8 +3269,8 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     \w_pnt_reg[0] ,
     \w_pnt_reg[0]_0 ,
     p_1_in,
-    \bus_rsp_o_reg[data][31]_0 ,
-    \bus_rsp_o_reg[data][31]_1 ,
+    \bus_rsp_o_reg[data][15]_0 ,
+    gpio_o,
     \bus_rsp_o_reg[data][0] ,
     \bus_rsp_o_reg[data][1] ,
     \bus_rsp_o_reg[data][2] ,
@@ -3396,39 +3286,23 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     \bus_rsp_o_reg[data][12] ,
     \bus_rsp_o_reg[data][13] ,
     \bus_rsp_o_reg[data][14] ,
-    \bus_rsp_o_reg[data][15]_0 ,
-    \bus_rsp_o_reg[data][16] ,
-    \bus_rsp_o_reg[data][17]_0 ,
-    \bus_rsp_o_reg[data][18] ,
-    \bus_rsp_o_reg[data][19]_0 ,
-    \bus_rsp_o_reg[data][20] ,
-    \bus_rsp_o_reg[data][21] ,
-    \bus_rsp_o_reg[data][22] ,
-    \bus_rsp_o_reg[data][23] ,
-    \bus_rsp_o_reg[data][24] ,
-    \bus_rsp_o_reg[data][25] ,
-    \bus_rsp_o_reg[data][26] ,
-    \bus_rsp_o_reg[data][27] ,
-    \bus_rsp_o_reg[data][28] ,
-    \bus_rsp_o_reg[data][29] ,
-    \bus_rsp_o_reg[data][30]_0 ,
-    \bus_rsp_o_reg[data][31]_2 ,
+    \bus_rsp_o_reg[data][15]_1 ,
     \ctrl_reg[enable]__0_0 ,
     \ctrl_reg[cpha]__0 ,
     \bus_rsp_o_reg[data][2]_0 ,
     \bus_rsp_o_reg[data][7]_0 ,
     \bus_rsp_o_reg[data][5]_1 ,
     \bus_rsp_o_reg[data][9]_0 ,
+    \bus_rsp_o_reg[data][16] ,
     \bus_rsp_o_reg[data][16]_0 ,
-    \bus_rsp_o_reg[data][16]_1 ,
     r_pnt,
     w_pnt,
-    \bus_rsp_o_reg[data][30]_1 ,
+    \bus_rsp_o_reg[data][30]_0 ,
     empty,
-    \bus_rsp_o_reg[data][31]_3 ,
-    \bus_rsp_o_reg[data][31]_4 ,
+    \bus_rsp_o_reg[data][31]_0 ,
+    \bus_rsp_o_reg[data][31]_1 ,
     \bus_rsp_o_reg[data][0]_0 ,
-    \bus_rsp_o_reg[data][31]_5 ,
+    \bus_rsp_o_reg[data][31]_2 ,
     \bus_rsp_o_reg[data][3]_0 ,
     \bus_rsp_o_reg[data][9]_1 ,
     \bus_rsp_o_reg[data][11]_0 ,
@@ -3437,7 +3311,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     \ctrl_reg[irq_rx_full]__0_2 ,
     \ctrl_reg[irq_tx_empty]__0_3 ,
     \ctrl_reg[irq_tx_nfull]__0_4 ,
-    \bus_rsp_o_reg[data][31]_6 ,
+    \bus_rsp_o_reg[data][31]_3 ,
     \device_rsp_i[ack] ,
     clk,
     rstn_sys,
@@ -3453,7 +3327,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   output \request_reg_enabled.device_req_o_reg[addr][17]_0 ;
   output [0:0]E;
   output \request_reg_enabled.device_req_o_reg[addr][20]_0 ;
-  output [31:0]D;
+  output [15:0]D;
   output \request_reg_enabled.device_req_o_reg[addr][16]_0 ;
   output [31:0]\dev_12_req_o[data] ;
   output [25:0]\request_reg_enabled.device_req_o_reg[rw]_0 ;
@@ -3466,7 +3340,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   output [0:0]\request_reg_enabled.device_req_o_reg[addr][3]_0 ;
   output [0:0]\request_reg_enabled.device_req_o_reg[addr][3]_1 ;
   output [0:0]\request_reg_enabled.device_req_o_reg[addr][4]_0 ;
-  output [31:0]\port_in_reg[31] ;
+  output [15:0]\port_in_reg[15] ;
   output \request_reg_enabled.device_req_o_reg[data][0]_0 ;
   output \request_reg_enabled.device_req_o_reg[addr][16]_1 ;
   output \request_reg_enabled.device_req_o_reg[data][1]_0 ;
@@ -3505,8 +3379,8 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   input \w_pnt_reg[0] ;
   input \w_pnt_reg[0]_0 ;
   input [0:0]p_1_in;
-  input [31:0]\bus_rsp_o_reg[data][31]_0 ;
-  input [31:0]\bus_rsp_o_reg[data][31]_1 ;
+  input [15:0]\bus_rsp_o_reg[data][15]_0 ;
+  input [15:0]gpio_o;
   input \bus_rsp_o_reg[data][0] ;
   input \bus_rsp_o_reg[data][1] ;
   input \bus_rsp_o_reg[data][2] ;
@@ -3522,39 +3396,23 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   input \bus_rsp_o_reg[data][12] ;
   input \bus_rsp_o_reg[data][13] ;
   input \bus_rsp_o_reg[data][14] ;
-  input \bus_rsp_o_reg[data][15]_0 ;
-  input \bus_rsp_o_reg[data][16] ;
-  input \bus_rsp_o_reg[data][17]_0 ;
-  input \bus_rsp_o_reg[data][18] ;
-  input \bus_rsp_o_reg[data][19]_0 ;
-  input \bus_rsp_o_reg[data][20] ;
-  input \bus_rsp_o_reg[data][21] ;
-  input \bus_rsp_o_reg[data][22] ;
-  input \bus_rsp_o_reg[data][23] ;
-  input \bus_rsp_o_reg[data][24] ;
-  input \bus_rsp_o_reg[data][25] ;
-  input \bus_rsp_o_reg[data][26] ;
-  input \bus_rsp_o_reg[data][27] ;
-  input \bus_rsp_o_reg[data][28] ;
-  input \bus_rsp_o_reg[data][29] ;
-  input \bus_rsp_o_reg[data][30]_0 ;
-  input \bus_rsp_o_reg[data][31]_2 ;
+  input \bus_rsp_o_reg[data][15]_1 ;
   input \ctrl_reg[enable]__0_0 ;
   input \ctrl_reg[cpha]__0 ;
   input \bus_rsp_o_reg[data][2]_0 ;
   input [7:0]\bus_rsp_o_reg[data][7]_0 ;
   input [2:0]\bus_rsp_o_reg[data][5]_1 ;
   input [3:0]\bus_rsp_o_reg[data][9]_0 ;
+  input \bus_rsp_o_reg[data][16] ;
   input \bus_rsp_o_reg[data][16]_0 ;
-  input \bus_rsp_o_reg[data][16]_1 ;
   input r_pnt;
   input w_pnt;
-  input [0:0]\bus_rsp_o_reg[data][30]_1 ;
+  input [0:0]\bus_rsp_o_reg[data][30]_0 ;
   input empty;
-  input \bus_rsp_o_reg[data][31]_3 ;
-  input \bus_rsp_o_reg[data][31]_4 ;
+  input \bus_rsp_o_reg[data][31]_0 ;
+  input \bus_rsp_o_reg[data][31]_1 ;
   input \bus_rsp_o_reg[data][0]_0 ;
-  input [30:0]\bus_rsp_o_reg[data][31]_5 ;
+  input [30:0]\bus_rsp_o_reg[data][31]_2 ;
   input [2:0]\bus_rsp_o_reg[data][3]_0 ;
   input \bus_rsp_o_reg[data][9]_1 ;
   input \bus_rsp_o_reg[data][11]_0 ;
@@ -3563,7 +3421,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   input \ctrl_reg[irq_rx_full]__0_2 ;
   input \ctrl_reg[irq_tx_empty]__0_3 ;
   input \ctrl_reg[irq_tx_nfull]__0_4 ;
-  input [31:0]\bus_rsp_o_reg[data][31]_6 ;
+  input [31:0]\bus_rsp_o_reg[data][31]_3 ;
   input \device_rsp_i[ack] ;
   input clk;
   input rstn_sys;
@@ -3574,15 +3432,15 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   input [31:0]\main_req_i[data] ;
   input \bus_req_i[rw] ;
 
-  wire [31:0]D;
+  wire [15:0]D;
   wire [0:0]E;
   wire I48;
   wire [7:0]Q;
   wire \bus_req_i[rw] ;
   wire \bus_req_i[stb] ;
-  wire \bus_rsp_o[data][31]_i_2_n_0 ;
-  wire \bus_rsp_o[data][31]_i_3_n_0 ;
-  wire \bus_rsp_o[data][31]_i_5_n_0 ;
+  wire \bus_rsp_o[data][15]_i_2_n_0 ;
+  wire \bus_rsp_o[data][15]_i_3_n_0 ;
+  wire \bus_rsp_o[data][15]_i_5_n_0 ;
   wire \bus_rsp_o_reg[data][0] ;
   wire \bus_rsp_o_reg[data][0]_0 ;
   wire \bus_rsp_o_reg[data][10] ;
@@ -3592,39 +3450,22 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   wire \bus_rsp_o_reg[data][13] ;
   wire \bus_rsp_o_reg[data][14] ;
   wire [9:0]\bus_rsp_o_reg[data][15] ;
-  wire \bus_rsp_o_reg[data][15]_0 ;
+  wire [15:0]\bus_rsp_o_reg[data][15]_0 ;
+  wire \bus_rsp_o_reg[data][15]_1 ;
   wire \bus_rsp_o_reg[data][16] ;
   wire \bus_rsp_o_reg[data][16]_0 ;
-  wire \bus_rsp_o_reg[data][16]_1 ;
   wire \bus_rsp_o_reg[data][17] ;
-  wire \bus_rsp_o_reg[data][17]_0 ;
-  wire \bus_rsp_o_reg[data][18] ;
   wire \bus_rsp_o_reg[data][19] ;
-  wire \bus_rsp_o_reg[data][19]_0 ;
   wire \bus_rsp_o_reg[data][1] ;
-  wire \bus_rsp_o_reg[data][20] ;
-  wire \bus_rsp_o_reg[data][21] ;
-  wire \bus_rsp_o_reg[data][22] ;
-  wire \bus_rsp_o_reg[data][23] ;
-  wire \bus_rsp_o_reg[data][24] ;
-  wire \bus_rsp_o_reg[data][25] ;
-  wire \bus_rsp_o_reg[data][26] ;
-  wire \bus_rsp_o_reg[data][27] ;
-  wire \bus_rsp_o_reg[data][28] ;
-  wire \bus_rsp_o_reg[data][29] ;
   wire \bus_rsp_o_reg[data][2] ;
   wire \bus_rsp_o_reg[data][2]_0 ;
   wire \bus_rsp_o_reg[data][30] ;
-  wire \bus_rsp_o_reg[data][30]_0 ;
-  wire [0:0]\bus_rsp_o_reg[data][30]_1 ;
+  wire [0:0]\bus_rsp_o_reg[data][30]_0 ;
   wire \bus_rsp_o_reg[data][31] ;
-  wire [31:0]\bus_rsp_o_reg[data][31]_0 ;
-  wire [31:0]\bus_rsp_o_reg[data][31]_1 ;
-  wire \bus_rsp_o_reg[data][31]_2 ;
-  wire \bus_rsp_o_reg[data][31]_3 ;
-  wire \bus_rsp_o_reg[data][31]_4 ;
-  wire [30:0]\bus_rsp_o_reg[data][31]_5 ;
-  wire [31:0]\bus_rsp_o_reg[data][31]_6 ;
+  wire \bus_rsp_o_reg[data][31]_0 ;
+  wire \bus_rsp_o_reg[data][31]_1 ;
+  wire [30:0]\bus_rsp_o_reg[data][31]_2 ;
+  wire [31:0]\bus_rsp_o_reg[data][31]_3 ;
   wire \bus_rsp_o_reg[data][3] ;
   wire [2:0]\bus_rsp_o_reg[data][3]_0 ;
   wire \bus_rsp_o_reg[data][4] ;
@@ -3660,6 +3501,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   wire \device_rsp_i[ack] ;
   wire [31:0]\device_rsp_i[data] ;
   wire empty;
+  wire [15:0]gpio_o;
   wire \main_req[stb] ;
   wire [14:0]\main_req_i[addr] ;
   wire [31:0]\main_req_i[data] ;
@@ -3667,7 +3509,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   wire [31:0]\main_rsp_o[data] ;
   wire \main_rsp_o[err] ;
   wire [0:0]p_1_in;
-  wire [31:0]\port_in_reg[31] ;
+  wire [15:0]\port_in_reg[15] ;
   wire r_pnt;
   wire re0;
   wire \request_reg_enabled.device_req_o_reg[addr][16]_0 ;
@@ -3763,13 +3605,13 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][0]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [0]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [0]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [0]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[0]),
         .I4(\bus_rsp_o_reg[data][0] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [0]));
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [0]));
   LUT5 #(
     .INIT(32'h20222000)) 
     \bus_rsp_o[data][0]_i_1__0 
@@ -3779,19 +3621,19 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\ctrl_reg[enable]__0_0 ),
         .O(\request_reg_enabled.device_req_o_reg[rw]_3 [0]));
-  (* SOFT_HLUTNM = "soft_lutpair215" *) 
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bus_rsp_o[data][0]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\bus_rsp_o_reg[data][0]_0 ),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [0]));
-  (* SOFT_HLUTNM = "soft_lutpair231" *) 
+  (* SOFT_HLUTNM = "soft_lutpair232" *) 
   LUT4 #(
     .INIT(16'h0AA8)) 
     \bus_rsp_o[data][0]_i_1__2 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_6 [0]),
+        .I1(\bus_rsp_o_reg[data][31]_3 [0]),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [0]));
@@ -3807,33 +3649,33 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][10]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [10]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [10]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [10]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[10]),
         .I4(\bus_rsp_o_reg[data][10] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [10]));
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [10]));
   LUT6 #(
     .INIT(64'h2000200020222000)) 
     \bus_rsp_o[data][10]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][31]_5 [9]),
+        .I2(\bus_rsp_o_reg[data][31]_2 [9]),
         .I3(\dev_00_req_o[addr] [1]),
         .I4(\bus_rsp_o_reg[data][11]_0 ),
         .I5(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [10]));
-  (* SOFT_HLUTNM = "soft_lutpair226" *) 
+  (* SOFT_HLUTNM = "soft_lutpair227" *) 
   LUT4 #(
     .INIT(16'h8820)) 
     \bus_rsp_o[data][10]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
-        .I2(\bus_rsp_o_reg[data][31]_6 [10]),
+        .I2(\bus_rsp_o_reg[data][31]_3 [10]),
         .I3(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [10]));
-  (* SOFT_HLUTNM = "soft_lutpair202" *) 
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \bus_rsp_o[data][10]_i_1__2 
@@ -3845,33 +3687,33 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][11]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [11]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [11]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [11]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[11]),
         .I4(\bus_rsp_o_reg[data][11] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [11]));
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [11]));
   LUT6 #(
     .INIT(64'h2000200020002022)) 
     \bus_rsp_o[data][11]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][31]_5 [10]),
+        .I2(\bus_rsp_o_reg[data][31]_2 [10]),
         .I3(\dev_00_req_o[addr] [1]),
         .I4(\bus_rsp_o_reg[data][11]_0 ),
         .I5(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [11]));
-  (* SOFT_HLUTNM = "soft_lutpair226" *) 
+  (* SOFT_HLUTNM = "soft_lutpair227" *) 
   LUT4 #(
     .INIT(16'h0200)) 
     \bus_rsp_o[data][11]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [11]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [11]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [11]));
-  (* SOFT_HLUTNM = "soft_lutpair196" *) 
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT4 #(
     .INIT(16'h0400)) 
     \bus_rsp_o[data][11]_i_1__2 
@@ -3883,33 +3725,33 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][12]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [12]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [12]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [12]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[12]),
         .I4(\bus_rsp_o_reg[data][12] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [12]));
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [12]));
   LUT6 #(
     .INIT(64'h2000200020222000)) 
     \bus_rsp_o[data][12]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][31]_5 [11]),
+        .I2(\bus_rsp_o_reg[data][31]_2 [11]),
         .I3(\dev_00_req_o[addr] [1]),
         .I4(rx_last),
         .I5(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [12]));
-  (* SOFT_HLUTNM = "soft_lutpair225" *) 
+  (* SOFT_HLUTNM = "soft_lutpair226" *) 
   LUT4 #(
     .INIT(16'h0200)) 
     \bus_rsp_o[data][12]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [12]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [12]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [12]));
-  (* SOFT_HLUTNM = "soft_lutpair196" *) 
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT4 #(
     .INIT(16'h0400)) 
     \bus_rsp_o[data][12]_i_1__2 
@@ -3921,32 +3763,32 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][13]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [13]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [13]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [13]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[13]),
         .I4(\bus_rsp_o_reg[data][13] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [13]));
-  (* SOFT_HLUTNM = "soft_lutpair207" *) 
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [13]));
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT4 #(
     .INIT(16'h2000)) 
     \bus_rsp_o[data][13]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [12]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [12]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [13]));
-  (* SOFT_HLUTNM = "soft_lutpair225" *) 
+  (* SOFT_HLUTNM = "soft_lutpair226" *) 
   LUT4 #(
     .INIT(16'h8820)) 
     \bus_rsp_o[data][13]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
-        .I2(\bus_rsp_o_reg[data][31]_6 [13]),
+        .I2(\bus_rsp_o_reg[data][31]_3 [13]),
         .I3(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [13]));
-  (* SOFT_HLUTNM = "soft_lutpair202" *) 
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \bus_rsp_o[data][13]_i_1__2 
@@ -3958,32 +3800,32 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][14]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [14]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [14]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [14]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[14]),
         .I4(\bus_rsp_o_reg[data][14] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [14]));
-  (* SOFT_HLUTNM = "soft_lutpair207" *) 
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [14]));
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT4 #(
     .INIT(16'h2000)) 
     \bus_rsp_o[data][14]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [13]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [13]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [14]));
-  (* SOFT_HLUTNM = "soft_lutpair224" *) 
+  (* SOFT_HLUTNM = "soft_lutpair225" *) 
   LUT4 #(
     .INIT(16'h0200)) 
     \bus_rsp_o[data][14]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [14]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [14]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [14]));
-  (* SOFT_HLUTNM = "soft_lutpair201" *) 
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \bus_rsp_o[data][14]_i_1__2 
@@ -3995,32 +3837,32 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][15]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [15]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [15]),
-        .I4(\bus_rsp_o_reg[data][15]_0 ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [15]));
-  (* SOFT_HLUTNM = "soft_lutpair208" *) 
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [15]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[15]),
+        .I4(\bus_rsp_o_reg[data][15]_1 ),
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [15]));
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT4 #(
     .INIT(16'h2000)) 
     \bus_rsp_o[data][15]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [14]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [14]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [15]));
-  (* SOFT_HLUTNM = "soft_lutpair224" *) 
+  (* SOFT_HLUTNM = "soft_lutpair225" *) 
   LUT4 #(
     .INIT(16'h00A8)) 
     \bus_rsp_o[data][15]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
-        .I2(\bus_rsp_o_reg[data][31]_6 [15]),
+        .I2(\bus_rsp_o_reg[data][31]_3 [15]),
         .I3(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [15]));
-  (* SOFT_HLUTNM = "soft_lutpair197" *) 
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT4 #(
     .INIT(16'h0400)) 
     \bus_rsp_o[data][15]_i_1__2 
@@ -4029,114 +3871,111 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\bus_rsp_o_reg[data][15] [9]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_0 [15]));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][16]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [16]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [16]),
-        .I4(\bus_rsp_o_reg[data][16] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [16]));
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  LUT5 #(
+    .INIT(32'h04040004)) 
+    \bus_rsp_o[data][15]_i_2 
+       (.I0(\dev_00_req_o[rw] ),
+        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
+        .I2(\dev_00_req_o[addr] [2]),
+        .I3(\dev_00_req_o[addr] [0]),
+        .I4(\dev_00_req_o[addr] [1]),
+        .O(\bus_rsp_o[data][15]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  LUT5 #(
+    .INIT(32'h00000008)) 
+    \bus_rsp_o[data][15]_i_3 
+       (.I0(\dev_00_req_o[addr] [0]),
+        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
+        .I2(\dev_00_req_o[rw] ),
+        .I3(\dev_00_req_o[addr] [2]),
+        .I4(\dev_00_req_o[addr] [1]),
+        .O(\bus_rsp_o[data][15]_i_3_n_0 ));
+  LUT3 #(
+    .INIT(8'h20)) 
+    \bus_rsp_o[data][15]_i_5 
+       (.I0(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
+        .I1(\dev_00_req_o[rw] ),
+        .I2(\dev_00_req_o[addr] [2]),
+        .O(\bus_rsp_o[data][15]_i_5_n_0 ));
   LUT5 #(
     .INIT(32'h00000220)) 
-    \bus_rsp_o[data][16]_i_1__0 
+    \bus_rsp_o[data][16]_i_1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][16]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][16]_0 ),
-        .I3(\bus_rsp_o_reg[data][16]_1 ),
+        .I2(\bus_rsp_o_reg[data][16] ),
+        .I3(\bus_rsp_o_reg[data][16]_0 ),
         .I4(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_3 [10]));
   LUT6 #(
     .INIT(64'h2000200020222000)) 
-    \bus_rsp_o[data][16]_i_1__1 
+    \bus_rsp_o[data][16]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][31]_5 [15]),
+        .I2(\bus_rsp_o_reg[data][31]_2 [15]),
         .I3(\dev_00_req_o[addr] [1]),
         .I4(\ctrl_reg[irq_rx_nempty]__0_1 ),
         .I5(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [16]));
-  (* SOFT_HLUTNM = "soft_lutpair223" *) 
+  (* SOFT_HLUTNM = "soft_lutpair224" *) 
   LUT4 #(
     .INIT(16'hAA08)) 
-    \bus_rsp_o[data][16]_i_1__2 
+    \bus_rsp_o[data][16]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_6 [16]),
+        .I1(\bus_rsp_o_reg[data][31]_3 [16]),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [16]));
-  (* SOFT_HLUTNM = "soft_lutpair197" *) 
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT4 #(
     .INIT(16'h0400)) 
-    \bus_rsp_o[data][16]_i_1__3 
+    \bus_rsp_o[data][16]_i_1__2 
        (.I0(\dev_00_req_o[rw] ),
         .I1(\request_reg_enabled.device_req_o_reg[addr][17]_0 ),
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\rx_fifo[avail] ),
         .O(\request_reg_enabled.device_req_o_reg[rw]_0 [16]));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][17]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [17]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [17]),
-        .I4(\bus_rsp_o_reg[data][17]_0 ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [17]));
-  (* SOFT_HLUTNM = "soft_lutpair192" *) 
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT5 #(
     .INIT(32'h00002002)) 
-    \bus_rsp_o[data][17]_i_1__0 
+    \bus_rsp_o[data][17]_i_1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][16]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(r_pnt),
         .I3(w_pnt),
         .I4(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_3 [11]));
-  (* SOFT_HLUTNM = "soft_lutpair208" *) 
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT4 #(
     .INIT(16'h2000)) 
-    \bus_rsp_o[data][17]_i_1__1 
+    \bus_rsp_o[data][17]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [16]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [16]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [17]));
-  (* SOFT_HLUTNM = "soft_lutpair223" *) 
+  (* SOFT_HLUTNM = "soft_lutpair224" *) 
   LUT4 #(
     .INIT(16'h00A8)) 
-    \bus_rsp_o[data][17]_i_1__2 
+    \bus_rsp_o[data][17]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
-        .I2(\bus_rsp_o_reg[data][31]_6 [17]),
+        .I2(\bus_rsp_o_reg[data][31]_3 [17]),
         .I3(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [17]));
-  (* SOFT_HLUTNM = "soft_lutpair198" *) 
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT4 #(
     .INIT(16'h0004)) 
-    \bus_rsp_o[data][17]_i_1__3 
+    \bus_rsp_o[data][17]_i_1__2 
        (.I0(\dev_00_req_o[rw] ),
         .I1(\request_reg_enabled.device_req_o_reg[addr][17]_0 ),
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\bus_rsp_o_reg[data][17] ),
         .O(\request_reg_enabled.device_req_o_reg[rw]_0 [17]));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][18]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [18]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [18]),
-        .I4(\bus_rsp_o_reg[data][18] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [18]));
-  (* SOFT_HLUTNM = "soft_lutpair192" *) 
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT5 #(
     .INIT(32'h00000220)) 
-    \bus_rsp_o[data][18]_i_1__0 
+    \bus_rsp_o[data][18]_i_1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][16]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(r_pnt),
@@ -4145,65 +3984,55 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .O(\request_reg_enabled.device_req_o_reg[rw]_3 [12]));
   LUT6 #(
     .INIT(64'h2000200020222000)) 
-    \bus_rsp_o[data][18]_i_1__1 
+    \bus_rsp_o[data][18]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][31]_5 [17]),
+        .I2(\bus_rsp_o_reg[data][31]_2 [17]),
         .I3(\dev_00_req_o[addr] [1]),
         .I4(\ctrl_reg[irq_rx_full]__0_2 ),
         .I5(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [18]));
-  (* SOFT_HLUTNM = "soft_lutpair222" *) 
+  (* SOFT_HLUTNM = "soft_lutpair223" *) 
   LUT4 #(
     .INIT(16'h00A8)) 
-    \bus_rsp_o[data][18]_i_1__2 
+    \bus_rsp_o[data][18]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
-        .I2(\bus_rsp_o_reg[data][31]_6 [18]),
+        .I2(\bus_rsp_o_reg[data][31]_3 [18]),
         .I3(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [18]));
   (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT4 #(
     .INIT(16'h0004)) 
-    \bus_rsp_o[data][18]_i_1__3 
+    \bus_rsp_o[data][18]_i_1__2 
        (.I0(\dev_00_req_o[rw] ),
         .I1(\request_reg_enabled.device_req_o_reg[addr][17]_0 ),
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\tx_fifo[avail] ),
         .O(\request_reg_enabled.device_req_o_reg[rw]_0 [18]));
   LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][19]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [19]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [19]),
-        .I4(\bus_rsp_o_reg[data][19]_0 ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [19]));
-  LUT6 #(
     .INIT(64'h2000200020222000)) 
-    \bus_rsp_o[data][19]_i_1__0 
+    \bus_rsp_o[data][19]_i_1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][31]_5 [18]),
+        .I2(\bus_rsp_o_reg[data][31]_2 [18]),
         .I3(\dev_00_req_o[addr] [1]),
         .I4(\ctrl_reg[irq_tx_empty]__0_3 ),
         .I5(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [19]));
-  (* SOFT_HLUTNM = "soft_lutpair222" *) 
+  (* SOFT_HLUTNM = "soft_lutpair223" *) 
   LUT4 #(
     .INIT(16'h0200)) 
-    \bus_rsp_o[data][19]_i_1__1 
+    \bus_rsp_o[data][19]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [19]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [19]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [19]));
-  (* SOFT_HLUTNM = "soft_lutpair198" *) 
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT4 #(
     .INIT(16'h0400)) 
-    \bus_rsp_o[data][19]_i_1__2 
+    \bus_rsp_o[data][19]_i_1__1 
        (.I0(\dev_00_req_o[rw] ),
         .I1(\request_reg_enabled.device_req_o_reg[addr][17]_0 ),
         .I2(\dev_00_req_o[addr] [0]),
@@ -4212,13 +4041,13 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][1]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [1]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [1]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [1]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[1]),
         .I4(\bus_rsp_o_reg[data][1] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [1]));
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [1]));
   LUT5 #(
     .INIT(32'h20222000)) 
     \bus_rsp_o[data][1]_i_1__0 
@@ -4233,21 +4062,21 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     \bus_rsp_o[data][1]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][31]_5 [0]),
+        .I2(\bus_rsp_o_reg[data][31]_2 [0]),
         .I3(\dev_00_req_o[addr] [1]),
         .I4(\dev_00_req_o[addr] [0]),
         .I5(\bus_rsp_o_reg[data][3]_0 [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [1]));
-  (* SOFT_HLUTNM = "soft_lutpair231" *) 
+  (* SOFT_HLUTNM = "soft_lutpair232" *) 
   LUT4 #(
     .INIT(16'hAAA8)) 
     \bus_rsp_o[data][1]_i_1__2 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_6 [1]),
+        .I1(\bus_rsp_o_reg[data][31]_3 [1]),
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\dev_00_req_o[addr] [1]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [1]));
-  (* SOFT_HLUTNM = "soft_lutpair195" *) 
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \bus_rsp_o[data][1]_i_1__3 
@@ -4256,333 +4085,233 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I2(\dev_00_req_o[addr] [0]),
         .I3(Q[1]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_0 [1]));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][20]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [20]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [20]),
-        .I4(\bus_rsp_o_reg[data][20] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [20]));
-  (* SOFT_HLUTNM = "soft_lutpair209" *) 
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT4 #(
     .INIT(16'h2000)) 
-    \bus_rsp_o[data][20]_i_1__0 
+    \bus_rsp_o[data][20]_i_1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [19]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [19]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [20]));
-  (* SOFT_HLUTNM = "soft_lutpair221" *) 
+  (* SOFT_HLUTNM = "soft_lutpair222" *) 
   LUT4 #(
     .INIT(16'h0200)) 
-    \bus_rsp_o[data][20]_i_1__1 
+    \bus_rsp_o[data][20]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [20]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [20]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [20]));
-  (* SOFT_HLUTNM = "soft_lutpair199" *) 
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT4 #(
     .INIT(16'h0400)) 
-    \bus_rsp_o[data][20]_i_1__2 
+    \bus_rsp_o[data][20]_i_1__1 
        (.I0(\dev_00_req_o[rw] ),
         .I1(\request_reg_enabled.device_req_o_reg[addr][17]_0 ),
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\ctrl_reg[irq_rx_nempty]__0 ),
         .O(\request_reg_enabled.device_req_o_reg[rw]_0 [20]));
   LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][21]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [21]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [21]),
-        .I4(\bus_rsp_o_reg[data][21] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [21]));
-  LUT6 #(
     .INIT(64'h2000200020222000)) 
-    \bus_rsp_o[data][21]_i_1__0 
+    \bus_rsp_o[data][21]_i_1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][31]_5 [20]),
+        .I2(\bus_rsp_o_reg[data][31]_2 [20]),
         .I3(\dev_00_req_o[addr] [1]),
         .I4(\ctrl_reg[irq_tx_nfull]__0_4 ),
         .I5(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [21]));
-  (* SOFT_HLUTNM = "soft_lutpair221" *) 
+  (* SOFT_HLUTNM = "soft_lutpair222" *) 
   LUT4 #(
     .INIT(16'h0200)) 
-    \bus_rsp_o[data][21]_i_1__1 
+    \bus_rsp_o[data][21]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [21]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [21]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [21]));
-  (* SOFT_HLUTNM = "soft_lutpair199" *) 
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT4 #(
     .INIT(16'h0400)) 
-    \bus_rsp_o[data][21]_i_1__2 
+    \bus_rsp_o[data][21]_i_1__1 
        (.I0(\dev_00_req_o[rw] ),
         .I1(\request_reg_enabled.device_req_o_reg[addr][17]_0 ),
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\ctrl_reg[irq_rx_full]__0 ),
         .O(\request_reg_enabled.device_req_o_reg[rw]_0 [21]));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][22]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [22]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [22]),
-        .I4(\bus_rsp_o_reg[data][22] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [22]));
-  (* SOFT_HLUTNM = "soft_lutpair209" *) 
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT4 #(
     .INIT(16'h2000)) 
-    \bus_rsp_o[data][22]_i_1__0 
+    \bus_rsp_o[data][22]_i_1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [21]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [21]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [22]));
-  (* SOFT_HLUTNM = "soft_lutpair220" *) 
+  (* SOFT_HLUTNM = "soft_lutpair221" *) 
   LUT4 #(
     .INIT(16'h0200)) 
-    \bus_rsp_o[data][22]_i_1__1 
+    \bus_rsp_o[data][22]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [22]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [22]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [22]));
-  (* SOFT_HLUTNM = "soft_lutpair200" *) 
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT4 #(
     .INIT(16'h0400)) 
-    \bus_rsp_o[data][22]_i_1__2 
+    \bus_rsp_o[data][22]_i_1__1 
        (.I0(\dev_00_req_o[rw] ),
         .I1(\request_reg_enabled.device_req_o_reg[addr][17]_0 ),
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\ctrl_reg[irq_tx_empty]__0 ),
         .O(\request_reg_enabled.device_req_o_reg[rw]_0 [22]));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][23]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [23]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [23]),
-        .I4(\bus_rsp_o_reg[data][23] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [23]));
-  (* SOFT_HLUTNM = "soft_lutpair210" *) 
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT4 #(
     .INIT(16'h2000)) 
-    \bus_rsp_o[data][23]_i_1__0 
+    \bus_rsp_o[data][23]_i_1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [22]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [22]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [23]));
-  (* SOFT_HLUTNM = "soft_lutpair220" *) 
+  (* SOFT_HLUTNM = "soft_lutpair221" *) 
   LUT4 #(
     .INIT(16'h0200)) 
-    \bus_rsp_o[data][23]_i_1__1 
+    \bus_rsp_o[data][23]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [23]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [23]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [23]));
-  (* SOFT_HLUTNM = "soft_lutpair200" *) 
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT4 #(
     .INIT(16'h0400)) 
-    \bus_rsp_o[data][23]_i_1__2 
+    \bus_rsp_o[data][23]_i_1__1 
        (.I0(\dev_00_req_o[rw] ),
         .I1(\request_reg_enabled.device_req_o_reg[addr][17]_0 ),
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\ctrl_reg[irq_tx_nfull]__0 ),
         .O(\request_reg_enabled.device_req_o_reg[rw]_0 [23]));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][24]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [24]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [24]),
-        .I4(\bus_rsp_o_reg[data][24] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [24]));
-  (* SOFT_HLUTNM = "soft_lutpair210" *) 
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT4 #(
     .INIT(16'h2000)) 
-    \bus_rsp_o[data][24]_i_1__0 
+    \bus_rsp_o[data][24]_i_1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [23]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [23]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [24]));
-  (* SOFT_HLUTNM = "soft_lutpair219" *) 
+  (* SOFT_HLUTNM = "soft_lutpair220" *) 
   LUT4 #(
     .INIT(16'hAA08)) 
-    \bus_rsp_o[data][24]_i_1__1 
+    \bus_rsp_o[data][24]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_6 [24]),
+        .I1(\bus_rsp_o_reg[data][31]_3 [24]),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [24]));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][25]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [25]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [25]),
-        .I4(\bus_rsp_o_reg[data][25] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [25]));
-  (* SOFT_HLUTNM = "soft_lutpair211" *) 
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
   LUT4 #(
     .INIT(16'h2000)) 
-    \bus_rsp_o[data][25]_i_1__0 
+    \bus_rsp_o[data][25]_i_1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [24]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [24]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [25]));
+  (* SOFT_HLUTNM = "soft_lutpair220" *) 
+  LUT4 #(
+    .INIT(16'h0200)) 
+    \bus_rsp_o[data][25]_i_1__0 
+       (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
+        .I1(\dev_00_req_o[addr] [1]),
+        .I2(\dev_00_req_o[addr] [0]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [25]),
+        .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [25]));
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
+  LUT4 #(
+    .INIT(16'h2000)) 
+    \bus_rsp_o[data][26]_i_1 
+       (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
+        .I1(\dev_00_req_o[rw] ),
+        .I2(\dev_00_req_o[addr] [1]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [25]),
+        .O(\request_reg_enabled.device_req_o_reg[rw]_5 [26]));
   (* SOFT_HLUTNM = "soft_lutpair219" *) 
   LUT4 #(
     .INIT(16'h0200)) 
-    \bus_rsp_o[data][25]_i_1__1 
-       (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
-        .I1(\dev_00_req_o[addr] [1]),
-        .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [25]),
-        .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [25]));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][26]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [26]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [26]),
-        .I4(\bus_rsp_o_reg[data][26] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [26]));
-  (* SOFT_HLUTNM = "soft_lutpair211" *) 
-  LUT4 #(
-    .INIT(16'h2000)) 
     \bus_rsp_o[data][26]_i_1__0 
-       (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
-        .I1(\dev_00_req_o[rw] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [25]),
-        .O(\request_reg_enabled.device_req_o_reg[rw]_5 [26]));
-  (* SOFT_HLUTNM = "soft_lutpair218" *) 
-  LUT4 #(
-    .INIT(16'h0200)) 
-    \bus_rsp_o[data][26]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [26]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [26]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [26]));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][27]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [27]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [27]),
-        .I4(\bus_rsp_o_reg[data][27] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [27]));
-  (* SOFT_HLUTNM = "soft_lutpair212" *) 
-  LUT4 #(
-    .INIT(16'h2000)) 
-    \bus_rsp_o[data][27]_i_1__0 
-       (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
-        .I1(\dev_00_req_o[rw] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [26]),
-        .O(\request_reg_enabled.device_req_o_reg[rw]_5 [27]));
-  (* SOFT_HLUTNM = "soft_lutpair218" *) 
-  LUT4 #(
-    .INIT(16'h00A8)) 
-    \bus_rsp_o[data][27]_i_1__1 
-       (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
-        .I1(\dev_00_req_o[addr] [0]),
-        .I2(\bus_rsp_o_reg[data][31]_6 [27]),
-        .I3(\dev_00_req_o[addr] [1]),
-        .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [27]));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][28]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [28]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [28]),
-        .I4(\bus_rsp_o_reg[data][28] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [28]));
-  (* SOFT_HLUTNM = "soft_lutpair212" *) 
-  LUT4 #(
-    .INIT(16'h2000)) 
-    \bus_rsp_o[data][28]_i_1__0 
-       (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
-        .I1(\dev_00_req_o[rw] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [27]),
-        .O(\request_reg_enabled.device_req_o_reg[rw]_5 [28]));
-  (* SOFT_HLUTNM = "soft_lutpair217" *) 
-  LUT4 #(
-    .INIT(16'h00A8)) 
-    \bus_rsp_o[data][28]_i_1__1 
-       (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
-        .I1(\dev_00_req_o[addr] [0]),
-        .I2(\bus_rsp_o_reg[data][31]_6 [28]),
-        .I3(\dev_00_req_o[addr] [1]),
-        .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [28]));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][29]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [29]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [29]),
-        .I4(\bus_rsp_o_reg[data][29] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [29]));
   (* SOFT_HLUTNM = "soft_lutpair213" *) 
   LUT4 #(
     .INIT(16'h2000)) 
-    \bus_rsp_o[data][29]_i_1__0 
+    \bus_rsp_o[data][27]_i_1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [28]),
-        .O(\request_reg_enabled.device_req_o_reg[rw]_5 [29]));
-  (* SOFT_HLUTNM = "soft_lutpair217" *) 
+        .I3(\bus_rsp_o_reg[data][31]_2 [26]),
+        .O(\request_reg_enabled.device_req_o_reg[rw]_5 [27]));
+  (* SOFT_HLUTNM = "soft_lutpair219" *) 
   LUT4 #(
     .INIT(16'h00A8)) 
-    \bus_rsp_o[data][29]_i_1__1 
+    \bus_rsp_o[data][27]_i_1__0 
+       (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
+        .I1(\dev_00_req_o[addr] [0]),
+        .I2(\bus_rsp_o_reg[data][31]_3 [27]),
+        .I3(\dev_00_req_o[addr] [1]),
+        .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [27]));
+  (* SOFT_HLUTNM = "soft_lutpair213" *) 
+  LUT4 #(
+    .INIT(16'h2000)) 
+    \bus_rsp_o[data][28]_i_1 
+       (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
+        .I1(\dev_00_req_o[rw] ),
+        .I2(\dev_00_req_o[addr] [1]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [27]),
+        .O(\request_reg_enabled.device_req_o_reg[rw]_5 [28]));
+  (* SOFT_HLUTNM = "soft_lutpair218" *) 
+  LUT4 #(
+    .INIT(16'h00A8)) 
+    \bus_rsp_o[data][28]_i_1__0 
+       (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
+        .I1(\dev_00_req_o[addr] [0]),
+        .I2(\bus_rsp_o_reg[data][31]_3 [28]),
+        .I3(\dev_00_req_o[addr] [1]),
+        .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [28]));
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
+  LUT4 #(
+    .INIT(16'h2000)) 
+    \bus_rsp_o[data][29]_i_1 
+       (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
+        .I1(\dev_00_req_o[rw] ),
+        .I2(\dev_00_req_o[addr] [1]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [28]),
+        .O(\request_reg_enabled.device_req_o_reg[rw]_5 [29]));
+  (* SOFT_HLUTNM = "soft_lutpair218" *) 
+  LUT4 #(
+    .INIT(16'h00A8)) 
+    \bus_rsp_o[data][29]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
-        .I2(\bus_rsp_o_reg[data][31]_6 [29]),
+        .I2(\bus_rsp_o_reg[data][31]_3 [29]),
         .I3(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [29]));
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][2]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [2]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [2]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [2]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[2]),
         .I4(\bus_rsp_o_reg[data][2] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [2]));
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [2]));
   LUT5 #(
     .INIT(32'h20222000)) 
     \bus_rsp_o[data][2]_i_1__0 
@@ -4597,17 +4326,17 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     \bus_rsp_o[data][2]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][31]_5 [1]),
+        .I2(\bus_rsp_o_reg[data][31]_2 [1]),
         .I3(\dev_00_req_o[addr] [1]),
         .I4(\dev_00_req_o[addr] [0]),
         .I5(\bus_rsp_o_reg[data][3]_0 [1]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [2]));
-  (* SOFT_HLUTNM = "soft_lutpair230" *) 
+  (* SOFT_HLUTNM = "soft_lutpair231" *) 
   LUT4 #(
     .INIT(16'hAAA8)) 
     \bus_rsp_o[data][2]_i_1__2 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_6 [2]),
+        .I1(\bus_rsp_o_reg[data][31]_3 [2]),
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\dev_00_req_o[addr] [1]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [2]));
@@ -4620,134 +4349,89 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I3(\ctrl_reg[hwfc_en]__0 ),
         .I4(Q[2]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_0 [2]));
-  LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][30]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [30]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [30]),
-        .I4(\bus_rsp_o_reg[data][30]_0 ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [30]));
   LUT4 #(
     .INIT(16'h0020)) 
-    \bus_rsp_o[data][30]_i_1__0 
+    \bus_rsp_o[data][30]_i_1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][16]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][30]_1 ),
+        .I2(\bus_rsp_o_reg[data][30]_0 ),
         .I3(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_3 [13]));
-  (* SOFT_HLUTNM = "soft_lutpair213" *) 
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
   LUT4 #(
     .INIT(16'h2000)) 
-    \bus_rsp_o[data][30]_i_1__1 
+    \bus_rsp_o[data][30]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [29]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [29]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [30]));
-  (* SOFT_HLUTNM = "soft_lutpair216" *) 
+  (* SOFT_HLUTNM = "soft_lutpair217" *) 
   LUT4 #(
     .INIT(16'h00A8)) 
-    \bus_rsp_o[data][30]_i_1__2 
+    \bus_rsp_o[data][30]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [0]),
-        .I2(\bus_rsp_o_reg[data][31]_6 [30]),
+        .I2(\bus_rsp_o_reg[data][31]_3 [30]),
         .I3(\dev_00_req_o[addr] [1]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [30]));
-  (* SOFT_HLUTNM = "soft_lutpair201" *) 
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT4 #(
     .INIT(16'h0400)) 
-    \bus_rsp_o[data][30]_i_1__3 
+    \bus_rsp_o[data][30]_i_1__2 
        (.I0(\dev_00_req_o[rw] ),
         .I1(\request_reg_enabled.device_req_o_reg[addr][17]_0 ),
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\bus_rsp_o_reg[data][30] ),
         .O(\request_reg_enabled.device_req_o_reg[rw]_0 [24]));
   LUT6 #(
-    .INIT(64'hFFFFF888F888F888)) 
-    \bus_rsp_o[data][31]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [31]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [31]),
-        .I4(\bus_rsp_o_reg[data][31]_2 ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [31]));
-  LUT6 #(
     .INIT(64'h0000000022222202)) 
-    \bus_rsp_o[data][31]_i_1__0 
+    \bus_rsp_o[data][31]_i_1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][16]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(empty),
-        .I3(\bus_rsp_o_reg[data][31]_3 ),
-        .I4(\bus_rsp_o_reg[data][31]_4 ),
+        .I3(\bus_rsp_o_reg[data][31]_0 ),
+        .I4(\bus_rsp_o_reg[data][31]_1 ),
         .I5(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_3 [14]));
-  (* SOFT_HLUTNM = "soft_lutpair214" *) 
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT4 #(
     .INIT(16'h2000)) 
-    \bus_rsp_o[data][31]_i_1__1 
+    \bus_rsp_o[data][31]_i_1__0 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [30]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [30]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [31]));
-  (* SOFT_HLUTNM = "soft_lutpair216" *) 
+  (* SOFT_HLUTNM = "soft_lutpair217" *) 
   LUT4 #(
     .INIT(16'h0200)) 
-    \bus_rsp_o[data][31]_i_1__2 
+    \bus_rsp_o[data][31]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [31]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [31]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [31]));
   (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT5 #(
     .INIT(32'h04040400)) 
-    \bus_rsp_o[data][31]_i_1__3 
+    \bus_rsp_o[data][31]_i_1__2 
        (.I0(\dev_00_req_o[rw] ),
         .I1(\request_reg_enabled.device_req_o_reg[addr][17]_0 ),
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\tx_fifo[avail] ),
         .I4(\bus_rsp_o_reg[data][31] ),
         .O(\request_reg_enabled.device_req_o_reg[rw]_0 [25]));
-  LUT5 #(
-    .INIT(32'h04040004)) 
-    \bus_rsp_o[data][31]_i_2 
-       (.I0(\dev_00_req_o[rw] ),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[addr] [2]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\dev_00_req_o[addr] [1]),
-        .O(\bus_rsp_o[data][31]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000008)) 
-    \bus_rsp_o[data][31]_i_3 
-       (.I0(\dev_00_req_o[addr] [0]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [2]),
-        .I4(\dev_00_req_o[addr] [1]),
-        .O(\bus_rsp_o[data][31]_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h20)) 
-    \bus_rsp_o[data][31]_i_5 
-       (.I0(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I1(\dev_00_req_o[rw] ),
-        .I2(\dev_00_req_o[addr] [2]),
-        .O(\bus_rsp_o[data][31]_i_5_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][3]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [3]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [3]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [3]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[3]),
         .I4(\bus_rsp_o_reg[data][3] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [3]));
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [3]));
   LUT5 #(
     .INIT(32'h20222000)) 
     \bus_rsp_o[data][3]_i_1__0 
@@ -4762,18 +4446,18 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     \bus_rsp_o[data][3]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][31]_5 [2]),
+        .I2(\bus_rsp_o_reg[data][31]_2 [2]),
         .I3(\dev_00_req_o[addr] [1]),
         .I4(\dev_00_req_o[addr] [0]),
         .I5(\bus_rsp_o_reg[data][3]_0 [2]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [3]));
-  (* SOFT_HLUTNM = "soft_lutpair230" *) 
+  (* SOFT_HLUTNM = "soft_lutpair231" *) 
   LUT4 #(
     .INIT(16'h00A8)) 
     \bus_rsp_o[data][3]_i_1__2 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [0]),
-        .I2(\bus_rsp_o_reg[data][31]_6 [3]),
+        .I2(\bus_rsp_o_reg[data][31]_3 [3]),
         .I3(\dev_00_req_o[addr] [1]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [3]));
   LUT5 #(
@@ -4788,13 +4472,13 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][4]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [4]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [4]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [4]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[4]),
         .I4(\bus_rsp_o_reg[data][4] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [4]));
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [4]));
   LUT5 #(
     .INIT(32'h20222000)) 
     \bus_rsp_o[data][4]_i_1__0 
@@ -4804,23 +4488,23 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\bus_rsp_o_reg[data][5]_1 [1]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_3 [4]));
-  (* SOFT_HLUTNM = "soft_lutpair205" *) 
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT4 #(
     .INIT(16'h2000)) 
     \bus_rsp_o[data][4]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [3]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [3]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [4]));
-  (* SOFT_HLUTNM = "soft_lutpair229" *) 
+  (* SOFT_HLUTNM = "soft_lutpair230" *) 
   LUT4 #(
     .INIT(16'h0200)) 
     \bus_rsp_o[data][4]_i_1__2 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [4]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [4]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [4]));
   LUT5 #(
     .INIT(32'h44400400)) 
@@ -4834,13 +4518,13 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][5]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [5]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [5]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [5]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[5]),
         .I4(\bus_rsp_o_reg[data][5]_0 ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [5]));
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [5]));
   LUT5 #(
     .INIT(32'h20222000)) 
     \bus_rsp_o[data][5]_i_1__0 
@@ -4850,21 +4534,21 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\bus_rsp_o_reg[data][5]_1 [2]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_3 [5]));
-  (* SOFT_HLUTNM = "soft_lutpair205" *) 
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT4 #(
     .INIT(16'h2000)) 
     \bus_rsp_o[data][5]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [4]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [4]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [5]));
-  (* SOFT_HLUTNM = "soft_lutpair229" *) 
+  (* SOFT_HLUTNM = "soft_lutpair230" *) 
   LUT4 #(
     .INIT(16'hAA08)) 
     \bus_rsp_o[data][5]_i_1__2 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_6 [5]),
+        .I1(\bus_rsp_o_reg[data][31]_3 [5]),
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\dev_00_req_o[addr] [1]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [5]));
@@ -4880,13 +4564,13 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][6]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [6]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [6]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [6]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[6]),
         .I4(\bus_rsp_o_reg[data][6] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [6]));
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [6]));
   LUT5 #(
     .INIT(32'h20222000)) 
     \bus_rsp_o[data][6]_i_1__0 
@@ -4896,22 +4580,22 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\bus_rsp_o_reg[data][9]_0 [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_3 [6]));
-  (* SOFT_HLUTNM = "soft_lutpair206" *) 
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT4 #(
     .INIT(16'h2000)) 
     \bus_rsp_o[data][6]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [5]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [5]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [6]));
-  (* SOFT_HLUTNM = "soft_lutpair228" *) 
+  (* SOFT_HLUTNM = "soft_lutpair229" *) 
   LUT4 #(
     .INIT(16'h00A8)) 
     \bus_rsp_o[data][6]_i_1__2 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
-        .I2(\bus_rsp_o_reg[data][31]_6 [6]),
+        .I2(\bus_rsp_o_reg[data][31]_3 [6]),
         .I3(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [6]));
   LUT5 #(
@@ -4926,13 +4610,13 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][7]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [7]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [7]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [7]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[7]),
         .I4(\bus_rsp_o_reg[data][7] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [7]));
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [7]));
   LUT5 #(
     .INIT(32'h20222000)) 
     \bus_rsp_o[data][7]_i_1__0 
@@ -4942,23 +4626,23 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\bus_rsp_o_reg[data][9]_0 [1]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_3 [7]));
-  (* SOFT_HLUTNM = "soft_lutpair206" *) 
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT4 #(
     .INIT(16'h2000)) 
     \bus_rsp_o[data][7]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
         .I2(\dev_00_req_o[addr] [1]),
-        .I3(\bus_rsp_o_reg[data][31]_5 [6]),
+        .I3(\bus_rsp_o_reg[data][31]_2 [6]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [7]));
-  (* SOFT_HLUTNM = "soft_lutpair228" *) 
+  (* SOFT_HLUTNM = "soft_lutpair229" *) 
   LUT4 #(
     .INIT(16'h0200)) 
     \bus_rsp_o[data][7]_i_1__2 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [7]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [7]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [7]));
   (* SOFT_HLUTNM = "soft_lutpair187" *) 
   LUT5 #(
@@ -4973,14 +4657,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][8]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [8]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [8]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [8]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[8]),
         .I4(\bus_rsp_o_reg[data][8] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [8]));
-  (* SOFT_HLUTNM = "soft_lutpair204" *) 
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [8]));
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT4 #(
     .INIT(16'h0020)) 
     \bus_rsp_o[data][8]_i_1__0 
@@ -4994,21 +4678,21 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     \bus_rsp_o[data][8]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][31]_5 [7]),
+        .I2(\bus_rsp_o_reg[data][31]_2 [7]),
         .I3(\dev_00_req_o[addr] [1]),
         .I4(\bus_rsp_o_reg[data][9]_1 ),
         .I5(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [8]));
-  (* SOFT_HLUTNM = "soft_lutpair227" *) 
+  (* SOFT_HLUTNM = "soft_lutpair228" *) 
   LUT4 #(
     .INIT(16'h0200)) 
     \bus_rsp_o[data][8]_i_1__2 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [0]),
-        .I3(\bus_rsp_o_reg[data][31]_6 [8]),
+        .I3(\bus_rsp_o_reg[data][31]_3 [8]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [8]));
-  (* SOFT_HLUTNM = "soft_lutpair195" *) 
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT4 #(
     .INIT(16'h0400)) 
     \bus_rsp_o[data][8]_i_1__3 
@@ -5020,14 +4704,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \bus_rsp_o[data][9]_i_1 
-       (.I0(\bus_rsp_o[data][31]_i_2_n_0 ),
-        .I1(\bus_rsp_o_reg[data][31]_0 [9]),
-        .I2(\bus_rsp_o[data][31]_i_3_n_0 ),
-        .I3(\bus_rsp_o_reg[data][31]_1 [9]),
+       (.I0(\bus_rsp_o[data][15]_i_2_n_0 ),
+        .I1(\bus_rsp_o_reg[data][15]_0 [9]),
+        .I2(\bus_rsp_o[data][15]_i_3_n_0 ),
+        .I3(gpio_o[9]),
         .I4(\bus_rsp_o_reg[data][9] ),
-        .I5(\bus_rsp_o[data][31]_i_5_n_0 ),
-        .O(\port_in_reg[31] [9]));
-  (* SOFT_HLUTNM = "soft_lutpair204" *) 
+        .I5(\bus_rsp_o[data][15]_i_5_n_0 ),
+        .O(\port_in_reg[15] [9]));
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT4 #(
     .INIT(16'h0020)) 
     \bus_rsp_o[data][9]_i_1__0 
@@ -5041,21 +4725,21 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     \bus_rsp_o[data][9]_i_1__1 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][17]_1 ),
         .I1(\dev_00_req_o[rw] ),
-        .I2(\bus_rsp_o_reg[data][31]_5 [8]),
+        .I2(\bus_rsp_o_reg[data][31]_2 [8]),
         .I3(\dev_00_req_o[addr] [1]),
         .I4(\bus_rsp_o_reg[data][9]_1 ),
         .I5(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_5 [9]));
-  (* SOFT_HLUTNM = "soft_lutpair227" *) 
+  (* SOFT_HLUTNM = "soft_lutpair228" *) 
   LUT4 #(
     .INIT(16'h8820)) 
     \bus_rsp_o[data][9]_i_1__2 
        (.I0(\request_reg_enabled.device_req_o_reg[addr][20]_0 ),
         .I1(\dev_00_req_o[addr] [1]),
-        .I2(\bus_rsp_o_reg[data][31]_6 [9]),
+        .I2(\bus_rsp_o_reg[data][31]_3 [9]),
         .I3(\dev_00_req_o[addr] [0]),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_3 [9]));
-  (* SOFT_HLUTNM = "soft_lutpair203" *) 
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT4 #(
     .INIT(16'h4440)) 
     \bus_rsp_o[data][9]_i_1__3 
@@ -5064,7 +4748,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\bus_rsp_o_reg[data][15] [3]),
         .O(\request_reg_enabled.device_req_o_reg[rw]_0 [9]));
-  (* SOFT_HLUTNM = "soft_lutpair194" *) 
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT4 #(
     .INIT(16'h8880)) 
     \bus_rsp_o[err]_i_1 
@@ -5091,7 +4775,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I3(\request_reg_enabled.device_req_o_reg[addr][16]_1 ),
         .I4(\bus_rsp_o_reg[data][2]_0 ),
         .O(\request_reg_enabled.device_req_o_reg[data][2]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT5 #(
     .INIT(32'hFBFF0800)) 
     \ctrl[enable]_i_1 
@@ -5101,7 +4785,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I3(\request_reg_enabled.device_req_o_reg[addr][16]_1 ),
         .I4(\ctrl_reg[enable]__0_0 ),
         .O(\request_reg_enabled.device_req_o_reg[data][0]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair214" *) 
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     \ctrl[enable]_i_1__0 
@@ -5118,7 +4802,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I1(\dev_00_req_o[rw] ),
         .I2(\request_reg_enabled.device_req_o_reg[addr][17]_0 ),
         .O(\request_reg_enabled.device_req_o_reg[addr][2]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT3 #(
     .INIT(8'h20)) 
     \ctrl[prsc][2]_i_1 
@@ -5134,7 +4818,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I2(\request_reg_enabled.device_req_o_reg[addr][17]_0 ),
         .I3(\dev_00_req_o[rw] ),
         .O(we));
-  (* SOFT_HLUTNM = "soft_lutpair193" *) 
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT5 #(
     .INIT(32'h80000080)) 
     \fifo_memory_small.fifo[0][35]_i_1 
@@ -5225,46 +4909,6 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .O(D[15]));
   LUT6 #(
     .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[16]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [16]),
-        .O(D[16]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[17]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [17]),
-        .O(D[17]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[18]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [18]),
-        .O(D[18]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[19]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [19]),
-        .O(D[19]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
     \irq_clrn[1]_i_1 
        (.I0(\dev_00_req_o[addr] [2]),
         .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
@@ -5275,106 +4919,6 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .O(D[1]));
   LUT6 #(
     .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[20]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [20]),
-        .O(D[20]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[21]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [21]),
-        .O(D[21]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[22]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [22]),
-        .O(D[22]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[23]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [23]),
-        .O(D[23]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[24]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [24]),
-        .O(D[24]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[25]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [25]),
-        .O(D[25]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[26]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [26]),
-        .O(D[26]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[27]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [27]),
-        .O(D[27]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[28]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [28]),
-        .O(D[28]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[29]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [29]),
-        .O(D[29]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
     \irq_clrn[2]_i_1 
        (.I0(\dev_00_req_o[addr] [2]),
         .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
@@ -5383,26 +4927,6 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I4(\dev_00_req_o[addr] [0]),
         .I5(\dev_12_req_o[data] [2]),
         .O(D[2]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[30]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [30]),
-        .O(D[30]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF7FFFFFFF)) 
-    \irq_clrn[31]_i_1 
-       (.I0(\dev_00_req_o[addr] [2]),
-        .I1(\request_reg_enabled.device_req_o_reg[addr][16]_0 ),
-        .I2(\dev_00_req_o[rw] ),
-        .I3(\dev_00_req_o[addr] [1]),
-        .I4(\dev_00_req_o[addr] [0]),
-        .I5(\dev_12_req_o[data] [31]),
-        .O(D[31]));
   LUT6 #(
     .INIT(64'hFFFFFFFF7FFFFFFF)) 
     \irq_clrn[3]_i_1 
@@ -5476,7 +5000,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT5 #(
     .INIT(32'h40000000)) 
-    \irq_en[31]_i_1 
+    \irq_en[15]_i_1 
        (.I0(\dev_00_req_o[addr] [0]),
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[addr] [2]),
@@ -5486,7 +5010,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT5 #(
     .INIT(32'h40000000)) 
-    \irq_pol[31]_i_1 
+    \irq_pol[15]_i_1 
        (.I0(\dev_00_req_o[addr] [1]),
         .I1(\dev_00_req_o[addr] [0]),
         .I2(\dev_00_req_o[addr] [2]),
@@ -5496,7 +5020,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
   (* SOFT_HLUTNM = "soft_lutpair190" *) 
   LUT5 #(
     .INIT(32'h10000000)) 
-    \irq_typ[31]_i_1 
+    \irq_typ[15]_i_1 
        (.I0(\dev_00_req_o[addr] [1]),
         .I1(\dev_00_req_o[addr] [0]),
         .I2(\dev_00_req_o[addr] [2]),
@@ -5533,7 +5057,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I4(\request_reg_enabled.device_req_o_reg[addr_n_0_][19] ),
         .I5(\request_reg_enabled.device_req_o_reg[addr_n_0_][18] ),
         .O(\bus_req_i[stb] ));
-  (* SOFT_HLUTNM = "soft_lutpair203" *) 
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT2 #(
     .INIT(4'h2)) 
     rden_i_1
@@ -6038,7 +5562,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .CLR(rstn_sys),
         .D(\dev_30_rsp_i[err] ),
         .Q(\main_rsp_o[err] ));
-  (* SOFT_HLUTNM = "soft_lutpair193" *) 
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT3 #(
     .INIT(8'h08)) 
     rx_last_i_1
@@ -6046,7 +5570,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I1(\dev_00_req_o[addr] [1]),
         .I2(\dev_00_req_o[rw] ),
         .O(\request_reg_enabled.device_req_o_reg[addr][3]_2 ));
-  (* SOFT_HLUTNM = "soft_lutpair194" *) 
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT4 #(
     .INIT(16'h0008)) 
     \sysinfo[0][31]_i_1 
@@ -6055,7 +5579,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
         .I2(\dev_00_req_o[addr] [0]),
         .I3(\dev_00_req_o[addr] [1]),
         .O(E));
-  (* SOFT_HLUTNM = "soft_lutpair215" *) 
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     \tx_route[3]_i_1 
@@ -30068,38 +29592,22 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     \irq_pol_reg[13]_0 ,
     \irq_pol_reg[14]_0 ,
     \irq_pol_reg[15]_0 ,
-    \irq_pol_reg[16]_0 ,
-    \irq_pol_reg[17]_0 ,
-    \irq_pol_reg[18]_0 ,
-    \irq_pol_reg[19]_0 ,
-    \irq_pol_reg[20]_0 ,
-    \irq_pol_reg[21]_0 ,
-    \irq_pol_reg[22]_0 ,
-    \irq_pol_reg[23]_0 ,
-    \irq_pol_reg[24]_0 ,
-    \irq_pol_reg[25]_0 ,
-    \irq_pol_reg[26]_0 ,
-    \irq_pol_reg[27]_0 ,
-    \irq_pol_reg[28]_0 ,
-    \irq_pol_reg[29]_0 ,
-    \irq_pol_reg[30]_0 ,
-    \irq_pol_reg[31]_0 ,
     Q,
     irq_fast_i,
-    \port_out_reg[31]_0 ,
-    \bus_rsp_o_reg[data][31]_0 ,
+    gpio_o,
+    \bus_rsp_o_reg[data][15]_0 ,
     \iodev_req[4][stb] ,
     clk,
     rstn_sys,
     \dev_00_req_o[addr] ,
     E,
     D,
-    \irq_typ_reg[31]_0 ,
-    \irq_pol_reg[31]_1 ,
-    \irq_en_reg[31]_0 ,
-    \irq_clrn_reg[31]_0 ,
+    \irq_typ_reg[15]_0 ,
+    \irq_pol_reg[15]_1 ,
+    \irq_en_reg[15]_0 ,
+    \irq_clrn_reg[15]_0 ,
     gpio_i,
-    \bus_rsp_o_reg[data][31]_1 );
+    \bus_rsp_o_reg[data][15]_1 );
   output \iodev_rsp[4][ack] ;
   output \irq_pol_reg[0]_0 ;
   output \irq_pol_reg[1]_0 ;
@@ -30117,52 +29625,37 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
   output \irq_pol_reg[13]_0 ;
   output \irq_pol_reg[14]_0 ;
   output \irq_pol_reg[15]_0 ;
-  output \irq_pol_reg[16]_0 ;
-  output \irq_pol_reg[17]_0 ;
-  output \irq_pol_reg[18]_0 ;
-  output \irq_pol_reg[19]_0 ;
-  output \irq_pol_reg[20]_0 ;
-  output \irq_pol_reg[21]_0 ;
-  output \irq_pol_reg[22]_0 ;
-  output \irq_pol_reg[23]_0 ;
-  output \irq_pol_reg[24]_0 ;
-  output \irq_pol_reg[25]_0 ;
-  output \irq_pol_reg[26]_0 ;
-  output \irq_pol_reg[27]_0 ;
-  output \irq_pol_reg[28]_0 ;
-  output \irq_pol_reg[29]_0 ;
-  output \irq_pol_reg[30]_0 ;
-  output \irq_pol_reg[31]_0 ;
-  output [31:0]Q;
+  output [15:0]Q;
   output [0:0]irq_fast_i;
-  output [31:0]\port_out_reg[31]_0 ;
-  output [31:0]\bus_rsp_o_reg[data][31]_0 ;
+  output [15:0]gpio_o;
+  output [15:0]\bus_rsp_o_reg[data][15]_0 ;
   input \iodev_req[4][stb] ;
   input clk;
   input rstn_sys;
   input [1:0]\dev_00_req_o[addr] ;
   input [0:0]E;
-  input [31:0]D;
-  input [0:0]\irq_typ_reg[31]_0 ;
-  input [0:0]\irq_pol_reg[31]_1 ;
-  input [0:0]\irq_en_reg[31]_0 ;
-  input [31:0]\irq_clrn_reg[31]_0 ;
-  input [31:0]gpio_i;
-  input [31:0]\bus_rsp_o_reg[data][31]_1 ;
+  input [15:0]D;
+  input [0:0]\irq_typ_reg[15]_0 ;
+  input [0:0]\irq_pol_reg[15]_1 ;
+  input [0:0]\irq_en_reg[15]_0 ;
+  input [15:0]\irq_clrn_reg[15]_0 ;
+  input [15:0]gpio_i;
+  input [15:0]\bus_rsp_o_reg[data][15]_1 ;
 
-  wire [31:0]D;
+  wire [15:0]D;
   wire [0:0]E;
-  wire [31:0]Q;
-  wire [31:0]\bus_rsp_o_reg[data][31]_0 ;
-  wire [31:0]\bus_rsp_o_reg[data][31]_1 ;
+  wire [15:0]Q;
+  wire [15:0]\bus_rsp_o_reg[data][15]_0 ;
+  wire [15:0]\bus_rsp_o_reg[data][15]_1 ;
   wire clk;
   wire [1:0]\dev_00_req_o[addr] ;
-  wire [31:0]gpio_i;
+  wire [15:0]gpio_i;
+  wire [15:0]gpio_o;
   wire \iodev_req[4][stb] ;
   wire \iodev_rsp[4][ack] ;
-  wire [31:0]irq_clrn;
-  wire [31:0]\irq_clrn_reg[31]_0 ;
-  wire [0:0]\irq_en_reg[31]_0 ;
+  wire [15:0]irq_clrn;
+  wire [15:0]\irq_clrn_reg[15]_0 ;
+  wire [0:0]\irq_en_reg[15]_0 ;
   wire \irq_en_reg_n_0_[0] ;
   wire \irq_en_reg_n_0_[10] ;
   wire \irq_en_reg_n_0_[11] ;
@@ -30170,24 +29663,8 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
   wire \irq_en_reg_n_0_[13] ;
   wire \irq_en_reg_n_0_[14] ;
   wire \irq_en_reg_n_0_[15] ;
-  wire \irq_en_reg_n_0_[16] ;
-  wire \irq_en_reg_n_0_[17] ;
-  wire \irq_en_reg_n_0_[18] ;
-  wire \irq_en_reg_n_0_[19] ;
   wire \irq_en_reg_n_0_[1] ;
-  wire \irq_en_reg_n_0_[20] ;
-  wire \irq_en_reg_n_0_[21] ;
-  wire \irq_en_reg_n_0_[22] ;
-  wire \irq_en_reg_n_0_[23] ;
-  wire \irq_en_reg_n_0_[24] ;
-  wire \irq_en_reg_n_0_[25] ;
-  wire \irq_en_reg_n_0_[26] ;
-  wire \irq_en_reg_n_0_[27] ;
-  wire \irq_en_reg_n_0_[28] ;
-  wire \irq_en_reg_n_0_[29] ;
   wire \irq_en_reg_n_0_[2] ;
-  wire \irq_en_reg_n_0_[30] ;
-  wire \irq_en_reg_n_0_[31] ;
   wire \irq_en_reg_n_0_[3] ;
   wire \irq_en_reg_n_0_[4] ;
   wire \irq_en_reg_n_0_[5] ;
@@ -30196,7 +29673,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
   wire \irq_en_reg_n_0_[8] ;
   wire \irq_en_reg_n_0_[9] ;
   wire [0:0]irq_fast_i;
-  wire [31:0]irq_pend0;
+  wire [15:0]irq_pend0;
   wire \irq_pend[0]_i_2_n_0 ;
   wire \irq_pend[10]_i_2_n_0 ;
   wire \irq_pend[11]_i_2_n_0 ;
@@ -30204,24 +29681,8 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
   wire \irq_pend[13]_i_2_n_0 ;
   wire \irq_pend[14]_i_2_n_0 ;
   wire \irq_pend[15]_i_2_n_0 ;
-  wire \irq_pend[16]_i_2_n_0 ;
-  wire \irq_pend[17]_i_2_n_0 ;
-  wire \irq_pend[18]_i_2_n_0 ;
-  wire \irq_pend[19]_i_2_n_0 ;
   wire \irq_pend[1]_i_2_n_0 ;
-  wire \irq_pend[20]_i_2_n_0 ;
-  wire \irq_pend[21]_i_2_n_0 ;
-  wire \irq_pend[22]_i_2_n_0 ;
-  wire \irq_pend[23]_i_2_n_0 ;
-  wire \irq_pend[24]_i_2_n_0 ;
-  wire \irq_pend[25]_i_2_n_0 ;
-  wire \irq_pend[26]_i_2_n_0 ;
-  wire \irq_pend[27]_i_2_n_0 ;
-  wire \irq_pend[28]_i_2_n_0 ;
-  wire \irq_pend[29]_i_2_n_0 ;
   wire \irq_pend[2]_i_2_n_0 ;
-  wire \irq_pend[30]_i_2_n_0 ;
-  wire \irq_pend[31]_i_2_n_0 ;
   wire \irq_pend[3]_i_2_n_0 ;
   wire \irq_pend[4]_i_2_n_0 ;
   wire \irq_pend[5]_i_2_n_0 ;
@@ -30230,27 +29691,15 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
   wire \irq_pend[8]_i_2_n_0 ;
   wire \irq_pend[9]_i_2_n_0 ;
   wire \irq_pend_reg_n_0_[0] ;
+  wire \irq_pend_reg_n_0_[10] ;
   wire \irq_pend_reg_n_0_[11] ;
-  wire \irq_pend_reg_n_0_[12] ;
-  wire \irq_pend_reg_n_0_[14] ;
   wire \irq_pend_reg_n_0_[15] ;
-  wire \irq_pend_reg_n_0_[17] ;
-  wire \irq_pend_reg_n_0_[18] ;
-  wire \irq_pend_reg_n_0_[20] ;
-  wire \irq_pend_reg_n_0_[21] ;
-  wire \irq_pend_reg_n_0_[23] ;
-  wire \irq_pend_reg_n_0_[24] ;
-  wire \irq_pend_reg_n_0_[26] ;
-  wire \irq_pend_reg_n_0_[27] ;
-  wire \irq_pend_reg_n_0_[29] ;
+  wire \irq_pend_reg_n_0_[1] ;
   wire \irq_pend_reg_n_0_[2] ;
-  wire \irq_pend_reg_n_0_[30] ;
-  wire \irq_pend_reg_n_0_[31] ;
-  wire \irq_pend_reg_n_0_[3] ;
+  wire \irq_pend_reg_n_0_[4] ;
   wire \irq_pend_reg_n_0_[5] ;
-  wire \irq_pend_reg_n_0_[6] ;
+  wire \irq_pend_reg_n_0_[7] ;
   wire \irq_pend_reg_n_0_[8] ;
-  wire \irq_pend_reg_n_0_[9] ;
   wire \irq_pol_reg[0]_0 ;
   wire \irq_pol_reg[10]_0 ;
   wire \irq_pol_reg[11]_0 ;
@@ -30258,25 +29707,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
   wire \irq_pol_reg[13]_0 ;
   wire \irq_pol_reg[14]_0 ;
   wire \irq_pol_reg[15]_0 ;
-  wire \irq_pol_reg[16]_0 ;
-  wire \irq_pol_reg[17]_0 ;
-  wire \irq_pol_reg[18]_0 ;
-  wire \irq_pol_reg[19]_0 ;
+  wire [0:0]\irq_pol_reg[15]_1 ;
   wire \irq_pol_reg[1]_0 ;
-  wire \irq_pol_reg[20]_0 ;
-  wire \irq_pol_reg[21]_0 ;
-  wire \irq_pol_reg[22]_0 ;
-  wire \irq_pol_reg[23]_0 ;
-  wire \irq_pol_reg[24]_0 ;
-  wire \irq_pol_reg[25]_0 ;
-  wire \irq_pol_reg[26]_0 ;
-  wire \irq_pol_reg[27]_0 ;
-  wire \irq_pol_reg[28]_0 ;
-  wire \irq_pol_reg[29]_0 ;
   wire \irq_pol_reg[2]_0 ;
-  wire \irq_pol_reg[30]_0 ;
-  wire \irq_pol_reg[31]_0 ;
-  wire [0:0]\irq_pol_reg[31]_1 ;
   wire \irq_pol_reg[3]_0 ;
   wire \irq_pol_reg[4]_0 ;
   wire \irq_pol_reg[5]_0 ;
@@ -30291,31 +29724,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
   wire \irq_pol_reg_n_0_[13] ;
   wire \irq_pol_reg_n_0_[14] ;
   wire \irq_pol_reg_n_0_[15] ;
-  wire \irq_pol_reg_n_0_[16] ;
-  wire \irq_pol_reg_n_0_[17] ;
-  wire \irq_pol_reg_n_0_[18] ;
-  wire \irq_pol_reg_n_0_[19] ;
   wire \irq_pol_reg_n_0_[1] ;
-  wire \irq_pol_reg_n_0_[20] ;
-  wire \irq_pol_reg_n_0_[21] ;
-  wire \irq_pol_reg_n_0_[22] ;
-  wire \irq_pol_reg_n_0_[23] ;
-  wire \irq_pol_reg_n_0_[24] ;
-  wire \irq_pol_reg_n_0_[25] ;
-  wire \irq_pol_reg_n_0_[27] ;
-  wire \irq_pol_reg_n_0_[28] ;
-  wire \irq_pol_reg_n_0_[29] ;
   wire \irq_pol_reg_n_0_[2] ;
-  wire \irq_pol_reg_n_0_[30] ;
-  wire \irq_pol_reg_n_0_[31] ;
   wire \irq_pol_reg_n_0_[3] ;
-  wire \irq_pol_reg_n_0_[4] ;
-  wire \irq_pol_reg_n_0_[5] ;
   wire \irq_pol_reg_n_0_[6] ;
   wire \irq_pol_reg_n_0_[7] ;
   wire \irq_pol_reg_n_0_[8] ;
   wire \irq_pol_reg_n_0_[9] ;
-  wire [0:0]\irq_typ_reg[31]_0 ;
+  wire [0:0]\irq_typ_reg[15]_0 ;
   wire \irq_typ_reg_n_0_[0] ;
   wire \irq_typ_reg_n_0_[10] ;
   wire \irq_typ_reg_n_0_[11] ;
@@ -30323,82 +29739,41 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
   wire \irq_typ_reg_n_0_[13] ;
   wire \irq_typ_reg_n_0_[14] ;
   wire \irq_typ_reg_n_0_[15] ;
-  wire \irq_typ_reg_n_0_[16] ;
-  wire \irq_typ_reg_n_0_[17] ;
-  wire \irq_typ_reg_n_0_[18] ;
-  wire \irq_typ_reg_n_0_[19] ;
   wire \irq_typ_reg_n_0_[1] ;
-  wire \irq_typ_reg_n_0_[20] ;
-  wire \irq_typ_reg_n_0_[21] ;
-  wire \irq_typ_reg_n_0_[22] ;
-  wire \irq_typ_reg_n_0_[23] ;
-  wire \irq_typ_reg_n_0_[24] ;
-  wire \irq_typ_reg_n_0_[25] ;
-  wire \irq_typ_reg_n_0_[27] ;
-  wire \irq_typ_reg_n_0_[28] ;
-  wire \irq_typ_reg_n_0_[29] ;
   wire \irq_typ_reg_n_0_[2] ;
-  wire \irq_typ_reg_n_0_[30] ;
-  wire \irq_typ_reg_n_0_[31] ;
   wire \irq_typ_reg_n_0_[3] ;
-  wire \irq_typ_reg_n_0_[4] ;
-  wire \irq_typ_reg_n_0_[5] ;
   wire \irq_typ_reg_n_0_[6] ;
   wire \irq_typ_reg_n_0_[7] ;
   wire \irq_typ_reg_n_0_[8] ;
   wire \irq_typ_reg_n_0_[9] ;
   wire p_0_in;
-  wire p_0_in15_in;
-  wire p_0_in21_in;
-  wire p_0_in27_in;
-  wire p_0_in33_in;
-  wire p_0_in39_in;
-  wire p_0_in45_in;
-  wire p_0_in51_in;
-  wire p_0_in57_in;
-  wire p_0_in63_in;
-  wire p_0_in69_in;
-  wire p_0_in75_in;
-  wire p_0_in81_in;
-  wire p_0_in87_in;
-  wire p_0_in93_in;
-  wire p_0_in9_in;
   wire p_11_in;
   wire p_12_in;
-  wire p_14_in;
+  wire [1:0]p_14_in;
   wire p_15_in;
-  wire p_17_in;
+  wire [1:0]p_17_in;
   wire p_18_in;
+  wire p_1_in;
   wire p_20_in;
-  wire p_21_in;
-  wire p_23_in;
+  wire p_22_in;
   wire p_24_in;
   wire p_26_in;
-  wire p_27_in;
-  wire p_29_in;
+  wire p_28_in;
   wire p_2_in;
   wire p_30_in;
-  wire [1:0]p_32_in;
-  wire p_33_in;
-  wire p_35_in;
-  wire p_37_in;
-  wire p_39_in;
+  wire p_32_in;
+  wire p_34_in;
+  wire p_36_in;
   wire p_3_in;
-  wire p_41_in;
   wire p_5_in;
   wire p_6_in;
   wire p_8_in;
   wire p_9_in;
   wire \port_in2_reg_n_0_[0] ;
-  wire [31:0]\port_out_reg[31]_0 ;
   wire rstn_sys;
   wire \trap_ctrl[irq_pnd][11]_i_2_n_0 ;
   wire \trap_ctrl[irq_pnd][11]_i_3_n_0 ;
   wire \trap_ctrl[irq_pnd][11]_i_4_n_0 ;
-  wire \trap_ctrl[irq_pnd][11]_i_5_n_0 ;
-  wire \trap_ctrl[irq_pnd][11]_i_6_n_0 ;
-  wire \trap_ctrl[irq_pnd][11]_i_7_n_0 ;
-  wire \trap_ctrl[irq_pnd][11]_i_8_n_0 ;
 
   LUT6 #(
     .INIT(64'hCAFFCAF0CA0FCA00)) 
@@ -30414,7 +29789,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(64'hCAFFCAF0CA0FCA00)) 
     \bus_rsp_o[data][10]_i_2 
        (.I0(\irq_pol_reg_n_0_[10] ),
-        .I1(p_20_in),
+        .I1(\irq_pend_reg_n_0_[10] ),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\irq_typ_reg_n_0_[10] ),
@@ -30434,7 +29809,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(64'hCAFFCAF0CA0FCA00)) 
     \bus_rsp_o[data][12]_i_2 
        (.I0(\irq_pol_reg_n_0_[12] ),
-        .I1(\irq_pend_reg_n_0_[12] ),
+        .I1(p_2_in),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\irq_typ_reg_n_0_[12] ),
@@ -30444,7 +29819,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(64'hCAFFCAF0CA0FCA00)) 
     \bus_rsp_o[data][13]_i_2 
        (.I0(\irq_pol_reg_n_0_[13] ),
-        .I1(p_17_in),
+        .I1(p_1_in),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\irq_typ_reg_n_0_[13] ),
@@ -30454,7 +29829,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(64'hCAFFCAF0CA0FCA00)) 
     \bus_rsp_o[data][14]_i_2 
        (.I0(\irq_pol_reg_n_0_[14] ),
-        .I1(\irq_pend_reg_n_0_[14] ),
+        .I1(p_0_in),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\irq_typ_reg_n_0_[14] ),
@@ -30462,7 +29837,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
         .O(\irq_pol_reg[14]_0 ));
   LUT6 #(
     .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][15]_i_2 
+    \bus_rsp_o[data][15]_i_4 
        (.I0(\irq_pol_reg_n_0_[15] ),
         .I1(\irq_pend_reg_n_0_[15] ),
         .I2(\dev_00_req_o[addr] [1]),
@@ -30472,154 +29847,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
         .O(\irq_pol_reg[15]_0 ));
   LUT6 #(
     .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][16]_i_2 
-       (.I0(\irq_pol_reg_n_0_[16] ),
-        .I1(p_14_in),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[16] ),
-        .I5(\irq_en_reg_n_0_[16] ),
-        .O(\irq_pol_reg[16]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][17]_i_2 
-       (.I0(\irq_pol_reg_n_0_[17] ),
-        .I1(\irq_pend_reg_n_0_[17] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[17] ),
-        .I5(\irq_en_reg_n_0_[17] ),
-        .O(\irq_pol_reg[17]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][18]_i_2 
-       (.I0(\irq_pol_reg_n_0_[18] ),
-        .I1(\irq_pend_reg_n_0_[18] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[18] ),
-        .I5(\irq_en_reg_n_0_[18] ),
-        .O(\irq_pol_reg[18]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][19]_i_2 
-       (.I0(\irq_pol_reg_n_0_[19] ),
-        .I1(p_11_in),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[19] ),
-        .I5(\irq_en_reg_n_0_[19] ),
-        .O(\irq_pol_reg[19]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
     \bus_rsp_o[data][1]_i_2 
        (.I0(\irq_pol_reg_n_0_[1] ),
-        .I1(p_29_in),
+        .I1(\irq_pend_reg_n_0_[1] ),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\irq_typ_reg_n_0_[1] ),
         .I5(\irq_en_reg_n_0_[1] ),
         .O(\irq_pol_reg[1]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][20]_i_2 
-       (.I0(\irq_pol_reg_n_0_[20] ),
-        .I1(\irq_pend_reg_n_0_[20] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[20] ),
-        .I5(\irq_en_reg_n_0_[20] ),
-        .O(\irq_pol_reg[20]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][21]_i_2 
-       (.I0(\irq_pol_reg_n_0_[21] ),
-        .I1(\irq_pend_reg_n_0_[21] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[21] ),
-        .I5(\irq_en_reg_n_0_[21] ),
-        .O(\irq_pol_reg[21]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][22]_i_2 
-       (.I0(\irq_pol_reg_n_0_[22] ),
-        .I1(p_8_in),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[22] ),
-        .I5(\irq_en_reg_n_0_[22] ),
-        .O(\irq_pol_reg[22]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][23]_i_2 
-       (.I0(\irq_pol_reg_n_0_[23] ),
-        .I1(\irq_pend_reg_n_0_[23] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[23] ),
-        .I5(\irq_en_reg_n_0_[23] ),
-        .O(\irq_pol_reg[23]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][24]_i_2 
-       (.I0(\irq_pol_reg_n_0_[24] ),
-        .I1(\irq_pend_reg_n_0_[24] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[24] ),
-        .I5(\irq_en_reg_n_0_[24] ),
-        .O(\irq_pol_reg[24]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][25]_i_2 
-       (.I0(\irq_pol_reg_n_0_[25] ),
-        .I1(p_5_in),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[25] ),
-        .I5(\irq_en_reg_n_0_[25] ),
-        .O(\irq_pol_reg[25]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][26]_i_2 
-       (.I0(p_32_in[0]),
-        .I1(\irq_pend_reg_n_0_[26] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(p_32_in[1]),
-        .I5(\irq_en_reg_n_0_[26] ),
-        .O(\irq_pol_reg[26]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][27]_i_2 
-       (.I0(\irq_pol_reg_n_0_[27] ),
-        .I1(\irq_pend_reg_n_0_[27] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[27] ),
-        .I5(\irq_en_reg_n_0_[27] ),
-        .O(\irq_pol_reg[27]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][28]_i_2 
-       (.I0(\irq_pol_reg_n_0_[28] ),
-        .I1(p_2_in),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[28] ),
-        .I5(\irq_en_reg_n_0_[28] ),
-        .O(\irq_pol_reg[28]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][29]_i_2 
-       (.I0(\irq_pol_reg_n_0_[29] ),
-        .I1(\irq_pend_reg_n_0_[29] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[29] ),
-        .I5(\irq_en_reg_n_0_[29] ),
-        .O(\irq_pol_reg[29]_0 ));
   LUT6 #(
     .INIT(64'hCAFFCAF0CA0FCA00)) 
     \bus_rsp_o[data][2]_i_2 
@@ -30632,29 +29867,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
         .O(\irq_pol_reg[2]_0 ));
   LUT6 #(
     .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][30]_i_2 
-       (.I0(\irq_pol_reg_n_0_[30] ),
-        .I1(\irq_pend_reg_n_0_[30] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[30] ),
-        .I5(\irq_en_reg_n_0_[30] ),
-        .O(\irq_pol_reg[30]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
-    \bus_rsp_o[data][31]_i_4 
-       (.I0(\irq_pol_reg_n_0_[31] ),
-        .I1(\irq_pend_reg_n_0_[31] ),
-        .I2(\dev_00_req_o[addr] [1]),
-        .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[31] ),
-        .I5(\irq_en_reg_n_0_[31] ),
-        .O(\irq_pol_reg[31]_0 ));
-  LUT6 #(
-    .INIT(64'hCAFFCAF0CA0FCA00)) 
     \bus_rsp_o[data][3]_i_2 
        (.I0(\irq_pol_reg_n_0_[3] ),
-        .I1(\irq_pend_reg_n_0_[3] ),
+        .I1(p_11_in),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\irq_typ_reg_n_0_[3] ),
@@ -30663,28 +29878,28 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
   LUT6 #(
     .INIT(64'hCAFFCAF0CA0FCA00)) 
     \bus_rsp_o[data][4]_i_2 
-       (.I0(\irq_pol_reg_n_0_[4] ),
-        .I1(p_26_in),
+       (.I0(p_14_in[0]),
+        .I1(\irq_pend_reg_n_0_[4] ),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[4] ),
+        .I4(p_14_in[1]),
         .I5(\irq_en_reg_n_0_[4] ),
         .O(\irq_pol_reg[4]_0 ));
   LUT6 #(
     .INIT(64'hCAFFCAF0CA0FCA00)) 
     \bus_rsp_o[data][5]_i_2 
-       (.I0(\irq_pol_reg_n_0_[5] ),
+       (.I0(p_17_in[0]),
         .I1(\irq_pend_reg_n_0_[5] ),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
-        .I4(\irq_typ_reg_n_0_[5] ),
+        .I4(p_17_in[1]),
         .I5(\irq_en_reg_n_0_[5] ),
         .O(\irq_pol_reg[5]_0 ));
   LUT6 #(
     .INIT(64'hCAFFCAF0CA0FCA00)) 
     \bus_rsp_o[data][6]_i_2 
        (.I0(\irq_pol_reg_n_0_[6] ),
-        .I1(\irq_pend_reg_n_0_[6] ),
+        .I1(p_8_in),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\irq_typ_reg_n_0_[6] ),
@@ -30694,7 +29909,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(64'hCAFFCAF0CA0FCA00)) 
     \bus_rsp_o[data][7]_i_2 
        (.I0(\irq_pol_reg_n_0_[7] ),
-        .I1(p_23_in),
+        .I1(\irq_pend_reg_n_0_[7] ),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\irq_typ_reg_n_0_[7] ),
@@ -30714,7 +29929,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(64'hCAFFCAF0CA0FCA00)) 
     \bus_rsp_o[data][9]_i_2 
        (.I0(\irq_pol_reg_n_0_[9] ),
-        .I1(\irq_pend_reg_n_0_[9] ),
+        .I1(p_5_in),
         .I2(\dev_00_req_o[addr] [1]),
         .I3(\dev_00_req_o[addr] [0]),
         .I4(\irq_typ_reg_n_0_[9] ),
@@ -30730,575 +29945,287 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [0]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [0]));
+        .D(\bus_rsp_o_reg[data][15]_1 [0]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [0]));
   FDCE \bus_rsp_o_reg[data][10] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [10]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [10]));
+        .D(\bus_rsp_o_reg[data][15]_1 [10]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [10]));
   FDCE \bus_rsp_o_reg[data][11] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [11]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [11]));
+        .D(\bus_rsp_o_reg[data][15]_1 [11]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [11]));
   FDCE \bus_rsp_o_reg[data][12] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [12]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [12]));
+        .D(\bus_rsp_o_reg[data][15]_1 [12]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [12]));
   FDCE \bus_rsp_o_reg[data][13] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [13]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [13]));
+        .D(\bus_rsp_o_reg[data][15]_1 [13]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [13]));
   FDCE \bus_rsp_o_reg[data][14] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [14]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [14]));
+        .D(\bus_rsp_o_reg[data][15]_1 [14]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [14]));
   FDCE \bus_rsp_o_reg[data][15] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [15]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [15]));
-  FDCE \bus_rsp_o_reg[data][16] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [16]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [16]));
-  FDCE \bus_rsp_o_reg[data][17] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [17]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [17]));
-  FDCE \bus_rsp_o_reg[data][18] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [18]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [18]));
-  FDCE \bus_rsp_o_reg[data][19] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [19]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [19]));
+        .D(\bus_rsp_o_reg[data][15]_1 [15]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [15]));
   FDCE \bus_rsp_o_reg[data][1] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [1]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [1]));
-  FDCE \bus_rsp_o_reg[data][20] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [20]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [20]));
-  FDCE \bus_rsp_o_reg[data][21] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [21]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [21]));
-  FDCE \bus_rsp_o_reg[data][22] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [22]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [22]));
-  FDCE \bus_rsp_o_reg[data][23] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [23]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [23]));
-  FDCE \bus_rsp_o_reg[data][24] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [24]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [24]));
-  FDCE \bus_rsp_o_reg[data][25] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [25]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [25]));
-  FDCE \bus_rsp_o_reg[data][26] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [26]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [26]));
-  FDCE \bus_rsp_o_reg[data][27] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [27]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [27]));
-  FDCE \bus_rsp_o_reg[data][28] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [28]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [28]));
-  FDCE \bus_rsp_o_reg[data][29] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [29]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [29]));
+        .D(\bus_rsp_o_reg[data][15]_1 [1]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [1]));
   FDCE \bus_rsp_o_reg[data][2] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [2]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [2]));
-  FDCE \bus_rsp_o_reg[data][30] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [30]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [30]));
-  FDCE \bus_rsp_o_reg[data][31] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [31]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [31]));
+        .D(\bus_rsp_o_reg[data][15]_1 [2]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [2]));
   FDCE \bus_rsp_o_reg[data][3] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [3]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [3]));
+        .D(\bus_rsp_o_reg[data][15]_1 [3]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [3]));
   FDCE \bus_rsp_o_reg[data][4] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [4]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [4]));
+        .D(\bus_rsp_o_reg[data][15]_1 [4]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [4]));
   FDCE \bus_rsp_o_reg[data][5] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [5]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [5]));
+        .D(\bus_rsp_o_reg[data][15]_1 [5]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [5]));
   FDCE \bus_rsp_o_reg[data][6] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [6]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [6]));
+        .D(\bus_rsp_o_reg[data][15]_1 [6]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [6]));
   FDCE \bus_rsp_o_reg[data][7] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [7]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [7]));
+        .D(\bus_rsp_o_reg[data][15]_1 [7]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [7]));
   FDCE \bus_rsp_o_reg[data][8] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [8]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [8]));
+        .D(\bus_rsp_o_reg[data][15]_1 [8]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [8]));
   FDCE \bus_rsp_o_reg[data][9] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\bus_rsp_o_reg[data][31]_1 [9]),
-        .Q(\bus_rsp_o_reg[data][31]_0 [9]));
+        .D(\bus_rsp_o_reg[data][15]_1 [9]),
+        .Q(\bus_rsp_o_reg[data][15]_0 [9]));
   FDCE \irq_clrn_reg[0] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [0]),
+        .D(\irq_clrn_reg[15]_0 [0]),
         .Q(irq_clrn[0]));
   FDCE \irq_clrn_reg[10] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [10]),
+        .D(\irq_clrn_reg[15]_0 [10]),
         .Q(irq_clrn[10]));
   FDCE \irq_clrn_reg[11] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [11]),
+        .D(\irq_clrn_reg[15]_0 [11]),
         .Q(irq_clrn[11]));
   FDCE \irq_clrn_reg[12] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [12]),
+        .D(\irq_clrn_reg[15]_0 [12]),
         .Q(irq_clrn[12]));
   FDCE \irq_clrn_reg[13] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [13]),
+        .D(\irq_clrn_reg[15]_0 [13]),
         .Q(irq_clrn[13]));
   FDCE \irq_clrn_reg[14] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [14]),
+        .D(\irq_clrn_reg[15]_0 [14]),
         .Q(irq_clrn[14]));
   FDCE \irq_clrn_reg[15] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [15]),
+        .D(\irq_clrn_reg[15]_0 [15]),
         .Q(irq_clrn[15]));
-  FDCE \irq_clrn_reg[16] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [16]),
-        .Q(irq_clrn[16]));
-  FDCE \irq_clrn_reg[17] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [17]),
-        .Q(irq_clrn[17]));
-  FDCE \irq_clrn_reg[18] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [18]),
-        .Q(irq_clrn[18]));
-  FDCE \irq_clrn_reg[19] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [19]),
-        .Q(irq_clrn[19]));
   FDCE \irq_clrn_reg[1] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [1]),
+        .D(\irq_clrn_reg[15]_0 [1]),
         .Q(irq_clrn[1]));
-  FDCE \irq_clrn_reg[20] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [20]),
-        .Q(irq_clrn[20]));
-  FDCE \irq_clrn_reg[21] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [21]),
-        .Q(irq_clrn[21]));
-  FDCE \irq_clrn_reg[22] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [22]),
-        .Q(irq_clrn[22]));
-  FDCE \irq_clrn_reg[23] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [23]),
-        .Q(irq_clrn[23]));
-  FDCE \irq_clrn_reg[24] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [24]),
-        .Q(irq_clrn[24]));
-  FDCE \irq_clrn_reg[25] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [25]),
-        .Q(irq_clrn[25]));
-  FDCE \irq_clrn_reg[26] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [26]),
-        .Q(irq_clrn[26]));
-  FDCE \irq_clrn_reg[27] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [27]),
-        .Q(irq_clrn[27]));
-  FDCE \irq_clrn_reg[28] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [28]),
-        .Q(irq_clrn[28]));
-  FDCE \irq_clrn_reg[29] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [29]),
-        .Q(irq_clrn[29]));
   FDCE \irq_clrn_reg[2] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [2]),
+        .D(\irq_clrn_reg[15]_0 [2]),
         .Q(irq_clrn[2]));
-  FDCE \irq_clrn_reg[30] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [30]),
-        .Q(irq_clrn[30]));
-  FDCE \irq_clrn_reg[31] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [31]),
-        .Q(irq_clrn[31]));
   FDCE \irq_clrn_reg[3] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [3]),
+        .D(\irq_clrn_reg[15]_0 [3]),
         .Q(irq_clrn[3]));
   FDCE \irq_clrn_reg[4] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [4]),
+        .D(\irq_clrn_reg[15]_0 [4]),
         .Q(irq_clrn[4]));
   FDCE \irq_clrn_reg[5] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [5]),
+        .D(\irq_clrn_reg[15]_0 [5]),
         .Q(irq_clrn[5]));
   FDCE \irq_clrn_reg[6] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [6]),
+        .D(\irq_clrn_reg[15]_0 [6]),
         .Q(irq_clrn[6]));
   FDCE \irq_clrn_reg[7] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [7]),
+        .D(\irq_clrn_reg[15]_0 [7]),
         .Q(irq_clrn[7]));
   FDCE \irq_clrn_reg[8] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [8]),
+        .D(\irq_clrn_reg[15]_0 [8]),
         .Q(irq_clrn[8]));
   FDCE \irq_clrn_reg[9] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(\irq_clrn_reg[31]_0 [9]),
+        .D(\irq_clrn_reg[15]_0 [9]),
         .Q(irq_clrn[9]));
   FDCE \irq_en_reg[0] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[0]),
         .Q(\irq_en_reg_n_0_[0] ));
   FDCE \irq_en_reg[10] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[10]),
         .Q(\irq_en_reg_n_0_[10] ));
   FDCE \irq_en_reg[11] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[11]),
         .Q(\irq_en_reg_n_0_[11] ));
   FDCE \irq_en_reg[12] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[12]),
         .Q(\irq_en_reg_n_0_[12] ));
   FDCE \irq_en_reg[13] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[13]),
         .Q(\irq_en_reg_n_0_[13] ));
   FDCE \irq_en_reg[14] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[14]),
         .Q(\irq_en_reg_n_0_[14] ));
   FDCE \irq_en_reg[15] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[15]),
         .Q(\irq_en_reg_n_0_[15] ));
-  FDCE \irq_en_reg[16] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[16]),
-        .Q(\irq_en_reg_n_0_[16] ));
-  FDCE \irq_en_reg[17] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[17]),
-        .Q(\irq_en_reg_n_0_[17] ));
-  FDCE \irq_en_reg[18] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[18]),
-        .Q(\irq_en_reg_n_0_[18] ));
-  FDCE \irq_en_reg[19] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[19]),
-        .Q(\irq_en_reg_n_0_[19] ));
   FDCE \irq_en_reg[1] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[1]),
         .Q(\irq_en_reg_n_0_[1] ));
-  FDCE \irq_en_reg[20] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[20]),
-        .Q(\irq_en_reg_n_0_[20] ));
-  FDCE \irq_en_reg[21] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[21]),
-        .Q(\irq_en_reg_n_0_[21] ));
-  FDCE \irq_en_reg[22] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[22]),
-        .Q(\irq_en_reg_n_0_[22] ));
-  FDCE \irq_en_reg[23] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[23]),
-        .Q(\irq_en_reg_n_0_[23] ));
-  FDCE \irq_en_reg[24] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[24]),
-        .Q(\irq_en_reg_n_0_[24] ));
-  FDCE \irq_en_reg[25] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[25]),
-        .Q(\irq_en_reg_n_0_[25] ));
-  FDCE \irq_en_reg[26] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[26]),
-        .Q(\irq_en_reg_n_0_[26] ));
-  FDCE \irq_en_reg[27] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[27]),
-        .Q(\irq_en_reg_n_0_[27] ));
-  FDCE \irq_en_reg[28] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[28]),
-        .Q(\irq_en_reg_n_0_[28] ));
-  FDCE \irq_en_reg[29] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[29]),
-        .Q(\irq_en_reg_n_0_[29] ));
   FDCE \irq_en_reg[2] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[2]),
         .Q(\irq_en_reg_n_0_[2] ));
-  FDCE \irq_en_reg[30] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[30]),
-        .Q(\irq_en_reg_n_0_[30] ));
-  FDCE \irq_en_reg[31] 
-       (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[31]),
-        .Q(\irq_en_reg_n_0_[31] ));
   FDCE \irq_en_reg[3] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[3]),
         .Q(\irq_en_reg_n_0_[3] ));
   FDCE \irq_en_reg[4] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[4]),
         .Q(\irq_en_reg_n_0_[4] ));
   FDCE \irq_en_reg[5] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[5]),
         .Q(\irq_en_reg_n_0_[5] ));
   FDCE \irq_en_reg[6] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[6]),
         .Q(\irq_en_reg_n_0_[6] ));
   FDCE \irq_en_reg[7] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[7]),
         .Q(\irq_en_reg_n_0_[7] ));
   FDCE \irq_en_reg[8] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[8]),
         .Q(\irq_en_reg_n_0_[8] ));
   FDCE \irq_en_reg[9] 
        (.C(clk),
-        .CE(\irq_en_reg[31]_0 ),
+        .CE(\irq_en_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[9]),
         .Q(\irq_en_reg_n_0_[9] ));
@@ -31323,7 +30250,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[10]_i_1 
        (.I0(\irq_pend[10]_i_2_n_0 ),
-        .I1(p_0_in57_in),
+        .I1(p_28_in),
         .I2(\irq_typ_reg_n_0_[10] ),
         .I3(Q[10]),
         .I4(\irq_pol_reg_n_0_[10] ),
@@ -31333,14 +30260,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(8'h80)) 
     \irq_pend[10]_i_2 
        (.I0(irq_clrn[10]),
-        .I1(p_20_in),
+        .I1(\irq_pend_reg_n_0_[10] ),
         .I2(\irq_en_reg_n_0_[10] ),
         .O(\irq_pend[10]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[11]_i_1 
        (.I0(\irq_pend[11]_i_2_n_0 ),
-        .I1(p_0_in63_in),
+        .I1(p_26_in),
         .I2(\irq_typ_reg_n_0_[11] ),
         .I3(Q[11]),
         .I4(\irq_pol_reg_n_0_[11] ),
@@ -31357,7 +30284,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[12]_i_1 
        (.I0(\irq_pend[12]_i_2_n_0 ),
-        .I1(p_0_in69_in),
+        .I1(p_24_in),
         .I2(\irq_typ_reg_n_0_[12] ),
         .I3(Q[12]),
         .I4(\irq_pol_reg_n_0_[12] ),
@@ -31367,14 +30294,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(8'h80)) 
     \irq_pend[12]_i_2 
        (.I0(irq_clrn[12]),
-        .I1(\irq_pend_reg_n_0_[12] ),
+        .I1(p_2_in),
         .I2(\irq_en_reg_n_0_[12] ),
         .O(\irq_pend[12]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[13]_i_1 
        (.I0(\irq_pend[13]_i_2_n_0 ),
-        .I1(p_0_in75_in),
+        .I1(p_22_in),
         .I2(\irq_typ_reg_n_0_[13] ),
         .I3(Q[13]),
         .I4(\irq_pol_reg_n_0_[13] ),
@@ -31384,14 +30311,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(8'h80)) 
     \irq_pend[13]_i_2 
        (.I0(irq_clrn[13]),
-        .I1(p_17_in),
+        .I1(p_1_in),
         .I2(\irq_en_reg_n_0_[13] ),
         .O(\irq_pend[13]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[14]_i_1 
        (.I0(\irq_pend[14]_i_2_n_0 ),
-        .I1(p_0_in81_in),
+        .I1(p_20_in),
         .I2(\irq_typ_reg_n_0_[14] ),
         .I3(Q[14]),
         .I4(\irq_pol_reg_n_0_[14] ),
@@ -31401,14 +30328,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(8'h80)) 
     \irq_pend[14]_i_2 
        (.I0(irq_clrn[14]),
-        .I1(\irq_pend_reg_n_0_[14] ),
+        .I1(p_0_in),
         .I2(\irq_en_reg_n_0_[14] ),
         .O(\irq_pend[14]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[15]_i_1 
        (.I0(\irq_pend[15]_i_2_n_0 ),
-        .I1(p_0_in87_in),
+        .I1(p_18_in),
         .I2(\irq_typ_reg_n_0_[15] ),
         .I3(Q[15]),
         .I4(\irq_pol_reg_n_0_[15] ),
@@ -31423,77 +30350,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
         .O(\irq_pend[15]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[16]_i_1 
-       (.I0(\irq_pend[16]_i_2_n_0 ),
-        .I1(p_0_in93_in),
-        .I2(\irq_typ_reg_n_0_[16] ),
-        .I3(Q[16]),
-        .I4(\irq_pol_reg_n_0_[16] ),
-        .I5(\irq_en_reg_n_0_[16] ),
-        .O(irq_pend0[16]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[16]_i_2 
-       (.I0(irq_clrn[16]),
-        .I1(p_14_in),
-        .I2(\irq_en_reg_n_0_[16] ),
-        .O(\irq_pend[16]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[17]_i_1 
-       (.I0(\irq_pend[17]_i_2_n_0 ),
-        .I1(p_3_in),
-        .I2(\irq_typ_reg_n_0_[17] ),
-        .I3(Q[17]),
-        .I4(\irq_pol_reg_n_0_[17] ),
-        .I5(\irq_en_reg_n_0_[17] ),
-        .O(irq_pend0[17]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[17]_i_2 
-       (.I0(irq_clrn[17]),
-        .I1(\irq_pend_reg_n_0_[17] ),
-        .I2(\irq_en_reg_n_0_[17] ),
-        .O(\irq_pend[17]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[18]_i_1 
-       (.I0(\irq_pend[18]_i_2_n_0 ),
-        .I1(p_6_in),
-        .I2(\irq_typ_reg_n_0_[18] ),
-        .I3(Q[18]),
-        .I4(\irq_pol_reg_n_0_[18] ),
-        .I5(\irq_en_reg_n_0_[18] ),
-        .O(irq_pend0[18]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[18]_i_2 
-       (.I0(irq_clrn[18]),
-        .I1(\irq_pend_reg_n_0_[18] ),
-        .I2(\irq_en_reg_n_0_[18] ),
-        .O(\irq_pend[18]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[19]_i_1 
-       (.I0(\irq_pend[19]_i_2_n_0 ),
-        .I1(p_9_in),
-        .I2(\irq_typ_reg_n_0_[19] ),
-        .I3(Q[19]),
-        .I4(\irq_pol_reg_n_0_[19] ),
-        .I5(\irq_en_reg_n_0_[19] ),
-        .O(irq_pend0[19]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[19]_i_2 
-       (.I0(irq_clrn[19]),
-        .I1(p_11_in),
-        .I2(\irq_en_reg_n_0_[19] ),
-        .O(\irq_pend[19]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[1]_i_1 
        (.I0(\irq_pend[1]_i_2_n_0 ),
-        .I1(p_0_in),
+        .I1(p_3_in),
         .I2(\irq_typ_reg_n_0_[1] ),
         .I3(Q[1]),
         .I4(\irq_pol_reg_n_0_[1] ),
@@ -31503,184 +30362,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(8'h80)) 
     \irq_pend[1]_i_2 
        (.I0(irq_clrn[1]),
-        .I1(p_29_in),
+        .I1(\irq_pend_reg_n_0_[1] ),
         .I2(\irq_en_reg_n_0_[1] ),
         .O(\irq_pend[1]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[20]_i_1 
-       (.I0(\irq_pend[20]_i_2_n_0 ),
-        .I1(p_12_in),
-        .I2(\irq_typ_reg_n_0_[20] ),
-        .I3(Q[20]),
-        .I4(\irq_pol_reg_n_0_[20] ),
-        .I5(\irq_en_reg_n_0_[20] ),
-        .O(irq_pend0[20]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[20]_i_2 
-       (.I0(irq_clrn[20]),
-        .I1(\irq_pend_reg_n_0_[20] ),
-        .I2(\irq_en_reg_n_0_[20] ),
-        .O(\irq_pend[20]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[21]_i_1 
-       (.I0(\irq_pend[21]_i_2_n_0 ),
-        .I1(p_15_in),
-        .I2(\irq_typ_reg_n_0_[21] ),
-        .I3(Q[21]),
-        .I4(\irq_pol_reg_n_0_[21] ),
-        .I5(\irq_en_reg_n_0_[21] ),
-        .O(irq_pend0[21]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[21]_i_2 
-       (.I0(irq_clrn[21]),
-        .I1(\irq_pend_reg_n_0_[21] ),
-        .I2(\irq_en_reg_n_0_[21] ),
-        .O(\irq_pend[21]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[22]_i_1 
-       (.I0(\irq_pend[22]_i_2_n_0 ),
-        .I1(p_18_in),
-        .I2(\irq_typ_reg_n_0_[22] ),
-        .I3(Q[22]),
-        .I4(\irq_pol_reg_n_0_[22] ),
-        .I5(\irq_en_reg_n_0_[22] ),
-        .O(irq_pend0[22]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[22]_i_2 
-       (.I0(irq_clrn[22]),
-        .I1(p_8_in),
-        .I2(\irq_en_reg_n_0_[22] ),
-        .O(\irq_pend[22]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[23]_i_1 
-       (.I0(\irq_pend[23]_i_2_n_0 ),
-        .I1(p_21_in),
-        .I2(\irq_typ_reg_n_0_[23] ),
-        .I3(Q[23]),
-        .I4(\irq_pol_reg_n_0_[23] ),
-        .I5(\irq_en_reg_n_0_[23] ),
-        .O(irq_pend0[23]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[23]_i_2 
-       (.I0(irq_clrn[23]),
-        .I1(\irq_pend_reg_n_0_[23] ),
-        .I2(\irq_en_reg_n_0_[23] ),
-        .O(\irq_pend[23]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[24]_i_1 
-       (.I0(\irq_pend[24]_i_2_n_0 ),
-        .I1(p_24_in),
-        .I2(\irq_typ_reg_n_0_[24] ),
-        .I3(Q[24]),
-        .I4(\irq_pol_reg_n_0_[24] ),
-        .I5(\irq_en_reg_n_0_[24] ),
-        .O(irq_pend0[24]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[24]_i_2 
-       (.I0(irq_clrn[24]),
-        .I1(\irq_pend_reg_n_0_[24] ),
-        .I2(\irq_en_reg_n_0_[24] ),
-        .O(\irq_pend[24]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[25]_i_1 
-       (.I0(\irq_pend[25]_i_2_n_0 ),
-        .I1(p_27_in),
-        .I2(\irq_typ_reg_n_0_[25] ),
-        .I3(Q[25]),
-        .I4(\irq_pol_reg_n_0_[25] ),
-        .I5(\irq_en_reg_n_0_[25] ),
-        .O(irq_pend0[25]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[25]_i_2 
-       (.I0(irq_clrn[25]),
-        .I1(p_5_in),
-        .I2(\irq_en_reg_n_0_[25] ),
-        .O(\irq_pend[25]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[26]_i_1 
-       (.I0(\irq_pend[26]_i_2_n_0 ),
-        .I1(p_30_in),
-        .I2(p_32_in[1]),
-        .I3(Q[26]),
-        .I4(p_32_in[0]),
-        .I5(\irq_en_reg_n_0_[26] ),
-        .O(irq_pend0[26]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[26]_i_2 
-       (.I0(irq_clrn[26]),
-        .I1(\irq_pend_reg_n_0_[26] ),
-        .I2(\irq_en_reg_n_0_[26] ),
-        .O(\irq_pend[26]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[27]_i_1 
-       (.I0(\irq_pend[27]_i_2_n_0 ),
-        .I1(p_41_in),
-        .I2(\irq_typ_reg_n_0_[27] ),
-        .I3(Q[27]),
-        .I4(\irq_pol_reg_n_0_[27] ),
-        .I5(\irq_en_reg_n_0_[27] ),
-        .O(irq_pend0[27]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[27]_i_2 
-       (.I0(irq_clrn[27]),
-        .I1(\irq_pend_reg_n_0_[27] ),
-        .I2(\irq_en_reg_n_0_[27] ),
-        .O(\irq_pend[27]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[28]_i_1 
-       (.I0(\irq_pend[28]_i_2_n_0 ),
-        .I1(p_39_in),
-        .I2(\irq_typ_reg_n_0_[28] ),
-        .I3(Q[28]),
-        .I4(\irq_pol_reg_n_0_[28] ),
-        .I5(\irq_en_reg_n_0_[28] ),
-        .O(irq_pend0[28]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[28]_i_2 
-       (.I0(irq_clrn[28]),
-        .I1(p_2_in),
-        .I2(\irq_en_reg_n_0_[28] ),
-        .O(\irq_pend[28]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[29]_i_1 
-       (.I0(\irq_pend[29]_i_2_n_0 ),
-        .I1(p_37_in),
-        .I2(\irq_typ_reg_n_0_[29] ),
-        .I3(Q[29]),
-        .I4(\irq_pol_reg_n_0_[29] ),
-        .I5(\irq_en_reg_n_0_[29] ),
-        .O(irq_pend0[29]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[29]_i_2 
-       (.I0(irq_clrn[29]),
-        .I1(\irq_pend_reg_n_0_[29] ),
-        .I2(\irq_en_reg_n_0_[29] ),
-        .O(\irq_pend[29]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[2]_i_1 
        (.I0(\irq_pend[2]_i_2_n_0 ),
-        .I1(p_0_in9_in),
+        .I1(p_6_in),
         .I2(\irq_typ_reg_n_0_[2] ),
         .I3(Q[2]),
         .I4(\irq_pol_reg_n_0_[2] ),
@@ -31695,43 +30384,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
         .O(\irq_pend[2]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[30]_i_1 
-       (.I0(\irq_pend[30]_i_2_n_0 ),
-        .I1(p_35_in),
-        .I2(\irq_typ_reg_n_0_[30] ),
-        .I3(Q[30]),
-        .I4(\irq_pol_reg_n_0_[30] ),
-        .I5(\irq_en_reg_n_0_[30] ),
-        .O(irq_pend0[30]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[30]_i_2 
-       (.I0(irq_clrn[30]),
-        .I1(\irq_pend_reg_n_0_[30] ),
-        .I2(\irq_en_reg_n_0_[30] ),
-        .O(\irq_pend[30]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
-    \irq_pend[31]_i_1 
-       (.I0(\irq_pend[31]_i_2_n_0 ),
-        .I1(p_33_in),
-        .I2(\irq_typ_reg_n_0_[31] ),
-        .I3(Q[31]),
-        .I4(\irq_pol_reg_n_0_[31] ),
-        .I5(\irq_en_reg_n_0_[31] ),
-        .O(irq_pend0[31]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \irq_pend[31]_i_2 
-       (.I0(irq_clrn[31]),
-        .I1(\irq_pend_reg_n_0_[31] ),
-        .I2(\irq_en_reg_n_0_[31] ),
-        .O(\irq_pend[31]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[3]_i_1 
        (.I0(\irq_pend[3]_i_2_n_0 ),
-        .I1(p_0_in15_in),
+        .I1(p_9_in),
         .I2(\irq_typ_reg_n_0_[3] ),
         .I3(Q[3]),
         .I4(\irq_pol_reg_n_0_[3] ),
@@ -31741,34 +30396,34 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(8'h80)) 
     \irq_pend[3]_i_2 
        (.I0(irq_clrn[3]),
-        .I1(\irq_pend_reg_n_0_[3] ),
+        .I1(p_11_in),
         .I2(\irq_en_reg_n_0_[3] ),
         .O(\irq_pend[3]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[4]_i_1 
        (.I0(\irq_pend[4]_i_2_n_0 ),
-        .I1(p_0_in21_in),
-        .I2(\irq_typ_reg_n_0_[4] ),
+        .I1(p_12_in),
+        .I2(p_14_in[1]),
         .I3(Q[4]),
-        .I4(\irq_pol_reg_n_0_[4] ),
+        .I4(p_14_in[0]),
         .I5(\irq_en_reg_n_0_[4] ),
         .O(irq_pend0[4]));
   LUT3 #(
     .INIT(8'h80)) 
     \irq_pend[4]_i_2 
        (.I0(irq_clrn[4]),
-        .I1(p_26_in),
+        .I1(\irq_pend_reg_n_0_[4] ),
         .I2(\irq_en_reg_n_0_[4] ),
         .O(\irq_pend[4]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[5]_i_1 
        (.I0(\irq_pend[5]_i_2_n_0 ),
-        .I1(p_0_in27_in),
-        .I2(\irq_typ_reg_n_0_[5] ),
+        .I1(p_15_in),
+        .I2(p_17_in[1]),
         .I3(Q[5]),
-        .I4(\irq_pol_reg_n_0_[5] ),
+        .I4(p_17_in[0]),
         .I5(\irq_en_reg_n_0_[5] ),
         .O(irq_pend0[5]));
   LUT3 #(
@@ -31782,7 +30437,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[6]_i_1 
        (.I0(\irq_pend[6]_i_2_n_0 ),
-        .I1(p_0_in33_in),
+        .I1(p_36_in),
         .I2(\irq_typ_reg_n_0_[6] ),
         .I3(Q[6]),
         .I4(\irq_pol_reg_n_0_[6] ),
@@ -31792,14 +30447,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(8'h80)) 
     \irq_pend[6]_i_2 
        (.I0(irq_clrn[6]),
-        .I1(\irq_pend_reg_n_0_[6] ),
+        .I1(p_8_in),
         .I2(\irq_en_reg_n_0_[6] ),
         .O(\irq_pend[6]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[7]_i_1 
        (.I0(\irq_pend[7]_i_2_n_0 ),
-        .I1(p_0_in39_in),
+        .I1(p_34_in),
         .I2(\irq_typ_reg_n_0_[7] ),
         .I3(Q[7]),
         .I4(\irq_pol_reg_n_0_[7] ),
@@ -31809,14 +30464,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(8'h80)) 
     \irq_pend[7]_i_2 
        (.I0(irq_clrn[7]),
-        .I1(p_23_in),
+        .I1(\irq_pend_reg_n_0_[7] ),
         .I2(\irq_en_reg_n_0_[7] ),
         .O(\irq_pend[7]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[8]_i_1 
        (.I0(\irq_pend[8]_i_2_n_0 ),
-        .I1(p_0_in45_in),
+        .I1(p_32_in),
         .I2(\irq_typ_reg_n_0_[8] ),
         .I3(Q[8]),
         .I4(\irq_pol_reg_n_0_[8] ),
@@ -31833,7 +30488,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(64'hBFAAAAEFAAAAAAAA)) 
     \irq_pend[9]_i_1 
        (.I0(\irq_pend[9]_i_2_n_0 ),
-        .I1(p_0_in51_in),
+        .I1(p_30_in),
         .I2(\irq_typ_reg_n_0_[9] ),
         .I3(Q[9]),
         .I4(\irq_pol_reg_n_0_[9] ),
@@ -31843,7 +30498,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
     .INIT(8'h80)) 
     \irq_pend[9]_i_2 
        (.I0(irq_clrn[9]),
-        .I1(\irq_pend_reg_n_0_[9] ),
+        .I1(p_5_in),
         .I2(\irq_en_reg_n_0_[9] ),
         .O(\irq_pend[9]_i_2_n_0 ));
   FDCE \irq_pend_reg[0] 
@@ -31857,7 +30512,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(irq_pend0[10]),
-        .Q(p_20_in));
+        .Q(\irq_pend_reg_n_0_[10] ));
   FDCE \irq_pend_reg[11] 
        (.C(clk),
         .CE(1'b1),
@@ -31869,145 +30524,49 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(irq_pend0[12]),
-        .Q(\irq_pend_reg_n_0_[12] ));
+        .Q(p_2_in));
   FDCE \irq_pend_reg[13] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(irq_pend0[13]),
-        .Q(p_17_in));
+        .Q(p_1_in));
   FDCE \irq_pend_reg[14] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(irq_pend0[14]),
-        .Q(\irq_pend_reg_n_0_[14] ));
+        .Q(p_0_in));
   FDCE \irq_pend_reg[15] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(irq_pend0[15]),
         .Q(\irq_pend_reg_n_0_[15] ));
-  FDCE \irq_pend_reg[16] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[16]),
-        .Q(p_14_in));
-  FDCE \irq_pend_reg[17] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[17]),
-        .Q(\irq_pend_reg_n_0_[17] ));
-  FDCE \irq_pend_reg[18] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[18]),
-        .Q(\irq_pend_reg_n_0_[18] ));
-  FDCE \irq_pend_reg[19] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[19]),
-        .Q(p_11_in));
   FDCE \irq_pend_reg[1] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(irq_pend0[1]),
-        .Q(p_29_in));
-  FDCE \irq_pend_reg[20] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[20]),
-        .Q(\irq_pend_reg_n_0_[20] ));
-  FDCE \irq_pend_reg[21] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[21]),
-        .Q(\irq_pend_reg_n_0_[21] ));
-  FDCE \irq_pend_reg[22] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[22]),
-        .Q(p_8_in));
-  FDCE \irq_pend_reg[23] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[23]),
-        .Q(\irq_pend_reg_n_0_[23] ));
-  FDCE \irq_pend_reg[24] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[24]),
-        .Q(\irq_pend_reg_n_0_[24] ));
-  FDCE \irq_pend_reg[25] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[25]),
-        .Q(p_5_in));
-  FDCE \irq_pend_reg[26] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[26]),
-        .Q(\irq_pend_reg_n_0_[26] ));
-  FDCE \irq_pend_reg[27] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[27]),
-        .Q(\irq_pend_reg_n_0_[27] ));
-  FDCE \irq_pend_reg[28] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[28]),
-        .Q(p_2_in));
-  FDCE \irq_pend_reg[29] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[29]),
-        .Q(\irq_pend_reg_n_0_[29] ));
+        .Q(\irq_pend_reg_n_0_[1] ));
   FDCE \irq_pend_reg[2] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(irq_pend0[2]),
         .Q(\irq_pend_reg_n_0_[2] ));
-  FDCE \irq_pend_reg[30] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[30]),
-        .Q(\irq_pend_reg_n_0_[30] ));
-  FDCE \irq_pend_reg[31] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(irq_pend0[31]),
-        .Q(\irq_pend_reg_n_0_[31] ));
   FDCE \irq_pend_reg[3] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(irq_pend0[3]),
-        .Q(\irq_pend_reg_n_0_[3] ));
+        .Q(p_11_in));
   FDCE \irq_pend_reg[4] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(irq_pend0[4]),
-        .Q(p_26_in));
+        .Q(\irq_pend_reg_n_0_[4] ));
   FDCE \irq_pend_reg[5] 
        (.C(clk),
         .CE(1'b1),
@@ -32019,13 +30578,13 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(irq_pend0[6]),
-        .Q(\irq_pend_reg_n_0_[6] ));
+        .Q(p_8_in));
   FDCE \irq_pend_reg[7] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(irq_pend0[7]),
-        .Q(p_23_in));
+        .Q(\irq_pend_reg_n_0_[7] ));
   FDCE \irq_pend_reg[8] 
        (.C(clk),
         .CE(1'b1),
@@ -32037,388 +30596,196 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(irq_pend0[9]),
-        .Q(\irq_pend_reg_n_0_[9] ));
+        .Q(p_5_in));
   FDCE \irq_pol_reg[0] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[0]),
         .Q(\irq_pol_reg_n_0_[0] ));
   FDCE \irq_pol_reg[10] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[10]),
         .Q(\irq_pol_reg_n_0_[10] ));
   FDCE \irq_pol_reg[11] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[11]),
         .Q(\irq_pol_reg_n_0_[11] ));
   FDCE \irq_pol_reg[12] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[12]),
         .Q(\irq_pol_reg_n_0_[12] ));
   FDCE \irq_pol_reg[13] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[13]),
         .Q(\irq_pol_reg_n_0_[13] ));
   FDCE \irq_pol_reg[14] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[14]),
         .Q(\irq_pol_reg_n_0_[14] ));
   FDCE \irq_pol_reg[15] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[15]),
         .Q(\irq_pol_reg_n_0_[15] ));
-  FDCE \irq_pol_reg[16] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[16]),
-        .Q(\irq_pol_reg_n_0_[16] ));
-  FDCE \irq_pol_reg[17] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[17]),
-        .Q(\irq_pol_reg_n_0_[17] ));
-  FDCE \irq_pol_reg[18] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[18]),
-        .Q(\irq_pol_reg_n_0_[18] ));
-  FDCE \irq_pol_reg[19] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[19]),
-        .Q(\irq_pol_reg_n_0_[19] ));
   FDCE \irq_pol_reg[1] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[1]),
         .Q(\irq_pol_reg_n_0_[1] ));
-  FDCE \irq_pol_reg[20] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[20]),
-        .Q(\irq_pol_reg_n_0_[20] ));
-  FDCE \irq_pol_reg[21] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[21]),
-        .Q(\irq_pol_reg_n_0_[21] ));
-  FDCE \irq_pol_reg[22] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[22]),
-        .Q(\irq_pol_reg_n_0_[22] ));
-  FDCE \irq_pol_reg[23] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[23]),
-        .Q(\irq_pol_reg_n_0_[23] ));
-  FDCE \irq_pol_reg[24] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[24]),
-        .Q(\irq_pol_reg_n_0_[24] ));
-  FDCE \irq_pol_reg[25] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[25]),
-        .Q(\irq_pol_reg_n_0_[25] ));
-  FDCE \irq_pol_reg[26] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[26]),
-        .Q(p_32_in[0]));
-  FDCE \irq_pol_reg[27] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[27]),
-        .Q(\irq_pol_reg_n_0_[27] ));
-  FDCE \irq_pol_reg[28] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[28]),
-        .Q(\irq_pol_reg_n_0_[28] ));
-  FDCE \irq_pol_reg[29] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[29]),
-        .Q(\irq_pol_reg_n_0_[29] ));
   FDCE \irq_pol_reg[2] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[2]),
         .Q(\irq_pol_reg_n_0_[2] ));
-  FDCE \irq_pol_reg[30] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[30]),
-        .Q(\irq_pol_reg_n_0_[30] ));
-  FDCE \irq_pol_reg[31] 
-       (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
-        .CLR(rstn_sys),
-        .D(D[31]),
-        .Q(\irq_pol_reg_n_0_[31] ));
   FDCE \irq_pol_reg[3] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[3]),
         .Q(\irq_pol_reg_n_0_[3] ));
   FDCE \irq_pol_reg[4] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[4]),
-        .Q(\irq_pol_reg_n_0_[4] ));
+        .Q(p_14_in[0]));
   FDCE \irq_pol_reg[5] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[5]),
-        .Q(\irq_pol_reg_n_0_[5] ));
+        .Q(p_17_in[0]));
   FDCE \irq_pol_reg[6] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[6]),
         .Q(\irq_pol_reg_n_0_[6] ));
   FDCE \irq_pol_reg[7] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[7]),
         .Q(\irq_pol_reg_n_0_[7] ));
   FDCE \irq_pol_reg[8] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[8]),
         .Q(\irq_pol_reg_n_0_[8] ));
   FDCE \irq_pol_reg[9] 
        (.C(clk),
-        .CE(\irq_pol_reg[31]_1 ),
+        .CE(\irq_pol_reg[15]_1 ),
         .CLR(rstn_sys),
         .D(D[9]),
         .Q(\irq_pol_reg_n_0_[9] ));
   FDCE \irq_typ_reg[0] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[0]),
         .Q(\irq_typ_reg_n_0_[0] ));
   FDCE \irq_typ_reg[10] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[10]),
         .Q(\irq_typ_reg_n_0_[10] ));
   FDCE \irq_typ_reg[11] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[11]),
         .Q(\irq_typ_reg_n_0_[11] ));
   FDCE \irq_typ_reg[12] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[12]),
         .Q(\irq_typ_reg_n_0_[12] ));
   FDCE \irq_typ_reg[13] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[13]),
         .Q(\irq_typ_reg_n_0_[13] ));
   FDCE \irq_typ_reg[14] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[14]),
         .Q(\irq_typ_reg_n_0_[14] ));
   FDCE \irq_typ_reg[15] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[15]),
         .Q(\irq_typ_reg_n_0_[15] ));
-  FDCE \irq_typ_reg[16] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[16]),
-        .Q(\irq_typ_reg_n_0_[16] ));
-  FDCE \irq_typ_reg[17] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[17]),
-        .Q(\irq_typ_reg_n_0_[17] ));
-  FDCE \irq_typ_reg[18] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[18]),
-        .Q(\irq_typ_reg_n_0_[18] ));
-  FDCE \irq_typ_reg[19] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[19]),
-        .Q(\irq_typ_reg_n_0_[19] ));
   FDCE \irq_typ_reg[1] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[1]),
         .Q(\irq_typ_reg_n_0_[1] ));
-  FDCE \irq_typ_reg[20] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[20]),
-        .Q(\irq_typ_reg_n_0_[20] ));
-  FDCE \irq_typ_reg[21] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[21]),
-        .Q(\irq_typ_reg_n_0_[21] ));
-  FDCE \irq_typ_reg[22] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[22]),
-        .Q(\irq_typ_reg_n_0_[22] ));
-  FDCE \irq_typ_reg[23] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[23]),
-        .Q(\irq_typ_reg_n_0_[23] ));
-  FDCE \irq_typ_reg[24] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[24]),
-        .Q(\irq_typ_reg_n_0_[24] ));
-  FDCE \irq_typ_reg[25] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[25]),
-        .Q(\irq_typ_reg_n_0_[25] ));
-  FDCE \irq_typ_reg[26] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[26]),
-        .Q(p_32_in[1]));
-  FDCE \irq_typ_reg[27] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[27]),
-        .Q(\irq_typ_reg_n_0_[27] ));
-  FDCE \irq_typ_reg[28] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[28]),
-        .Q(\irq_typ_reg_n_0_[28] ));
-  FDCE \irq_typ_reg[29] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[29]),
-        .Q(\irq_typ_reg_n_0_[29] ));
   FDCE \irq_typ_reg[2] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[2]),
         .Q(\irq_typ_reg_n_0_[2] ));
-  FDCE \irq_typ_reg[30] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[30]),
-        .Q(\irq_typ_reg_n_0_[30] ));
-  FDCE \irq_typ_reg[31] 
-       (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
-        .CLR(rstn_sys),
-        .D(D[31]),
-        .Q(\irq_typ_reg_n_0_[31] ));
   FDCE \irq_typ_reg[3] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[3]),
         .Q(\irq_typ_reg_n_0_[3] ));
   FDCE \irq_typ_reg[4] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[4]),
-        .Q(\irq_typ_reg_n_0_[4] ));
+        .Q(p_14_in[1]));
   FDCE \irq_typ_reg[5] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[5]),
-        .Q(\irq_typ_reg_n_0_[5] ));
+        .Q(p_17_in[1]));
   FDCE \irq_typ_reg[6] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[6]),
         .Q(\irq_typ_reg_n_0_[6] ));
   FDCE \irq_typ_reg[7] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[7]),
         .Q(\irq_typ_reg_n_0_[7] ));
   FDCE \irq_typ_reg[8] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[8]),
         .Q(\irq_typ_reg_n_0_[8] ));
   FDCE \irq_typ_reg[9] 
        (.C(clk),
-        .CE(\irq_typ_reg[31]_0 ),
+        .CE(\irq_typ_reg[15]_0 ),
         .CLR(rstn_sys),
         .D(D[9]),
         .Q(\irq_typ_reg_n_0_[9] ));
@@ -32433,187 +30800,91 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[10]),
-        .Q(p_0_in57_in));
+        .Q(p_28_in));
   FDCE \port_in2_reg[11] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[11]),
-        .Q(p_0_in63_in));
+        .Q(p_26_in));
   FDCE \port_in2_reg[12] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[12]),
-        .Q(p_0_in69_in));
+        .Q(p_24_in));
   FDCE \port_in2_reg[13] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[13]),
-        .Q(p_0_in75_in));
+        .Q(p_22_in));
   FDCE \port_in2_reg[14] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[14]),
-        .Q(p_0_in81_in));
+        .Q(p_20_in));
   FDCE \port_in2_reg[15] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[15]),
-        .Q(p_0_in87_in));
-  FDCE \port_in2_reg[16] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[16]),
-        .Q(p_0_in93_in));
-  FDCE \port_in2_reg[17] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[17]),
-        .Q(p_3_in));
-  FDCE \port_in2_reg[18] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[18]),
-        .Q(p_6_in));
-  FDCE \port_in2_reg[19] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[19]),
-        .Q(p_9_in));
+        .Q(p_18_in));
   FDCE \port_in2_reg[1] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[1]),
-        .Q(p_0_in));
-  FDCE \port_in2_reg[20] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[20]),
-        .Q(p_12_in));
-  FDCE \port_in2_reg[21] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[21]),
-        .Q(p_15_in));
-  FDCE \port_in2_reg[22] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[22]),
-        .Q(p_18_in));
-  FDCE \port_in2_reg[23] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[23]),
-        .Q(p_21_in));
-  FDCE \port_in2_reg[24] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[24]),
-        .Q(p_24_in));
-  FDCE \port_in2_reg[25] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[25]),
-        .Q(p_27_in));
-  FDCE \port_in2_reg[26] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[26]),
-        .Q(p_30_in));
-  FDCE \port_in2_reg[27] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[27]),
-        .Q(p_41_in));
-  FDCE \port_in2_reg[28] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[28]),
-        .Q(p_39_in));
-  FDCE \port_in2_reg[29] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[29]),
-        .Q(p_37_in));
+        .Q(p_3_in));
   FDCE \port_in2_reg[2] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[2]),
-        .Q(p_0_in9_in));
-  FDCE \port_in2_reg[30] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[30]),
-        .Q(p_35_in));
-  FDCE \port_in2_reg[31] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(Q[31]),
-        .Q(p_33_in));
+        .Q(p_6_in));
   FDCE \port_in2_reg[3] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[3]),
-        .Q(p_0_in15_in));
+        .Q(p_9_in));
   FDCE \port_in2_reg[4] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[4]),
-        .Q(p_0_in21_in));
+        .Q(p_12_in));
   FDCE \port_in2_reg[5] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[5]),
-        .Q(p_0_in27_in));
+        .Q(p_15_in));
   FDCE \port_in2_reg[6] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[6]),
-        .Q(p_0_in33_in));
+        .Q(p_36_in));
   FDCE \port_in2_reg[7] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[7]),
-        .Q(p_0_in39_in));
+        .Q(p_34_in));
   FDCE \port_in2_reg[8] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[8]),
-        .Q(p_0_in45_in));
+        .Q(p_32_in));
   FDCE \port_in2_reg[9] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(Q[9]),
-        .Q(p_0_in51_in));
+        .Q(p_30_in));
   FDCE \port_in_reg[0] 
        (.C(clk),
         .CE(1'b1),
@@ -32656,114 +30927,18 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
         .CLR(rstn_sys),
         .D(gpio_i[15]),
         .Q(Q[15]));
-  FDCE \port_in_reg[16] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[16]),
-        .Q(Q[16]));
-  FDCE \port_in_reg[17] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[17]),
-        .Q(Q[17]));
-  FDCE \port_in_reg[18] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[18]),
-        .Q(Q[18]));
-  FDCE \port_in_reg[19] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[19]),
-        .Q(Q[19]));
   FDCE \port_in_reg[1] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(gpio_i[1]),
         .Q(Q[1]));
-  FDCE \port_in_reg[20] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[20]),
-        .Q(Q[20]));
-  FDCE \port_in_reg[21] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[21]),
-        .Q(Q[21]));
-  FDCE \port_in_reg[22] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[22]),
-        .Q(Q[22]));
-  FDCE \port_in_reg[23] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[23]),
-        .Q(Q[23]));
-  FDCE \port_in_reg[24] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[24]),
-        .Q(Q[24]));
-  FDCE \port_in_reg[25] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[25]),
-        .Q(Q[25]));
-  FDCE \port_in_reg[26] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[26]),
-        .Q(Q[26]));
-  FDCE \port_in_reg[27] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[27]),
-        .Q(Q[27]));
-  FDCE \port_in_reg[28] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[28]),
-        .Q(Q[28]));
-  FDCE \port_in_reg[29] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[29]),
-        .Q(Q[29]));
   FDCE \port_in_reg[2] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
         .D(gpio_i[2]),
         .Q(Q[2]));
-  FDCE \port_in_reg[30] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[30]),
-        .Q(Q[30]));
-  FDCE \port_in_reg[31] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(rstn_sys),
-        .D(gpio_i[31]),
-        .Q(Q[31]));
   FDCE \port_in_reg[3] 
        (.C(clk),
         .CE(1'b1),
@@ -32811,264 +30986,132 @@ module system_neorv32_vivado_ip_0_0_neorv32_gpio
         .CE(E),
         .CLR(rstn_sys),
         .D(D[0]),
-        .Q(\port_out_reg[31]_0 [0]));
+        .Q(gpio_o[0]));
   FDCE \port_out_reg[10] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[10]),
-        .Q(\port_out_reg[31]_0 [10]));
+        .Q(gpio_o[10]));
   FDCE \port_out_reg[11] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[11]),
-        .Q(\port_out_reg[31]_0 [11]));
+        .Q(gpio_o[11]));
   FDCE \port_out_reg[12] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[12]),
-        .Q(\port_out_reg[31]_0 [12]));
+        .Q(gpio_o[12]));
   FDCE \port_out_reg[13] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[13]),
-        .Q(\port_out_reg[31]_0 [13]));
+        .Q(gpio_o[13]));
   FDCE \port_out_reg[14] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[14]),
-        .Q(\port_out_reg[31]_0 [14]));
+        .Q(gpio_o[14]));
   FDCE \port_out_reg[15] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[15]),
-        .Q(\port_out_reg[31]_0 [15]));
-  FDCE \port_out_reg[16] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[16]),
-        .Q(\port_out_reg[31]_0 [16]));
-  FDCE \port_out_reg[17] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[17]),
-        .Q(\port_out_reg[31]_0 [17]));
-  FDCE \port_out_reg[18] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[18]),
-        .Q(\port_out_reg[31]_0 [18]));
-  FDCE \port_out_reg[19] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[19]),
-        .Q(\port_out_reg[31]_0 [19]));
+        .Q(gpio_o[15]));
   FDCE \port_out_reg[1] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[1]),
-        .Q(\port_out_reg[31]_0 [1]));
-  FDCE \port_out_reg[20] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[20]),
-        .Q(\port_out_reg[31]_0 [20]));
-  FDCE \port_out_reg[21] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[21]),
-        .Q(\port_out_reg[31]_0 [21]));
-  FDCE \port_out_reg[22] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[22]),
-        .Q(\port_out_reg[31]_0 [22]));
-  FDCE \port_out_reg[23] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[23]),
-        .Q(\port_out_reg[31]_0 [23]));
-  FDCE \port_out_reg[24] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[24]),
-        .Q(\port_out_reg[31]_0 [24]));
-  FDCE \port_out_reg[25] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[25]),
-        .Q(\port_out_reg[31]_0 [25]));
-  FDCE \port_out_reg[26] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[26]),
-        .Q(\port_out_reg[31]_0 [26]));
-  FDCE \port_out_reg[27] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[27]),
-        .Q(\port_out_reg[31]_0 [27]));
-  FDCE \port_out_reg[28] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[28]),
-        .Q(\port_out_reg[31]_0 [28]));
-  FDCE \port_out_reg[29] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[29]),
-        .Q(\port_out_reg[31]_0 [29]));
+        .Q(gpio_o[1]));
   FDCE \port_out_reg[2] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[2]),
-        .Q(\port_out_reg[31]_0 [2]));
-  FDCE \port_out_reg[30] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[30]),
-        .Q(\port_out_reg[31]_0 [30]));
-  FDCE \port_out_reg[31] 
-       (.C(clk),
-        .CE(E),
-        .CLR(rstn_sys),
-        .D(D[31]),
-        .Q(\port_out_reg[31]_0 [31]));
+        .Q(gpio_o[2]));
   FDCE \port_out_reg[3] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[3]),
-        .Q(\port_out_reg[31]_0 [3]));
+        .Q(gpio_o[3]));
   FDCE \port_out_reg[4] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[4]),
-        .Q(\port_out_reg[31]_0 [4]));
+        .Q(gpio_o[4]));
   FDCE \port_out_reg[5] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[5]),
-        .Q(\port_out_reg[31]_0 [5]));
+        .Q(gpio_o[5]));
   FDCE \port_out_reg[6] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[6]),
-        .Q(\port_out_reg[31]_0 [6]));
+        .Q(gpio_o[6]));
   FDCE \port_out_reg[7] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[7]),
-        .Q(\port_out_reg[31]_0 [7]));
+        .Q(gpio_o[7]));
   FDCE \port_out_reg[8] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[8]),
-        .Q(\port_out_reg[31]_0 [8]));
+        .Q(gpio_o[8]));
   FDCE \port_out_reg[9] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
         .D(D[9]),
-        .Q(\port_out_reg[31]_0 [9]));
+        .Q(gpio_o[9]));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \trap_ctrl[irq_pnd][11]_i_1 
        (.I0(\trap_ctrl[irq_pnd][11]_i_2_n_0 ),
-        .I1(\trap_ctrl[irq_pnd][11]_i_3_n_0 ),
-        .I2(\irq_pend_reg_n_0_[24] ),
-        .I3(\irq_pend_reg_n_0_[23] ),
-        .I4(p_8_in),
-        .I5(\irq_pend_reg_n_0_[21] ),
+        .I1(p_0_in),
+        .I2(p_1_in),
+        .I3(p_2_in),
+        .I4(\irq_pend_reg_n_0_[11] ),
+        .I5(\trap_ctrl[irq_pnd][11]_i_3_n_0 ),
         .O(irq_fast_i));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \trap_ctrl[irq_pnd][11]_i_2 
+       (.I0(\irq_pend_reg_n_0_[10] ),
+        .I1(p_5_in),
+        .I2(\irq_pend_reg_n_0_[8] ),
+        .I3(\irq_pend_reg_n_0_[7] ),
+        .O(\trap_ctrl[irq_pnd][11]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \trap_ctrl[irq_pnd][11]_i_2 
-       (.I0(\trap_ctrl[irq_pnd][11]_i_4_n_0 ),
-        .I1(p_5_in),
-        .I2(\irq_pend_reg_n_0_[26] ),
-        .I3(\irq_pend_reg_n_0_[27] ),
-        .I4(p_2_in),
-        .O(\trap_ctrl[irq_pnd][11]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \trap_ctrl[irq_pnd][11]_i_3 
-       (.I0(p_14_in),
-        .I1(\irq_pend_reg_n_0_[15] ),
-        .I2(\trap_ctrl[irq_pnd][11]_i_5_n_0 ),
-        .I3(\trap_ctrl[irq_pnd][11]_i_6_n_0 ),
-        .I4(\trap_ctrl[irq_pnd][11]_i_7_n_0 ),
-        .I5(\trap_ctrl[irq_pnd][11]_i_8_n_0 ),
+       (.I0(p_11_in),
+        .I1(\irq_pend_reg_n_0_[4] ),
+        .I2(\irq_pend_reg_n_0_[5] ),
+        .I3(p_8_in),
+        .I4(\trap_ctrl[irq_pnd][11]_i_4_n_0 ),
         .O(\trap_ctrl[irq_pnd][11]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     \trap_ctrl[irq_pnd][11]_i_4 
-       (.I0(\irq_pend_reg_n_0_[17] ),
-        .I1(\irq_pend_reg_n_0_[18] ),
-        .I2(p_11_in),
-        .I3(\irq_pend_reg_n_0_[20] ),
-        .I4(\irq_pend_reg_n_0_[30] ),
-        .I5(\irq_pend_reg_n_0_[29] ),
-        .O(\trap_ctrl[irq_pnd][11]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \trap_ctrl[irq_pnd][11]_i_5 
-       (.I0(\irq_pend_reg_n_0_[6] ),
-        .I1(\irq_pend_reg_n_0_[5] ),
-        .I2(p_26_in),
-        .I3(\irq_pend_reg_n_0_[3] ),
-        .O(\trap_ctrl[irq_pnd][11]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \trap_ctrl[irq_pnd][11]_i_6 
        (.I0(\irq_pend_reg_n_0_[2] ),
-        .I1(p_29_in),
+        .I1(\irq_pend_reg_n_0_[1] ),
         .I2(\irq_pend_reg_n_0_[0] ),
-        .I3(\irq_pend_reg_n_0_[31] ),
-        .O(\trap_ctrl[irq_pnd][11]_i_6_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \trap_ctrl[irq_pnd][11]_i_7 
-       (.I0(\irq_pend_reg_n_0_[14] ),
-        .I1(p_17_in),
-        .I2(\irq_pend_reg_n_0_[12] ),
-        .I3(\irq_pend_reg_n_0_[11] ),
-        .O(\trap_ctrl[irq_pnd][11]_i_7_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \trap_ctrl[irq_pnd][11]_i_8 
-       (.I0(p_20_in),
-        .I1(\irq_pend_reg_n_0_[9] ),
-        .I2(\irq_pend_reg_n_0_[8] ),
-        .I3(p_23_in),
-        .O(\trap_ctrl[irq_pnd][11]_i_8_n_0 ));
+        .I3(\irq_pend_reg_n_0_[15] ),
+        .O(\trap_ctrl[irq_pnd][11]_i_4_n_0 ));
 endmodule
 
 (* ORIG_REF_NAME = "neorv32_imem" *) 
@@ -33475,7 +31518,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo
         .D(p_2_out[7]),
         .Q(rdata[7]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair253" *) 
+  (* SOFT_HLUTNM = "soft_lutpair254" *) 
   LUT4 #(
     .INIT(16'hEFFE)) 
     \fifo_status_large.avail_i_1__0 
@@ -33517,7 +31560,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo
         .I1(\w_pnt_reg[6]_1 ),
         .I2(r_pnt_reg[0]),
         .O(r_nxt[0]));
-  (* SOFT_HLUTNM = "soft_lutpair250" *) 
+  (* SOFT_HLUTNM = "soft_lutpair251" *) 
   LUT4 #(
     .INIT(16'h0440)) 
     \r_pnt[1]_i_1__0 
@@ -33526,7 +31569,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo
         .I2(r_pnt_reg[1]),
         .I3(r_pnt_reg[0]),
         .O(r_nxt[1]));
-  (* SOFT_HLUTNM = "soft_lutpair250" *) 
+  (* SOFT_HLUTNM = "soft_lutpair251" *) 
   LUT5 #(
     .INIT(32'h04444000)) 
     \r_pnt[2]_i_1 
@@ -33556,7 +31599,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo
         .I4(r_pnt_reg[3]),
         .I5(r_pnt_reg[4]),
         .O(r_nxt[4]));
-  (* SOFT_HLUTNM = "soft_lutpair249" *) 
+  (* SOFT_HLUTNM = "soft_lutpair250" *) 
   LUT4 #(
     .INIT(16'h0440)) 
     \r_pnt[5]_i_1 
@@ -33565,7 +31608,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo
         .I2(\r_pnt[6]_i_3__0_n_0 ),
         .I3(r_pnt_reg[5]),
         .O(r_nxt[5]));
-  (* SOFT_HLUTNM = "soft_lutpair249" *) 
+  (* SOFT_HLUTNM = "soft_lutpair250" *) 
   LUT5 #(
     .INIT(32'h00780000)) 
     \r_pnt[6]_i_2__0 
@@ -33626,7 +31669,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo
         .CLR(rstn_sys),
         .D(\r_pnt[6]_i_2__0_n_0 ),
         .Q(r_pnt_reg[6]));
-  (* SOFT_HLUTNM = "soft_lutpair254" *) 
+  (* SOFT_HLUTNM = "soft_lutpair255" *) 
   LUT4 #(
     .INIT(16'hF040)) 
     rx_overrun_i_1
@@ -33635,7 +31678,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo
         .I2(\w_pnt_reg[6]_1 ),
         .I3(rx_overrun_reg),
         .O(\rx_engine_reg[done] ));
-  (* SOFT_HLUTNM = "soft_lutpair254" *) 
+  (* SOFT_HLUTNM = "soft_lutpair255" *) 
   LUT3 #(
     .INIT(8'h2A)) 
     uart_rtsn_o_i_1
@@ -33643,7 +31686,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo
         .I1(\w_pnt_reg[6]_1 ),
         .I2(\r_pnt_reg[6]_0 ),
         .O(uart_rtsn_o0));
-  (* SOFT_HLUTNM = "soft_lutpair253" *) 
+  (* SOFT_HLUTNM = "soft_lutpair254" *) 
   LUT4 #(
     .INIT(16'hFEEF)) 
     uart_rtsn_o_i_2
@@ -33659,7 +31702,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo
         .I1(\w_pnt_reg[6]_1 ),
         .I2(\w_pnt_reg_n_0_[0] ),
         .O(w_nxt__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair251" *) 
+  (* SOFT_HLUTNM = "soft_lutpair252" *) 
   LUT4 #(
     .INIT(16'h0440)) 
     \w_pnt[1]_i_1__0 
@@ -33668,7 +31711,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo
         .I2(\w_pnt_reg_n_0_[1] ),
         .I3(\w_pnt_reg_n_0_[0] ),
         .O(w_nxt__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair251" *) 
+  (* SOFT_HLUTNM = "soft_lutpair252" *) 
   LUT5 #(
     .INIT(32'h04444000)) 
     \w_pnt[2]_i_1 
@@ -33698,7 +31741,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo
         .I4(\w_pnt_reg_n_0_[3] ),
         .I5(\w_pnt_reg_n_0_[4] ),
         .O(w_nxt__0[4]));
-  (* SOFT_HLUTNM = "soft_lutpair252" *) 
+  (* SOFT_HLUTNM = "soft_lutpair253" *) 
   LUT4 #(
     .INIT(16'h0440)) 
     \w_pnt[5]_i_1 
@@ -33715,7 +31758,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo
         .I2(\w_pnt_reg[6]_0 ),
         .I3(\w_pnt_reg[6]_1 ),
         .O(\w_pnt[6]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair252" *) 
+  (* SOFT_HLUTNM = "soft_lutpair253" *) 
   LUT5 #(
     .INIT(32'h04444000)) 
     \w_pnt[6]_i_2 
@@ -33895,10 +31938,10 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
   wire \NLW_fifo_memory_large.fifo_reg_0_63_6_7_DOC_UNCONNECTED ;
   wire \NLW_fifo_memory_large.fifo_reg_0_63_6_7_DOD_UNCONNECTED ;
 
-  (* SOFT_HLUTNM = "soft_lutpair259" *) 
+  (* SOFT_HLUTNM = "soft_lutpair260" *) 
   LUT3 #(
     .INIT(8'hEB)) 
-    \bus_rsp_o[data][19]_i_2__0 
+    \bus_rsp_o[data][19]_i_2 
        (.I0(\fifo_status_large.avail_i_2_n_0 ),
         .I1(p_1_in),
         .I2(p_0_in__0),
@@ -34026,7 +32069,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .D(p_2_out__0[7]),
         .Q(rdata_1[7]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair259" *) 
+  (* SOFT_HLUTNM = "soft_lutpair260" *) 
   LUT3 #(
     .INIT(8'hBE)) 
     \fifo_status_large.avail_i_1 
@@ -34084,7 +32127,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I2(\rx_fifo[avail] ),
         .I3(\ctrl_reg[irq_rx_nempty]__0 ),
         .O(irq_o_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair260" *) 
+  (* SOFT_HLUTNM = "soft_lutpair261" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \r_pnt[0]_i_1__0 
@@ -34092,7 +32135,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I1(\r_pnt_reg[6]_2 ),
         .I2(\r_pnt_reg_n_0_[0] ),
         .O(r_nxt[0]));
-  (* SOFT_HLUTNM = "soft_lutpair256" *) 
+  (* SOFT_HLUTNM = "soft_lutpair257" *) 
   LUT4 #(
     .INIT(16'h0440)) 
     \r_pnt[1]_i_1__1 
@@ -34101,7 +32144,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I2(\r_pnt_reg_n_0_[1] ),
         .I3(\r_pnt_reg_n_0_[0] ),
         .O(r_nxt[1]));
-  (* SOFT_HLUTNM = "soft_lutpair256" *) 
+  (* SOFT_HLUTNM = "soft_lutpair257" *) 
   LUT5 #(
     .INIT(32'h04444000)) 
     \r_pnt[2]_i_1__0 
@@ -34131,7 +32174,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I4(\r_pnt_reg_n_0_[3] ),
         .I5(\r_pnt_reg_n_0_[4] ),
         .O(r_nxt[4]));
-  (* SOFT_HLUTNM = "soft_lutpair255" *) 
+  (* SOFT_HLUTNM = "soft_lutpair256" *) 
   LUT4 #(
     .INIT(16'h0440)) 
     \r_pnt[5]_i_1__0 
@@ -34150,7 +32193,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I4(\r_pnt_reg[6]_1 ),
         .I5(\r_pnt_reg[6]_2 ),
         .O(\r_pnt[6]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair255" *) 
+  (* SOFT_HLUTNM = "soft_lutpair256" *) 
   LUT5 #(
     .INIT(32'h00780000)) 
     \r_pnt[6]_i_2 
@@ -34211,7 +32254,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .CLR(rstn_sys),
         .D(\r_pnt[6]_i_2_n_0 ),
         .Q(p_1_in));
-  (* SOFT_HLUTNM = "soft_lutpair264" *) 
+  (* SOFT_HLUTNM = "soft_lutpair265" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \tx_engine[sreg][1]_i_1 
@@ -34219,7 +32262,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I1(\tx_engine_reg[sreg][1] ),
         .I2(rdata_1[0]),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair264" *) 
+  (* SOFT_HLUTNM = "soft_lutpair265" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \tx_engine[sreg][2]_i_1 
@@ -34227,7 +32270,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I1(\tx_engine_reg[sreg][1] ),
         .I2(rdata_1[1]),
         .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair263" *) 
+  (* SOFT_HLUTNM = "soft_lutpair264" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \tx_engine[sreg][3]_i_1 
@@ -34235,7 +32278,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I1(\tx_engine_reg[sreg][1] ),
         .I2(rdata_1[2]),
         .O(D[2]));
-  (* SOFT_HLUTNM = "soft_lutpair263" *) 
+  (* SOFT_HLUTNM = "soft_lutpair264" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \tx_engine[sreg][4]_i_1 
@@ -34243,7 +32286,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I1(\tx_engine_reg[sreg][1] ),
         .I2(rdata_1[3]),
         .O(D[3]));
-  (* SOFT_HLUTNM = "soft_lutpair262" *) 
+  (* SOFT_HLUTNM = "soft_lutpair263" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \tx_engine[sreg][5]_i_1 
@@ -34251,7 +32294,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I1(\tx_engine_reg[sreg][1] ),
         .I2(rdata_1[4]),
         .O(D[4]));
-  (* SOFT_HLUTNM = "soft_lutpair262" *) 
+  (* SOFT_HLUTNM = "soft_lutpair263" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \tx_engine[sreg][6]_i_1 
@@ -34259,7 +32302,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I1(\tx_engine_reg[sreg][1] ),
         .I2(rdata_1[5]),
         .O(D[5]));
-  (* SOFT_HLUTNM = "soft_lutpair261" *) 
+  (* SOFT_HLUTNM = "soft_lutpair262" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \tx_engine[sreg][7]_i_1 
@@ -34267,7 +32310,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I1(\tx_engine_reg[sreg][1] ),
         .I2(rdata_1[6]),
         .O(D[6]));
-  (* SOFT_HLUTNM = "soft_lutpair261" *) 
+  (* SOFT_HLUTNM = "soft_lutpair262" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \tx_engine[sreg][8]_i_1 
@@ -34291,7 +32334,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I1(\r_pnt_reg[6]_2 ),
         .I2(\w_pnt_reg_n_0_[0] ),
         .O(w_nxt[0]));
-  (* SOFT_HLUTNM = "soft_lutpair257" *) 
+  (* SOFT_HLUTNM = "soft_lutpair258" *) 
   LUT4 #(
     .INIT(16'h0440)) 
     \w_pnt[1]_i_1__1 
@@ -34300,7 +32343,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I2(\w_pnt_reg_n_0_[1] ),
         .I3(\w_pnt_reg_n_0_[0] ),
         .O(w_nxt[1]));
-  (* SOFT_HLUTNM = "soft_lutpair257" *) 
+  (* SOFT_HLUTNM = "soft_lutpair258" *) 
   LUT5 #(
     .INIT(32'h04444000)) 
     \w_pnt[2]_i_1__0 
@@ -34330,14 +32373,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I4(\w_pnt_reg_n_0_[3] ),
         .I5(\w_pnt_reg_n_0_[4] ),
         .O(w_nxt[4]));
-  (* SOFT_HLUTNM = "soft_lutpair260" *) 
+  (* SOFT_HLUTNM = "soft_lutpair261" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \w_pnt[4]_i_2 
        (.I0(\r_pnt_reg[6]_2 ),
         .I1(\r_pnt_reg[6]_1 ),
         .O(\ctrl_reg[enable] ));
-  (* SOFT_HLUTNM = "soft_lutpair258" *) 
+  (* SOFT_HLUTNM = "soft_lutpair259" *) 
   LUT4 #(
     .INIT(16'h0440)) 
     \w_pnt[5]_i_1__0 
@@ -34356,7 +32399,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3
         .I4(\r_pnt_reg[6]_1 ),
         .I5(\r_pnt_reg[6]_2 ),
         .O(\w_pnt[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair258" *) 
+  (* SOFT_HLUTNM = "soft_lutpair259" *) 
   LUT5 #(
     .INIT(32'h04444000)) 
     \w_pnt[6]_i_2__0 
@@ -34553,7 +32596,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized0
         .CLR(rstn_sys),
         .D(\fifo_memory_small.fifo_reg[0][8]_1 [8]),
         .Q(\tx_fifo[rdata] [8]));
-  (* SOFT_HLUTNM = "soft_lutpair234" *) 
+  (* SOFT_HLUTNM = "soft_lutpair235" *) 
   LUT5 #(
     .INIT(32'h00000090)) 
     irq_o_i_1__1
@@ -34579,21 +32622,21 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized0
         .CLR(rstn_sys),
         .D(\r_pnt[0]_i_1_n_0 ),
         .Q(\r_pnt_reg[0]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair239" *) 
+  (* SOFT_HLUTNM = "soft_lutpair240" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \rtx_engine[cs_ctrl][0]_i_1 
        (.I0(\r_pnt_reg[0]_2 ),
         .I1(\tx_fifo[rdata] [0]),
         .O(\rtx_engine_reg[state][2]_0 [0]));
-  (* SOFT_HLUTNM = "soft_lutpair239" *) 
+  (* SOFT_HLUTNM = "soft_lutpair240" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \rtx_engine[cs_ctrl][1]_i_1 
        (.I0(\r_pnt_reg[0]_2 ),
         .I1(\tx_fifo[rdata] [1]),
         .O(\rtx_engine_reg[state][2]_0 [1]));
-  (* SOFT_HLUTNM = "soft_lutpair240" *) 
+  (* SOFT_HLUTNM = "soft_lutpair241" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \rtx_engine[cs_ctrl][2]_i_1 
@@ -34610,14 +32653,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized0
         .I4(\w_pnt_reg[0]_0 ),
         .I5(\r_pnt_reg[0]_2 ),
         .O(E));
-  (* SOFT_HLUTNM = "soft_lutpair240" *) 
+  (* SOFT_HLUTNM = "soft_lutpair241" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \rtx_engine[cs_ctrl][3]_i_2 
        (.I0(\r_pnt_reg[0]_2 ),
         .I1(\tx_fifo[rdata] [3]),
         .O(\rtx_engine_reg[state][2]_0 [3]));
-  (* SOFT_HLUTNM = "soft_lutpair235" *) 
+  (* SOFT_HLUTNM = "soft_lutpair236" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rtx_engine[sreg][0]_i_1 
@@ -34625,7 +32668,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized0
         .I1(\rtx_engine_reg[sreg][7] ),
         .I2(\tx_fifo[rdata] [0]),
         .O(\rtx_engine_reg[sreg][6] [0]));
-  (* SOFT_HLUTNM = "soft_lutpair235" *) 
+  (* SOFT_HLUTNM = "soft_lutpair236" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rtx_engine[sreg][1]_i_1 
@@ -34633,7 +32676,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized0
         .I1(\rtx_engine_reg[sreg][7] ),
         .I2(\tx_fifo[rdata] [1]),
         .O(\rtx_engine_reg[sreg][6] [1]));
-  (* SOFT_HLUTNM = "soft_lutpair236" *) 
+  (* SOFT_HLUTNM = "soft_lutpair237" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rtx_engine[sreg][2]_i_1 
@@ -34641,7 +32684,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized0
         .I1(\rtx_engine_reg[sreg][7] ),
         .I2(\tx_fifo[rdata] [2]),
         .O(\rtx_engine_reg[sreg][6] [2]));
-  (* SOFT_HLUTNM = "soft_lutpair236" *) 
+  (* SOFT_HLUTNM = "soft_lutpair237" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rtx_engine[sreg][3]_i_1 
@@ -34649,7 +32692,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized0
         .I1(\rtx_engine_reg[sreg][7] ),
         .I2(\tx_fifo[rdata] [3]),
         .O(\rtx_engine_reg[sreg][6] [3]));
-  (* SOFT_HLUTNM = "soft_lutpair237" *) 
+  (* SOFT_HLUTNM = "soft_lutpair238" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rtx_engine[sreg][4]_i_1 
@@ -34657,7 +32700,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized0
         .I1(\rtx_engine_reg[sreg][7] ),
         .I2(\fifo_memory_small.fifo_reg_n_0_[0][4] ),
         .O(\rtx_engine_reg[sreg][6] [4]));
-  (* SOFT_HLUTNM = "soft_lutpair237" *) 
+  (* SOFT_HLUTNM = "soft_lutpair238" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rtx_engine[sreg][5]_i_1 
@@ -34665,7 +32708,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized0
         .I1(\rtx_engine_reg[sreg][7] ),
         .I2(\fifo_memory_small.fifo_reg_n_0_[0][5] ),
         .O(\rtx_engine_reg[sreg][6] [5]));
-  (* SOFT_HLUTNM = "soft_lutpair238" *) 
+  (* SOFT_HLUTNM = "soft_lutpair239" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rtx_engine[sreg][6]_i_1 
@@ -34683,7 +32726,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized0
         .I4(irq_o_reg),
         .I5(spi_clk_en),
         .O(\rtx_engine_reg[state][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair238" *) 
+  (* SOFT_HLUTNM = "soft_lutpair239" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rtx_engine[sreg][7]_i_2 
@@ -34691,7 +32734,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized0
         .I1(\rtx_engine_reg[sreg][7] ),
         .I2(\fifo_memory_small.fifo_reg_n_0_[0][7] ),
         .O(\rtx_engine_reg[sreg][6] [7]));
-  (* SOFT_HLUTNM = "soft_lutpair234" *) 
+  (* SOFT_HLUTNM = "soft_lutpair235" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \rtx_engine[sreg][7]_i_3 
@@ -35158,14 +33201,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized2
         .CLR(rstn_sys),
         .D(\r_pnt[0]_i_1__0_n_0 ),
         .Q(r_pnt));
-  (* SOFT_HLUTNM = "soft_lutpair232" *) 
+  (* SOFT_HLUTNM = "soft_lutpair233" *) 
   LUT2 #(
     .INIT(4'h9)) 
     s1_axis_tready_INST_0
        (.I0(w_pnt),
         .I1(r_pnt),
         .O(\w_pnt_reg[0]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair232" *) 
+  (* SOFT_HLUTNM = "soft_lutpair233" *) 
   LUT4 #(
     .INIT(16'h3A00)) 
     \w_pnt[0]_i_1__0 
@@ -35496,7 +33539,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized2_4
         .I4(r_pnt),
         .I5(\ctrl_reg[irq_rx_full]__0 ),
         .O(irq_o_i_2__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair233" *) 
+  (* SOFT_HLUTNM = "soft_lutpair234" *) 
   LUT4 #(
     .INIT(16'hAC00)) 
     \r_pnt[0]_i_1__0 
@@ -35511,7 +33554,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__parameterized2_4
         .CLR(rstn_sys),
         .D(\r_pnt[0]_i_1__0_n_0 ),
         .Q(\r_pnt_reg[0]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair233" *) 
+  (* SOFT_HLUTNM = "soft_lutpair234" *) 
   LUT2 #(
     .INIT(4'h6)) 
     s0_axis_tvalid_INST_0
@@ -44437,7 +42480,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .I1(cdiv_cnt[0]),
         .I2(spi_clk_en0),
         .O(\cdiv_cnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair242" *) 
+  (* SOFT_HLUTNM = "soft_lutpair243" *) 
   LUT4 #(
     .INIT(16'h0220)) 
     \cdiv_cnt[1]_i_1 
@@ -44446,7 +42489,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .I2(cdiv_cnt[0]),
         .I3(cdiv_cnt[1]),
         .O(\cdiv_cnt[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair242" *) 
+  (* SOFT_HLUTNM = "soft_lutpair243" *) 
   LUT5 #(
     .INIT(32'h02222000)) 
     \cdiv_cnt[2]_i_1 
@@ -44556,14 +42599,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .CLR(rstn_sys),
         .D(tx_fifo_inst_n_5),
         .Q(irq_fast_i));
-  (* SOFT_HLUTNM = "soft_lutpair248" *) 
+  (* SOFT_HLUTNM = "soft_lutpair249" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \rtx_engine[bitcnt][0]_i_1 
        (.I0(\rtx_engine_reg[state][1]_0 ),
         .I1(\rtx_engine_reg[bitcnt_n_0_][0] ),
         .O(\rtx_engine[bitcnt][0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair248" *) 
+  (* SOFT_HLUTNM = "soft_lutpair249" *) 
   LUT3 #(
     .INIT(8'h28)) 
     \rtx_engine[bitcnt][1]_i_1 
@@ -44571,7 +42614,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .I1(\rtx_engine_reg[bitcnt_n_0_][1] ),
         .I2(\rtx_engine_reg[bitcnt_n_0_][0] ),
         .O(\rtx_engine[bitcnt][1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair243" *) 
+  (* SOFT_HLUTNM = "soft_lutpair244" *) 
   LUT4 #(
     .INIT(16'h2888)) 
     \rtx_engine[bitcnt][2]_i_1 
@@ -44588,7 +42631,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .I2(spi_clk_en),
         .I3(\rtx_engine_reg[state][1]_0 ),
         .O(\rtx_engine[bitcnt][3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair243" *) 
+  (* SOFT_HLUTNM = "soft_lutpair244" *) 
   LUT5 #(
     .INIT(32'h28888888)) 
     \rtx_engine[bitcnt][3]_i_2 
@@ -44598,7 +42641,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .I3(\rtx_engine_reg[bitcnt_n_0_][0] ),
         .I4(\rtx_engine_reg[bitcnt_n_0_][1] ),
         .O(\rtx_engine[bitcnt][3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair241" *) 
+  (* SOFT_HLUTNM = "soft_lutpair242" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     \rtx_engine[done]_i_1 
@@ -44644,7 +42687,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .I4(spi_clk_en),
         .I5(\rtx_engine_reg[sdi_sync]__0 ),
         .O(\rtx_engine[sdi_sync]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair241" *) 
+  (* SOFT_HLUTNM = "soft_lutpair242" *) 
   LUT5 #(
     .INIT(32'h4CC0CC00)) 
     \rtx_engine[state][1]_i_1 
@@ -44828,7 +42871,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .CLR(rstn_sys),
         .D(spi_clk_en0_out),
         .Q(spi_clk_en));
-  (* SOFT_HLUTNM = "soft_lutpair245" *) 
+  (* SOFT_HLUTNM = "soft_lutpair246" *) 
   LUT4 #(
     .INIT(16'hFEFF)) 
     \spi_csn_o[0]_i_1 
@@ -44837,7 +42880,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .I2(\rtx_engine_reg[cs_ctrl_n_0_][2] ),
         .I3(Q),
         .O(\spi_csn_o[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair245" *) 
+  (* SOFT_HLUTNM = "soft_lutpair246" *) 
   LUT4 #(
     .INIT(16'hFBFF)) 
     \spi_csn_o[1]_i_1 
@@ -44846,7 +42889,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .I2(\rtx_engine_reg[cs_ctrl_n_0_][2] ),
         .I3(Q),
         .O(\spi_csn_o[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair246" *) 
+  (* SOFT_HLUTNM = "soft_lutpair247" *) 
   LUT4 #(
     .INIT(16'hFBFF)) 
     \spi_csn_o[2]_i_1 
@@ -44855,7 +42898,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .I2(\rtx_engine_reg[cs_ctrl_n_0_][2] ),
         .I3(Q),
         .O(\spi_csn_o[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair244" *) 
+  (* SOFT_HLUTNM = "soft_lutpair245" *) 
   LUT4 #(
     .INIT(16'hF7FF)) 
     \spi_csn_o[3]_i_1 
@@ -44864,7 +42907,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .I2(\rtx_engine_reg[cs_ctrl_n_0_][2] ),
         .I3(Q),
         .O(\spi_csn_o[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair247" *) 
+  (* SOFT_HLUTNM = "soft_lutpair248" *) 
   LUT4 #(
     .INIT(16'hEFFF)) 
     \spi_csn_o[4]_i_1 
@@ -44873,7 +42916,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .I2(\rtx_engine_reg[cs_ctrl_n_0_][2] ),
         .I3(Q),
         .O(\spi_csn_o[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair247" *) 
+  (* SOFT_HLUTNM = "soft_lutpair248" *) 
   LUT4 #(
     .INIT(16'hBFFF)) 
     \spi_csn_o[5]_i_1 
@@ -44882,7 +42925,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .I2(\rtx_engine_reg[cs_ctrl_n_0_][2] ),
         .I3(Q),
         .O(\spi_csn_o[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair246" *) 
+  (* SOFT_HLUTNM = "soft_lutpair247" *) 
   LUT4 #(
     .INIT(16'hBFFF)) 
     \spi_csn_o[6]_i_1 
@@ -44891,7 +42934,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_spi
         .I2(\rtx_engine_reg[cs_ctrl_n_0_][2] ),
         .I3(Q),
         .O(\spi_csn_o[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair244" *) 
+  (* SOFT_HLUTNM = "soft_lutpair245" *) 
   LUT4 #(
     .INIT(16'h7FFF)) 
     \spi_csn_o[7]_i_1 
@@ -45380,8 +43423,8 @@ module system_neorv32_vivado_ip_0_0_neorv32_sysinfo
     rstn_sys,
     \bus_rsp_o_reg[err]_0 ,
     E,
-    \dev_12_req_o[data] ,
-    D);
+    D,
+    \bus_rsp_o_reg[data][31]_1 );
   output \iodev_rsp[2][ack] ;
   output \dev_30_rsp_i[err] ;
   output [31:0]Q;
@@ -45391,16 +43434,16 @@ module system_neorv32_vivado_ip_0_0_neorv32_sysinfo
   input rstn_sys;
   input \bus_rsp_o_reg[err]_0 ;
   input [0:0]E;
-  input [31:0]\dev_12_req_o[data] ;
   input [31:0]D;
+  input [31:0]\bus_rsp_o_reg[data][31]_1 ;
 
   wire [31:0]D;
   wire [0:0]E;
   wire [31:0]Q;
   wire [31:0]\bus_rsp_o_reg[data][31]_0 ;
+  wire [31:0]\bus_rsp_o_reg[data][31]_1 ;
   wire \bus_rsp_o_reg[err]_0 ;
   wire clk;
-  wire [31:0]\dev_12_req_o[data] ;
   wire \dev_30_rsp_i[err] ;
   wire \iodev_req[2][stb] ;
   wire \iodev_rsp[2][ack] ;
@@ -45416,193 +43459,193 @@ module system_neorv32_vivado_ip_0_0_neorv32_sysinfo
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[0]),
+        .D(\bus_rsp_o_reg[data][31]_1 [0]),
         .Q(\bus_rsp_o_reg[data][31]_0 [0]));
   FDCE \bus_rsp_o_reg[data][10] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[10]),
+        .D(\bus_rsp_o_reg[data][31]_1 [10]),
         .Q(\bus_rsp_o_reg[data][31]_0 [10]));
   FDCE \bus_rsp_o_reg[data][11] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[11]),
+        .D(\bus_rsp_o_reg[data][31]_1 [11]),
         .Q(\bus_rsp_o_reg[data][31]_0 [11]));
   FDCE \bus_rsp_o_reg[data][12] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[12]),
+        .D(\bus_rsp_o_reg[data][31]_1 [12]),
         .Q(\bus_rsp_o_reg[data][31]_0 [12]));
   FDCE \bus_rsp_o_reg[data][13] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[13]),
+        .D(\bus_rsp_o_reg[data][31]_1 [13]),
         .Q(\bus_rsp_o_reg[data][31]_0 [13]));
   FDCE \bus_rsp_o_reg[data][14] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[14]),
+        .D(\bus_rsp_o_reg[data][31]_1 [14]),
         .Q(\bus_rsp_o_reg[data][31]_0 [14]));
   FDCE \bus_rsp_o_reg[data][15] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[15]),
+        .D(\bus_rsp_o_reg[data][31]_1 [15]),
         .Q(\bus_rsp_o_reg[data][31]_0 [15]));
   FDCE \bus_rsp_o_reg[data][16] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[16]),
+        .D(\bus_rsp_o_reg[data][31]_1 [16]),
         .Q(\bus_rsp_o_reg[data][31]_0 [16]));
   FDCE \bus_rsp_o_reg[data][17] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[17]),
+        .D(\bus_rsp_o_reg[data][31]_1 [17]),
         .Q(\bus_rsp_o_reg[data][31]_0 [17]));
   FDCE \bus_rsp_o_reg[data][18] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[18]),
+        .D(\bus_rsp_o_reg[data][31]_1 [18]),
         .Q(\bus_rsp_o_reg[data][31]_0 [18]));
   FDCE \bus_rsp_o_reg[data][19] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[19]),
+        .D(\bus_rsp_o_reg[data][31]_1 [19]),
         .Q(\bus_rsp_o_reg[data][31]_0 [19]));
   FDCE \bus_rsp_o_reg[data][1] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[1]),
+        .D(\bus_rsp_o_reg[data][31]_1 [1]),
         .Q(\bus_rsp_o_reg[data][31]_0 [1]));
   FDCE \bus_rsp_o_reg[data][20] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[20]),
+        .D(\bus_rsp_o_reg[data][31]_1 [20]),
         .Q(\bus_rsp_o_reg[data][31]_0 [20]));
   FDCE \bus_rsp_o_reg[data][21] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[21]),
+        .D(\bus_rsp_o_reg[data][31]_1 [21]),
         .Q(\bus_rsp_o_reg[data][31]_0 [21]));
   FDCE \bus_rsp_o_reg[data][22] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[22]),
+        .D(\bus_rsp_o_reg[data][31]_1 [22]),
         .Q(\bus_rsp_o_reg[data][31]_0 [22]));
   FDCE \bus_rsp_o_reg[data][23] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[23]),
+        .D(\bus_rsp_o_reg[data][31]_1 [23]),
         .Q(\bus_rsp_o_reg[data][31]_0 [23]));
   FDCE \bus_rsp_o_reg[data][24] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[24]),
+        .D(\bus_rsp_o_reg[data][31]_1 [24]),
         .Q(\bus_rsp_o_reg[data][31]_0 [24]));
   FDCE \bus_rsp_o_reg[data][25] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[25]),
+        .D(\bus_rsp_o_reg[data][31]_1 [25]),
         .Q(\bus_rsp_o_reg[data][31]_0 [25]));
   FDCE \bus_rsp_o_reg[data][26] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[26]),
+        .D(\bus_rsp_o_reg[data][31]_1 [26]),
         .Q(\bus_rsp_o_reg[data][31]_0 [26]));
   FDCE \bus_rsp_o_reg[data][27] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[27]),
+        .D(\bus_rsp_o_reg[data][31]_1 [27]),
         .Q(\bus_rsp_o_reg[data][31]_0 [27]));
   FDCE \bus_rsp_o_reg[data][28] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[28]),
+        .D(\bus_rsp_o_reg[data][31]_1 [28]),
         .Q(\bus_rsp_o_reg[data][31]_0 [28]));
   FDCE \bus_rsp_o_reg[data][29] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[29]),
+        .D(\bus_rsp_o_reg[data][31]_1 [29]),
         .Q(\bus_rsp_o_reg[data][31]_0 [29]));
   FDCE \bus_rsp_o_reg[data][2] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[2]),
+        .D(\bus_rsp_o_reg[data][31]_1 [2]),
         .Q(\bus_rsp_o_reg[data][31]_0 [2]));
   FDCE \bus_rsp_o_reg[data][30] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[30]),
+        .D(\bus_rsp_o_reg[data][31]_1 [30]),
         .Q(\bus_rsp_o_reg[data][31]_0 [30]));
   FDCE \bus_rsp_o_reg[data][31] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[31]),
+        .D(\bus_rsp_o_reg[data][31]_1 [31]),
         .Q(\bus_rsp_o_reg[data][31]_0 [31]));
   FDCE \bus_rsp_o_reg[data][3] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[3]),
+        .D(\bus_rsp_o_reg[data][31]_1 [3]),
         .Q(\bus_rsp_o_reg[data][31]_0 [3]));
   FDCE \bus_rsp_o_reg[data][4] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[4]),
+        .D(\bus_rsp_o_reg[data][31]_1 [4]),
         .Q(\bus_rsp_o_reg[data][31]_0 [4]));
   FDCE \bus_rsp_o_reg[data][5] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[5]),
+        .D(\bus_rsp_o_reg[data][31]_1 [5]),
         .Q(\bus_rsp_o_reg[data][31]_0 [5]));
   FDCE \bus_rsp_o_reg[data][6] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[6]),
+        .D(\bus_rsp_o_reg[data][31]_1 [6]),
         .Q(\bus_rsp_o_reg[data][31]_0 [6]));
   FDCE \bus_rsp_o_reg[data][7] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[7]),
+        .D(\bus_rsp_o_reg[data][31]_1 [7]),
         .Q(\bus_rsp_o_reg[data][31]_0 [7]));
   FDCE \bus_rsp_o_reg[data][8] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[8]),
+        .D(\bus_rsp_o_reg[data][31]_1 [8]),
         .Q(\bus_rsp_o_reg[data][31]_0 [8]));
   FDCE \bus_rsp_o_reg[data][9] 
        (.C(clk),
         .CE(1'b1),
         .CLR(rstn_sys),
-        .D(D[9]),
+        .D(\bus_rsp_o_reg[data][31]_1 [9]),
         .Q(\bus_rsp_o_reg[data][31]_0 [9]));
   FDCE \bus_rsp_o_reg[err] 
        (.C(clk),
@@ -45614,193 +43657,193 @@ module system_neorv32_vivado_ip_0_0_neorv32_sysinfo
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [0]),
+        .D(D[0]),
         .Q(Q[0]));
   FDCE \sysinfo_reg[0][10] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [10]),
+        .D(D[10]),
         .Q(Q[10]));
   FDCE \sysinfo_reg[0][11] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [11]),
+        .D(D[11]),
         .Q(Q[11]));
   FDCE \sysinfo_reg[0][12] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [12]),
+        .D(D[12]),
         .Q(Q[12]));
   FDPE \sysinfo_reg[0][13] 
        (.C(clk),
         .CE(E),
-        .D(\dev_12_req_o[data] [13]),
+        .D(D[13]),
         .PRE(rstn_sys),
         .Q(Q[13]));
   FDPE \sysinfo_reg[0][14] 
        (.C(clk),
         .CE(E),
-        .D(\dev_12_req_o[data] [14]),
+        .D(D[14]),
         .PRE(rstn_sys),
         .Q(Q[14]));
   FDPE \sysinfo_reg[0][15] 
        (.C(clk),
         .CE(E),
-        .D(\dev_12_req_o[data] [15]),
+        .D(D[15]),
         .PRE(rstn_sys),
         .Q(Q[15]));
   FDPE \sysinfo_reg[0][16] 
        (.C(clk),
         .CE(E),
-        .D(\dev_12_req_o[data] [16]),
+        .D(D[16]),
         .PRE(rstn_sys),
         .Q(Q[16]));
   FDCE \sysinfo_reg[0][17] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [17]),
+        .D(D[17]),
         .Q(Q[17]));
   FDPE \sysinfo_reg[0][18] 
        (.C(clk),
         .CE(E),
-        .D(\dev_12_req_o[data] [18]),
+        .D(D[18]),
         .PRE(rstn_sys),
         .Q(Q[18]));
   FDCE \sysinfo_reg[0][19] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [19]),
+        .D(D[19]),
         .Q(Q[19]));
   FDCE \sysinfo_reg[0][1] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [1]),
+        .D(D[1]),
         .Q(Q[1]));
   FDPE \sysinfo_reg[0][20] 
        (.C(clk),
         .CE(E),
-        .D(\dev_12_req_o[data] [20]),
+        .D(D[20]),
         .PRE(rstn_sys),
         .Q(Q[20]));
   FDPE \sysinfo_reg[0][21] 
        (.C(clk),
         .CE(E),
-        .D(\dev_12_req_o[data] [21]),
+        .D(D[21]),
         .PRE(rstn_sys),
         .Q(Q[21]));
   FDPE \sysinfo_reg[0][22] 
        (.C(clk),
         .CE(E),
-        .D(\dev_12_req_o[data] [22]),
+        .D(D[22]),
         .PRE(rstn_sys),
         .Q(Q[22]));
   FDPE \sysinfo_reg[0][23] 
        (.C(clk),
         .CE(E),
-        .D(\dev_12_req_o[data] [23]),
+        .D(D[23]),
         .PRE(rstn_sys),
         .Q(Q[23]));
   FDPE \sysinfo_reg[0][24] 
        (.C(clk),
         .CE(E),
-        .D(\dev_12_req_o[data] [24]),
+        .D(D[24]),
         .PRE(rstn_sys),
         .Q(Q[24]));
   FDCE \sysinfo_reg[0][25] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [25]),
+        .D(D[25]),
         .Q(Q[25]));
   FDPE \sysinfo_reg[0][26] 
        (.C(clk),
         .CE(E),
-        .D(\dev_12_req_o[data] [26]),
+        .D(D[26]),
         .PRE(rstn_sys),
         .Q(Q[26]));
   FDCE \sysinfo_reg[0][27] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [27]),
+        .D(D[27]),
         .Q(Q[27]));
   FDCE \sysinfo_reg[0][28] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [28]),
+        .D(D[28]),
         .Q(Q[28]));
   FDCE \sysinfo_reg[0][29] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [29]),
+        .D(D[29]),
         .Q(Q[29]));
   FDCE \sysinfo_reg[0][2] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [2]),
+        .D(D[2]),
         .Q(Q[2]));
   FDCE \sysinfo_reg[0][30] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [30]),
+        .D(D[30]),
         .Q(Q[30]));
   FDCE \sysinfo_reg[0][31] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [31]),
+        .D(D[31]),
         .Q(Q[31]));
   FDCE \sysinfo_reg[0][3] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [3]),
+        .D(D[3]),
         .Q(Q[3]));
   FDCE \sysinfo_reg[0][4] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [4]),
+        .D(D[4]),
         .Q(Q[4]));
   FDCE \sysinfo_reg[0][5] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [5]),
+        .D(D[5]),
         .Q(Q[5]));
   FDCE \sysinfo_reg[0][6] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [6]),
+        .D(D[6]),
         .Q(Q[6]));
   FDCE \sysinfo_reg[0][7] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [7]),
+        .D(D[7]),
         .Q(Q[7]));
   FDPE \sysinfo_reg[0][8] 
        (.C(clk),
         .CE(E),
-        .D(\dev_12_req_o[data] [8]),
+        .D(D[8]),
         .PRE(rstn_sys),
         .Q(Q[8]));
   FDCE \sysinfo_reg[0][9] 
        (.C(clk),
         .CE(E),
         .CLR(rstn_sys),
-        .D(\dev_12_req_o[data] [9]),
+        .D(D[9]),
         .Q(Q[9]));
 endmodule
 
@@ -45878,7 +43921,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
   input m_axi_awready;
   input m_axi_wvalid;
   input m_axi_wready;
-  input [31:0]gpio_i;
+  input [15:0]gpio_i;
   input spi_dat_i;
   input s1_axis_tvalid;
   input s0_axis_tready;
@@ -45894,6 +43937,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
   wire arvalid;
   wire arvalid_reg;
   wire awvalid;
+  wire [15:0]\bus_rsp_o[data]0_out ;
   wire \cache_o[stat] ;
   wire clk;
   wire \core_complex_gen[0].neorv32_core_bus_switch_inst_n_1 ;
@@ -45978,23 +44022,23 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
   wire \ctrl_reg[buf_req]__0 ;
   wire \ctrl_reg[cpha]__0 ;
   wire \ctrl_reg[enable]__0 ;
-  wire \ctrl_reg[enable]__0_9 ;
+  wire \ctrl_reg[enable]__0_8 ;
   wire \ctrl_reg[hwfc_en]__0 ;
   wire \ctrl_reg[irq_rx_full]__0 ;
-  wire \ctrl_reg[irq_rx_full]__0_7 ;
+  wire \ctrl_reg[irq_rx_full]__0_6 ;
   wire \ctrl_reg[irq_rx_nempty]__0 ;
-  wire \ctrl_reg[irq_rx_nempty]__0_8 ;
+  wire \ctrl_reg[irq_rx_nempty]__0_7 ;
   wire \ctrl_reg[irq_tx_empty]__0 ;
-  wire \ctrl_reg[irq_tx_empty]__0_6 ;
+  wire \ctrl_reg[irq_tx_empty]__0_5 ;
   wire \ctrl_reg[irq_tx_nfull]__0 ;
-  wire \ctrl_reg[irq_tx_nfull]__0_5 ;
+  wire \ctrl_reg[irq_tx_nfull]__0_4 ;
   wire \ctrl_reg[sim_mode]__0 ;
   wire [7:0]data_o;
   wire [7:6]\dcache_req[0][addr] ;
   wire \dcache_req[0][stb] ;
   wire empty;
   wire [3:0]en;
-  wire [31:0]gpio_i;
+  wire [15:0]gpio_i;
   wire [15:0]gpio_o;
   wire [31:2]\icache_req[0][addr] ;
   wire \icache_req[0][stb] ;
@@ -46008,17 +44052,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
   wire [31:0]\io_rsp[data] ;
   wire \io_rsp[err] ;
   wire \io_system.neorv32_bus_io_switch_inst_n_0 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_100 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_101 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_102 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_103 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_104 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_105 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_106 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_107 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_109 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_115 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_116 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_117 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_118 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_119 ;
@@ -46037,8 +44071,6 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
   wire \io_system.neorv32_bus_io_switch_inst_n_131 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_132 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_133 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_134 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_135 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_136 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_137 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_138 ;
@@ -46051,6 +44083,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
   wire \io_system.neorv32_bus_io_switch_inst_n_145 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_146 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_147 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_148 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_149 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_150 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_151 ;
@@ -46068,39 +44101,25 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
   wire \io_system.neorv32_bus_io_switch_inst_n_163 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_164 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_165 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_168 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_169 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_170 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_171 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_172 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_173 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_174 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_175 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_176 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_177 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_178 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_179 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_180 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_181 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_182 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_183 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_184 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_185 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_186 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_187 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_188 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_189 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_190 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_191 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_192 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_193 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_194 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_195 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_196 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_197 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_198 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_199 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_237 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_166 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_167 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_205 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_64 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_65 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_66 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_67 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_68 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_69 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_70 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_71 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_72 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_73 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_74 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_75 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_76 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_77 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_78 ;
+  wire \io_system.neorv32_bus_io_switch_inst_n_79 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_80 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_81 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_82 ;
@@ -46113,14 +44132,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
   wire \io_system.neorv32_bus_io_switch_inst_n_89 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_90 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_91 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_92 ;
   wire \io_system.neorv32_bus_io_switch_inst_n_93 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_94 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_95 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_96 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_97 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_98 ;
-  wire \io_system.neorv32_bus_io_switch_inst_n_99 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_1 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_10 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_11 ;
@@ -46129,46 +44141,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_14 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_15 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_16 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_17 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_18 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_19 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_2 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_20 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_21 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_22 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_23 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_24 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_25 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_26 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_27 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_28 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_29 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_3 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_30 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_31 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_32 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_4 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_5 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_6 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_64 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_66 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_67 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_68 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_69 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_7 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_70 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_71 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_72 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_73 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_74 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_75 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_76 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_77 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_78 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_79 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_8 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_80 ;
-  wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_81 ;
   wire \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_9 ;
   wire \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_0 ;
   wire \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_10 ;
@@ -46270,7 +44250,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
   wire [31:0]\iodev_rsp[2][data] ;
   wire \iodev_rsp[2][err] ;
   wire \iodev_rsp[4][ack] ;
-  wire [31:0]\iodev_rsp[4][data] ;
+  wire [15:0]\iodev_rsp[4][data] ;
   wire \iodev_rsp[8][ack] ;
   wire [31:0]\iodev_rsp[8][data] ;
   wire irq_en;
@@ -46333,41 +44313,25 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
   wire \neorv32_cpu_frontend_inst/we_i ;
   wire \neorv32_cpu_lsu_inst/misaligned ;
   wire [31:0]p_0_in;
-  wire p_0_in_10;
-  wire [31:0]p_0_in__0;
+  wire p_0_in_9;
+  wire [15:0]p_0_in__0;
   wire p_10_in;
   wire p_13_in;
   wire p_16_in;
   wire p_19_in;
   wire p_1_in;
-  wire p_1_in13_in;
-  wire p_1_in19_in;
-  wire p_1_in25_in;
-  wire p_1_in31_in;
-  wire p_1_in37_in;
-  wire p_1_in43_in;
-  wire p_1_in49_in;
-  wire p_1_in55_in;
-  wire p_1_in61_in;
-  wire p_1_in67_in;
-  wire p_1_in73_in;
-  wire p_1_in79_in;
-  wire p_1_in7_in;
-  wire p_1_in85_in;
-  wire p_1_in91_in;
-  wire p_1_in_2;
-  wire [0:0]p_1_in_3;
-  wire p_1_in_4;
+  wire [0:0]p_1_in_2;
+  wire p_1_in_3;
   wire [0:0]p_1_out;
-  wire p_22_in;
+  wire p_21_in;
+  wire p_23_in;
   wire p_25_in;
-  wire p_28_in;
+  wire p_27_in;
+  wire p_29_in;
   wire p_31_in;
-  wire p_34_in;
-  wire p_36_in;
-  wire p_38_in;
-  wire p_40_in;
-  wire p_42_in;
+  wire p_33_in;
+  wire p_35_in;
+  wire p_37_in;
   wire p_4_in;
   wire p_7_in;
   wire port_out;
@@ -46582,7 +44546,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .we_i(\neorv32_cpu_frontend_inst/we_i ));
   system_neorv32_vivado_ip_0_0_neorv32_boot_rom \io_system.neorv32_boot_rom_enabled.neorv32_boot_rom_inst 
        (.DOADO(rdata_reg),
-        .I48(\io_system.neorv32_bus_io_switch_inst_n_109 ),
+        .I48(\io_system.neorv32_bus_io_switch_inst_n_93 ),
         .\bus_req_i[stb] (\iodev_req[0][stb] ),
         .\bus_rsp_o[ack] (\iodev_rsp[0][ack] ),
         .clk(clk),
@@ -46592,7 +44556,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
        (.D(p_0_in__0),
         .DOADO(rdata_reg),
         .E(\io_system.neorv32_bus_io_switch_inst_n_13 ),
-        .I48(\io_system.neorv32_bus_io_switch_inst_n_109 ),
+        .I48(\io_system.neorv32_bus_io_switch_inst_n_93 ),
         .Q({\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_31 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_32 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_33 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_34 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_35 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_36 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_37 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_38 }),
         .\bus_req_i[rw] (\core_complex_gen[0].neorv32_dcache_enabled.neorv32_dcache_inst_n_30 ),
         .\bus_req_i[stb] (\iodev_req[0][stb] ),
@@ -46606,39 +44570,22 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .\bus_rsp_o_reg[data][13] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_14 ),
         .\bus_rsp_o_reg[data][14] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_15 ),
         .\bus_rsp_o_reg[data][15] ({\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_17 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_18 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_19 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_20 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_21 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_22 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_23 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_24 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_25 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_26 }),
-        .\bus_rsp_o_reg[data][15]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_16 ),
-        .\bus_rsp_o_reg[data][16] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_17 ),
-        .\bus_rsp_o_reg[data][16]_0 (\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_11 ),
-        .\bus_rsp_o_reg[data][16]_1 (\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_12 ),
+        .\bus_rsp_o_reg[data][15]_0 ({p_19_in,p_21_in,p_23_in,p_25_in,p_27_in,p_29_in,p_31_in,p_33_in,p_35_in,p_37_in,p_16_in,p_13_in,p_10_in,p_7_in,p_4_in,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_32 }),
+        .\bus_rsp_o_reg[data][15]_1 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_16 ),
+        .\bus_rsp_o_reg[data][16] (\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_11 ),
+        .\bus_rsp_o_reg[data][16]_0 (\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_12 ),
         .\bus_rsp_o_reg[data][17] (\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_16 ),
-        .\bus_rsp_o_reg[data][17]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_18 ),
-        .\bus_rsp_o_reg[data][18] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_19 ),
         .\bus_rsp_o_reg[data][19] (\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_15 ),
-        .\bus_rsp_o_reg[data][19]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_20 ),
         .\bus_rsp_o_reg[data][1] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_2 ),
-        .\bus_rsp_o_reg[data][20] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_21 ),
-        .\bus_rsp_o_reg[data][21] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_22 ),
-        .\bus_rsp_o_reg[data][22] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_23 ),
-        .\bus_rsp_o_reg[data][23] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_24 ),
-        .\bus_rsp_o_reg[data][24] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_25 ),
-        .\bus_rsp_o_reg[data][25] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_26 ),
-        .\bus_rsp_o_reg[data][26] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_27 ),
-        .\bus_rsp_o_reg[data][27] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_28 ),
-        .\bus_rsp_o_reg[data][28] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_29 ),
-        .\bus_rsp_o_reg[data][29] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_30 ),
         .\bus_rsp_o_reg[data][2] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_3 ),
         .\bus_rsp_o_reg[data][2]_0 (\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_3 ),
         .\bus_rsp_o_reg[data][30] (\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_30 ),
-        .\bus_rsp_o_reg[data][30]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_31 ),
-        .\bus_rsp_o_reg[data][30]_1 (p_1_in_4),
+        .\bus_rsp_o_reg[data][30]_0 (p_1_in_3),
         .\bus_rsp_o_reg[data][31] (\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_14 ),
-        .\bus_rsp_o_reg[data][31]_0 ({p_34_in,p_36_in,p_38_in,p_40_in,p_42_in,p_31_in,p_28_in,p_25_in,p_22_in,p_19_in,p_16_in,p_13_in,p_10_in,p_7_in,p_4_in,p_1_in91_in,p_1_in85_in,p_1_in79_in,p_1_in73_in,p_1_in67_in,p_1_in61_in,p_1_in55_in,p_1_in49_in,p_1_in43_in,p_1_in37_in,p_1_in31_in,p_1_in25_in,p_1_in19_in,p_1_in13_in,p_1_in7_in,p_1_in_2,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_64 }),
-        .\bus_rsp_o_reg[data][31]_1 ({\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_66 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_67 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_68 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_69 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_70 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_71 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_72 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_73 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_74 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_75 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_76 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_77 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_78 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_79 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_80 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_81 ,gpio_o}),
-        .\bus_rsp_o_reg[data][31]_2 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_32 ),
-        .\bus_rsp_o_reg[data][31]_3 (\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_5 ),
-        .\bus_rsp_o_reg[data][31]_4 (\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_6 ),
-        .\bus_rsp_o_reg[data][31]_5 ({\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_54 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_55 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_56 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_57 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_58 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_59 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_60 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_61 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_62 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_63 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_64 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_65 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_66 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_67 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_68 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_69 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_70 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_71 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_72 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_73 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_74 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_75 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_76 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_77 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_78 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_79 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_80 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_81 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_82 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_83 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_84 }),
-        .\bus_rsp_o_reg[data][31]_6 (\sysinfo_reg[0]_0 ),
+        .\bus_rsp_o_reg[data][31]_0 (\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_5 ),
+        .\bus_rsp_o_reg[data][31]_1 (\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_6 ),
+        .\bus_rsp_o_reg[data][31]_2 ({\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_54 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_55 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_56 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_57 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_58 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_59 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_60 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_61 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_62 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_63 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_64 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_65 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_66 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_67 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_68 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_69 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_70 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_71 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_72 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_73 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_74 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_75 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_76 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_77 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_78 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_79 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_80 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_81 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_82 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_83 ,\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_84 }),
+        .\bus_rsp_o_reg[data][31]_3 (\sysinfo_reg[0]_0 ),
         .\bus_rsp_o_reg[data][3] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_4 ),
         .\bus_rsp_o_reg[data][3]_0 (rx_route),
         .\bus_rsp_o_reg[data][4] (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_5 ),
@@ -46655,16 +44602,16 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .clk(clk),
         .\ctrl[enable] (\ctrl[enable] ),
         .\ctrl_reg[cpha]__0 (\ctrl_reg[cpha]__0 ),
-        .\ctrl_reg[enable]__0 (\ctrl_reg[enable]__0_9 ),
+        .\ctrl_reg[enable]__0 (\ctrl_reg[enable]__0_8 ),
         .\ctrl_reg[enable]__0_0 (\ctrl_reg[enable]__0 ),
         .\ctrl_reg[hwfc_en]__0 (\ctrl_reg[hwfc_en]__0 ),
-        .\ctrl_reg[irq_rx_full]__0 (\ctrl_reg[irq_rx_full]__0_7 ),
+        .\ctrl_reg[irq_rx_full]__0 (\ctrl_reg[irq_rx_full]__0_6 ),
         .\ctrl_reg[irq_rx_full]__0_2 (\ctrl_reg[irq_rx_full]__0 ),
-        .\ctrl_reg[irq_rx_nempty]__0 (\ctrl_reg[irq_rx_nempty]__0_8 ),
+        .\ctrl_reg[irq_rx_nempty]__0 (\ctrl_reg[irq_rx_nempty]__0_7 ),
         .\ctrl_reg[irq_rx_nempty]__0_1 (\ctrl_reg[irq_rx_nempty]__0 ),
-        .\ctrl_reg[irq_tx_empty]__0 (\ctrl_reg[irq_tx_empty]__0_6 ),
+        .\ctrl_reg[irq_tx_empty]__0 (\ctrl_reg[irq_tx_empty]__0_5 ),
         .\ctrl_reg[irq_tx_empty]__0_3 (\ctrl_reg[irq_tx_empty]__0 ),
-        .\ctrl_reg[irq_tx_nfull]__0 (\ctrl_reg[irq_tx_nfull]__0_5 ),
+        .\ctrl_reg[irq_tx_nfull]__0 (\ctrl_reg[irq_tx_nfull]__0_4 ),
         .\ctrl_reg[irq_tx_nfull]__0_4 (\ctrl_reg[irq_tx_nfull]__0 ),
         .\ctrl_reg[sim_mode]__0 (\ctrl_reg[sim_mode]__0 ),
         .\dev_00_req_o[addr] ({\iodev_req[0][addr] ,\iodev_req[4][addr] ,\iodev_req[17][addr] }),
@@ -46672,6 +44619,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .\dev_12_req_o[rw] (\iodev_req[17][rw] ),
         .\dev_30_rsp_i[err] (\iodev_rsp[2][err] ),
         .empty(empty),
+        .gpio_o(gpio_o),
         .\iodev_req[11][stb] (\iodev_req[11][stb] ),
         .\iodev_req[17][stb] (\iodev_req[17][stb] ),
         .\iodev_req[2][stb] (\iodev_req[2][stb] ),
@@ -46687,8 +44635,8 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .\main_rsp_o[ack] (\io_rsp[ack] ),
         .\main_rsp_o[data] (\io_rsp[data] ),
         .\main_rsp_o[err] (\io_rsp[err] ),
-        .p_1_in(p_1_in_3),
-        .\port_in_reg[31] ({\io_system.neorv32_bus_io_switch_inst_n_115 ,\io_system.neorv32_bus_io_switch_inst_n_116 ,\io_system.neorv32_bus_io_switch_inst_n_117 ,\io_system.neorv32_bus_io_switch_inst_n_118 ,\io_system.neorv32_bus_io_switch_inst_n_119 ,\io_system.neorv32_bus_io_switch_inst_n_120 ,\io_system.neorv32_bus_io_switch_inst_n_121 ,\io_system.neorv32_bus_io_switch_inst_n_122 ,\io_system.neorv32_bus_io_switch_inst_n_123 ,\io_system.neorv32_bus_io_switch_inst_n_124 ,\io_system.neorv32_bus_io_switch_inst_n_125 ,\io_system.neorv32_bus_io_switch_inst_n_126 ,\io_system.neorv32_bus_io_switch_inst_n_127 ,\io_system.neorv32_bus_io_switch_inst_n_128 ,\io_system.neorv32_bus_io_switch_inst_n_129 ,\io_system.neorv32_bus_io_switch_inst_n_130 ,\io_system.neorv32_bus_io_switch_inst_n_131 ,\io_system.neorv32_bus_io_switch_inst_n_132 ,\io_system.neorv32_bus_io_switch_inst_n_133 ,\io_system.neorv32_bus_io_switch_inst_n_134 ,\io_system.neorv32_bus_io_switch_inst_n_135 ,\io_system.neorv32_bus_io_switch_inst_n_136 ,\io_system.neorv32_bus_io_switch_inst_n_137 ,\io_system.neorv32_bus_io_switch_inst_n_138 ,\io_system.neorv32_bus_io_switch_inst_n_139 ,\io_system.neorv32_bus_io_switch_inst_n_140 ,\io_system.neorv32_bus_io_switch_inst_n_141 ,\io_system.neorv32_bus_io_switch_inst_n_142 ,\io_system.neorv32_bus_io_switch_inst_n_143 ,\io_system.neorv32_bus_io_switch_inst_n_144 ,\io_system.neorv32_bus_io_switch_inst_n_145 ,\io_system.neorv32_bus_io_switch_inst_n_146 }),
+        .p_1_in(p_1_in_2),
+        .\port_in_reg[15] (\bus_rsp_o[data]0_out ),
         .r_pnt(r_pnt),
         .re0(\rx_engine_fifo_inst/re0 ),
         .\request_reg_enabled.device_req_o_reg[addr][2] (\io_system.neorv32_bus_io_switch_inst_n_0 ),
@@ -46700,23 +44648,23 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .\request_reg_enabled.device_req_o_reg[addr][3]_1 (\rx_fifo[re] ),
         .\request_reg_enabled.device_req_o_reg[addr][3]_2 (p_0_in),
         .\request_reg_enabled.device_req_o_reg[addr][4] (port_out),
-        .\request_reg_enabled.device_req_o_reg[data][0] (\io_system.neorv32_bus_io_switch_inst_n_147 ),
-        .\request_reg_enabled.device_req_o_reg[data][1] (\io_system.neorv32_bus_io_switch_inst_n_149 ),
-        .\request_reg_enabled.device_req_o_reg[data][2] (\io_system.neorv32_bus_io_switch_inst_n_150 ),
-        .\request_reg_enabled.device_req_o_reg[rw] ({\io_system.neorv32_bus_io_switch_inst_n_80 ,\io_system.neorv32_bus_io_switch_inst_n_81 ,\io_system.neorv32_bus_io_switch_inst_n_82 ,\io_system.neorv32_bus_io_switch_inst_n_83 ,\io_system.neorv32_bus_io_switch_inst_n_84 ,\io_system.neorv32_bus_io_switch_inst_n_85 ,\io_system.neorv32_bus_io_switch_inst_n_86 ,\io_system.neorv32_bus_io_switch_inst_n_87 ,\io_system.neorv32_bus_io_switch_inst_n_88 ,\io_system.neorv32_bus_io_switch_inst_n_89 ,\io_system.neorv32_bus_io_switch_inst_n_90 ,\io_system.neorv32_bus_io_switch_inst_n_91 ,\io_system.neorv32_bus_io_switch_inst_n_92 ,\io_system.neorv32_bus_io_switch_inst_n_93 ,\io_system.neorv32_bus_io_switch_inst_n_94 ,\io_system.neorv32_bus_io_switch_inst_n_95 ,\io_system.neorv32_bus_io_switch_inst_n_96 ,\io_system.neorv32_bus_io_switch_inst_n_97 ,\io_system.neorv32_bus_io_switch_inst_n_98 ,\io_system.neorv32_bus_io_switch_inst_n_99 ,\io_system.neorv32_bus_io_switch_inst_n_100 ,\io_system.neorv32_bus_io_switch_inst_n_101 ,\io_system.neorv32_bus_io_switch_inst_n_102 ,\io_system.neorv32_bus_io_switch_inst_n_103 ,\io_system.neorv32_bus_io_switch_inst_n_104 ,\io_system.neorv32_bus_io_switch_inst_n_105 }),
-        .\request_reg_enabled.device_req_o_reg[rw]_0 (\io_system.neorv32_bus_io_switch_inst_n_106 ),
-        .\request_reg_enabled.device_req_o_reg[rw]_1 (\io_system.neorv32_bus_io_switch_inst_n_107 ),
-        .\request_reg_enabled.device_req_o_reg[rw]_2 ({\io_system.neorv32_bus_io_switch_inst_n_151 ,\io_system.neorv32_bus_io_switch_inst_n_152 ,\io_system.neorv32_bus_io_switch_inst_n_153 ,\io_system.neorv32_bus_io_switch_inst_n_154 ,\io_system.neorv32_bus_io_switch_inst_n_155 ,\io_system.neorv32_bus_io_switch_inst_n_156 ,\io_system.neorv32_bus_io_switch_inst_n_157 ,\io_system.neorv32_bus_io_switch_inst_n_158 ,\io_system.neorv32_bus_io_switch_inst_n_159 ,\io_system.neorv32_bus_io_switch_inst_n_160 ,\io_system.neorv32_bus_io_switch_inst_n_161 ,\io_system.neorv32_bus_io_switch_inst_n_162 ,\io_system.neorv32_bus_io_switch_inst_n_163 ,\io_system.neorv32_bus_io_switch_inst_n_164 ,\io_system.neorv32_bus_io_switch_inst_n_165 }),
+        .\request_reg_enabled.device_req_o_reg[data][0] (\io_system.neorv32_bus_io_switch_inst_n_115 ),
+        .\request_reg_enabled.device_req_o_reg[data][1] (\io_system.neorv32_bus_io_switch_inst_n_117 ),
+        .\request_reg_enabled.device_req_o_reg[data][2] (\io_system.neorv32_bus_io_switch_inst_n_118 ),
+        .\request_reg_enabled.device_req_o_reg[rw] ({\io_system.neorv32_bus_io_switch_inst_n_64 ,\io_system.neorv32_bus_io_switch_inst_n_65 ,\io_system.neorv32_bus_io_switch_inst_n_66 ,\io_system.neorv32_bus_io_switch_inst_n_67 ,\io_system.neorv32_bus_io_switch_inst_n_68 ,\io_system.neorv32_bus_io_switch_inst_n_69 ,\io_system.neorv32_bus_io_switch_inst_n_70 ,\io_system.neorv32_bus_io_switch_inst_n_71 ,\io_system.neorv32_bus_io_switch_inst_n_72 ,\io_system.neorv32_bus_io_switch_inst_n_73 ,\io_system.neorv32_bus_io_switch_inst_n_74 ,\io_system.neorv32_bus_io_switch_inst_n_75 ,\io_system.neorv32_bus_io_switch_inst_n_76 ,\io_system.neorv32_bus_io_switch_inst_n_77 ,\io_system.neorv32_bus_io_switch_inst_n_78 ,\io_system.neorv32_bus_io_switch_inst_n_79 ,\io_system.neorv32_bus_io_switch_inst_n_80 ,\io_system.neorv32_bus_io_switch_inst_n_81 ,\io_system.neorv32_bus_io_switch_inst_n_82 ,\io_system.neorv32_bus_io_switch_inst_n_83 ,\io_system.neorv32_bus_io_switch_inst_n_84 ,\io_system.neorv32_bus_io_switch_inst_n_85 ,\io_system.neorv32_bus_io_switch_inst_n_86 ,\io_system.neorv32_bus_io_switch_inst_n_87 ,\io_system.neorv32_bus_io_switch_inst_n_88 ,\io_system.neorv32_bus_io_switch_inst_n_89 }),
+        .\request_reg_enabled.device_req_o_reg[rw]_0 (\io_system.neorv32_bus_io_switch_inst_n_90 ),
+        .\request_reg_enabled.device_req_o_reg[rw]_1 (\io_system.neorv32_bus_io_switch_inst_n_91 ),
+        .\request_reg_enabled.device_req_o_reg[rw]_2 ({\io_system.neorv32_bus_io_switch_inst_n_119 ,\io_system.neorv32_bus_io_switch_inst_n_120 ,\io_system.neorv32_bus_io_switch_inst_n_121 ,\io_system.neorv32_bus_io_switch_inst_n_122 ,\io_system.neorv32_bus_io_switch_inst_n_123 ,\io_system.neorv32_bus_io_switch_inst_n_124 ,\io_system.neorv32_bus_io_switch_inst_n_125 ,\io_system.neorv32_bus_io_switch_inst_n_126 ,\io_system.neorv32_bus_io_switch_inst_n_127 ,\io_system.neorv32_bus_io_switch_inst_n_128 ,\io_system.neorv32_bus_io_switch_inst_n_129 ,\io_system.neorv32_bus_io_switch_inst_n_130 ,\io_system.neorv32_bus_io_switch_inst_n_131 ,\io_system.neorv32_bus_io_switch_inst_n_132 ,\io_system.neorv32_bus_io_switch_inst_n_133 }),
         .\request_reg_enabled.device_req_o_reg[rw]_3 (\tx_fifo_inst/we_1 ),
-        .\request_reg_enabled.device_req_o_reg[rw]_4 ({\io_system.neorv32_bus_io_switch_inst_n_168 ,\io_system.neorv32_bus_io_switch_inst_n_169 ,\io_system.neorv32_bus_io_switch_inst_n_170 ,\io_system.neorv32_bus_io_switch_inst_n_171 ,\io_system.neorv32_bus_io_switch_inst_n_172 ,\io_system.neorv32_bus_io_switch_inst_n_173 ,\io_system.neorv32_bus_io_switch_inst_n_174 ,\io_system.neorv32_bus_io_switch_inst_n_175 ,\io_system.neorv32_bus_io_switch_inst_n_176 ,\io_system.neorv32_bus_io_switch_inst_n_177 ,\io_system.neorv32_bus_io_switch_inst_n_178 ,\io_system.neorv32_bus_io_switch_inst_n_179 ,\io_system.neorv32_bus_io_switch_inst_n_180 ,\io_system.neorv32_bus_io_switch_inst_n_181 ,\io_system.neorv32_bus_io_switch_inst_n_182 ,\io_system.neorv32_bus_io_switch_inst_n_183 ,\io_system.neorv32_bus_io_switch_inst_n_184 ,\io_system.neorv32_bus_io_switch_inst_n_185 ,\io_system.neorv32_bus_io_switch_inst_n_186 ,\io_system.neorv32_bus_io_switch_inst_n_187 ,\io_system.neorv32_bus_io_switch_inst_n_188 ,\io_system.neorv32_bus_io_switch_inst_n_189 ,\io_system.neorv32_bus_io_switch_inst_n_190 ,\io_system.neorv32_bus_io_switch_inst_n_191 ,\io_system.neorv32_bus_io_switch_inst_n_192 ,\io_system.neorv32_bus_io_switch_inst_n_193 ,\io_system.neorv32_bus_io_switch_inst_n_194 ,\io_system.neorv32_bus_io_switch_inst_n_195 ,\io_system.neorv32_bus_io_switch_inst_n_196 ,\io_system.neorv32_bus_io_switch_inst_n_197 ,\io_system.neorv32_bus_io_switch_inst_n_198 ,\io_system.neorv32_bus_io_switch_inst_n_199 }),
+        .\request_reg_enabled.device_req_o_reg[rw]_4 ({\io_system.neorv32_bus_io_switch_inst_n_136 ,\io_system.neorv32_bus_io_switch_inst_n_137 ,\io_system.neorv32_bus_io_switch_inst_n_138 ,\io_system.neorv32_bus_io_switch_inst_n_139 ,\io_system.neorv32_bus_io_switch_inst_n_140 ,\io_system.neorv32_bus_io_switch_inst_n_141 ,\io_system.neorv32_bus_io_switch_inst_n_142 ,\io_system.neorv32_bus_io_switch_inst_n_143 ,\io_system.neorv32_bus_io_switch_inst_n_144 ,\io_system.neorv32_bus_io_switch_inst_n_145 ,\io_system.neorv32_bus_io_switch_inst_n_146 ,\io_system.neorv32_bus_io_switch_inst_n_147 ,\io_system.neorv32_bus_io_switch_inst_n_148 ,\io_system.neorv32_bus_io_switch_inst_n_149 ,\io_system.neorv32_bus_io_switch_inst_n_150 ,\io_system.neorv32_bus_io_switch_inst_n_151 ,\io_system.neorv32_bus_io_switch_inst_n_152 ,\io_system.neorv32_bus_io_switch_inst_n_153 ,\io_system.neorv32_bus_io_switch_inst_n_154 ,\io_system.neorv32_bus_io_switch_inst_n_155 ,\io_system.neorv32_bus_io_switch_inst_n_156 ,\io_system.neorv32_bus_io_switch_inst_n_157 ,\io_system.neorv32_bus_io_switch_inst_n_158 ,\io_system.neorv32_bus_io_switch_inst_n_159 ,\io_system.neorv32_bus_io_switch_inst_n_160 ,\io_system.neorv32_bus_io_switch_inst_n_161 ,\io_system.neorv32_bus_io_switch_inst_n_162 ,\io_system.neorv32_bus_io_switch_inst_n_163 ,\io_system.neorv32_bus_io_switch_inst_n_164 ,\io_system.neorv32_bus_io_switch_inst_n_165 ,\io_system.neorv32_bus_io_switch_inst_n_166 ,\io_system.neorv32_bus_io_switch_inst_n_167 }),
         .\request_reg_enabled.device_req_o_reg[rw]_5 (\tx_fifo_inst/we ),
-        .\request_reg_enabled.device_req_o_reg[rw]_6 (\io_system.neorv32_bus_io_switch_inst_n_237 ),
+        .\request_reg_enabled.device_req_o_reg[rw]_6 (\io_system.neorv32_bus_io_switch_inst_n_205 ),
         .\request_reg_enabled.device_req_o_reg[rw]_7 (\io_req[stb] ),
+        .\response_reg_enabled.host_rsp_o_reg[data][15] (\iodev_rsp[4][data] ),
         .\response_reg_enabled.host_rsp_o_reg[data][31] (\iodev_rsp[2][data] ),
         .\response_reg_enabled.host_rsp_o_reg[data][31]_0 ({\iodev_rsp[8][data] [31:30],\iodev_rsp[8][data] [18:16],\iodev_rsp[8][data] [9:0]}),
-        .\response_reg_enabled.host_rsp_o_reg[data][31]_1 (\iodev_rsp[4][data] ),
-        .\response_reg_enabled.host_rsp_o_reg[data][31]_2 (\iodev_rsp[17][data] ),
-        .\response_reg_enabled.host_rsp_o_reg[data][31]_3 ({\iodev_rsp[11][data] [31:30],\iodev_rsp[11][data] [23:0]}),
+        .\response_reg_enabled.host_rsp_o_reg[data][31]_1 (\iodev_rsp[17][data] ),
+        .\response_reg_enabled.host_rsp_o_reg[data][31]_2 ({\iodev_rsp[11][data] [31:30],\iodev_rsp[11][data] [23:0]}),
         .rstn_sys(rstn_sys),
         .\rx_fifo[avail] (\rx_fifo[avail] ),
         .rx_last(rx_last),
@@ -46726,18 +44674,19 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .\w_pnt_reg[0]_0 (\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_0 ),
         .we(we__0));
   system_neorv32_vivado_ip_0_0_neorv32_gpio \io_system.neorv32_gpio_enabled.neorv32_gpio_inst 
-       (.D(\iodev_req[17][data] ),
+       (.D(\iodev_req[17][data] [15:0]),
         .E(port_out),
-        .Q({p_34_in,p_36_in,p_38_in,p_40_in,p_42_in,p_31_in,p_28_in,p_25_in,p_22_in,p_19_in,p_16_in,p_13_in,p_10_in,p_7_in,p_4_in,p_1_in91_in,p_1_in85_in,p_1_in79_in,p_1_in73_in,p_1_in67_in,p_1_in61_in,p_1_in55_in,p_1_in49_in,p_1_in43_in,p_1_in37_in,p_1_in31_in,p_1_in25_in,p_1_in19_in,p_1_in13_in,p_1_in7_in,p_1_in_2,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_64 }),
-        .\bus_rsp_o_reg[data][31]_0 (\iodev_rsp[4][data] ),
-        .\bus_rsp_o_reg[data][31]_1 ({\io_system.neorv32_bus_io_switch_inst_n_115 ,\io_system.neorv32_bus_io_switch_inst_n_116 ,\io_system.neorv32_bus_io_switch_inst_n_117 ,\io_system.neorv32_bus_io_switch_inst_n_118 ,\io_system.neorv32_bus_io_switch_inst_n_119 ,\io_system.neorv32_bus_io_switch_inst_n_120 ,\io_system.neorv32_bus_io_switch_inst_n_121 ,\io_system.neorv32_bus_io_switch_inst_n_122 ,\io_system.neorv32_bus_io_switch_inst_n_123 ,\io_system.neorv32_bus_io_switch_inst_n_124 ,\io_system.neorv32_bus_io_switch_inst_n_125 ,\io_system.neorv32_bus_io_switch_inst_n_126 ,\io_system.neorv32_bus_io_switch_inst_n_127 ,\io_system.neorv32_bus_io_switch_inst_n_128 ,\io_system.neorv32_bus_io_switch_inst_n_129 ,\io_system.neorv32_bus_io_switch_inst_n_130 ,\io_system.neorv32_bus_io_switch_inst_n_131 ,\io_system.neorv32_bus_io_switch_inst_n_132 ,\io_system.neorv32_bus_io_switch_inst_n_133 ,\io_system.neorv32_bus_io_switch_inst_n_134 ,\io_system.neorv32_bus_io_switch_inst_n_135 ,\io_system.neorv32_bus_io_switch_inst_n_136 ,\io_system.neorv32_bus_io_switch_inst_n_137 ,\io_system.neorv32_bus_io_switch_inst_n_138 ,\io_system.neorv32_bus_io_switch_inst_n_139 ,\io_system.neorv32_bus_io_switch_inst_n_140 ,\io_system.neorv32_bus_io_switch_inst_n_141 ,\io_system.neorv32_bus_io_switch_inst_n_142 ,\io_system.neorv32_bus_io_switch_inst_n_143 ,\io_system.neorv32_bus_io_switch_inst_n_144 ,\io_system.neorv32_bus_io_switch_inst_n_145 ,\io_system.neorv32_bus_io_switch_inst_n_146 }),
+        .Q({p_19_in,p_21_in,p_23_in,p_25_in,p_27_in,p_29_in,p_31_in,p_33_in,p_35_in,p_37_in,p_16_in,p_13_in,p_10_in,p_7_in,p_4_in,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_32 }),
+        .\bus_rsp_o_reg[data][15]_0 (\iodev_rsp[4][data] ),
+        .\bus_rsp_o_reg[data][15]_1 (\bus_rsp_o[data]0_out ),
         .clk(clk),
         .\dev_00_req_o[addr] (\iodev_req[17][addr] ),
         .gpio_i(gpio_i),
+        .gpio_o(gpio_o),
         .\iodev_req[4][stb] (\iodev_req[4][stb] ),
         .\iodev_rsp[4][ack] (\iodev_rsp[4][ack] ),
-        .\irq_clrn_reg[31]_0 (p_0_in__0),
-        .\irq_en_reg[31]_0 (irq_en),
+        .\irq_clrn_reg[15]_0 (p_0_in__0),
+        .\irq_en_reg[15]_0 (irq_en),
         .irq_fast_i(cpu_firq[8]),
         .\irq_pol_reg[0]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_1 ),
         .\irq_pol_reg[10]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_11 ),
@@ -46746,25 +44695,9 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .\irq_pol_reg[13]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_14 ),
         .\irq_pol_reg[14]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_15 ),
         .\irq_pol_reg[15]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_16 ),
-        .\irq_pol_reg[16]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_17 ),
-        .\irq_pol_reg[17]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_18 ),
-        .\irq_pol_reg[18]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_19 ),
-        .\irq_pol_reg[19]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_20 ),
+        .\irq_pol_reg[15]_1 (irq_pol),
         .\irq_pol_reg[1]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_2 ),
-        .\irq_pol_reg[20]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_21 ),
-        .\irq_pol_reg[21]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_22 ),
-        .\irq_pol_reg[22]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_23 ),
-        .\irq_pol_reg[23]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_24 ),
-        .\irq_pol_reg[24]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_25 ),
-        .\irq_pol_reg[25]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_26 ),
-        .\irq_pol_reg[26]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_27 ),
-        .\irq_pol_reg[27]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_28 ),
-        .\irq_pol_reg[28]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_29 ),
-        .\irq_pol_reg[29]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_30 ),
         .\irq_pol_reg[2]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_3 ),
-        .\irq_pol_reg[30]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_31 ),
-        .\irq_pol_reg[31]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_32 ),
-        .\irq_pol_reg[31]_1 (irq_pol),
         .\irq_pol_reg[3]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_4 ),
         .\irq_pol_reg[4]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_5 ),
         .\irq_pol_reg[5]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_6 ),
@@ -46772,15 +44705,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .\irq_pol_reg[7]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_8 ),
         .\irq_pol_reg[8]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_9 ),
         .\irq_pol_reg[9]_0 (\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_10 ),
-        .\irq_typ_reg[31]_0 (irq_typ),
-        .\port_out_reg[31]_0 ({\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_66 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_67 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_68 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_69 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_70 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_71 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_72 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_73 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_74 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_75 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_76 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_77 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_78 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_79 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_80 ,\io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_81 ,gpio_o}),
+        .\irq_typ_reg[15]_0 (irq_typ),
         .rstn_sys(rstn_sys));
   system_neorv32_vivado_ip_0_0_neorv32_slink \io_system.neorv32_slink_enabled.neorv32_slink_inst 
        (.D(\iodev_req[17][data] ),
         .E(\rx_fifo[re] ),
         .Q(rx_route),
         .\bus_rsp_o_reg[data][31]_0 (\iodev_rsp[17][data] ),
-        .\bus_rsp_o_reg[data][31]_1 ({\io_system.neorv32_bus_io_switch_inst_n_168 ,\io_system.neorv32_bus_io_switch_inst_n_169 ,\io_system.neorv32_bus_io_switch_inst_n_170 ,\io_system.neorv32_bus_io_switch_inst_n_171 ,\io_system.neorv32_bus_io_switch_inst_n_172 ,\io_system.neorv32_bus_io_switch_inst_n_173 ,\io_system.neorv32_bus_io_switch_inst_n_174 ,\io_system.neorv32_bus_io_switch_inst_n_175 ,\io_system.neorv32_bus_io_switch_inst_n_176 ,\io_system.neorv32_bus_io_switch_inst_n_177 ,\io_system.neorv32_bus_io_switch_inst_n_178 ,\io_system.neorv32_bus_io_switch_inst_n_179 ,\io_system.neorv32_bus_io_switch_inst_n_180 ,\io_system.neorv32_bus_io_switch_inst_n_181 ,\io_system.neorv32_bus_io_switch_inst_n_182 ,\io_system.neorv32_bus_io_switch_inst_n_183 ,\io_system.neorv32_bus_io_switch_inst_n_184 ,\io_system.neorv32_bus_io_switch_inst_n_185 ,\io_system.neorv32_bus_io_switch_inst_n_186 ,\io_system.neorv32_bus_io_switch_inst_n_187 ,\io_system.neorv32_bus_io_switch_inst_n_188 ,\io_system.neorv32_bus_io_switch_inst_n_189 ,\io_system.neorv32_bus_io_switch_inst_n_190 ,\io_system.neorv32_bus_io_switch_inst_n_191 ,\io_system.neorv32_bus_io_switch_inst_n_192 ,\io_system.neorv32_bus_io_switch_inst_n_193 ,\io_system.neorv32_bus_io_switch_inst_n_194 ,\io_system.neorv32_bus_io_switch_inst_n_195 ,\io_system.neorv32_bus_io_switch_inst_n_196 ,\io_system.neorv32_bus_io_switch_inst_n_197 ,\io_system.neorv32_bus_io_switch_inst_n_198 ,\io_system.neorv32_bus_io_switch_inst_n_199 }),
+        .\bus_rsp_o_reg[data][31]_1 ({\io_system.neorv32_bus_io_switch_inst_n_136 ,\io_system.neorv32_bus_io_switch_inst_n_137 ,\io_system.neorv32_bus_io_switch_inst_n_138 ,\io_system.neorv32_bus_io_switch_inst_n_139 ,\io_system.neorv32_bus_io_switch_inst_n_140 ,\io_system.neorv32_bus_io_switch_inst_n_141 ,\io_system.neorv32_bus_io_switch_inst_n_142 ,\io_system.neorv32_bus_io_switch_inst_n_143 ,\io_system.neorv32_bus_io_switch_inst_n_144 ,\io_system.neorv32_bus_io_switch_inst_n_145 ,\io_system.neorv32_bus_io_switch_inst_n_146 ,\io_system.neorv32_bus_io_switch_inst_n_147 ,\io_system.neorv32_bus_io_switch_inst_n_148 ,\io_system.neorv32_bus_io_switch_inst_n_149 ,\io_system.neorv32_bus_io_switch_inst_n_150 ,\io_system.neorv32_bus_io_switch_inst_n_151 ,\io_system.neorv32_bus_io_switch_inst_n_152 ,\io_system.neorv32_bus_io_switch_inst_n_153 ,\io_system.neorv32_bus_io_switch_inst_n_154 ,\io_system.neorv32_bus_io_switch_inst_n_155 ,\io_system.neorv32_bus_io_switch_inst_n_156 ,\io_system.neorv32_bus_io_switch_inst_n_157 ,\io_system.neorv32_bus_io_switch_inst_n_158 ,\io_system.neorv32_bus_io_switch_inst_n_159 ,\io_system.neorv32_bus_io_switch_inst_n_160 ,\io_system.neorv32_bus_io_switch_inst_n_161 ,\io_system.neorv32_bus_io_switch_inst_n_162 ,\io_system.neorv32_bus_io_switch_inst_n_163 ,\io_system.neorv32_bus_io_switch_inst_n_164 ,\io_system.neorv32_bus_io_switch_inst_n_165 ,\io_system.neorv32_bus_io_switch_inst_n_166 ,\io_system.neorv32_bus_io_switch_inst_n_167 }),
         .clk(clk),
         .\ctrl[enable] (\ctrl[enable] ),
         .\ctrl_reg[enable]_0 (\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_13 ),
@@ -46797,7 +44729,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .\iodev_req[17][stb] (\iodev_req[17][stb] ),
         .\iodev_rsp[17][ack] (\iodev_rsp[17][ack] ),
         .irq_fast_i(cpu_firq[14]),
-        .p_1_in(p_1_in_3),
+        .p_1_in(p_1_in_2),
         .\r_pnt_reg[0] (\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_11 ),
         .rstn_sys(rstn_sys),
         .rx_last(rx_last),
@@ -46808,21 +44740,21 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .\w_pnt_reg[0] (\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_0 ),
         .\w_pnt_reg[0]_0 (\w_pnt_reg[0] ),
         .\w_pnt_reg[0]_1 (\io_system.neorv32_slink_enabled.neorv32_slink_inst_n_10 ),
-        .\w_pnt_reg[0]_2 (\io_system.neorv32_bus_io_switch_inst_n_107 ));
+        .\w_pnt_reg[0]_2 (\io_system.neorv32_bus_io_switch_inst_n_91 ));
   system_neorv32_vivado_ip_0_0_neorv32_spi \io_system.neorv32_spi_enabled.neorv32_spi_inst 
        (.D({\iodev_req[17][data] [31],\iodev_req[17][data] [9:0]}),
         .E(\tx_fifo_inst/we_1 ),
-        .Q(p_1_in_4),
+        .Q(p_1_in_3),
         .\bus_rsp_o_reg[data][31]_0 ({\iodev_rsp[8][data] [31:30],\iodev_rsp[8][data] [18:16],\iodev_rsp[8][data] [9:0]}),
-        .\bus_rsp_o_reg[data][31]_1 ({\io_system.neorv32_bus_io_switch_inst_n_151 ,\io_system.neorv32_bus_io_switch_inst_n_152 ,\io_system.neorv32_bus_io_switch_inst_n_153 ,\io_system.neorv32_bus_io_switch_inst_n_154 ,\io_system.neorv32_bus_io_switch_inst_n_155 ,\io_system.neorv32_bus_io_switch_inst_n_156 ,\io_system.neorv32_bus_io_switch_inst_n_157 ,\io_system.neorv32_bus_io_switch_inst_n_158 ,\io_system.neorv32_bus_io_switch_inst_n_159 ,\io_system.neorv32_bus_io_switch_inst_n_160 ,\io_system.neorv32_bus_io_switch_inst_n_161 ,\io_system.neorv32_bus_io_switch_inst_n_162 ,\io_system.neorv32_bus_io_switch_inst_n_163 ,\io_system.neorv32_bus_io_switch_inst_n_164 ,\io_system.neorv32_bus_io_switch_inst_n_165 }),
+        .\bus_rsp_o_reg[data][31]_1 ({\io_system.neorv32_bus_io_switch_inst_n_119 ,\io_system.neorv32_bus_io_switch_inst_n_120 ,\io_system.neorv32_bus_io_switch_inst_n_121 ,\io_system.neorv32_bus_io_switch_inst_n_122 ,\io_system.neorv32_bus_io_switch_inst_n_123 ,\io_system.neorv32_bus_io_switch_inst_n_124 ,\io_system.neorv32_bus_io_switch_inst_n_125 ,\io_system.neorv32_bus_io_switch_inst_n_126 ,\io_system.neorv32_bus_io_switch_inst_n_127 ,\io_system.neorv32_bus_io_switch_inst_n_128 ,\io_system.neorv32_bus_io_switch_inst_n_129 ,\io_system.neorv32_bus_io_switch_inst_n_130 ,\io_system.neorv32_bus_io_switch_inst_n_131 ,\io_system.neorv32_bus_io_switch_inst_n_132 ,\io_system.neorv32_bus_io_switch_inst_n_133 }),
         .\cdiv_cnt_reg[0]_0 (\soc_generators.neorv32_sys_clock_inst_n_0 ),
         .clk(clk),
         .\ctrl_reg[cdiv][3]_0 ({\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_13 ,\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_14 ,\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_15 ,\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_16 }),
-        .\ctrl_reg[cpha]_0 (\io_system.neorv32_bus_io_switch_inst_n_149 ),
+        .\ctrl_reg[cpha]_0 (\io_system.neorv32_bus_io_switch_inst_n_117 ),
         .\ctrl_reg[cpha]__0 (\ctrl_reg[cpha]__0 ),
         .\ctrl_reg[cpol]_0 (\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_3 ),
-        .\ctrl_reg[cpol]_1 (\io_system.neorv32_bus_io_switch_inst_n_150 ),
-        .\ctrl_reg[enable]_0 (\io_system.neorv32_bus_io_switch_inst_n_147 ),
+        .\ctrl_reg[cpol]_1 (\io_system.neorv32_bus_io_switch_inst_n_118 ),
+        .\ctrl_reg[enable]_0 (\io_system.neorv32_bus_io_switch_inst_n_115 ),
         .\ctrl_reg[enable]__0 (\ctrl_reg[enable]__0 ),
         .\ctrl_reg[prsc][2]_0 ({\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_18 ,\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_19 ,\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_20 }),
         .\ctrl_reg[prsc][2]_1 (\ctrl[prsc] ),
@@ -46846,28 +44778,28 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .w_pnt(w_pnt),
         .\w_pnt_reg[0] (\io_system.neorv32_spi_enabled.neorv32_spi_inst_n_12 ));
   system_neorv32_vivado_ip_0_0_neorv32_sysinfo \io_system.neorv32_sysinfo_enabled.neorv32_sysinfo_inst 
-       (.D(p_0_in),
+       (.D(\iodev_req[17][data] ),
         .E(\io_system.neorv32_bus_io_switch_inst_n_13 ),
         .Q(\sysinfo_reg[0]_0 ),
         .\bus_rsp_o_reg[data][31]_0 (\iodev_rsp[2][data] ),
-        .\bus_rsp_o_reg[err]_0 (\io_system.neorv32_bus_io_switch_inst_n_237 ),
+        .\bus_rsp_o_reg[data][31]_1 (p_0_in),
+        .\bus_rsp_o_reg[err]_0 (\io_system.neorv32_bus_io_switch_inst_n_205 ),
         .clk(clk),
-        .\dev_12_req_o[data] (\iodev_req[17][data] ),
         .\dev_30_rsp_i[err] (\iodev_rsp[2][err] ),
         .\iodev_req[2][stb] (\iodev_req[2][stb] ),
         .\iodev_rsp[2][ack] (\iodev_rsp[2][ack] ),
         .rstn_sys(rstn_sys));
   system_neorv32_vivado_ip_0_0_neorv32_uart \io_system.neorv32_uart0_enabled.neorv32_uart0_inst 
-       (.D({\io_system.neorv32_bus_io_switch_inst_n_80 ,\io_system.neorv32_bus_io_switch_inst_n_81 ,\io_system.neorv32_bus_io_switch_inst_n_82 ,\io_system.neorv32_bus_io_switch_inst_n_83 ,\io_system.neorv32_bus_io_switch_inst_n_84 ,\io_system.neorv32_bus_io_switch_inst_n_85 ,\io_system.neorv32_bus_io_switch_inst_n_86 ,\io_system.neorv32_bus_io_switch_inst_n_87 ,\io_system.neorv32_bus_io_switch_inst_n_88 ,\io_system.neorv32_bus_io_switch_inst_n_89 ,\io_system.neorv32_bus_io_switch_inst_n_90 ,\io_system.neorv32_bus_io_switch_inst_n_91 ,\io_system.neorv32_bus_io_switch_inst_n_92 ,\io_system.neorv32_bus_io_switch_inst_n_93 ,\io_system.neorv32_bus_io_switch_inst_n_94 ,\io_system.neorv32_bus_io_switch_inst_n_95 ,\io_system.neorv32_bus_io_switch_inst_n_96 ,\io_system.neorv32_bus_io_switch_inst_n_97 ,\io_system.neorv32_bus_io_switch_inst_n_98 ,\io_system.neorv32_bus_io_switch_inst_n_99 ,\io_system.neorv32_bus_io_switch_inst_n_100 ,\io_system.neorv32_bus_io_switch_inst_n_101 ,\io_system.neorv32_bus_io_switch_inst_n_102 ,\io_system.neorv32_bus_io_switch_inst_n_103 ,\io_system.neorv32_bus_io_switch_inst_n_104 ,\io_system.neorv32_bus_io_switch_inst_n_105 }),
+       (.D({\io_system.neorv32_bus_io_switch_inst_n_64 ,\io_system.neorv32_bus_io_switch_inst_n_65 ,\io_system.neorv32_bus_io_switch_inst_n_66 ,\io_system.neorv32_bus_io_switch_inst_n_67 ,\io_system.neorv32_bus_io_switch_inst_n_68 ,\io_system.neorv32_bus_io_switch_inst_n_69 ,\io_system.neorv32_bus_io_switch_inst_n_70 ,\io_system.neorv32_bus_io_switch_inst_n_71 ,\io_system.neorv32_bus_io_switch_inst_n_72 ,\io_system.neorv32_bus_io_switch_inst_n_73 ,\io_system.neorv32_bus_io_switch_inst_n_74 ,\io_system.neorv32_bus_io_switch_inst_n_75 ,\io_system.neorv32_bus_io_switch_inst_n_76 ,\io_system.neorv32_bus_io_switch_inst_n_77 ,\io_system.neorv32_bus_io_switch_inst_n_78 ,\io_system.neorv32_bus_io_switch_inst_n_79 ,\io_system.neorv32_bus_io_switch_inst_n_80 ,\io_system.neorv32_bus_io_switch_inst_n_81 ,\io_system.neorv32_bus_io_switch_inst_n_82 ,\io_system.neorv32_bus_io_switch_inst_n_83 ,\io_system.neorv32_bus_io_switch_inst_n_84 ,\io_system.neorv32_bus_io_switch_inst_n_85 ,\io_system.neorv32_bus_io_switch_inst_n_86 ,\io_system.neorv32_bus_io_switch_inst_n_87 ,\io_system.neorv32_bus_io_switch_inst_n_88 ,\io_system.neorv32_bus_io_switch_inst_n_89 }),
         .Q({\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_17 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_18 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_19 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_20 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_21 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_22 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_23 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_24 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_25 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_26 }),
         .\bus_rsp_o_reg[data][31]_0 ({\iodev_rsp[11][data] [31:30],\iodev_rsp[11][data] [23:0]}),
         .clk(clk),
-        .\ctrl_reg[enable]__0 (\ctrl_reg[enable]__0_9 ),
+        .\ctrl_reg[enable]__0 (\ctrl_reg[enable]__0_8 ),
         .\ctrl_reg[hwfc_en]__0 (\ctrl_reg[hwfc_en]__0 ),
-        .\ctrl_reg[irq_rx_full]__0 (\ctrl_reg[irq_rx_full]__0_7 ),
-        .\ctrl_reg[irq_rx_nempty]__0 (\ctrl_reg[irq_rx_nempty]__0_8 ),
-        .\ctrl_reg[irq_tx_empty]__0 (\ctrl_reg[irq_tx_empty]__0_6 ),
-        .\ctrl_reg[irq_tx_nfull]__0 (\ctrl_reg[irq_tx_nfull]__0_5 ),
+        .\ctrl_reg[irq_rx_full]__0 (\ctrl_reg[irq_rx_full]__0_6 ),
+        .\ctrl_reg[irq_rx_nempty]__0 (\ctrl_reg[irq_rx_nempty]__0_7 ),
+        .\ctrl_reg[irq_tx_empty]__0 (\ctrl_reg[irq_tx_empty]__0_5 ),
+        .\ctrl_reg[irq_tx_nfull]__0 (\ctrl_reg[irq_tx_nfull]__0_4 ),
         .\ctrl_reg[prsc][2]_0 ({\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_27 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_28 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_29 }),
         .\ctrl_reg[prsc][2]_1 (\io_system.neorv32_bus_io_switch_inst_n_0 ),
         .\ctrl_reg[sim_mode]__0 (\ctrl_reg[sim_mode]__0 ),
@@ -46879,7 +44811,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .irq_fast_i(cpu_firq[2]),
         .\r_pnt_reg[6] (\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_15 ),
         .\r_pnt_reg[6]_0 (\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_16 ),
-        .\r_pnt_reg[6]_1 (\io_system.neorv32_bus_io_switch_inst_n_106 ),
+        .\r_pnt_reg[6]_1 (\io_system.neorv32_bus_io_switch_inst_n_90 ),
         .rdata({\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_31 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_32 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_33 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_34 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_35 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_36 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_37 ,\io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_38 }),
         .re0(\rx_engine_fifo_inst/re0 ),
         .rstn_sys(rstn_sys),
@@ -46896,7 +44828,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
   system_neorv32_vivado_ip_0_0_neorv32_imem \memory_system.neorv32_imem_enabled.neorv32_imem_inst 
        (.D(\core_req[0][meta] [0]),
         .\FSM_onehot_keeper[state][2]_i_2 (neorv32_bus_gateway_inst_n_3),
-        .Q(p_0_in_10),
+        .Q(p_0_in_9),
         .addr_i(\core_req[0][addr] [14:2]),
         .\amo_rsp[ack] (\amo_rsp[ack] ),
         .\bus_req_i[rw] (\core_complex_gen[0].neorv32_dcache_enabled.neorv32_dcache_inst_n_30 ),
@@ -46968,7 +44900,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_top
         .\FSM_onehot_keeper_reg[state][1]_0 (neorv32_bus_gateway_inst_n_3),
         .\FSM_onehot_keeper_reg[state][2]_0 (neorv32_bus_gateway_inst_n_1),
         .\FSM_onehot_keeper_reg[state][2]_1 (\memory_system.neorv32_imem_enabled.neorv32_imem_inst_n_3 ),
-        .Q(p_0_in_10),
+        .Q(p_0_in_9),
         .\amo_rsp[data] (\amo_rsp[data] ),
         .\bus_req_i[lock] (\core_req[0][lock] ),
         .\bus_rsp_o[ack] (\xbus_rsp[ack] ),
@@ -47523,7 +45455,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
         .I4(\rx_engine_reg[state_n_0_][0] ),
         .I5(Q[3]),
         .O(\rx_engine[baudcnt][2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair271" *) 
+  (* SOFT_HLUTNM = "soft_lutpair272" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \rx_engine[baudcnt][2]_i_2 
@@ -47539,7 +45471,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
         .I3(\rx_engine_reg[state_n_0_][0] ),
         .I4(Q[4]),
         .O(\rx_engine[baudcnt][3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair271" *) 
+  (* SOFT_HLUTNM = "soft_lutpair272" *) 
   LUT4 #(
     .INIT(16'hAAA9)) 
     \rx_engine[baudcnt][3]_i_2 
@@ -47558,7 +45490,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
         .I4(\rx_engine_reg[state_n_0_][0] ),
         .I5(Q[5]),
         .O(\rx_engine[baudcnt][4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair268" *) 
+  (* SOFT_HLUTNM = "soft_lutpair269" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \rx_engine[baudcnt][4]_i_2 
@@ -47577,7 +45509,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
         .I4(\rx_engine_reg[state_n_0_][0] ),
         .I5(Q[6]),
         .O(\rx_engine[baudcnt][5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair268" *) 
+  (* SOFT_HLUTNM = "soft_lutpair269" *) 
   LUT5 #(
     .INIT(32'h00000001)) 
     \rx_engine[baudcnt][5]_i_2 
@@ -47685,7 +45617,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
        (.I0(\rx_engine_reg[state_n_0_][0] ),
         .I1(\rx_engine_reg[bitcnt] [0]),
         .O(\rx_engine[bitcnt][0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair272" *) 
+  (* SOFT_HLUTNM = "soft_lutpair273" *) 
   LUT3 #(
     .INIT(8'hD7)) 
     \rx_engine[bitcnt][1]_i_1 
@@ -47693,7 +45625,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
         .I1(\rx_engine_reg[bitcnt] [0]),
         .I2(\rx_engine_reg[bitcnt] [1]),
         .O(\rx_engine[bitcnt][1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair272" *) 
+  (* SOFT_HLUTNM = "soft_lutpair273" *) 
   LUT4 #(
     .INIT(16'hA802)) 
     \rx_engine[bitcnt][2]_i_1 
@@ -47710,7 +45642,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
         .I2(\rx_engine_reg[state_n_0_][1] ),
         .I3(uart_clk),
         .O(\rx_engine[bitcnt][3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair265" *) 
+  (* SOFT_HLUTNM = "soft_lutpair266" *) 
   LUT5 #(
     .INIT(32'hFFFD5557)) 
     \rx_engine[bitcnt][3]_i_2 
@@ -47748,7 +45680,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
         .I4(\rx_engine[state][0]_i_2_n_0 ),
         .I5(\rx_engine_reg[state_n_0_][1] ),
         .O(\rx_engine[state][0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair265" *) 
+  (* SOFT_HLUTNM = "soft_lutpair266" *) 
   LUT5 #(
     .INIT(32'hFFFEFFFF)) 
     \rx_engine[state][0]_i_2 
@@ -48033,7 +45965,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
         .I2(\tx_engine_reg[baudcnt] [6]),
         .I3(\tx_engine[baudcnt][8]_i_2_n_0 ),
         .O(\tx_engine[baudcnt][6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair266" *) 
+  (* SOFT_HLUTNM = "soft_lutpair267" *) 
   LUT5 #(
     .INIT(32'hB88BB8B8)) 
     \tx_engine[baudcnt][7]_i_1 
@@ -48089,7 +46021,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
         .I4(\tx_engine[baudcnt][8]_i_2_n_0 ),
         .I5(\tx_engine_reg[state][0]_0 ),
         .O(\tx_engine[baudcnt][9]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair266" *) 
+  (* SOFT_HLUTNM = "soft_lutpair267" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \tx_engine[baudcnt][9]_i_4 
@@ -48097,14 +46029,14 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
         .I1(\tx_engine_reg[baudcnt] [7]),
         .I2(\tx_engine_reg[baudcnt] [6]),
         .O(\tx_engine[baudcnt][9]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair269" *) 
+  (* SOFT_HLUTNM = "soft_lutpair270" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \tx_engine[bitcnt][0]_i_1 
        (.I0(\tx_engine_reg[bitcnt] [0]),
         .I1(\tx_engine_reg[state][0]_0 ),
         .O(\tx_engine[bitcnt][0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair270" *) 
+  (* SOFT_HLUTNM = "soft_lutpair271" *) 
   LUT3 #(
     .INIT(8'hD7)) 
     \tx_engine[bitcnt][1]_i_1 
@@ -48112,7 +46044,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
         .I1(\tx_engine_reg[bitcnt] [0]),
         .I2(\tx_engine_reg[bitcnt] [1]),
         .O(\tx_engine[bitcnt][1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair270" *) 
+  (* SOFT_HLUTNM = "soft_lutpair271" *) 
   LUT4 #(
     .INIT(16'hA802)) 
     \tx_engine[bitcnt][2]_i_1 
@@ -48129,7 +46061,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
         .I2(\tx_engine_reg[state][0]_0 ),
         .I3(\tx_engine[baudcnt][9]_i_3_n_0 ),
         .O(\tx_engine[bitcnt][3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair267" *) 
+  (* SOFT_HLUTNM = "soft_lutpair268" *) 
   LUT5 #(
     .INIT(32'hFFFD5557)) 
     \tx_engine[bitcnt][3]_i_2 
@@ -48155,7 +46087,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
        (.I0(\tx_engine_reg[state][0]_0 ),
         .I1(\tx_engine_reg[sreg_n_0_][1] ),
         .O(\tx_engine[sreg][0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair269" *) 
+  (* SOFT_HLUTNM = "soft_lutpair270" *) 
   LUT4 #(
     .INIT(16'hFDDD)) 
     \tx_engine[state][0]_i_2 
@@ -48164,7 +46096,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_uart
         .I2(\ctrl_reg[hwfc_en]__0 ),
         .I3(p_0_in),
         .O(\tx_engine[state][0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair267" *) 
+  (* SOFT_HLUTNM = "soft_lutpair268" *) 
   LUT5 #(
     .INIT(32'h00000002)) 
     \tx_engine[state][0]_i_3 
@@ -48455,7 +46387,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_vivado_ip
   input msw_irq_i;
   input m_axi_bvalid;
   input m_axi_rvalid;
-  input [31:0]gpio_i;
+  input [15:0]gpio_i;
   input uart0_ctsn_i;
   input uart0_rxd_i;
   input spi_dat_i;
@@ -48477,7 +46409,7 @@ module system_neorv32_vivado_ip_0_0_neorv32_vivado_ip
   wire awvalid_i_2_n_0;
   wire \axi4_bridge.axi4_bridge_inst_n_4 ;
   wire clk;
-  wire [31:0]gpio_i;
+  wire [15:0]gpio_i;
   wire [15:0]gpio_o;
   wire [0:0]m_axi_arlen;
   wire m_axi_arready;

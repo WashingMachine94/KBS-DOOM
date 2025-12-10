@@ -15,9 +15,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axis
 # IP: bd/system/ip/system_smartconnect_0_1/system_smartconnect_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_smartconnect_0_1 || ORIG_REF_NAME==system_smartconnect_0_1} -quiet] -quiet
 
-# IP: bd/system/ip/system_xlconcat_0_0/system_xlconcat_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xlconcat_0_0 || ORIG_REF_NAME==system_xlconcat_0_0} -quiet] -quiet
-
 # IP: bd/system/ip/system_axi_bram_ctrl_0_0/system_axi_bram_ctrl_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axi_bram_ctrl_0_0 || ORIG_REF_NAME==system_axi_bram_ctrl_0_0} -quiet] -quiet
 
@@ -51,4 +48,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_util
 # IP: bd/system/ip/system_vga_display_0_0/system_vga_display_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_vga_display_0_0 || ORIG_REF_NAME==system_vga_display_0_0} -quiet] -quiet
 
-# XDC: c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/system_ooc.xdc
+# IP: bd/system/ip/system_PS2Receiver_0_0/system_PS2Receiver_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_PS2Receiver_0_0 || ORIG_REF_NAME==system_PS2Receiver_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_ps2_sync_0_0/system_ps2_sync_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_ps2_sync_0_0 || ORIG_REF_NAME==system_ps2_sync_0_0} -quiet] -quiet
+
+# XDC: c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/system_ooc.xdc

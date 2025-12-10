@@ -97,7 +97,7 @@ ENTITY system_neorv32_vivado_ip_0_0 IS
     s1_axis_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     s1_axis_tlast : IN STD_LOGIC;
     gpio_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-    gpio_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    gpio_i : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     uart0_txd_o : OUT STD_LOGIC;
     uart0_rxd_i : IN STD_LOGIC;
     uart0_rtsn_o : OUT STD_LOGIC;
@@ -263,7 +263,7 @@ ARCHITECTURE system_neorv32_vivado_ip_0_0_arch OF system_neorv32_vivado_ip_0_0 I
       jtag_tdo_o : OUT STD_LOGIC;
       jtag_tms_i : IN STD_LOGIC;
       gpio_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-      gpio_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      gpio_i : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       uart0_txd_o : OUT STD_LOGIC;
       uart0_rxd_i : IN STD_LOGIC;
       uart0_rtsn_o : OUT STD_LOGIC;
@@ -406,8 +406,8 @@ BEGIN
       IMEM_SIZE => 32768,
       IMEM_OUTREG_EN => true,
       DMEM_EN => false,
-      DMEM_SIZE => 262144,
-      DMEM_OUTREG_EN => true,
+      DMEM_SIZE => 8192,
+      DMEM_OUTREG_EN => false,
       ICACHE_EN => true,
       ICACHE_NUM_BLOCKS => 4,
       DCACHE_EN => true,
@@ -418,7 +418,7 @@ BEGIN
       XBUS_TIMEOUT => 2048,
       XBUS_REGSTAGE_EN => true,
       IO_GPIO_EN => true,
-      IO_GPIO_IN_NUM => 32,
+      IO_GPIO_IN_NUM => 16,
       IO_GPIO_OUT_NUM => 16,
       IO_CLINT_EN => false,
       IO_UART0_EN => true,

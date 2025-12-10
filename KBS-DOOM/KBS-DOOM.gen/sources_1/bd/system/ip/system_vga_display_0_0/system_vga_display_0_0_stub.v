@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-// Date        : Sun Dec  7 13:21:51 2025
-// Host        : LAPTOP-61978DQ3 running 64-bit major release  (build 9200)
+// Date        : Tue Dec  9 14:13:19 2025
+// Host        : DESKTOP-NOIGLTL running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_vga_display_0_0/system_vga_display_0_0_stub.v
+//               c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_vga_display_0_0/system_vga_display_0_0_stub.v
 // Design      : system_vga_display_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

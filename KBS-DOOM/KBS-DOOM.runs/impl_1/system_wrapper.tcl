@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.runs/impl_1/system_wrapper.tcl"
+  variable script "C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/impl_1/system_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -97,6 +97,8 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL-1065} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -104,38 +106,35 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 4
+  set_param chipscope.maxJobs 2
   set_param general.usePosixSpawnForFork 1
   set_param bd.open.in_stealth_mode 1
   set_param xicom.use_bs_reader 1
-  set_param runs.launchOptions { -jobs 16  }
+  set_param runs.launchOptions { -jobs 4  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
-  set_property board_part_repo_paths {C:/Users/lucas/AppData/Roaming/Xilinx/Vivado/2025.1/xhub/board_store/xilinx_board_store} [current_project]
+  set_property board_part_repo_paths {C:/Users/user/AppData/Roaming/Xilinx/Vivado/2025.1/xhub/board_store/xilinx_board_store} [current_project]
   set_property board_part digilentinc.com:nexys-a7-100t:part0:1.3 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.cache/wt [current_project]
-  set_property parent.project_path C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.xpr [current_project]
-  set_property ip_repo_paths {
-  C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.srcs/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0
-  C:/Users/lucas/Desktop/testNEORV32/neorv32/rtl/system_integration/neorv32_vivado_ip_work
-} [current_project]
+  set_property webtalk.parent_dir C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.cache/wt [current_project]
+  set_property parent.project_path C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.xpr [current_project]
+  set_property ip_repo_paths C:/KBS_CE/neorv32/rtl/system_integration/neorv32_vivado_ip_work [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.cache/ip [current_project]
+  set_property ip_output_repo C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.runs/synth_1/system_wrapper.dcp
+  add_files -quiet C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/system_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.srcs/sources_1/bd/system/system.bd
+  add_files C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.srcs/sources_1/bd/system/system.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-Master.xdc
+  read_xdc C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.srcs/constrs_1/imports/Downloads/Nexys-A7-100T-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
