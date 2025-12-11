@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Wed Dec 10 10:38:48 2025
-# Process ID         : 32704
+# Start of session at: Wed Dec 10 14:52:22 2025
+# Process ID         : 25128
 # Current directory  : C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1
 # Command line       : vivado.exe -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
 # Log file           : C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/system_wrapper.vds
@@ -17,12 +17,12 @@
 # CPU Physical cores : 4
 # CPU Logical cores  : 8
 # Host memory        : 16942 MB
-# Swap memory        : 8315 MB
-# Total Virtual      : 25258 MB
-# Available Virtual  : 5183 MB
+# Swap memory        : 10028 MB
+# Total Virtual      : 26971 MB
+# Available Virtual  : 4569 MB
 #-----------------------------------------------------------
 source system_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 489.711 ; gain = 210.887
+create_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 493.148 ; gain = 210.789
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/KBS_CE/neorv32/rtl/system_integration/neorv32_vivado_ip_work'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/data/ip'.
@@ -32,7 +32,7 @@ More information on inline hdl is available in UG994.
 Utility IP Component Instances:
  system_xlconstant_0_0
 system_util_vector_logic_0_0
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 562.090 ; gain = 67.160
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 562.602 ; gain = 65.539
 Command: read_checkpoint -auto_incremental -incremental C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.srcs/utils_1/imports/synth_1/system_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.srcs/utils_1/imports/synth_1/system_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -45,46 +45,46 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 31600
+INFO: [Synth 8-7075] Helper process launched with PID 36464
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1257.215 ; gain = 494.371
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1261.699 ; gain = 494.926
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'system_wrapper' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/hdl/system_wrapper.vhd:50]
 INFO: [Synth 8-3491] module 'system' declared at 'c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:15' bound to instance 'system_i' of component 'system' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/hdl/system_wrapper.vhd:86]
 INFO: [Synth 8-638] synthesizing module 'system' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:54]
-INFO: [Synth 8-3491] module 'system_PS2Receiver_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_PS2Receiver_0_0_stub.vhdl:6' bound to instance 'PS2Receiver_0' of component 'system_PS2Receiver_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:739]
-INFO: [Synth 8-638] synthesizing module 'system_PS2Receiver_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_PS2Receiver_0_0_stub.vhdl:24]
-INFO: [Synth 8-3491] module 'system_axi_bram_ctrl_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_axi_bram_ctrl_0_0_stub.vhdl:6' bound to instance 'axi_bram_ctrl_0' of component 'system_axi_bram_ctrl_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:746]
-INFO: [Synth 8-638] synthesizing module 'system_axi_bram_ctrl_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_axi_bram_ctrl_0_0_stub.vhdl:58]
-INFO: [Synth 8-3491] module 'system_axi_bram_ctrl_1_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_axi_bram_ctrl_1_0_stub.vhdl:6' bound to instance 'axi_bram_ctrl_1' of component 'system_axi_bram_ctrl_1_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:789]
-INFO: [Synth 8-638] synthesizing module 'system_axi_bram_ctrl_1_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_axi_bram_ctrl_1_0_stub.vhdl:58]
-INFO: [Synth 8-3491] module 'system_axis_data_fifo_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_axis_data_fifo_0_0_stub.vhdl:6' bound to instance 'axis_data_fifo_0' of component 'system_axis_data_fifo_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:832]
-INFO: [Synth 8-638] synthesizing module 'system_axis_data_fifo_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_axis_data_fifo_0_0_stub.vhdl:30]
-INFO: [Synth 8-3491] module 'system_blk_mem_gen_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_blk_mem_gen_0_0_stub.vhdl:6' bound to instance 'blk_mem_gen_0' of component 'system_blk_mem_gen_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:847]
-INFO: [Synth 8-638] synthesizing module 'system_blk_mem_gen_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_blk_mem_gen_0_0_stub.vhdl:34]
-INFO: [Synth 8-3491] module 'system_blk_mem_gen_1_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_blk_mem_gen_1_0_stub.vhdl:6' bound to instance 'blk_mem_gen_1' of component 'system_blk_mem_gen_1_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:867]
-INFO: [Synth 8-638] synthesizing module 'system_blk_mem_gen_1_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_blk_mem_gen_1_0_stub.vhdl:34]
-INFO: [Synth 8-3491] module 'system_clk_wiz_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'system_clk_wiz_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:887]
-INFO: [Synth 8-638] synthesizing module 'system_clk_wiz_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_clk_wiz_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'system_PS2Receiver_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_PS2Receiver_0_0_stub.vhdl:6' bound to instance 'PS2Receiver_0' of component 'system_PS2Receiver_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:739]
+INFO: [Synth 8-638] synthesizing module 'system_PS2Receiver_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_PS2Receiver_0_0_stub.vhdl:24]
+INFO: [Synth 8-3491] module 'system_axi_bram_ctrl_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_axi_bram_ctrl_0_0_stub.vhdl:6' bound to instance 'axi_bram_ctrl_0' of component 'system_axi_bram_ctrl_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:746]
+INFO: [Synth 8-638] synthesizing module 'system_axi_bram_ctrl_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_axi_bram_ctrl_0_0_stub.vhdl:58]
+INFO: [Synth 8-3491] module 'system_axi_bram_ctrl_1_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_axi_bram_ctrl_1_0_stub.vhdl:6' bound to instance 'axi_bram_ctrl_1' of component 'system_axi_bram_ctrl_1_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:789]
+INFO: [Synth 8-638] synthesizing module 'system_axi_bram_ctrl_1_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_axi_bram_ctrl_1_0_stub.vhdl:58]
+INFO: [Synth 8-3491] module 'system_axis_data_fifo_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_axis_data_fifo_0_0_stub.vhdl:6' bound to instance 'axis_data_fifo_0' of component 'system_axis_data_fifo_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:832]
+INFO: [Synth 8-638] synthesizing module 'system_axis_data_fifo_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_axis_data_fifo_0_0_stub.vhdl:30]
+INFO: [Synth 8-3491] module 'system_blk_mem_gen_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_blk_mem_gen_0_0_stub.vhdl:6' bound to instance 'blk_mem_gen_0' of component 'system_blk_mem_gen_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:847]
+INFO: [Synth 8-638] synthesizing module 'system_blk_mem_gen_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_blk_mem_gen_0_0_stub.vhdl:34]
+INFO: [Synth 8-3491] module 'system_blk_mem_gen_1_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_blk_mem_gen_1_0_stub.vhdl:6' bound to instance 'blk_mem_gen_1' of component 'system_blk_mem_gen_1_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:867]
+INFO: [Synth 8-638] synthesizing module 'system_blk_mem_gen_1_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_blk_mem_gen_1_0_stub.vhdl:34]
+INFO: [Synth 8-3491] module 'system_clk_wiz_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'system_clk_wiz_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:887]
+INFO: [Synth 8-638] synthesizing module 'system_clk_wiz_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_clk_wiz_0_0_stub.vhdl:19]
 WARNING: [Synth 8-5640] Port 'app_sr_active' is missing in component declaration [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:421]
 WARNING: [Synth 8-5640] Port 'app_ref_ack' is missing in component declaration [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:421]
 WARNING: [Synth 8-5640] Port 'app_zq_ack' is missing in component declaration [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:421]
-INFO: [Synth 8-3491] module 'system_mig_7series_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_mig_7series_0_0_stub.vhdl:6' bound to instance 'mig_7series_0' of component 'system_mig_7series_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:896]
-INFO: [Synth 8-638] synthesizing module 'system_mig_7series_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_mig_7series_0_0_stub.vhdl:74]
-INFO: [Synth 8-3491] module 'system_neorv32_vivado_ip_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_neorv32_vivado_ip_0_0_stub.vhdl:6' bound to instance 'neorv32_vivado_ip_0' of component 'system_neorv32_vivado_ip_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:958]
-INFO: [Synth 8-638] synthesizing module 'system_neorv32_vivado_ip_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_neorv32_vivado_ip_0_0_stub.vhdl:72]
-INFO: [Synth 8-3491] module 'system_proc_sys_reset_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_proc_sys_reset_0_0_stub.vhdl:6' bound to instance 'proc_sys_reset_0' of component 'system_proc_sys_reset_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:1015]
-INFO: [Synth 8-638] synthesizing module 'system_proc_sys_reset_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_proc_sys_reset_0_0_stub.vhdl:28]
-INFO: [Synth 8-3491] module 'system_ps2_sync_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_ps2_sync_0_0_stub.vhdl:6' bound to instance 'ps2_sync_0' of component 'system_ps2_sync_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:1028]
-INFO: [Synth 8-638] synthesizing module 'system_ps2_sync_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_ps2_sync_0_0_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'system_smartconnect_0_1' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_smartconnect_0_1_stub.vhdl:6' bound to instance 'smartconnect_0' of component 'system_smartconnect_0_1' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:1036]
-INFO: [Synth 8-638] synthesizing module 'system_smartconnect_0_1' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_smartconnect_0_1_stub.vhdl:153]
-INFO: [Synth 8-3491] module 'system_util_ds_buf_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_util_ds_buf_0_0_stub.vhdl:6' bound to instance 'util_ds_buf_0' of component 'system_util_ds_buf_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:1174]
-INFO: [Synth 8-638] synthesizing module 'system_util_ds_buf_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_util_ds_buf_0_0_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'system_util_vector_logic_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_util_vector_logic_0_0_stub.vhdl:6' bound to instance 'util_vector_logic_0' of component 'system_util_vector_logic_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:1179]
-INFO: [Synth 8-638] synthesizing module 'system_util_vector_logic_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_util_vector_logic_0_0_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'system_vga_display_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_vga_display_0_0_stub.vhdl:6' bound to instance 'vga_display_0' of component 'system_vga_display_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:1184]
-INFO: [Synth 8-638] synthesizing module 'system_vga_display_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-32704-DESKTOP-NOIGLTL/realtime/system_vga_display_0_0_stub.vhdl:30]
+INFO: [Synth 8-3491] module 'system_mig_7series_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_mig_7series_0_0_stub.vhdl:6' bound to instance 'mig_7series_0' of component 'system_mig_7series_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:896]
+INFO: [Synth 8-638] synthesizing module 'system_mig_7series_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_mig_7series_0_0_stub.vhdl:74]
+INFO: [Synth 8-3491] module 'system_neorv32_vivado_ip_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_neorv32_vivado_ip_0_0_stub.vhdl:6' bound to instance 'neorv32_vivado_ip_0' of component 'system_neorv32_vivado_ip_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:958]
+INFO: [Synth 8-638] synthesizing module 'system_neorv32_vivado_ip_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_neorv32_vivado_ip_0_0_stub.vhdl:72]
+INFO: [Synth 8-3491] module 'system_proc_sys_reset_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_proc_sys_reset_0_0_stub.vhdl:6' bound to instance 'proc_sys_reset_0' of component 'system_proc_sys_reset_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:1015]
+INFO: [Synth 8-638] synthesizing module 'system_proc_sys_reset_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_proc_sys_reset_0_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'system_ps2_sync_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_ps2_sync_0_0_stub.vhdl:6' bound to instance 'ps2_sync_0' of component 'system_ps2_sync_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:1028]
+INFO: [Synth 8-638] synthesizing module 'system_ps2_sync_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_ps2_sync_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'system_smartconnect_0_1' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_smartconnect_0_1_stub.vhdl:6' bound to instance 'smartconnect_0' of component 'system_smartconnect_0_1' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:1036]
+INFO: [Synth 8-638] synthesizing module 'system_smartconnect_0_1' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_smartconnect_0_1_stub.vhdl:153]
+INFO: [Synth 8-3491] module 'system_util_ds_buf_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_util_ds_buf_0_0_stub.vhdl:6' bound to instance 'util_ds_buf_0' of component 'system_util_ds_buf_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:1174]
+INFO: [Synth 8-638] synthesizing module 'system_util_ds_buf_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_util_ds_buf_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'system_util_vector_logic_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_util_vector_logic_0_0_stub.vhdl:6' bound to instance 'util_vector_logic_0' of component 'system_util_vector_logic_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:1179]
+INFO: [Synth 8-638] synthesizing module 'system_util_vector_logic_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_util_vector_logic_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'system_vga_display_0_0' declared at 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_vga_display_0_0_stub.vhdl:6' bound to instance 'vga_display_0' of component 'system_vga_display_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:1184]
+INFO: [Synth 8-638] synthesizing module 'system_vga_display_0_0' [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/.Xil/Vivado-25128-DESKTOP-NOIGLTL/realtime/system_vga_display_0_0_stub.vhdl:30]
 INFO: [Synth 8-3491] module 'system_xlconstant_0_0' declared at 'c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_xlconstant_0_0/synth/system_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'system_xlconstant_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:1197]
 INFO: [Synth 8-6157] synthesizing module 'system_xlconstant_0_0' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_xlconstant_0_0/synth/system_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant' [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
@@ -93,18 +93,18 @@ INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_0' (0#1) [c:/
 INFO: [Synth 8-256] done synthesizing module 'system' (0#1) [c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/synth/system.vhd:54]
 INFO: [Synth 8-256] done synthesizing module 'system_wrapper' (0#1) [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/hdl/system_wrapper.vhd:50]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1374.523 ; gain = 611.680
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1379.574 ; gain = 612.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1374.523 ; gain = 611.680
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1379.574 ; gain = 612.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1374.523 ; gain = 611.680
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1379.574 ; gain = 612.801
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1374.523 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1379.574 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -147,33 +147,33 @@ Parsing XDC File [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/dont_to
 Finished Parsing XDC File [C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1374.523 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1379.574 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1374.523 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1379.574 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'system_i/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'system_i/blk_mem_gen_1' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1374.523 ; gain = 611.680
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1379.574 ; gain = 612.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1374.523 ; gain = 611.680
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1379.574 ; gain = 612.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1374.523 ; gain = 611.680
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1379.574 ; gain = 612.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1374.523 ; gain = 611.680
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1379.574 ; gain = 612.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -196,19 +196,19 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1385.141 ; gain = 622.297
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1393.781 ; gain = 627.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1557.316 ; gain = 794.473
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1565.777 ; gain = 799.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1568.316 ; gain = 805.473
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 1576.785 ; gain = 810.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -220,19 +220,19 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1802.535 ; gain = 1039.691
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1811.316 ; gain = 1044.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1802.535 ; gain = 1039.691
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1811.316 ; gain = 1044.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1802.535 ; gain = 1039.691
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1811.316 ; gain = 1044.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -282,16 +282,16 @@ Report Cell Usage:
 |17    |OBUF                              |    41|
 +------+----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1802.535 ; gain = 1039.691
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1811.316 ; gain = 1044.543
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:38 . Memory (MB): peak = 1802.535 ; gain = 1039.691
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1802.535 ; gain = 1039.691
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 1811.316 ; gain = 1044.543
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1811.316 ; gain = 1044.543
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1807.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1820.477 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1810.363 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1824.125 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -299,8 +299,8 @@ Synth Design complete | Checksum: 23f3b4e5
 INFO: [Common 17-83] Releasing license: Synthesis
 63 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:01:04 . Memory (MB): peak = 1810.363 ; gain = 1247.766
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1810.363 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:04 . Memory (MB): peak = 1824.125 ; gain = 1261.512
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1824.125 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/system_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 10 10:40:33 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 10 14:53:52 2025...

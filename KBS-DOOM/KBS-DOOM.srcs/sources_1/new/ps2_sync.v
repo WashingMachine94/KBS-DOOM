@@ -1,5 +1,5 @@
 module ps2_sync(
-    input  wire clk,      // system clock 
+    input  wire clk,      // system clock (e.g. 50 MHz)
     input  wire ps2_clk,  // raw PS/2 clock
     input  wire ps2_data, // raw PS/2 data
     output wire clk_fall, // 1-cycle pulse on PS/2 falling edge

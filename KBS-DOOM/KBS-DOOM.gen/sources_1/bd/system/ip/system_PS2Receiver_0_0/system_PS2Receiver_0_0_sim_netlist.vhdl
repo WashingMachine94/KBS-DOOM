@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
--- Date        : Tue Dec  9 14:52:38 2025
+-- Date        : Wed Dec 10 14:52:19 2025
 -- Host        : DESKTOP-NOIGLTL running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_PS2Receiver_0_0/system_PS2Receiver_0_0_sim_netlist.vhdl
@@ -46,7 +46,7 @@ architecture STRUCTURE of system_PS2Receiver_0_0_ps2_sync is
   attribute SOFT_HLUTNM of \bitcount[3]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of break_state_i_1 : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \keycode[12]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \scan[7]_i_2\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \scan[6]_i_2\ : label is "soft_lutpair1";
 begin
 \bitcount[3]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -172,7 +172,7 @@ break_state_i_1: unisim.vcomponents.LUT4
       I5 => break_state2_out,
       O => \scan_reg[1]\
     );
-\scan[7]_i_2\: unisim.vcomponents.LUT3
+\scan[6]_i_2\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"04"
     )
@@ -215,16 +215,16 @@ architecture STRUCTURE of system_PS2Receiver_0_0_PS2Receiver is
   signal p_1_in0 : STD_LOGIC;
   signal p_2_in : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \scan[0]_i_1_n_0\ : STD_LOGIC;
-  signal \scan[0]_i_2_n_0\ : STD_LOGIC;
   signal \scan[1]_i_1_n_0\ : STD_LOGIC;
+  signal \scan[1]_i_2_n_0\ : STD_LOGIC;
   signal \scan[2]_i_1_n_0\ : STD_LOGIC;
-  signal \scan[2]_i_2_n_0\ : STD_LOGIC;
   signal \scan[3]_i_1_n_0\ : STD_LOGIC;
   signal \scan[4]_i_1_n_0\ : STD_LOGIC;
   signal \scan[5]_i_1_n_0\ : STD_LOGIC;
+  signal \scan[5]_i_2_n_0\ : STD_LOGIC;
   signal \scan[6]_i_1_n_0\ : STD_LOGIC;
-  signal \scan[6]_i_2_n_0\ : STD_LOGIC;
   signal \scan[7]_i_1_n_0\ : STD_LOGIC;
+  signal \scan[7]_i_2_n_0\ : STD_LOGIC;
   signal sync_n_0 : STD_LOGIC;
   signal sync_n_1 : STD_LOGIC;
   signal sync_n_2 : STD_LOGIC;
@@ -234,8 +234,8 @@ architecture STRUCTURE of system_PS2Receiver_0_0_PS2Receiver is
   attribute SOFT_HLUTNM of \bitcount[1]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \bitcount[2]_i_1\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \bitcount[3]_i_2\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \scan[0]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \scan[6]_i_2\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \scan[5]_i_2\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \scan[7]_i_2\ : label is "soft_lutpair4";
 begin
   keycode(8 downto 0) <= \^keycode\(8 downto 0);
 \bitcount[0]_i_1\: unisim.vcomponents.LUT4
@@ -432,28 +432,6 @@ break_state_reg: unisim.vcomponents.FDRE
     );
 \scan[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFBFFFFF00800000"
-    )
-        port map (
-      I0 => p_1_in0,
-      I1 => \scan[0]_i_2_n_0\,
-      I2 => \bitcount_reg_n_0_[0]\,
-      I3 => \bitcount_reg_n_0_[1]\,
-      I4 => clk_fall,
-      I5 => p_2_in(0),
-      O => \scan[0]_i_1_n_0\
-    );
-\scan[0]_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \bitcount_reg_n_0_[2]\,
-      I1 => \bitcount_reg_n_0_[3]\,
-      O => \scan[0]_i_2_n_0\
-    );
-\scan[1]_i_1\: unisim.vcomponents.LUT6
-    generic map(
       INIT => X"FFFBFFFF00080000"
     )
         port map (
@@ -462,10 +440,10 @@ break_state_reg: unisim.vcomponents.FDRE
       I2 => \bitcount_reg_n_0_[2]\,
       I3 => \bitcount_reg_n_0_[3]\,
       I4 => sync_n_3,
-      I5 => p_2_in(1),
-      O => \scan[1]_i_1_n_0\
+      I5 => p_2_in(0),
+      O => \scan[0]_i_1_n_0\
     );
-\scan[2]_i_1\: unisim.vcomponents.LUT6
+\scan[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFB00000008"
     )
@@ -474,20 +452,20 @@ break_state_reg: unisim.vcomponents.FDRE
       I1 => clk_fall,
       I2 => \bitcount_reg_n_0_[2]\,
       I3 => \bitcount_reg_n_0_[3]\,
-      I4 => \scan[2]_i_2_n_0\,
-      I5 => p_2_in(2),
-      O => \scan[2]_i_1_n_0\
+      I4 => \scan[1]_i_2_n_0\,
+      I5 => p_2_in(1),
+      O => \scan[1]_i_1_n_0\
     );
-\scan[2]_i_2\: unisim.vcomponents.LUT2
+\scan[1]_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"7"
     )
         port map (
       I0 => \bitcount_reg_n_0_[0]\,
       I1 => \bitcount_reg_n_0_[1]\,
-      O => \scan[2]_i_2_n_0\
+      O => \scan[1]_i_2_n_0\
     );
-\scan[3]_i_1\: unisim.vcomponents.LUT6
+\scan[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFEFFFFF00200000"
     )
@@ -497,6 +475,19 @@ break_state_reg: unisim.vcomponents.FDRE
       I2 => \bitcount_reg_n_0_[2]\,
       I3 => \bitcount_reg_n_0_[3]\,
       I4 => sync_n_3,
+      I5 => p_2_in(2),
+      O => \scan[2]_i_1_n_0\
+    );
+\scan[3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBFFFFF00800000"
+    )
+        port map (
+      I0 => p_1_in0,
+      I1 => clk_fall,
+      I2 => \bitcount_reg_n_0_[0]\,
+      I3 => \bitcount_reg_n_0_[1]\,
+      I4 => \scan[5]_i_2_n_0\,
       I5 => p_2_in(3),
       O => \scan[3]_i_1_n_0\
     );
@@ -506,27 +497,14 @@ break_state_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => p_1_in0,
-      I1 => clk_fall,
-      I2 => \bitcount_reg_n_0_[0]\,
-      I3 => \bitcount_reg_n_0_[1]\,
-      I4 => \scan[6]_i_2_n_0\,
-      I5 => p_2_in(4),
-      O => \scan[4]_i_1_n_0\
-    );
-\scan[5]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFBFFFFF00800000"
-    )
-        port map (
-      I0 => p_1_in0,
       I1 => \bitcount_reg_n_0_[1]\,
       I2 => \bitcount_reg_n_0_[2]\,
       I3 => \bitcount_reg_n_0_[3]\,
       I4 => sync_n_3,
-      I5 => p_2_in(5),
-      O => \scan[5]_i_1_n_0\
+      I5 => p_2_in(4),
+      O => \scan[4]_i_1_n_0\
     );
-\scan[6]_i_1\: unisim.vcomponents.LUT6
+\scan[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"BFFFFFFF80000000"
     )
@@ -535,20 +513,20 @@ break_state_reg: unisim.vcomponents.FDRE
       I1 => \bitcount_reg_n_0_[0]\,
       I2 => \bitcount_reg_n_0_[1]\,
       I3 => clk_fall,
-      I4 => \scan[6]_i_2_n_0\,
-      I5 => p_2_in(6),
-      O => \scan[6]_i_1_n_0\
+      I4 => \scan[5]_i_2_n_0\,
+      I5 => p_2_in(5),
+      O => \scan[5]_i_1_n_0\
     );
-\scan[6]_i_2\: unisim.vcomponents.LUT2
+\scan[5]_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
         port map (
       I0 => \bitcount_reg_n_0_[2]\,
       I1 => \bitcount_reg_n_0_[3]\,
-      O => \scan[6]_i_2_n_0\
+      O => \scan[5]_i_2_n_0\
     );
-\scan[7]_i_1\: unisim.vcomponents.LUT6
+\scan[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FEFFFFFF02000000"
     )
@@ -558,8 +536,30 @@ break_state_reg: unisim.vcomponents.FDRE
       I2 => \bitcount_reg_n_0_[2]\,
       I3 => \bitcount_reg_n_0_[3]\,
       I4 => sync_n_3,
+      I5 => p_2_in(6),
+      O => \scan[6]_i_1_n_0\
+    );
+\scan[7]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFBF00000080"
+    )
+        port map (
+      I0 => p_1_in0,
+      I1 => clk_fall,
+      I2 => \bitcount_reg_n_0_[0]\,
+      I3 => \bitcount_reg_n_0_[1]\,
+      I4 => \scan[7]_i_2_n_0\,
       I5 => p_2_in(7),
       O => \scan[7]_i_1_n_0\
+    );
+\scan[7]_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => \bitcount_reg_n_0_[2]\,
+      I1 => \bitcount_reg_n_0_[3]\,
+      O => \scan[7]_i_2_n_0\
     );
 \scan_reg[0]\: unisim.vcomponents.FDRE
     generic map(

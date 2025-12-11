@@ -908,13 +908,7 @@
           },
           "ps2_clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "system_PS2_CLK",
-                "value_src": "default_prop"
-              }
-            }
+            "direction": "I"
           },
           "ps2_data": {
             "direction": "I",
@@ -1002,8 +996,8 @@
         "ports": [
           "CLK100MHZ",
           "util_ds_buf_0/BUFG_I",
-          "PS2Receiver_0/clk",
-          "ps2_sync_0/clk"
+          "ps2_sync_0/clk",
+          "PS2Receiver_0/clk"
         ]
       },
       "PS2Receiver_0_keycode": {

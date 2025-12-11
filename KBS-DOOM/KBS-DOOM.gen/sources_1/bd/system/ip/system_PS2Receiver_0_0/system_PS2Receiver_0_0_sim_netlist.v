@@ -2,7 +2,7 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-// Date        : Tue Dec  9 14:52:38 2025
+// Date        : Wed Dec 10 14:52:19 2025
 // Host        : DESKTOP-NOIGLTL running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_PS2Receiver_0_0/system_PS2Receiver_0_0_sim_netlist.v
@@ -83,16 +83,16 @@ module system_PS2Receiver_0_0_PS2Receiver
   wire p_1_in0;
   wire [7:0]p_2_in;
   wire \scan[0]_i_1_n_0 ;
-  wire \scan[0]_i_2_n_0 ;
   wire \scan[1]_i_1_n_0 ;
+  wire \scan[1]_i_2_n_0 ;
   wire \scan[2]_i_1_n_0 ;
-  wire \scan[2]_i_2_n_0 ;
   wire \scan[3]_i_1_n_0 ;
   wire \scan[4]_i_1_n_0 ;
   wire \scan[5]_i_1_n_0 ;
+  wire \scan[5]_i_2_n_0 ;
   wire \scan[6]_i_1_n_0 ;
-  wire \scan[6]_i_2_n_0 ;
   wire \scan[7]_i_1_n_0 ;
+  wire \scan[7]_i_2_n_0 ;
   wire sync_n_0;
   wire sync_n_1;
   wire sync_n_2;
@@ -244,105 +244,105 @@ module system_PS2Receiver_0_0_PS2Receiver
         .Q(keycode[7]),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hFFBFFFFF00800000)) 
-    \scan[0]_i_1 
-       (.I0(p_1_in0),
-        .I1(\scan[0]_i_2_n_0 ),
-        .I2(\bitcount_reg_n_0_[0] ),
-        .I3(\bitcount_reg_n_0_[1] ),
-        .I4(clk_fall),
-        .I5(p_2_in[0]),
-        .O(\scan[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT2 #(
-    .INIT(4'h1)) 
-    \scan[0]_i_2 
-       (.I0(\bitcount_reg_n_0_[2] ),
-        .I1(\bitcount_reg_n_0_[3] ),
-        .O(\scan[0]_i_2_n_0 ));
-  LUT6 #(
     .INIT(64'hFFFBFFFF00080000)) 
-    \scan[1]_i_1 
+    \scan[0]_i_1 
        (.I0(p_1_in0),
         .I1(\bitcount_reg_n_0_[1] ),
         .I2(\bitcount_reg_n_0_[2] ),
         .I3(\bitcount_reg_n_0_[3] ),
         .I4(sync_n_3),
-        .I5(p_2_in[1]),
-        .O(\scan[1]_i_1_n_0 ));
+        .I5(p_2_in[0]),
+        .O(\scan[0]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFB00000008)) 
-    \scan[2]_i_1 
+    \scan[1]_i_1 
        (.I0(p_1_in0),
         .I1(clk_fall),
         .I2(\bitcount_reg_n_0_[2] ),
         .I3(\bitcount_reg_n_0_[3] ),
-        .I4(\scan[2]_i_2_n_0 ),
-        .I5(p_2_in[2]),
-        .O(\scan[2]_i_1_n_0 ));
+        .I4(\scan[1]_i_2_n_0 ),
+        .I5(p_2_in[1]),
+        .O(\scan[1]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h7)) 
-    \scan[2]_i_2 
+    \scan[1]_i_2 
        (.I0(\bitcount_reg_n_0_[0] ),
         .I1(\bitcount_reg_n_0_[1] ),
-        .O(\scan[2]_i_2_n_0 ));
+        .O(\scan[1]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFFEFFFFF00200000)) 
-    \scan[3]_i_1 
+    \scan[2]_i_1 
        (.I0(p_1_in0),
         .I1(\bitcount_reg_n_0_[1] ),
         .I2(\bitcount_reg_n_0_[2] ),
         .I3(\bitcount_reg_n_0_[3] ),
         .I4(sync_n_3),
+        .I5(p_2_in[2]),
+        .O(\scan[2]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFBFFFFF00800000)) 
+    \scan[3]_i_1 
+       (.I0(p_1_in0),
+        .I1(clk_fall),
+        .I2(\bitcount_reg_n_0_[0] ),
+        .I3(\bitcount_reg_n_0_[1] ),
+        .I4(\scan[5]_i_2_n_0 ),
         .I5(p_2_in[3]),
         .O(\scan[3]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFBFFFFF00800000)) 
     \scan[4]_i_1 
        (.I0(p_1_in0),
-        .I1(clk_fall),
-        .I2(\bitcount_reg_n_0_[0] ),
-        .I3(\bitcount_reg_n_0_[1] ),
-        .I4(\scan[6]_i_2_n_0 ),
-        .I5(p_2_in[4]),
-        .O(\scan[4]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFBFFFFF00800000)) 
-    \scan[5]_i_1 
-       (.I0(p_1_in0),
         .I1(\bitcount_reg_n_0_[1] ),
         .I2(\bitcount_reg_n_0_[2] ),
         .I3(\bitcount_reg_n_0_[3] ),
         .I4(sync_n_3),
-        .I5(p_2_in[5]),
-        .O(\scan[5]_i_1_n_0 ));
+        .I5(p_2_in[4]),
+        .O(\scan[4]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hBFFFFFFF80000000)) 
-    \scan[6]_i_1 
+    \scan[5]_i_1 
        (.I0(p_1_in0),
         .I1(\bitcount_reg_n_0_[0] ),
         .I2(\bitcount_reg_n_0_[1] ),
         .I3(clk_fall),
-        .I4(\scan[6]_i_2_n_0 ),
-        .I5(p_2_in[6]),
-        .O(\scan[6]_i_1_n_0 ));
+        .I4(\scan[5]_i_2_n_0 ),
+        .I5(p_2_in[5]),
+        .O(\scan[5]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h2)) 
-    \scan[6]_i_2 
+    \scan[5]_i_2 
        (.I0(\bitcount_reg_n_0_[2] ),
         .I1(\bitcount_reg_n_0_[3] ),
-        .O(\scan[6]_i_2_n_0 ));
+        .O(\scan[5]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFEFFFFFF02000000)) 
-    \scan[7]_i_1 
+    \scan[6]_i_1 
        (.I0(p_1_in0),
         .I1(\bitcount_reg_n_0_[1] ),
         .I2(\bitcount_reg_n_0_[2] ),
         .I3(\bitcount_reg_n_0_[3] ),
         .I4(sync_n_3),
+        .I5(p_2_in[6]),
+        .O(\scan[6]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFBF00000080)) 
+    \scan[7]_i_1 
+       (.I0(p_1_in0),
+        .I1(clk_fall),
+        .I2(\bitcount_reg_n_0_[0] ),
+        .I3(\bitcount_reg_n_0_[1] ),
+        .I4(\scan[7]_i_2_n_0 ),
         .I5(p_2_in[7]),
         .O(\scan[7]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    \scan[7]_i_2 
+       (.I0(\bitcount_reg_n_0_[2] ),
+        .I1(\bitcount_reg_n_0_[3] ),
+        .O(\scan[7]_i_2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \scan_reg[0] 
@@ -575,7 +575,7 @@ module system_PS2Receiver_0_0_ps2_sync
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'h04)) 
-    \scan[7]_i_2 
+    \scan[6]_i_2 
        (.I0(clk_sync[1]),
         .I1(clk_sync[2]),
         .I2(Q[0]),

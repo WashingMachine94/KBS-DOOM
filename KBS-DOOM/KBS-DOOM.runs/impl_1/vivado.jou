@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Wed Dec 10 10:40:40 2025
-# Process ID         : 26708
+# Start of session at: Wed Dec 10 14:54:00 2025
+# Process ID         : 27520
 # Current directory  : C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/impl_1
 # Command line       : vivado.exe -log system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
 # Log file           : C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/impl_1/system_wrapper.vdi
@@ -17,8 +17,8 @@
 # CPU Physical cores : 4
 # CPU Logical cores  : 8
 # Host memory        : 16942 MB
-# Swap memory        : 8315 MB
-# Total Virtual      : 25258 MB
-# Available Virtual  : 5166 MB
+# Swap memory        : 10028 MB
+# Total Virtual      : 26971 MB
+# Available Virtual  : 5064 MB
 #-----------------------------------------------------------
 source system_wrapper.tcl -notrace

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date             : Wed Dec 10 10:45:44 2025
+| Date             : Wed Dec 10 14:57:37 2025
 | Host             : DESKTOP-NOIGLTL running 64-bit major release  (build 9200)
 | Command          : report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
 | Design           : system_wrapper
@@ -52,17 +52,17 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.059 |       25 |       --- |             --- |
+| Clocks                   |     0.061 |       25 |       --- |             --- |
 | Slice Logic              |     0.030 |    28833 |       --- |             --- |
-|   LUT as Logic           |     0.025 |     9442 |     63400 |           14.89 |
+|   LUT as Logic           |     0.025 |     9445 |     63400 |           14.90 |
 |   LUT as Distributed RAM |     0.003 |     1616 |     19000 |            8.51 |
 |   Register               |     0.002 |    12483 |    126800 |            9.84 |
 |   CARRY4                 |    <0.001 |      202 |     15850 |            1.27 |
 |   LUT as Shift Register  |    <0.001 |      310 |     19000 |            1.63 |
 |   F7/F8 Muxes            |    <0.001 |       32 |     63400 |            0.05 |
 |   Others                 |     0.000 |      901 |       --- |             --- |
-| Signals                  |     0.039 |    20525 |       --- |             --- |
-| Block RAM                |     0.112 |      107 |       135 |           79.26 |
+| Signals                  |     0.040 |    20531 |       --- |             --- |
+| Block RAM                |     0.109 |      107 |       135 |           79.26 |
 | MMCM                     |     0.219 |        2 |         6 |           33.33 |
 | PLL                      |     0.115 |        1 |         6 |           16.67 |
 | DSPs                     |    <0.001 |        2 |       240 |            0.83 |
@@ -89,7 +89,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.013 |       0.010 |      0.003 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.013 |       0.009 |      0.003 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.022 |       0.002 |      0.020 |       NA    | Unspecified | NA         |
@@ -181,18 +181,18 @@ Table of Contents
 |       U0                           |     0.004 |
 |     axis_data_fifo_0               |     0.001 |
 |       inst                         |     0.001 |
-|     blk_mem_gen_0                  |     0.050 |
-|       U0                           |     0.050 |
-|     blk_mem_gen_1                  |     0.059 |
-|       U0                           |     0.059 |
+|     blk_mem_gen_0                  |     0.045 |
+|       U0                           |     0.045 |
+|     blk_mem_gen_1                  |     0.061 |
+|       U0                           |     0.061 |
 |     clk_wiz_0                      |     0.107 |
 |       inst                         |     0.107 |
-|     mig_7series_0                  |     0.906 |
-|       u_system_mig_7series_0_0_mig |     0.904 |
-|     neorv32_vivado_ip_0            |     0.022 |
-|       U0                           |     0.022 |
-|     smartconnect_0                 |     0.065 |
-|       inst                         |     0.065 |
+|     mig_7series_0                  |     0.907 |
+|       u_system_mig_7series_0_0_mig |     0.906 |
+|     neorv32_vivado_ip_0            |     0.023 |
+|       U0                           |     0.023 |
+|     smartconnect_0                 |     0.066 |
+|       inst                         |     0.066 |
 +------------------------------------+-----------+
 
 

@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-// Date        : Wed Dec 10 10:38:43 2025
+// Date        : Wed Dec 10 10:38:40 2025
 // Host        : DESKTOP-NOIGLTL running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/system_neorv32_vivado_ip_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top system_neorv32_vivado_ip_0_0 -prefix
+//               system_neorv32_vivado_ip_0_0_ system_neorv32_vivado_ip_0_0_stub.v
 // Design      : system_neorv32_vivado_ip_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

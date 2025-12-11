@@ -23,14 +23,14 @@ module PS2Receiver(
     always @(posedge clk) begin
         if (clk_fall) begin
             case (bitcount)
-                1: scan[0] <= data_sync;
-                2: scan[1] <= data_sync;
-                3: scan[2] <= data_sync;
-                4: scan[3] <= data_sync;
-                5: scan[4] <= data_sync;
-                6: scan[5] <= data_sync;
-                7: scan[6] <= data_sync;
-                8: scan[7] <= data_sync;
+                2: scan[0] <= data_sync;
+                3: scan[1] <= data_sync;
+                4: scan[2] <= data_sync;
+                5: scan[3] <= data_sync;
+                6: scan[4] <= data_sync;
+                7: scan[5] <= data_sync;
+                8: scan[6] <= data_sync;
+                9: scan[7] <= data_sync;
             endcase
 
             bitcount <= bitcount + 1;

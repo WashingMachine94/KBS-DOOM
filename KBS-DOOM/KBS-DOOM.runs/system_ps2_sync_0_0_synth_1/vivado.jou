@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Tue Dec  9 14:13:05 2025
-# Process ID         : 31564
+# Start of session at: Wed Dec 10 14:27:33 2025
+# Process ID         : 29496
 # Current directory  : C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/system_ps2_sync_0_0_synth_1
 # Command line       : vivado.exe -log system_ps2_sync_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_ps2_sync_0_0.tcl
 # Log file           : C:/KBS_CE_DOOM/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/system_ps2_sync_0_0_synth_1/system_ps2_sync_0_0.vds
@@ -17,8 +17,8 @@
 # CPU Physical cores : 4
 # CPU Logical cores  : 8
 # Host memory        : 16942 MB
-# Swap memory        : 11379 MB
-# Total Virtual      : 28322 MB
-# Available Virtual  : 2098 MB
+# Swap memory        : 10028 MB
+# Total Virtual      : 26971 MB
+# Available Virtual  : 4891 MB
 #-----------------------------------------------------------
 source system_ps2_sync_0_0.tcl -notrace
