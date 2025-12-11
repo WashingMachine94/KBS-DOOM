@@ -45,7 +45,7 @@ architecture Behavioral of vga_display is
     constant V_BACK     : integer := 33;
     constant V_MAX      : integer := V_VISIBLE + V_FRONT + V_SYNC + V_BACK - 1;
 
-    ------------------------------------------------------------------------
+    ------------------------------------------------------------------------    
     -- framebuffer logical resolution
     ------------------------------------------------------------------------
     constant DRAW_W : integer := 320;
@@ -58,19 +58,31 @@ architecture Behavioral of vga_display is
     signal v_count : integer range 0 to V_MAX := 0;
 
     signal visible_area  : std_logic;
-    signal in_draw_area  : std_logic;
+
+    ------------------------------------------------------------------------
+    -- scaling coordinates
+    ------------------------------------------------------------------------
+    signal disp_x : integer range 0 to DRAW_W-1;
+    signal disp_y : integer range 0 to DRAW_H-1;
+    signal in_draw_area : std_logic;
+
+    ------------------------------------------------------------------------
+    -- Pipeline delayed versions of counters
+    ------------------------------------------------------------------------
+    -- We need 4-5 stages of delay for the coordinates
+    signal h_count_d1, h_count_d2, h_count_d3, h_count_d4, h_count_d5 : integer range 0 to H_MAX;
+    signal v_count_d1, v_count_d2, v_count_d3, v_count_d4, v_count_d5 : integer range 0 to V_MAX;
+    signal visible_d1, visible_d2, visible_d3, visible_d4, visible_d5 : std_logic;
+    signal draw_d1, draw_d2, draw_d3, draw_d4, draw_d5 : std_logic;
+    signal disp_x_d1, disp_x_d2, disp_x_d3, disp_x_d4 : integer range 0 to DRAW_W-1;
+    signal disp_y_d1, disp_y_d2, disp_y_d3, disp_y_d4 : integer range 0 to DRAW_H-1;
 
     ------------------------------------------------------------------------
     -- memory addressing and byte lane selection
     ------------------------------------------------------------------------
-    signal pixel_index  : unsigned(31 downto 0);      -- byte index
-    signal byte_lane    : unsigned(1 downto 0);       -- which byte in word
-    signal byte_lane_d1 : unsigned(1 downto 0);
-    signal byte_lane_d2 : unsigned(1 downto 0);
-
-    -- pipelined visibilities to align with data latency
-    signal vis_d1, vis_d2      : std_logic;
-    signal draw_d1, draw_d2    : std_logic;
+    signal pixel_index  : unsigned(31 downto 0);
+    signal byte_lane    : unsigned(1 downto 0);
+    signal byte_lane_d1, byte_lane_d2 : unsigned(1 downto 0);
 
     -- extracted pixel index (0..255)
     signal fb_pixel_idx : std_logic_vector(7 downto 0);
@@ -105,22 +117,30 @@ begin
         end if;
     end process;
 
-    VGA_HS <= '0' when (h_count >= H_VISIBLE + H_FRONT and
-                        h_count <  H_VISIBLE + H_FRONT + H_SYNC)
+    -- HSYNC and VSYNC should NOT be delayed - they need to match the pixel stream timing
+    VGA_HS <= '0' when (h_count_d4 >= H_VISIBLE + H_FRONT and  -- Use delayed version!
+                        h_count_d4 <  H_VISIBLE + H_FRONT + H_SYNC)
               else '1';
 
-    VGA_VS <= '0' when (v_count >= V_VISIBLE + V_FRONT and
-                        v_count <  V_VISIBLE + V_FRONT + V_SYNC)
+    VGA_VS <= '0' when (v_count_d4 >= V_VISIBLE + V_FRONT and  -- Use delayed version!
+                        v_count_d4 <  V_VISIBLE + V_FRONT + V_SYNC)
               else '1';
 
     visible_area <= '1' when (h_count < H_VISIBLE  and v_count < V_VISIBLE)
                     else '0';
 
-    in_draw_area <= '1' when (h_count < DRAW_W and v_count < DRAW_H)
+    ------------------------------------------------------------------------
+    -- Nearest neighbor scaling to fill the screen:
+    -- 640x480 -> 320x200 means X/2, Y/2
+    ------------------------------------------------------------------------
+    disp_x <= h_count / 2;
+    disp_y <= v_count / 2;
+
+    in_draw_area <= '1' when (visible_area='1' and disp_x < DRAW_W and disp_y < DRAW_H)
                     else '0';
 
     ------------------------------------------------------------------------
-    -- Framebuffer addressing
+    -- Framebuffer addressing - NO OFFSET NEEDED!
     ------------------------------------------------------------------------
     process(pixel_clk)
         variable addr_calc : unsigned(31 downto 0);
@@ -130,15 +150,16 @@ begin
             enb <= in_draw_area;
 
             if in_draw_area = '1' then
-                -- byte index = (row*W + col)
-                addr_calc := to_unsigned(v_count * DRAW_W + h_count,32);
+                -- NO OFFSET! We're reading the pixel for the CURRENT position
+                addr_calc := to_unsigned(disp_y * DRAW_W + disp_x,32);
                 pixel_index <= addr_calc;
 
                 -- lower 2 bits pick byte inside the 32bit word
                 byte_lane <= addr_calc(1 downto 0);
 
-                -- RAM word address = byte_index/4
-                addrb <= std_logic_vector(addr_calc);
+                -- word address for BRAM
+                addrb(31 downto 2) <= std_logic_vector(addr_calc(31 downto 2));
+                addrb(1 downto 0)  <= "00";
 
             else
                 pixel_index <= (others=>'0');
@@ -148,33 +169,58 @@ begin
         end if;
     end process;
 
-    -- pipeline byte lane and vis signals to match memory latency
+    ------------------------------------------------------------------------
+    -- PIPELINE THE COORDINATES to match data latency
+    ------------------------------------------------------------------------
     process(pixel_clk)
     begin
         if rising_edge(pixel_clk) then
-
-            -- stage1
+            -- Stage 1
+            h_count_d1 <= h_count;
+            v_count_d1 <= v_count;
+            visible_d1 <= visible_area;
+            draw_d1    <= in_draw_area;
+            disp_x_d1  <= disp_x;
+            disp_y_d1  <= disp_y;
             byte_lane_d1 <= byte_lane;
-            vis_d1       <= visible_area;
-            draw_d1      <= in_draw_area;
-
-            -- stage2
+            
+            -- Stage 2 (after framebuffer read)
+            h_count_d2 <= h_count_d1;
+            v_count_d2 <= v_count_d1;
+            visible_d2 <= visible_d1;
+            draw_d2    <= draw_d1;
+            disp_x_d2  <= disp_x_d1;
+            disp_y_d2  <= disp_y_d1;
             byte_lane_d2 <= byte_lane_d1;
-            vis_d2       <= vis_d1;
-            draw_d2      <= draw_d1;
-
+            doutb_latched <= doutb;  -- Capture framebuffer output
+            
+            -- Stage 3 (after palette address calc)
+            h_count_d3 <= h_count_d2;
+            v_count_d3 <= v_count_d2;
+            visible_d3 <= visible_d2;
+            draw_d3    <= draw_d2;
+            disp_x_d3  <= disp_x_d2;
+            disp_y_d3  <= disp_y_d2;
+            
+            -- Stage 4 (after palette read)
+            h_count_d4 <= h_count_d3;
+            v_count_d4 <= v_count_d3;
+            visible_d4 <= visible_d3;
+            draw_d4    <= draw_d3;
+            disp_x_d4  <= disp_x_d3;
+            disp_y_d4  <= disp_y_d3;
+            pal_color <= doutPalette;  -- Capture palette output
+            
+            -- Stage 5 (final output stage)
+            h_count_d5 <= h_count_d4;
+            v_count_d5 <= v_count_d4;
+            visible_d5 <= visible_d4;
+            draw_d5    <= draw_d4;
+            
         end if;
     end process;
-    
-    process(pixel_clk)
-    begin
-        if rising_edge(pixel_clk) then
-            doutb_latched <= doutb;
-        end if;
-    end process;
 
-    -- byte extraction from 32bit doutb (no clock!)
-    -- choose which byte depending on byte_lane_d2
+    -- byte extraction - using stage 2 data
     process(doutb_latched, byte_lane_d2)
     begin
         case byte_lane_d2 is
@@ -185,41 +231,35 @@ begin
         end case;
     end process;
 
-    -- palette lookup
+    -- palette lookup - using stage 2 to calculate address for stage 3
     process(pixel_clk)
         variable a   : unsigned(31 downto 0);
         variable idx : unsigned(7 downto 0);
     begin
         if rising_edge(pixel_clk) then
-
-            if vis_d2='1' and draw_d2='1' then
+            if draw_d2='1' and visible_d2='1' then
                 enPalette <= '1';
                 idx := unsigned(fb_pixel_idx);
-                a := resize(idx * 2,32);      -- 2 bytes per palette entry
+                a := resize(idx * 2,32);  -- 2 bytes per entry
                 addrPalette <= std_logic_vector(a);
             else
                 enPalette <= '0';
+                addrPalette <= (others => '0');
             end if;
-
         end if;
     end process;
 
-    -- capture palette word
-    process(pixel_clk)
-    begin
-        if rising_edge(pixel_clk) then
-            pal_color <= doutPalette;
-        end if;
-    end process;
-
-    -- unpack 12-bit RGB (R3:G3:B3 assumed)
     pixel_rgb <= pal_color(11 downto 0);
 
-    -- VGA output (one more cycle)
+    ------------------------------------------------------------------------
+    -- VGA output - using stage 4 data (matched with delayed coordinates)
+    ------------------------------------------------------------------------
     process(pixel_clk)
     begin
         if rising_edge(pixel_clk) then
-            if vis_d2='1' and draw_d2='1' then
+            if visible_d4='1' and draw_d4='1' then
+                -- These colors correspond to the position at h_count_d4, v_count_d4
+                -- which is exactly where this pixel should be displayed!
                 VGA_R <= pixel_rgb(11 downto 8);
                 VGA_G <= pixel_rgb(7 downto 4);
                 VGA_B <= pixel_rgb(3 downto 0);
@@ -232,4 +272,3 @@ begin
     end process;
 
 end Behavioral;
-

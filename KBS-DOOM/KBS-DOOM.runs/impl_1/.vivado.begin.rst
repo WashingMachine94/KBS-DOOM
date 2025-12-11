@@ -98,3 +98,108 @@
     <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="31584" HostCore="16" HostMemory="016476839936">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="34920" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="39368" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="29172" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="25456" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="12448" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="39840" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="20276" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="22960" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="40524" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="22316" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="34652" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="44988" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="30748" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="34456" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="40860" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="25268" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="23768" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="18112" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="10084" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="11672" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="lucas" Host="LAPTOP-61978DQ3" Pid="46884" HostCore="16" HostMemory="016476839936">
+    </Process>
+</ProcessHandle>

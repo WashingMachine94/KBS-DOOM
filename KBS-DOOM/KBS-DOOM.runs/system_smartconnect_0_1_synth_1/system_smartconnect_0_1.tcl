@@ -59,6 +59,7 @@ OPTRACE "system_smartconnect_0_1_synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
 set_param general.usePosixSpawnForFork 1
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -75,7 +76,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/lucas/AppData/Roaming/Xilinx/Vivado/2025.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys-a7-100t:part0:1.3 [current_project]
-set_property ip_repo_paths c:/Users/lucas/Documents/GitHub/KBS-DOOM/neorv32_vivado_ip_work [current_project]
+set_property ip_repo_paths c:/Users/lucas/Documents/GitHub/KBS-DOOM/IP [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
