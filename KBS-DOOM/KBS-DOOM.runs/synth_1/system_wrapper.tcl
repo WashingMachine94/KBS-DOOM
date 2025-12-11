@@ -58,8 +58,8 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
 set_param general.usePosixSpawnForFork 1
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param bd.open.in_stealth_mode 1
+set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -74,7 +74,10 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/lucas/AppData/Roaming/Xilinx/Vivado/2025.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys-a7-100t:part0:1.3 [current_project]
-set_property ip_repo_paths c:/Users/lucas/Documents/GitHub/KBS-DOOM/IP [current_project]
+set_property ip_repo_paths {
+  c:/Users/lucas/Documents/GitHub/KBS-DOOM/IP
+  c:/Users/lucas/Documents/GitHub/KBS-DOOM
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -138,7 +141,7 @@ set_property used_in_implementation false [get_files -all c:/Users/lucas/Documen
 set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_axi_bram_ctrl_2_0/system_axi_bram_ctrl_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_blk_mem_gen_2_0/system_blk_mem_gen_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/system_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/system_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

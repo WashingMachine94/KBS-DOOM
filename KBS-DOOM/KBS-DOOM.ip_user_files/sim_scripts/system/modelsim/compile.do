@@ -13,7 +13,6 @@ vlib modelsim_lib/msim/smartconnect_v1_0
 vlib modelsim_lib/msim/axi_infrastructure_v1_1_0
 vlib modelsim_lib/msim/axi_register_slice_v2_1_35
 vlib modelsim_lib/msim/axi_vip_v1_1_21
-vlib modelsim_lib/msim/xlconcat_v2_1_7
 vlib modelsim_lib/msim/axi_bram_ctrl_v4_1_13
 vlib modelsim_lib/msim/blk_mem_gen_v8_4_11
 vlib modelsim_lib/msim/util_vector_logic_v2_0_5
@@ -30,7 +29,6 @@ vmap smartconnect_v1_0 modelsim_lib/msim/smartconnect_v1_0
 vmap axi_infrastructure_v1_1_0 modelsim_lib/msim/axi_infrastructure_v1_1_0
 vmap axi_register_slice_v2_1_35 modelsim_lib/msim/axi_register_slice_v2_1_35
 vmap axi_vip_v1_1_21 modelsim_lib/msim/axi_vip_v1_1_21
-vmap xlconcat_v2_1_7 modelsim_lib/msim/xlconcat_v2_1_7
 vmap axi_bram_ctrl_v4_1_13 modelsim_lib/msim/axi_bram_ctrl_v4_1_13
 vmap blk_mem_gen_v8_4_11 modelsim_lib/msim/blk_mem_gen_v8_4_11
 vmap util_vector_logic_v2_0_5 modelsim_lib/msim/util_vector_logic_v2_0_5
@@ -231,12 +229,6 @@ vlog -work axi_vip_v1_1_21  -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconnect_
 vlog -work xil_defaultlib  -incr -mfcu  -sv -L axi_vip_v1_1_21 -L smartconnect_v1_0 -L xilinx_vip "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/434f/hdl" "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/a8e4/hdl/verilog" "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef" "+incdir+C:/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
 "../../../bd/system/ip/system_smartconnect_0_1/sim/system_smartconnect_0_1.sv" \
 
-vlog -work xlconcat_v2_1_7  -incr -mfcu  "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/434f/hdl" "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/a8e4/hdl/verilog" "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef" "+incdir+C:/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/434f/hdl" "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/a8e4/hdl/verilog" "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/a9be" "+incdir+../../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef" "+incdir+C:/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \
-"../../../bd/system/ip/system_xlconcat_0_0/sim/system_xlconcat_0_0.v" \
-
 vcom -work axi_bram_ctrl_v4_1_13  -93  \
 "../../../../KBS-DOOM.gen/sources_1/bd/system/ipshared/2f03/hdl/axi_bram_ctrl_v4_1_rfs.vhd" \
 
@@ -384,6 +376,8 @@ vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../KBS-DOOM.gen/source
 
 vcom -work xil_defaultlib  -93  \
 "../../../bd/system/sim/system.vhd" \
+"../../../bd/system/ip/system_PS2Receiver_0_0/sim/system_PS2Receiver_0_0.vhd" \
+"../../../bd/system/ip/system_ps2_sync_0_0/sim/system_ps2_sync_0_0.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

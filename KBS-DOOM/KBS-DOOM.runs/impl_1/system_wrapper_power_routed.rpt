@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date             : Wed Dec 10 20:48:36 2025
+| Date             : Thu Dec 11 09:48:02 2025
 | Host             : LAPTOP-61978DQ3 running 64-bit major release  (build 9200)
 | Command          : report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
 | Design           : system_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.381        |
+| Total On-Chip Power (W)  | 1.379        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.266        |
+| Dynamic (W)              | 1.264        |
 | Device Static (W)        | 0.115        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 78.7         |
@@ -52,25 +52,25 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.063 |       25 |       --- |             --- |
-| Slice Logic              |     0.033 |    31991 |       --- |             --- |
-|   LUT as Logic           |     0.027 |    10385 |     63400 |           16.38 |
+| Clocks                   |     0.061 |       25 |       --- |             --- |
+| Slice Logic              |     0.033 |    31843 |       --- |             --- |
+|   LUT as Logic           |     0.027 |    10307 |     63400 |           16.26 |
 |   LUT as Distributed RAM |     0.003 |     1862 |     19000 |            9.80 |
-|   Register               |     0.002 |    13833 |    126800 |           10.91 |
+|   Register               |     0.002 |    13743 |    126800 |           10.84 |
 |   CARRY4                 |    <0.001 |      197 |     15850 |            1.24 |
 |   LUT as Shift Register  |    <0.001 |      339 |     19000 |            1.78 |
 |   F7/F8 Muxes            |    <0.001 |       32 |     63400 |            0.05 |
-|   Others                 |     0.000 |      999 |       --- |             --- |
-| Signals                  |     0.043 |    22604 |       --- |             --- |
+|   Others                 |     0.000 |     1006 |       --- |             --- |
+| Signals                  |     0.043 |    22471 |       --- |             --- |
 | Block RAM                |     0.147 |      109 |       135 |           80.74 |
 | MMCM                     |     0.219 |        2 |         6 |           33.33 |
 | PLL                      |     0.115 |        1 |         6 |           16.67 |
 | DSPs                     |    <0.001 |        1 |       240 |            0.42 |
-| I/O                      |     0.533 |      109 |       210 |           51.90 |
+| I/O                      |     0.533 |       93 |       210 |           44.29 |
 | PHASER                   |     0.110 |       14 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | Static Power             |     0.115 |          |           |                 |
-| Total                    |     1.381 |          |           |                 |
+| Total                    |     1.379 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,7 +80,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.331 |       0.309 |      0.022 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.329 |       0.307 |      0.022 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.302 |       0.283 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -171,8 +171,8 @@ Table of Contents
 +------------------------------------+-----------+
 | Name                               | Power (W) |
 +------------------------------------+-----------+
-| system_wrapper                     |     1.266 |
-|   system_i                         |     1.264 |
+| system_wrapper                     |     1.264 |
+|   system_i                         |     1.262 |
 |     axi_bram_ctrl_0                |     0.003 |
 |       U0                           |     0.003 |
 |     axi_bram_ctrl_1                |     0.002 |
@@ -185,16 +185,16 @@ Table of Contents
 |       U0                           |     0.051 |
 |     blk_mem_gen_1                  |     0.004 |
 |       U0                           |     0.004 |
-|     blk_mem_gen_2                  |     0.090 |
-|       U0                           |     0.090 |
+|     blk_mem_gen_2                  |     0.089 |
+|       U0                           |     0.089 |
 |     clk_wiz_0                      |     0.107 |
 |       inst                         |     0.107 |
 |     mig_7series_0                  |     0.904 |
 |       u_system_mig_7series_0_0_mig |     0.902 |
-|     neorv32_vivado_ip_0            |     0.024 |
-|       U0                           |     0.024 |
-|     smartconnect_0                 |     0.073 |
-|       inst                         |     0.073 |
+|     neorv32_vivado_ip_0            |     0.023 |
+|       U0                           |     0.023 |
+|     smartconnect_0                 |     0.072 |
+|       inst                         |     0.072 |
 +------------------------------------+-----------+
 
 

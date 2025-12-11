@@ -23,8 +23,8 @@ var ISEJScriptLib = RDScrDir + "/ISEWrap.js";
 eval( EAInclude(ISEJScriptLib) );
 
 
-ISEStep( "vivado",
-         "-log system_neorv32_vivado_ip_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_neorv32_vivado_ip_0_0.tcl" );
+// ISEStep( "vivado",
+//          "-log system_neorv32_vivado_ip_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_neorv32_vivado_ip_0_0.tcl" );
 
 
 

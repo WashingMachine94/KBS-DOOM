@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
--- Date        : Thu Dec  4 18:05:21 2025
+-- Date        : Thu Dec 11 09:43:39 2025
 -- Host        : LAPTOP-61978DQ3 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/system_neorv32_vivado_ip_0_0_sim_netlist.vhdl
+--               c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/system_neorv32_vivado_ip_0_0_sim_netlist.vhdl
 -- Design      : system_neorv32_vivado_ip_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -1254,40 +1254,40 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_bus_reg is
   signal \xbus_req[we]\ : STD_LOGIC;
   signal \xbus_rsp[err]\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of locked_i_1 : label is "soft_lutpair273";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[ack]_i_1\ : label is "soft_lutpair289";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][0]_i_1\ : label is "soft_lutpair273";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][10]_i_1\ : label is "soft_lutpair278";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][11]_i_1\ : label is "soft_lutpair279";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][12]_i_1\ : label is "soft_lutpair279";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][13]_i_1\ : label is "soft_lutpair280";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][14]_i_1\ : label is "soft_lutpair280";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][15]_i_1\ : label is "soft_lutpair281";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][16]_i_1\ : label is "soft_lutpair281";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][17]_i_1\ : label is "soft_lutpair282";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][18]_i_1\ : label is "soft_lutpair282";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][19]_i_1\ : label is "soft_lutpair283";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][1]_i_1\ : label is "soft_lutpair274";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][20]_i_1\ : label is "soft_lutpair283";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][21]_i_1\ : label is "soft_lutpair284";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][22]_i_1\ : label is "soft_lutpair284";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][23]_i_1\ : label is "soft_lutpair285";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][24]_i_1\ : label is "soft_lutpair285";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][25]_i_1\ : label is "soft_lutpair286";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][26]_i_1\ : label is "soft_lutpair286";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][27]_i_1\ : label is "soft_lutpair287";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][28]_i_1\ : label is "soft_lutpair287";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][29]_i_1\ : label is "soft_lutpair288";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][2]_i_1\ : label is "soft_lutpair274";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][30]_i_1\ : label is "soft_lutpair288";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][31]_i_1\ : label is "soft_lutpair289";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][3]_i_1\ : label is "soft_lutpair275";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][4]_i_1\ : label is "soft_lutpair275";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][5]_i_1\ : label is "soft_lutpair276";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][6]_i_1\ : label is "soft_lutpair276";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][7]_i_1\ : label is "soft_lutpair277";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][8]_i_1\ : label is "soft_lutpair277";
-  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][9]_i_1\ : label is "soft_lutpair278";
+  attribute SOFT_HLUTNM of locked_i_1 : label is "soft_lutpair274";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[ack]_i_1\ : label is "soft_lutpair290";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][0]_i_1\ : label is "soft_lutpair274";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][10]_i_1\ : label is "soft_lutpair279";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][11]_i_1\ : label is "soft_lutpair280";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][12]_i_1\ : label is "soft_lutpair280";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][13]_i_1\ : label is "soft_lutpair281";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][14]_i_1\ : label is "soft_lutpair281";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][15]_i_1\ : label is "soft_lutpair282";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][16]_i_1\ : label is "soft_lutpair282";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][17]_i_1\ : label is "soft_lutpair283";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][18]_i_1\ : label is "soft_lutpair283";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][19]_i_1\ : label is "soft_lutpair284";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][1]_i_1\ : label is "soft_lutpair275";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][20]_i_1\ : label is "soft_lutpair284";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][21]_i_1\ : label is "soft_lutpair285";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][22]_i_1\ : label is "soft_lutpair285";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][23]_i_1\ : label is "soft_lutpair286";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][24]_i_1\ : label is "soft_lutpair286";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][25]_i_1\ : label is "soft_lutpair287";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][26]_i_1\ : label is "soft_lutpair287";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][27]_i_1\ : label is "soft_lutpair288";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][28]_i_1\ : label is "soft_lutpair288";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][29]_i_1\ : label is "soft_lutpair289";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][2]_i_1\ : label is "soft_lutpair275";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][30]_i_1\ : label is "soft_lutpair289";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][31]_i_1\ : label is "soft_lutpair290";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][3]_i_1\ : label is "soft_lutpair276";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][4]_i_1\ : label is "soft_lutpair276";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][5]_i_1\ : label is "soft_lutpair277";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][6]_i_1\ : label is "soft_lutpair277";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][7]_i_1\ : label is "soft_lutpair278";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][8]_i_1\ : label is "soft_lutpair278";
+  attribute SOFT_HLUTNM of \response_reg_enabled.host_rsp_o[data][9]_i_1\ : label is "soft_lutpair279";
 begin
   \bus_rsp_o[err]\ <= \^bus_rsp_o[err]\;
   \request_reg_enabled.device_req_o_reg[burst]_0\ <= \^request_reg_enabled.device_req_o_reg[burst]_0\;
@@ -2572,7 +2572,7 @@ entity system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5 is
     \request_reg_enabled.device_req_o_reg[addr][17]_0\ : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     \request_reg_enabled.device_req_o_reg[addr][20]_0\ : out STD_LOGIC;
-    D : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 15 downto 0 );
     \request_reg_enabled.device_req_o_reg[addr][16]_0\ : out STD_LOGIC;
     \dev_12_req_o[data]\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
     \request_reg_enabled.device_req_o_reg[rw]_0\ : out STD_LOGIC_VECTOR ( 25 downto 0 );
@@ -2585,7 +2585,7 @@ entity system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5 is
     \request_reg_enabled.device_req_o_reg[addr][3]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \request_reg_enabled.device_req_o_reg[addr][3]_1\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \request_reg_enabled.device_req_o_reg[addr][4]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \port_in_reg[31]\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    \port_in_reg[15]\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
     \request_reg_enabled.device_req_o_reg[data][0]_0\ : out STD_LOGIC;
     \request_reg_enabled.device_req_o_reg[addr][16]_1\ : out STD_LOGIC;
     \request_reg_enabled.device_req_o_reg[data][1]_0\ : out STD_LOGIC;
@@ -2624,8 +2624,8 @@ entity system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5 is
     \w_pnt_reg[0]\ : in STD_LOGIC;
     \w_pnt_reg[0]_0\ : in STD_LOGIC;
     p_1_in : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \bus_rsp_o_reg[data][31]_0\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    \bus_rsp_o_reg[data][31]_1\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    \bus_rsp_o_reg[data][15]_0\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    gpio_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     \bus_rsp_o_reg[data][0]\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][1]\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][2]\ : in STD_LOGIC;
@@ -2641,39 +2641,23 @@ entity system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5 is
     \bus_rsp_o_reg[data][12]\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][13]\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][14]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][15]_0\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][16]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][17]_0\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][18]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][19]_0\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][20]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][21]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][22]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][23]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][24]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][25]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][26]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][27]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][28]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][29]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][30]_0\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][31]_2\ : in STD_LOGIC;
+    \bus_rsp_o_reg[data][15]_1\ : in STD_LOGIC;
     \ctrl_reg[enable]__0_0\ : in STD_LOGIC;
     \ctrl_reg[cpha]__0\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][2]_0\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \bus_rsp_o_reg[data][5]_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \bus_rsp_o_reg[data][9]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \bus_rsp_o_reg[data][16]\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][16]_0\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][16]_1\ : in STD_LOGIC;
     r_pnt : in STD_LOGIC;
     w_pnt : in STD_LOGIC;
-    \bus_rsp_o_reg[data][30]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \bus_rsp_o_reg[data][30]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     empty : in STD_LOGIC;
-    \bus_rsp_o_reg[data][31]_3\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][31]_4\ : in STD_LOGIC;
+    \bus_rsp_o_reg[data][31]_0\ : in STD_LOGIC;
+    \bus_rsp_o_reg[data][31]_1\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][0]_0\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][31]_5\ : in STD_LOGIC_VECTOR ( 30 downto 0 );
+    \bus_rsp_o_reg[data][31]_2\ : in STD_LOGIC_VECTOR ( 30 downto 0 );
     \bus_rsp_o_reg[data][3]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \bus_rsp_o_reg[data][9]_1\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][11]_0\ : in STD_LOGIC;
@@ -2682,7 +2666,7 @@ entity system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5 is
     \ctrl_reg[irq_rx_full]__0_2\ : in STD_LOGIC;
     \ctrl_reg[irq_tx_empty]__0_3\ : in STD_LOGIC;
     \ctrl_reg[irq_tx_nfull]__0_4\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][31]_6\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    \bus_rsp_o_reg[data][31]_3\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \device_rsp_i[ack]\ : in STD_LOGIC;
     clk : in STD_LOGIC;
     rstn_sys : in STD_LOGIC;
@@ -2699,9 +2683,9 @@ end system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5;
 
 architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5 is
   signal \^bus_req_i[stb]\ : STD_LOGIC;
-  signal \bus_rsp_o[data][31]_i_2_n_0\ : STD_LOGIC;
-  signal \bus_rsp_o[data][31]_i_3_n_0\ : STD_LOGIC;
-  signal \bus_rsp_o[data][31]_i_5_n_0\ : STD_LOGIC;
+  signal \bus_rsp_o[data][15]_i_2_n_0\ : STD_LOGIC;
+  signal \bus_rsp_o[data][15]_i_3_n_0\ : STD_LOGIC;
+  signal \bus_rsp_o[data][15]_i_5_n_0\ : STD_LOGIC;
   signal \^dev_00_req_o[addr]\ : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal \^dev_00_req_o[rw]\ : STD_LOGIC;
   signal \^dev_12_req_o[data]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -2717,96 +2701,98 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5 is
   signal \request_reg_enabled.device_req_o_reg[addr_n_0_][19]\ : STD_LOGIC;
   signal \request_reg_enabled.device_req_o_reg[addr_n_0_][20]\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][0]_i_1__1\ : label is "soft_lutpair215";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][0]_i_1__2\ : label is "soft_lutpair231";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][10]_i_1__1\ : label is "soft_lutpair226";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][10]_i_1__2\ : label is "soft_lutpair202";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][11]_i_1__1\ : label is "soft_lutpair226";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][11]_i_1__2\ : label is "soft_lutpair196";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][12]_i_1__1\ : label is "soft_lutpair225";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][12]_i_1__2\ : label is "soft_lutpair196";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][13]_i_1__0\ : label is "soft_lutpair207";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][13]_i_1__1\ : label is "soft_lutpair225";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][13]_i_1__2\ : label is "soft_lutpair202";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][14]_i_1__0\ : label is "soft_lutpair207";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][14]_i_1__1\ : label is "soft_lutpair224";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][14]_i_1__2\ : label is "soft_lutpair201";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][15]_i_1__0\ : label is "soft_lutpair208";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][15]_i_1__1\ : label is "soft_lutpair224";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][15]_i_1__2\ : label is "soft_lutpair197";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][16]_i_1__2\ : label is "soft_lutpair223";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][16]_i_1__3\ : label is "soft_lutpair197";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][17]_i_1__0\ : label is "soft_lutpair192";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][17]_i_1__1\ : label is "soft_lutpair208";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][17]_i_1__2\ : label is "soft_lutpair223";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][17]_i_1__3\ : label is "soft_lutpair198";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][18]_i_1__0\ : label is "soft_lutpair192";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][18]_i_1__2\ : label is "soft_lutpair222";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][18]_i_1__3\ : label is "soft_lutpair188";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][19]_i_1__1\ : label is "soft_lutpair222";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][19]_i_1__2\ : label is "soft_lutpair198";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][1]_i_1__2\ : label is "soft_lutpair231";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][1]_i_1__3\ : label is "soft_lutpair195";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][20]_i_1__0\ : label is "soft_lutpair209";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][20]_i_1__1\ : label is "soft_lutpair221";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][20]_i_1__2\ : label is "soft_lutpair199";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][21]_i_1__1\ : label is "soft_lutpair221";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][21]_i_1__2\ : label is "soft_lutpair199";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][22]_i_1__0\ : label is "soft_lutpair209";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][22]_i_1__1\ : label is "soft_lutpair220";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][22]_i_1__2\ : label is "soft_lutpair200";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][23]_i_1__0\ : label is "soft_lutpair210";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][23]_i_1__1\ : label is "soft_lutpair220";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][23]_i_1__2\ : label is "soft_lutpair200";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][24]_i_1__0\ : label is "soft_lutpair210";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][24]_i_1__1\ : label is "soft_lutpair219";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][25]_i_1__0\ : label is "soft_lutpair211";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][25]_i_1__1\ : label is "soft_lutpair219";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][26]_i_1__0\ : label is "soft_lutpair211";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][26]_i_1__1\ : label is "soft_lutpair218";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][27]_i_1__0\ : label is "soft_lutpair212";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][27]_i_1__1\ : label is "soft_lutpair218";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][28]_i_1__0\ : label is "soft_lutpair212";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][28]_i_1__1\ : label is "soft_lutpair217";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][29]_i_1__0\ : label is "soft_lutpair213";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][29]_i_1__1\ : label is "soft_lutpair217";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][2]_i_1__2\ : label is "soft_lutpair230";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][30]_i_1__1\ : label is "soft_lutpair213";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][30]_i_1__2\ : label is "soft_lutpair216";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][30]_i_1__3\ : label is "soft_lutpair201";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][31]_i_1__1\ : label is "soft_lutpair214";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][31]_i_1__2\ : label is "soft_lutpair216";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][31]_i_1__3\ : label is "soft_lutpair188";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][3]_i_1__2\ : label is "soft_lutpair230";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][4]_i_1__1\ : label is "soft_lutpair205";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][4]_i_1__2\ : label is "soft_lutpair229";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][5]_i_1__1\ : label is "soft_lutpair205";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][5]_i_1__2\ : label is "soft_lutpair229";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][6]_i_1__1\ : label is "soft_lutpair206";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][6]_i_1__2\ : label is "soft_lutpair228";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][7]_i_1__1\ : label is "soft_lutpair206";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][7]_i_1__2\ : label is "soft_lutpair228";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][0]_i_1__1\ : label is "soft_lutpair216";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][0]_i_1__2\ : label is "soft_lutpair232";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][10]_i_1__1\ : label is "soft_lutpair227";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][10]_i_1__2\ : label is "soft_lutpair203";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][11]_i_1__1\ : label is "soft_lutpair227";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][11]_i_1__2\ : label is "soft_lutpair197";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][12]_i_1__1\ : label is "soft_lutpair226";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][12]_i_1__2\ : label is "soft_lutpair197";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][13]_i_1__0\ : label is "soft_lutpair208";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][13]_i_1__1\ : label is "soft_lutpair226";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][13]_i_1__2\ : label is "soft_lutpair203";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][14]_i_1__0\ : label is "soft_lutpair208";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][14]_i_1__1\ : label is "soft_lutpair225";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][14]_i_1__2\ : label is "soft_lutpair202";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][15]_i_1__0\ : label is "soft_lutpair209";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][15]_i_1__1\ : label is "soft_lutpair225";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][15]_i_1__2\ : label is "soft_lutpair198";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][15]_i_2\ : label is "soft_lutpair191";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][15]_i_3\ : label is "soft_lutpair191";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][16]_i_1__1\ : label is "soft_lutpair224";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][16]_i_1__2\ : label is "soft_lutpair198";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][17]_i_1\ : label is "soft_lutpair193";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][17]_i_1__0\ : label is "soft_lutpair209";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][17]_i_1__1\ : label is "soft_lutpair224";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][17]_i_1__2\ : label is "soft_lutpair199";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][18]_i_1\ : label is "soft_lutpair193";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][18]_i_1__1\ : label is "soft_lutpair223";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][18]_i_1__2\ : label is "soft_lutpair188";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][19]_i_1__0\ : label is "soft_lutpair223";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][19]_i_1__1\ : label is "soft_lutpair199";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][1]_i_1__2\ : label is "soft_lutpair232";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][1]_i_1__3\ : label is "soft_lutpair196";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][20]_i_1\ : label is "soft_lutpair210";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][20]_i_1__0\ : label is "soft_lutpair222";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][20]_i_1__1\ : label is "soft_lutpair200";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][21]_i_1__0\ : label is "soft_lutpair222";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][21]_i_1__1\ : label is "soft_lutpair200";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][22]_i_1\ : label is "soft_lutpair210";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][22]_i_1__0\ : label is "soft_lutpair221";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][22]_i_1__1\ : label is "soft_lutpair201";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][23]_i_1\ : label is "soft_lutpair211";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][23]_i_1__0\ : label is "soft_lutpair221";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][23]_i_1__1\ : label is "soft_lutpair201";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][24]_i_1\ : label is "soft_lutpair211";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][24]_i_1__0\ : label is "soft_lutpair220";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][25]_i_1\ : label is "soft_lutpair212";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][25]_i_1__0\ : label is "soft_lutpair220";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][26]_i_1\ : label is "soft_lutpair212";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][26]_i_1__0\ : label is "soft_lutpair219";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][27]_i_1\ : label is "soft_lutpair213";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][27]_i_1__0\ : label is "soft_lutpair219";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][28]_i_1\ : label is "soft_lutpair213";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][28]_i_1__0\ : label is "soft_lutpair218";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][29]_i_1\ : label is "soft_lutpair214";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][29]_i_1__0\ : label is "soft_lutpair218";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][2]_i_1__2\ : label is "soft_lutpair231";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][30]_i_1__0\ : label is "soft_lutpair214";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][30]_i_1__1\ : label is "soft_lutpair217";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][30]_i_1__2\ : label is "soft_lutpair202";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][31]_i_1__0\ : label is "soft_lutpair215";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][31]_i_1__1\ : label is "soft_lutpair217";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][31]_i_1__2\ : label is "soft_lutpair188";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][3]_i_1__2\ : label is "soft_lutpair231";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][4]_i_1__1\ : label is "soft_lutpair206";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][4]_i_1__2\ : label is "soft_lutpair230";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][5]_i_1__1\ : label is "soft_lutpair206";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][5]_i_1__2\ : label is "soft_lutpair230";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][6]_i_1__1\ : label is "soft_lutpair207";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][6]_i_1__2\ : label is "soft_lutpair229";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][7]_i_1__1\ : label is "soft_lutpair207";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][7]_i_1__2\ : label is "soft_lutpair229";
   attribute SOFT_HLUTNM of \bus_rsp_o[data][7]_i_1__3\ : label is "soft_lutpair187";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][8]_i_1__0\ : label is "soft_lutpair204";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][8]_i_1__2\ : label is "soft_lutpair227";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][8]_i_1__3\ : label is "soft_lutpair195";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][9]_i_1__0\ : label is "soft_lutpair204";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][9]_i_1__2\ : label is "soft_lutpair227";
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][9]_i_1__3\ : label is "soft_lutpair203";
-  attribute SOFT_HLUTNM of \bus_rsp_o[err]_i_1\ : label is "soft_lutpair194";
-  attribute SOFT_HLUTNM of \ctrl[enable]_i_1\ : label is "soft_lutpair191";
-  attribute SOFT_HLUTNM of \ctrl[enable]_i_1__0\ : label is "soft_lutpair214";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][8]_i_1__0\ : label is "soft_lutpair205";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][8]_i_1__2\ : label is "soft_lutpair228";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][8]_i_1__3\ : label is "soft_lutpair196";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][9]_i_1__0\ : label is "soft_lutpair205";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][9]_i_1__2\ : label is "soft_lutpair228";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][9]_i_1__3\ : label is "soft_lutpair204";
+  attribute SOFT_HLUTNM of \bus_rsp_o[err]_i_1\ : label is "soft_lutpair195";
+  attribute SOFT_HLUTNM of \ctrl[enable]_i_1\ : label is "soft_lutpair192";
+  attribute SOFT_HLUTNM of \ctrl[enable]_i_1__0\ : label is "soft_lutpair215";
   attribute SOFT_HLUTNM of \ctrl[enable]_i_1__1\ : label is "soft_lutpair187";
-  attribute SOFT_HLUTNM of \ctrl[prsc][2]_i_1\ : label is "soft_lutpair191";
-  attribute SOFT_HLUTNM of \fifo_memory_small.fifo[0][35]_i_1\ : label is "soft_lutpair193";
-  attribute SOFT_HLUTNM of \irq_en[31]_i_1\ : label is "soft_lutpair189";
-  attribute SOFT_HLUTNM of \irq_pol[31]_i_1\ : label is "soft_lutpair189";
-  attribute SOFT_HLUTNM of \irq_typ[31]_i_1\ : label is "soft_lutpair190";
+  attribute SOFT_HLUTNM of \ctrl[prsc][2]_i_1\ : label is "soft_lutpair192";
+  attribute SOFT_HLUTNM of \fifo_memory_small.fifo[0][35]_i_1\ : label is "soft_lutpair194";
+  attribute SOFT_HLUTNM of \irq_en[15]_i_1\ : label is "soft_lutpair189";
+  attribute SOFT_HLUTNM of \irq_pol[15]_i_1\ : label is "soft_lutpair189";
+  attribute SOFT_HLUTNM of \irq_typ[15]_i_1\ : label is "soft_lutpair190";
   attribute SOFT_HLUTNM of \port_out[15]_i_1\ : label is "soft_lutpair190";
-  attribute SOFT_HLUTNM of rden_i_1 : label is "soft_lutpair203";
-  attribute SOFT_HLUTNM of rx_last_i_1 : label is "soft_lutpair193";
-  attribute SOFT_HLUTNM of \sysinfo[0][31]_i_1\ : label is "soft_lutpair194";
-  attribute SOFT_HLUTNM of \tx_route[3]_i_1\ : label is "soft_lutpair215";
+  attribute SOFT_HLUTNM of rden_i_1 : label is "soft_lutpair204";
+  attribute SOFT_HLUTNM of rx_last_i_1 : label is "soft_lutpair194";
+  attribute SOFT_HLUTNM of \sysinfo[0][31]_i_1\ : label is "soft_lutpair195";
+  attribute SOFT_HLUTNM of \tx_route[3]_i_1\ : label is "soft_lutpair216";
 begin
   \bus_req_i[stb]\ <= \^bus_req_i[stb]\;
   \dev_00_req_o[addr]\(9 downto 0) <= \^dev_00_req_o[addr]\(9 downto 0);
@@ -2887,13 +2873,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(0),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(0),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(0),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(0),
       I4 => \bus_rsp_o_reg[data][0]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(0)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(0)
     );
 \bus_rsp_o[data][0]_i_1__0\: unisim.vcomponents.LUT5
     generic map(
@@ -2922,7 +2908,7 @@ begin
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
-      I1 => \bus_rsp_o_reg[data][31]_6\(0),
+      I1 => \bus_rsp_o_reg[data][31]_3\(0),
       I2 => \^dev_00_req_o[addr]\(1),
       I3 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(0)
@@ -2944,13 +2930,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(10),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(10),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(10),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(10),
       I4 => \bus_rsp_o_reg[data][10]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(10)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(10)
     );
 \bus_rsp_o[data][10]_i_1__0\: unisim.vcomponents.LUT6
     generic map(
@@ -2959,7 +2945,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][31]_5\(9),
+      I2 => \bus_rsp_o_reg[data][31]_2\(9),
       I3 => \^dev_00_req_o[addr]\(1),
       I4 => \bus_rsp_o_reg[data][11]_0\,
       I5 => \^dev_00_req_o[addr]\(0),
@@ -2972,7 +2958,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
-      I2 => \bus_rsp_o_reg[data][31]_6\(10),
+      I2 => \bus_rsp_o_reg[data][31]_3\(10),
       I3 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(10)
     );
@@ -2992,13 +2978,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(11),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(11),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(11),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(11),
       I4 => \bus_rsp_o_reg[data][11]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(11)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(11)
     );
 \bus_rsp_o[data][11]_i_1__0\: unisim.vcomponents.LUT6
     generic map(
@@ -3007,7 +2993,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][31]_5\(10),
+      I2 => \bus_rsp_o_reg[data][31]_2\(10),
       I3 => \^dev_00_req_o[addr]\(1),
       I4 => \bus_rsp_o_reg[data][11]_0\,
       I5 => \^dev_00_req_o[addr]\(0),
@@ -3021,7 +3007,7 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(11),
+      I3 => \bus_rsp_o_reg[data][31]_3\(11),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(11)
     );
 \bus_rsp_o[data][11]_i_1__2\: unisim.vcomponents.LUT4
@@ -3040,13 +3026,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(12),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(12),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(12),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(12),
       I4 => \bus_rsp_o_reg[data][12]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(12)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(12)
     );
 \bus_rsp_o[data][12]_i_1__0\: unisim.vcomponents.LUT6
     generic map(
@@ -3055,7 +3041,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][31]_5\(11),
+      I2 => \bus_rsp_o_reg[data][31]_2\(11),
       I3 => \^dev_00_req_o[addr]\(1),
       I4 => rx_last,
       I5 => \^dev_00_req_o[addr]\(0),
@@ -3069,7 +3055,7 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(12),
+      I3 => \bus_rsp_o_reg[data][31]_3\(12),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(12)
     );
 \bus_rsp_o[data][12]_i_1__2\: unisim.vcomponents.LUT4
@@ -3088,13 +3074,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(13),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(13),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(13),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(13),
       I4 => \bus_rsp_o_reg[data][13]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(13)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(13)
     );
 \bus_rsp_o[data][13]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
@@ -3104,7 +3090,7 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(12),
+      I3 => \bus_rsp_o_reg[data][31]_2\(12),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(13)
     );
 \bus_rsp_o[data][13]_i_1__1\: unisim.vcomponents.LUT4
@@ -3114,7 +3100,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
-      I2 => \bus_rsp_o_reg[data][31]_6\(13),
+      I2 => \bus_rsp_o_reg[data][31]_3\(13),
       I3 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(13)
     );
@@ -3134,13 +3120,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(14),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(14),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(14),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(14),
       I4 => \bus_rsp_o_reg[data][14]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(14)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(14)
     );
 \bus_rsp_o[data][14]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
@@ -3150,7 +3136,7 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(13),
+      I3 => \bus_rsp_o_reg[data][31]_2\(13),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(14)
     );
 \bus_rsp_o[data][14]_i_1__1\: unisim.vcomponents.LUT4
@@ -3161,7 +3147,7 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(14),
+      I3 => \bus_rsp_o_reg[data][31]_3\(14),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(14)
     );
 \bus_rsp_o[data][14]_i_1__2\: unisim.vcomponents.LUT4
@@ -3180,13 +3166,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(15),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(15),
-      I4 => \bus_rsp_o_reg[data][15]_0\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(15)
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(15),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(15),
+      I4 => \bus_rsp_o_reg[data][15]_1\,
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(15)
     );
 \bus_rsp_o[data][15]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
@@ -3196,7 +3182,7 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(14),
+      I3 => \bus_rsp_o_reg[data][31]_2\(14),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(15)
     );
 \bus_rsp_o[data][15]_i_1__1\: unisim.vcomponents.LUT4
@@ -3206,7 +3192,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
-      I2 => \bus_rsp_o_reg[data][31]_6\(15),
+      I2 => \bus_rsp_o_reg[data][31]_3\(15),
       I3 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(15)
     );
@@ -3221,56 +3207,77 @@ begin
       I3 => \bus_rsp_o_reg[data][15]\(9),
       O => \request_reg_enabled.device_req_o_reg[rw]_0\(15)
     );
-\bus_rsp_o[data][16]_i_1\: unisim.vcomponents.LUT6
+\bus_rsp_o[data][15]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFF888F888F888"
+      INIT => X"04040004"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(16),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(16),
-      I4 => \bus_rsp_o_reg[data][16]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(16)
+      I0 => \^dev_00_req_o[rw]\,
+      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
+      I2 => \^dev_00_req_o[addr]\(2),
+      I3 => \^dev_00_req_o[addr]\(0),
+      I4 => \^dev_00_req_o[addr]\(1),
+      O => \bus_rsp_o[data][15]_i_2_n_0\
     );
-\bus_rsp_o[data][16]_i_1__0\: unisim.vcomponents.LUT5
+\bus_rsp_o[data][15]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00000008"
+    )
+        port map (
+      I0 => \^dev_00_req_o[addr]\(0),
+      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
+      I2 => \^dev_00_req_o[rw]\,
+      I3 => \^dev_00_req_o[addr]\(2),
+      I4 => \^dev_00_req_o[addr]\(1),
+      O => \bus_rsp_o[data][15]_i_3_n_0\
+    );
+\bus_rsp_o[data][15]_i_5\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"20"
+    )
+        port map (
+      I0 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
+      I1 => \^dev_00_req_o[rw]\,
+      I2 => \^dev_00_req_o[addr]\(2),
+      O => \bus_rsp_o[data][15]_i_5_n_0\
+    );
+\bus_rsp_o[data][16]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000220"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][16]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][16]_0\,
-      I3 => \bus_rsp_o_reg[data][16]_1\,
+      I2 => \bus_rsp_o_reg[data][16]\,
+      I3 => \bus_rsp_o_reg[data][16]_0\,
       I4 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[rw]_3\(10)
     );
-\bus_rsp_o[data][16]_i_1__1\: unisim.vcomponents.LUT6
+\bus_rsp_o[data][16]_i_1__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"2000200020222000"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][31]_5\(15),
+      I2 => \bus_rsp_o_reg[data][31]_2\(15),
       I3 => \^dev_00_req_o[addr]\(1),
       I4 => \ctrl_reg[irq_rx_nempty]__0_1\,
       I5 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(16)
     );
-\bus_rsp_o[data][16]_i_1__2\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][16]_i_1__1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"AA08"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
-      I1 => \bus_rsp_o_reg[data][31]_6\(16),
+      I1 => \bus_rsp_o_reg[data][31]_3\(16),
       I2 => \^dev_00_req_o[addr]\(1),
       I3 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(16)
     );
-\bus_rsp_o[data][16]_i_1__3\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][16]_i_1__2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0400"
     )
@@ -3281,20 +3288,7 @@ begin
       I3 => \rx_fifo[avail]\,
       O => \request_reg_enabled.device_req_o_reg[rw]_0\(16)
     );
-\bus_rsp_o[data][17]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(17),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(17),
-      I4 => \bus_rsp_o_reg[data][17]_0\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(17)
-    );
-\bus_rsp_o[data][17]_i_1__0\: unisim.vcomponents.LUT5
+\bus_rsp_o[data][17]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00002002"
     )
@@ -3306,7 +3300,7 @@ begin
       I4 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[rw]_3\(11)
     );
-\bus_rsp_o[data][17]_i_1__1\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][17]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2000"
     )
@@ -3314,21 +3308,21 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(16),
+      I3 => \bus_rsp_o_reg[data][31]_2\(16),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(17)
     );
-\bus_rsp_o[data][17]_i_1__2\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][17]_i_1__1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"00A8"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
-      I2 => \bus_rsp_o_reg[data][31]_6\(17),
+      I2 => \bus_rsp_o_reg[data][31]_3\(17),
       I3 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(17)
     );
-\bus_rsp_o[data][17]_i_1__3\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][17]_i_1__2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0004"
     )
@@ -3339,20 +3333,7 @@ begin
       I3 => \bus_rsp_o_reg[data][17]\,
       O => \request_reg_enabled.device_req_o_reg[rw]_0\(17)
     );
-\bus_rsp_o[data][18]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(18),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(18),
-      I4 => \bus_rsp_o_reg[data][18]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(18)
-    );
-\bus_rsp_o[data][18]_i_1__0\: unisim.vcomponents.LUT5
+\bus_rsp_o[data][18]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000220"
     )
@@ -3364,31 +3345,31 @@ begin
       I4 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[rw]_3\(12)
     );
-\bus_rsp_o[data][18]_i_1__1\: unisim.vcomponents.LUT6
+\bus_rsp_o[data][18]_i_1__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"2000200020222000"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][31]_5\(17),
+      I2 => \bus_rsp_o_reg[data][31]_2\(17),
       I3 => \^dev_00_req_o[addr]\(1),
       I4 => \ctrl_reg[irq_rx_full]__0_2\,
       I5 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(18)
     );
-\bus_rsp_o[data][18]_i_1__2\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][18]_i_1__1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"00A8"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
-      I2 => \bus_rsp_o_reg[data][31]_6\(18),
+      I2 => \bus_rsp_o_reg[data][31]_3\(18),
       I3 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(18)
     );
-\bus_rsp_o[data][18]_i_1__3\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][18]_i_1__2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0004"
     )
@@ -3401,31 +3382,18 @@ begin
     );
 \bus_rsp_o[data][19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(19),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(19),
-      I4 => \bus_rsp_o_reg[data][19]_0\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(19)
-    );
-\bus_rsp_o[data][19]_i_1__0\: unisim.vcomponents.LUT6
-    generic map(
       INIT => X"2000200020222000"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][31]_5\(18),
+      I2 => \bus_rsp_o_reg[data][31]_2\(18),
       I3 => \^dev_00_req_o[addr]\(1),
       I4 => \ctrl_reg[irq_tx_empty]__0_3\,
       I5 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(19)
     );
-\bus_rsp_o[data][19]_i_1__1\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][19]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0200"
     )
@@ -3433,10 +3401,10 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(19),
+      I3 => \bus_rsp_o_reg[data][31]_3\(19),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(19)
     );
-\bus_rsp_o[data][19]_i_1__2\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][19]_i_1__1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0400"
     )
@@ -3452,13 +3420,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(1),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(1),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(1),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(1),
       I4 => \bus_rsp_o_reg[data][1]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(1)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(1)
     );
 \bus_rsp_o[data][1]_i_1__0\: unisim.vcomponents.LUT5
     generic map(
@@ -3479,7 +3447,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][31]_5\(0),
+      I2 => \bus_rsp_o_reg[data][31]_2\(0),
       I3 => \^dev_00_req_o[addr]\(1),
       I4 => \^dev_00_req_o[addr]\(0),
       I5 => \bus_rsp_o_reg[data][3]_0\(0),
@@ -3491,7 +3459,7 @@ begin
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
-      I1 => \bus_rsp_o_reg[data][31]_6\(1),
+      I1 => \bus_rsp_o_reg[data][31]_3\(1),
       I2 => \^dev_00_req_o[addr]\(0),
       I3 => \^dev_00_req_o[addr]\(1),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(1)
@@ -3507,20 +3475,7 @@ begin
       I3 => Q(1),
       O => \request_reg_enabled.device_req_o_reg[rw]_0\(1)
     );
-\bus_rsp_o[data][20]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(20),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(20),
-      I4 => \bus_rsp_o_reg[data][20]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(20)
-    );
-\bus_rsp_o[data][20]_i_1__0\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][20]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2000"
     )
@@ -3528,10 +3483,10 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(19),
+      I3 => \bus_rsp_o_reg[data][31]_2\(19),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(20)
     );
-\bus_rsp_o[data][20]_i_1__1\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][20]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0200"
     )
@@ -3539,10 +3494,10 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(20),
+      I3 => \bus_rsp_o_reg[data][31]_3\(20),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(20)
     );
-\bus_rsp_o[data][20]_i_1__2\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][20]_i_1__1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0400"
     )
@@ -3555,31 +3510,18 @@ begin
     );
 \bus_rsp_o[data][21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(21),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(21),
-      I4 => \bus_rsp_o_reg[data][21]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(21)
-    );
-\bus_rsp_o[data][21]_i_1__0\: unisim.vcomponents.LUT6
-    generic map(
       INIT => X"2000200020222000"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][31]_5\(20),
+      I2 => \bus_rsp_o_reg[data][31]_2\(20),
       I3 => \^dev_00_req_o[addr]\(1),
       I4 => \ctrl_reg[irq_tx_nfull]__0_4\,
       I5 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(21)
     );
-\bus_rsp_o[data][21]_i_1__1\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][21]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0200"
     )
@@ -3587,10 +3529,10 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(21),
+      I3 => \bus_rsp_o_reg[data][31]_3\(21),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(21)
     );
-\bus_rsp_o[data][21]_i_1__2\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][21]_i_1__1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0400"
     )
@@ -3601,20 +3543,7 @@ begin
       I3 => \ctrl_reg[irq_rx_full]__0\,
       O => \request_reg_enabled.device_req_o_reg[rw]_0\(21)
     );
-\bus_rsp_o[data][22]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(22),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(22),
-      I4 => \bus_rsp_o_reg[data][22]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(22)
-    );
-\bus_rsp_o[data][22]_i_1__0\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][22]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2000"
     )
@@ -3622,10 +3551,10 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(21),
+      I3 => \bus_rsp_o_reg[data][31]_2\(21),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(22)
     );
-\bus_rsp_o[data][22]_i_1__1\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][22]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0200"
     )
@@ -3633,10 +3562,10 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(22),
+      I3 => \bus_rsp_o_reg[data][31]_3\(22),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(22)
     );
-\bus_rsp_o[data][22]_i_1__2\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][22]_i_1__1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0400"
     )
@@ -3647,20 +3576,7 @@ begin
       I3 => \ctrl_reg[irq_tx_empty]__0\,
       O => \request_reg_enabled.device_req_o_reg[rw]_0\(22)
     );
-\bus_rsp_o[data][23]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(23),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(23),
-      I4 => \bus_rsp_o_reg[data][23]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(23)
-    );
-\bus_rsp_o[data][23]_i_1__0\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][23]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2000"
     )
@@ -3668,10 +3584,10 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(22),
+      I3 => \bus_rsp_o_reg[data][31]_2\(22),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(23)
     );
-\bus_rsp_o[data][23]_i_1__1\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][23]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0200"
     )
@@ -3679,10 +3595,10 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(23),
+      I3 => \bus_rsp_o_reg[data][31]_3\(23),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(23)
     );
-\bus_rsp_o[data][23]_i_1__2\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][23]_i_1__1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0400"
     )
@@ -3693,20 +3609,7 @@ begin
       I3 => \ctrl_reg[irq_tx_nfull]__0\,
       O => \request_reg_enabled.device_req_o_reg[rw]_0\(23)
     );
-\bus_rsp_o[data][24]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(24),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(24),
-      I4 => \bus_rsp_o_reg[data][24]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(24)
-    );
-\bus_rsp_o[data][24]_i_1__0\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][24]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2000"
     )
@@ -3714,139 +3617,87 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(23),
+      I3 => \bus_rsp_o_reg[data][31]_2\(23),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(24)
     );
-\bus_rsp_o[data][24]_i_1__1\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][24]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"AA08"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
-      I1 => \bus_rsp_o_reg[data][31]_6\(24),
+      I1 => \bus_rsp_o_reg[data][31]_3\(24),
       I2 => \^dev_00_req_o[addr]\(1),
       I3 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(24)
     );
-\bus_rsp_o[data][25]_i_1\: unisim.vcomponents.LUT6
+\bus_rsp_o[data][25]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFF888F888F888"
+      INIT => X"2000"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(25),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(25),
-      I4 => \bus_rsp_o_reg[data][25]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(25)
+      I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
+      I1 => \^dev_00_req_o[rw]\,
+      I2 => \^dev_00_req_o[addr]\(1),
+      I3 => \bus_rsp_o_reg[data][31]_2\(24),
+      O => \request_reg_enabled.device_req_o_reg[rw]_5\(25)
     );
 \bus_rsp_o[data][25]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2000"
-    )
-        port map (
-      I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
-      I1 => \^dev_00_req_o[rw]\,
-      I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(24),
-      O => \request_reg_enabled.device_req_o_reg[rw]_5\(25)
-    );
-\bus_rsp_o[data][25]_i_1__1\: unisim.vcomponents.LUT4
-    generic map(
       INIT => X"0200"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(25),
+      I3 => \bus_rsp_o_reg[data][31]_3\(25),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(25)
     );
-\bus_rsp_o[data][26]_i_1\: unisim.vcomponents.LUT6
+\bus_rsp_o[data][26]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFF888F888F888"
+      INIT => X"2000"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(26),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(26),
-      I4 => \bus_rsp_o_reg[data][26]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(26)
+      I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
+      I1 => \^dev_00_req_o[rw]\,
+      I2 => \^dev_00_req_o[addr]\(1),
+      I3 => \bus_rsp_o_reg[data][31]_2\(25),
+      O => \request_reg_enabled.device_req_o_reg[rw]_5\(26)
     );
 \bus_rsp_o[data][26]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2000"
-    )
-        port map (
-      I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
-      I1 => \^dev_00_req_o[rw]\,
-      I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(25),
-      O => \request_reg_enabled.device_req_o_reg[rw]_5\(26)
-    );
-\bus_rsp_o[data][26]_i_1__1\: unisim.vcomponents.LUT4
-    generic map(
       INIT => X"0200"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(26),
+      I3 => \bus_rsp_o_reg[data][31]_3\(26),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(26)
     );
-\bus_rsp_o[data][27]_i_1\: unisim.vcomponents.LUT6
+\bus_rsp_o[data][27]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFF888F888F888"
+      INIT => X"2000"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(27),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(27),
-      I4 => \bus_rsp_o_reg[data][27]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(27)
+      I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
+      I1 => \^dev_00_req_o[rw]\,
+      I2 => \^dev_00_req_o[addr]\(1),
+      I3 => \bus_rsp_o_reg[data][31]_2\(26),
+      O => \request_reg_enabled.device_req_o_reg[rw]_5\(27)
     );
 \bus_rsp_o[data][27]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2000"
-    )
-        port map (
-      I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
-      I1 => \^dev_00_req_o[rw]\,
-      I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(26),
-      O => \request_reg_enabled.device_req_o_reg[rw]_5\(27)
-    );
-\bus_rsp_o[data][27]_i_1__1\: unisim.vcomponents.LUT4
-    generic map(
       INIT => X"00A8"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(0),
-      I2 => \bus_rsp_o_reg[data][31]_6\(27),
+      I2 => \bus_rsp_o_reg[data][31]_3\(27),
       I3 => \^dev_00_req_o[addr]\(1),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(27)
     );
-\bus_rsp_o[data][28]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(28),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(28),
-      I4 => \bus_rsp_o_reg[data][28]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(28)
-    );
-\bus_rsp_o[data][28]_i_1__0\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][28]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2000"
     )
@@ -3854,34 +3705,21 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(27),
+      I3 => \bus_rsp_o_reg[data][31]_2\(27),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(28)
     );
-\bus_rsp_o[data][28]_i_1__1\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][28]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"00A8"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(0),
-      I2 => \bus_rsp_o_reg[data][31]_6\(28),
+      I2 => \bus_rsp_o_reg[data][31]_3\(28),
       I3 => \^dev_00_req_o[addr]\(1),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(28)
     );
-\bus_rsp_o[data][29]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(29),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(29),
-      I4 => \bus_rsp_o_reg[data][29]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(29)
-    );
-\bus_rsp_o[data][29]_i_1__0\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][29]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2000"
     )
@@ -3889,17 +3727,17 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(28),
+      I3 => \bus_rsp_o_reg[data][31]_2\(28),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(29)
     );
-\bus_rsp_o[data][29]_i_1__1\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][29]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"00A8"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
-      I2 => \bus_rsp_o_reg[data][31]_6\(29),
+      I2 => \bus_rsp_o_reg[data][31]_3\(29),
       I3 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(29)
     );
@@ -3908,13 +3746,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(2),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(2),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(2),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(2),
       I4 => \bus_rsp_o_reg[data][2]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(2)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(2)
     );
 \bus_rsp_o[data][2]_i_1__0\: unisim.vcomponents.LUT5
     generic map(
@@ -3935,7 +3773,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][31]_5\(1),
+      I2 => \bus_rsp_o_reg[data][31]_2\(1),
       I3 => \^dev_00_req_o[addr]\(1),
       I4 => \^dev_00_req_o[addr]\(0),
       I5 => \bus_rsp_o_reg[data][3]_0\(1),
@@ -3947,7 +3785,7 @@ begin
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
-      I1 => \bus_rsp_o_reg[data][31]_6\(2),
+      I1 => \bus_rsp_o_reg[data][31]_3\(2),
       I2 => \^dev_00_req_o[addr]\(0),
       I3 => \^dev_00_req_o[addr]\(1),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(2)
@@ -3964,31 +3802,18 @@ begin
       I4 => Q(2),
       O => \request_reg_enabled.device_req_o_reg[rw]_0\(2)
     );
-\bus_rsp_o[data][30]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(30),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(30),
-      I4 => \bus_rsp_o_reg[data][30]_0\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(30)
-    );
-\bus_rsp_o[data][30]_i_1__0\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][30]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0020"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][16]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][30]_1\(0),
+      I2 => \bus_rsp_o_reg[data][30]_0\(0),
       I3 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[rw]_3\(13)
     );
-\bus_rsp_o[data][30]_i_1__1\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][30]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2000"
     )
@@ -3996,21 +3821,21 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(29),
+      I3 => \bus_rsp_o_reg[data][31]_2\(29),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(30)
     );
-\bus_rsp_o[data][30]_i_1__2\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][30]_i_1__1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"00A8"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(0),
-      I2 => \bus_rsp_o_reg[data][31]_6\(30),
+      I2 => \bus_rsp_o_reg[data][31]_3\(30),
       I3 => \^dev_00_req_o[addr]\(1),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(30)
     );
-\bus_rsp_o[data][30]_i_1__3\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][30]_i_1__2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0400"
     )
@@ -4023,31 +3848,18 @@ begin
     );
 \bus_rsp_o[data][31]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFF888F888F888"
-    )
-        port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(31),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(31),
-      I4 => \bus_rsp_o_reg[data][31]_2\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(31)
-    );
-\bus_rsp_o[data][31]_i_1__0\: unisim.vcomponents.LUT6
-    generic map(
       INIT => X"0000000022222202"
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][16]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => empty,
-      I3 => \bus_rsp_o_reg[data][31]_3\,
-      I4 => \bus_rsp_o_reg[data][31]_4\,
+      I3 => \bus_rsp_o_reg[data][31]_0\,
+      I4 => \bus_rsp_o_reg[data][31]_1\,
       I5 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[rw]_3\(14)
     );
-\bus_rsp_o[data][31]_i_1__1\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][31]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2000"
     )
@@ -4055,10 +3867,10 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(30),
+      I3 => \bus_rsp_o_reg[data][31]_2\(30),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(31)
     );
-\bus_rsp_o[data][31]_i_1__2\: unisim.vcomponents.LUT4
+\bus_rsp_o[data][31]_i_1__1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0200"
     )
@@ -4066,10 +3878,10 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(31),
+      I3 => \bus_rsp_o_reg[data][31]_3\(31),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(31)
     );
-\bus_rsp_o[data][31]_i_1__3\: unisim.vcomponents.LUT5
+\bus_rsp_o[data][31]_i_1__2\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"04040400"
     )
@@ -4081,52 +3893,18 @@ begin
       I4 => \bus_rsp_o_reg[data][31]\,
       O => \request_reg_enabled.device_req_o_reg[rw]_0\(25)
     );
-\bus_rsp_o[data][31]_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"04040004"
-    )
-        port map (
-      I0 => \^dev_00_req_o[rw]\,
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[addr]\(2),
-      I3 => \^dev_00_req_o[addr]\(0),
-      I4 => \^dev_00_req_o[addr]\(1),
-      O => \bus_rsp_o[data][31]_i_2_n_0\
-    );
-\bus_rsp_o[data][31]_i_3\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000008"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(0),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(2),
-      I4 => \^dev_00_req_o[addr]\(1),
-      O => \bus_rsp_o[data][31]_i_3_n_0\
-    );
-\bus_rsp_o[data][31]_i_5\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"20"
-    )
-        port map (
-      I0 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I1 => \^dev_00_req_o[rw]\,
-      I2 => \^dev_00_req_o[addr]\(2),
-      O => \bus_rsp_o[data][31]_i_5_n_0\
-    );
 \bus_rsp_o[data][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(3),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(3),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(3),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(3),
       I4 => \bus_rsp_o_reg[data][3]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(3)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(3)
     );
 \bus_rsp_o[data][3]_i_1__0\: unisim.vcomponents.LUT5
     generic map(
@@ -4147,7 +3925,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][31]_5\(2),
+      I2 => \bus_rsp_o_reg[data][31]_2\(2),
       I3 => \^dev_00_req_o[addr]\(1),
       I4 => \^dev_00_req_o[addr]\(0),
       I5 => \bus_rsp_o_reg[data][3]_0\(2),
@@ -4160,7 +3938,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(0),
-      I2 => \bus_rsp_o_reg[data][31]_6\(3),
+      I2 => \bus_rsp_o_reg[data][31]_3\(3),
       I3 => \^dev_00_req_o[addr]\(1),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(3)
     );
@@ -4181,13 +3959,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(4),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(4),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(4),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(4),
       I4 => \bus_rsp_o_reg[data][4]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(4)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(4)
     );
 \bus_rsp_o[data][4]_i_1__0\: unisim.vcomponents.LUT5
     generic map(
@@ -4209,7 +3987,7 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(3),
+      I3 => \bus_rsp_o_reg[data][31]_2\(3),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(4)
     );
 \bus_rsp_o[data][4]_i_1__2\: unisim.vcomponents.LUT4
@@ -4220,7 +3998,7 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(4),
+      I3 => \bus_rsp_o_reg[data][31]_3\(4),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(4)
     );
 \bus_rsp_o[data][4]_i_1__3\: unisim.vcomponents.LUT5
@@ -4240,13 +4018,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(5),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(5),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(5),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(5),
       I4 => \bus_rsp_o_reg[data][5]_0\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(5)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(5)
     );
 \bus_rsp_o[data][5]_i_1__0\: unisim.vcomponents.LUT5
     generic map(
@@ -4268,7 +4046,7 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(4),
+      I3 => \bus_rsp_o_reg[data][31]_2\(4),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(5)
     );
 \bus_rsp_o[data][5]_i_1__2\: unisim.vcomponents.LUT4
@@ -4277,7 +4055,7 @@ begin
     )
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
-      I1 => \bus_rsp_o_reg[data][31]_6\(5),
+      I1 => \bus_rsp_o_reg[data][31]_3\(5),
       I2 => \^dev_00_req_o[addr]\(0),
       I3 => \^dev_00_req_o[addr]\(1),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(5)
@@ -4299,13 +4077,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(6),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(6),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(6),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(6),
       I4 => \bus_rsp_o_reg[data][6]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(6)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(6)
     );
 \bus_rsp_o[data][6]_i_1__0\: unisim.vcomponents.LUT5
     generic map(
@@ -4327,7 +4105,7 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(5),
+      I3 => \bus_rsp_o_reg[data][31]_2\(5),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(6)
     );
 \bus_rsp_o[data][6]_i_1__2\: unisim.vcomponents.LUT4
@@ -4337,7 +4115,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
-      I2 => \bus_rsp_o_reg[data][31]_6\(6),
+      I2 => \bus_rsp_o_reg[data][31]_3\(6),
       I3 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(6)
     );
@@ -4358,13 +4136,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(7),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(7),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(7),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(7),
       I4 => \bus_rsp_o_reg[data][7]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(7)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(7)
     );
 \bus_rsp_o[data][7]_i_1__0\: unisim.vcomponents.LUT5
     generic map(
@@ -4386,7 +4164,7 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
       I2 => \^dev_00_req_o[addr]\(1),
-      I3 => \bus_rsp_o_reg[data][31]_5\(6),
+      I3 => \bus_rsp_o_reg[data][31]_2\(6),
       O => \request_reg_enabled.device_req_o_reg[rw]_5\(7)
     );
 \bus_rsp_o[data][7]_i_1__2\: unisim.vcomponents.LUT4
@@ -4397,7 +4175,7 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(7),
+      I3 => \bus_rsp_o_reg[data][31]_3\(7),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(7)
     );
 \bus_rsp_o[data][7]_i_1__3\: unisim.vcomponents.LUT5
@@ -4417,13 +4195,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(8),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(8),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(8),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(8),
       I4 => \bus_rsp_o_reg[data][8]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(8)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(8)
     );
 \bus_rsp_o[data][8]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
@@ -4443,7 +4221,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][31]_5\(7),
+      I2 => \bus_rsp_o_reg[data][31]_2\(7),
       I3 => \^dev_00_req_o[addr]\(1),
       I4 => \bus_rsp_o_reg[data][9]_1\,
       I5 => \^dev_00_req_o[addr]\(0),
@@ -4457,7 +4235,7 @@ begin
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
       I2 => \^dev_00_req_o[addr]\(0),
-      I3 => \bus_rsp_o_reg[data][31]_6\(8),
+      I3 => \bus_rsp_o_reg[data][31]_3\(8),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(8)
     );
 \bus_rsp_o[data][8]_i_1__3\: unisim.vcomponents.LUT4
@@ -4476,13 +4254,13 @@ begin
       INIT => X"FFFFF888F888F888"
     )
         port map (
-      I0 => \bus_rsp_o[data][31]_i_2_n_0\,
-      I1 => \bus_rsp_o_reg[data][31]_0\(9),
-      I2 => \bus_rsp_o[data][31]_i_3_n_0\,
-      I3 => \bus_rsp_o_reg[data][31]_1\(9),
+      I0 => \bus_rsp_o[data][15]_i_2_n_0\,
+      I1 => \bus_rsp_o_reg[data][15]_0\(9),
+      I2 => \bus_rsp_o[data][15]_i_3_n_0\,
+      I3 => gpio_o(9),
       I4 => \bus_rsp_o_reg[data][9]\,
-      I5 => \bus_rsp_o[data][31]_i_5_n_0\,
-      O => \port_in_reg[31]\(9)
+      I5 => \bus_rsp_o[data][15]_i_5_n_0\,
+      O => \port_in_reg[15]\(9)
     );
 \bus_rsp_o[data][9]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
@@ -4502,7 +4280,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][17]_1\,
       I1 => \^dev_00_req_o[rw]\,
-      I2 => \bus_rsp_o_reg[data][31]_5\(8),
+      I2 => \bus_rsp_o_reg[data][31]_2\(8),
       I3 => \^dev_00_req_o[addr]\(1),
       I4 => \bus_rsp_o_reg[data][9]_1\,
       I5 => \^dev_00_req_o[addr]\(0),
@@ -4515,7 +4293,7 @@ begin
         port map (
       I0 => \^request_reg_enabled.device_req_o_reg[addr][20]_0\,
       I1 => \^dev_00_req_o[addr]\(1),
-      I2 => \bus_rsp_o_reg[data][31]_6\(9),
+      I2 => \bus_rsp_o_reg[data][31]_3\(9),
       I3 => \^dev_00_req_o[addr]\(0),
       O => \request_reg_enabled.device_req_o_reg[addr][3]_3\(9)
     );
@@ -4734,58 +4512,6 @@ begin
       I5 => \^dev_12_req_o[data]\(15),
       O => D(15)
     );
-\irq_clrn[16]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(16),
-      O => D(16)
-    );
-\irq_clrn[17]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(17),
-      O => D(17)
-    );
-\irq_clrn[18]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(18),
-      O => D(18)
-    );
-\irq_clrn[19]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(19),
-      O => D(19)
-    );
 \irq_clrn[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFF7FFFFFFF"
@@ -4799,136 +4525,6 @@ begin
       I5 => \^dev_12_req_o[data]\(1),
       O => D(1)
     );
-\irq_clrn[20]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(20),
-      O => D(20)
-    );
-\irq_clrn[21]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(21),
-      O => D(21)
-    );
-\irq_clrn[22]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(22),
-      O => D(22)
-    );
-\irq_clrn[23]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(23),
-      O => D(23)
-    );
-\irq_clrn[24]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(24),
-      O => D(24)
-    );
-\irq_clrn[25]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(25),
-      O => D(25)
-    );
-\irq_clrn[26]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(26),
-      O => D(26)
-    );
-\irq_clrn[27]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(27),
-      O => D(27)
-    );
-\irq_clrn[28]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(28),
-      O => D(28)
-    );
-\irq_clrn[29]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(29),
-      O => D(29)
-    );
 \irq_clrn[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFF7FFFFFFF"
@@ -4941,32 +4537,6 @@ begin
       I4 => \^dev_00_req_o[addr]\(0),
       I5 => \^dev_12_req_o[data]\(2),
       O => D(2)
-    );
-\irq_clrn[30]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(30),
-      O => D(30)
-    );
-\irq_clrn[31]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF7FFFFFFF"
-    )
-        port map (
-      I0 => \^dev_00_req_o[addr]\(2),
-      I1 => \^request_reg_enabled.device_req_o_reg[addr][16]_0\,
-      I2 => \^dev_00_req_o[rw]\,
-      I3 => \^dev_00_req_o[addr]\(1),
-      I4 => \^dev_00_req_o[addr]\(0),
-      I5 => \^dev_12_req_o[data]\(31),
-      O => D(31)
     );
 \irq_clrn[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -5059,7 +4629,7 @@ begin
       I5 => \^dev_12_req_o[data]\(9),
       O => D(9)
     );
-\irq_en[31]_i_1\: unisim.vcomponents.LUT5
+\irq_en[15]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"40000000"
     )
@@ -5071,7 +4641,7 @@ begin
       I4 => \^dev_00_req_o[rw]\,
       O => \request_reg_enabled.device_req_o_reg[addr][2]_1\(0)
     );
-\irq_pol[31]_i_1\: unisim.vcomponents.LUT5
+\irq_pol[15]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"40000000"
     )
@@ -5083,7 +4653,7 @@ begin
       I4 => \^dev_00_req_o[rw]\,
       O => \request_reg_enabled.device_req_o_reg[addr][3]_0\(0)
     );
-\irq_typ[31]_i_1\: unisim.vcomponents.LUT5
+\irq_typ[15]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"10000000"
     )
@@ -29099,46 +28669,30 @@ entity system_neorv32_vivado_ip_0_0_neorv32_gpio is
     \irq_pol_reg[13]_0\ : out STD_LOGIC;
     \irq_pol_reg[14]_0\ : out STD_LOGIC;
     \irq_pol_reg[15]_0\ : out STD_LOGIC;
-    \irq_pol_reg[16]_0\ : out STD_LOGIC;
-    \irq_pol_reg[17]_0\ : out STD_LOGIC;
-    \irq_pol_reg[18]_0\ : out STD_LOGIC;
-    \irq_pol_reg[19]_0\ : out STD_LOGIC;
-    \irq_pol_reg[20]_0\ : out STD_LOGIC;
-    \irq_pol_reg[21]_0\ : out STD_LOGIC;
-    \irq_pol_reg[22]_0\ : out STD_LOGIC;
-    \irq_pol_reg[23]_0\ : out STD_LOGIC;
-    \irq_pol_reg[24]_0\ : out STD_LOGIC;
-    \irq_pol_reg[25]_0\ : out STD_LOGIC;
-    \irq_pol_reg[26]_0\ : out STD_LOGIC;
-    \irq_pol_reg[27]_0\ : out STD_LOGIC;
-    \irq_pol_reg[28]_0\ : out STD_LOGIC;
-    \irq_pol_reg[29]_0\ : out STD_LOGIC;
-    \irq_pol_reg[30]_0\ : out STD_LOGIC;
-    \irq_pol_reg[31]_0\ : out STD_LOGIC;
-    Q : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    Q : out STD_LOGIC_VECTOR ( 15 downto 0 );
     irq_fast_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \port_out_reg[31]_0\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    \bus_rsp_o_reg[data][31]_0\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    gpio_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    \bus_rsp_o_reg[data][15]_0\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
     \iodev_req[4][stb]\ : in STD_LOGIC;
     clk : in STD_LOGIC;
     rstn_sys : in STD_LOGIC;
     \dev_00_req_o[addr]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
-    D : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    \irq_typ_reg[31]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \irq_pol_reg[31]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \irq_en_reg[31]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \irq_clrn_reg[31]_0\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    gpio_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    \bus_rsp_o_reg[data][31]_1\ : in STD_LOGIC_VECTOR ( 31 downto 0 )
+    D : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \irq_typ_reg[15]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \irq_pol_reg[15]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \irq_en_reg[15]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \irq_clrn_reg[15]_0\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    gpio_i : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \bus_rsp_o_reg[data][15]_1\ : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_neorv32_vivado_ip_0_0_neorv32_gpio : entity is "neorv32_gpio";
 end system_neorv32_vivado_ip_0_0_neorv32_gpio;
 
 architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_gpio is
-  signal \^q\ : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal irq_clrn : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal \^q\ : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal irq_clrn : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \irq_en_reg_n_0_[0]\ : STD_LOGIC;
   signal \irq_en_reg_n_0_[10]\ : STD_LOGIC;
   signal \irq_en_reg_n_0_[11]\ : STD_LOGIC;
@@ -29146,24 +28700,8 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_gpio is
   signal \irq_en_reg_n_0_[13]\ : STD_LOGIC;
   signal \irq_en_reg_n_0_[14]\ : STD_LOGIC;
   signal \irq_en_reg_n_0_[15]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[16]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[17]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[18]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[19]\ : STD_LOGIC;
   signal \irq_en_reg_n_0_[1]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[20]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[21]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[22]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[23]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[24]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[25]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[26]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[27]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[28]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[29]\ : STD_LOGIC;
   signal \irq_en_reg_n_0_[2]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[30]\ : STD_LOGIC;
-  signal \irq_en_reg_n_0_[31]\ : STD_LOGIC;
   signal \irq_en_reg_n_0_[3]\ : STD_LOGIC;
   signal \irq_en_reg_n_0_[4]\ : STD_LOGIC;
   signal \irq_en_reg_n_0_[5]\ : STD_LOGIC;
@@ -29171,7 +28709,7 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_gpio is
   signal \irq_en_reg_n_0_[7]\ : STD_LOGIC;
   signal \irq_en_reg_n_0_[8]\ : STD_LOGIC;
   signal \irq_en_reg_n_0_[9]\ : STD_LOGIC;
-  signal irq_pend0 : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal irq_pend0 : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \irq_pend[0]_i_2_n_0\ : STD_LOGIC;
   signal \irq_pend[10]_i_2_n_0\ : STD_LOGIC;
   signal \irq_pend[11]_i_2_n_0\ : STD_LOGIC;
@@ -29179,24 +28717,8 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_gpio is
   signal \irq_pend[13]_i_2_n_0\ : STD_LOGIC;
   signal \irq_pend[14]_i_2_n_0\ : STD_LOGIC;
   signal \irq_pend[15]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[16]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[17]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[18]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[19]_i_2_n_0\ : STD_LOGIC;
   signal \irq_pend[1]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[20]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[21]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[22]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[23]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[24]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[25]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[26]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[27]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[28]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[29]_i_2_n_0\ : STD_LOGIC;
   signal \irq_pend[2]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[30]_i_2_n_0\ : STD_LOGIC;
-  signal \irq_pend[31]_i_2_n_0\ : STD_LOGIC;
   signal \irq_pend[3]_i_2_n_0\ : STD_LOGIC;
   signal \irq_pend[4]_i_2_n_0\ : STD_LOGIC;
   signal \irq_pend[5]_i_2_n_0\ : STD_LOGIC;
@@ -29205,27 +28727,15 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_gpio is
   signal \irq_pend[8]_i_2_n_0\ : STD_LOGIC;
   signal \irq_pend[9]_i_2_n_0\ : STD_LOGIC;
   signal \irq_pend_reg_n_0_[0]\ : STD_LOGIC;
+  signal \irq_pend_reg_n_0_[10]\ : STD_LOGIC;
   signal \irq_pend_reg_n_0_[11]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[12]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[14]\ : STD_LOGIC;
   signal \irq_pend_reg_n_0_[15]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[17]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[18]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[20]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[21]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[23]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[24]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[26]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[27]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[29]\ : STD_LOGIC;
+  signal \irq_pend_reg_n_0_[1]\ : STD_LOGIC;
   signal \irq_pend_reg_n_0_[2]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[30]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[31]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[3]\ : STD_LOGIC;
+  signal \irq_pend_reg_n_0_[4]\ : STD_LOGIC;
   signal \irq_pend_reg_n_0_[5]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[6]\ : STD_LOGIC;
+  signal \irq_pend_reg_n_0_[7]\ : STD_LOGIC;
   signal \irq_pend_reg_n_0_[8]\ : STD_LOGIC;
-  signal \irq_pend_reg_n_0_[9]\ : STD_LOGIC;
   signal \irq_pol_reg_n_0_[0]\ : STD_LOGIC;
   signal \irq_pol_reg_n_0_[10]\ : STD_LOGIC;
   signal \irq_pol_reg_n_0_[11]\ : STD_LOGIC;
@@ -29233,26 +28743,9 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_gpio is
   signal \irq_pol_reg_n_0_[13]\ : STD_LOGIC;
   signal \irq_pol_reg_n_0_[14]\ : STD_LOGIC;
   signal \irq_pol_reg_n_0_[15]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[16]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[17]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[18]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[19]\ : STD_LOGIC;
   signal \irq_pol_reg_n_0_[1]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[20]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[21]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[22]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[23]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[24]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[25]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[27]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[28]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[29]\ : STD_LOGIC;
   signal \irq_pol_reg_n_0_[2]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[30]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[31]\ : STD_LOGIC;
   signal \irq_pol_reg_n_0_[3]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[4]\ : STD_LOGIC;
-  signal \irq_pol_reg_n_0_[5]\ : STD_LOGIC;
   signal \irq_pol_reg_n_0_[6]\ : STD_LOGIC;
   signal \irq_pol_reg_n_0_[7]\ : STD_LOGIC;
   signal \irq_pol_reg_n_0_[8]\ : STD_LOGIC;
@@ -29264,68 +28757,32 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_gpio is
   signal \irq_typ_reg_n_0_[13]\ : STD_LOGIC;
   signal \irq_typ_reg_n_0_[14]\ : STD_LOGIC;
   signal \irq_typ_reg_n_0_[15]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[16]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[17]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[18]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[19]\ : STD_LOGIC;
   signal \irq_typ_reg_n_0_[1]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[20]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[21]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[22]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[23]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[24]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[25]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[27]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[28]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[29]\ : STD_LOGIC;
   signal \irq_typ_reg_n_0_[2]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[30]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[31]\ : STD_LOGIC;
   signal \irq_typ_reg_n_0_[3]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[4]\ : STD_LOGIC;
-  signal \irq_typ_reg_n_0_[5]\ : STD_LOGIC;
   signal \irq_typ_reg_n_0_[6]\ : STD_LOGIC;
   signal \irq_typ_reg_n_0_[7]\ : STD_LOGIC;
   signal \irq_typ_reg_n_0_[8]\ : STD_LOGIC;
   signal \irq_typ_reg_n_0_[9]\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC;
-  signal p_0_in15_in : STD_LOGIC;
-  signal p_0_in21_in : STD_LOGIC;
-  signal p_0_in27_in : STD_LOGIC;
-  signal p_0_in33_in : STD_LOGIC;
-  signal p_0_in39_in : STD_LOGIC;
-  signal p_0_in45_in : STD_LOGIC;
-  signal p_0_in51_in : STD_LOGIC;
-  signal p_0_in57_in : STD_LOGIC;
-  signal p_0_in63_in : STD_LOGIC;
-  signal p_0_in69_in : STD_LOGIC;
-  signal p_0_in75_in : STD_LOGIC;
-  signal p_0_in81_in : STD_LOGIC;
-  signal p_0_in87_in : STD_LOGIC;
-  signal p_0_in93_in : STD_LOGIC;
-  signal p_0_in9_in : STD_LOGIC;
   signal p_11_in : STD_LOGIC;
   signal p_12_in : STD_LOGIC;
-  signal p_14_in : STD_LOGIC;
+  signal p_14_in : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal p_15_in : STD_LOGIC;
-  signal p_17_in : STD_LOGIC;
+  signal p_17_in : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal p_18_in : STD_LOGIC;
+  signal p_1_in : STD_LOGIC;
   signal p_20_in : STD_LOGIC;
-  signal p_21_in : STD_LOGIC;
-  signal p_23_in : STD_LOGIC;
+  signal p_22_in : STD_LOGIC;
   signal p_24_in : STD_LOGIC;
   signal p_26_in : STD_LOGIC;
-  signal p_27_in : STD_LOGIC;
-  signal p_29_in : STD_LOGIC;
+  signal p_28_in : STD_LOGIC;
   signal p_2_in : STD_LOGIC;
   signal p_30_in : STD_LOGIC;
-  signal p_32_in : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal p_33_in : STD_LOGIC;
-  signal p_35_in : STD_LOGIC;
-  signal p_37_in : STD_LOGIC;
-  signal p_39_in : STD_LOGIC;
+  signal p_32_in : STD_LOGIC;
+  signal p_34_in : STD_LOGIC;
+  signal p_36_in : STD_LOGIC;
   signal p_3_in : STD_LOGIC;
-  signal p_41_in : STD_LOGIC;
   signal p_5_in : STD_LOGIC;
   signal p_6_in : STD_LOGIC;
   signal p_8_in : STD_LOGIC;
@@ -29334,12 +28791,8 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_gpio is
   signal \trap_ctrl[irq_pnd][11]_i_2_n_0\ : STD_LOGIC;
   signal \trap_ctrl[irq_pnd][11]_i_3_n_0\ : STD_LOGIC;
   signal \trap_ctrl[irq_pnd][11]_i_4_n_0\ : STD_LOGIC;
-  signal \trap_ctrl[irq_pnd][11]_i_5_n_0\ : STD_LOGIC;
-  signal \trap_ctrl[irq_pnd][11]_i_6_n_0\ : STD_LOGIC;
-  signal \trap_ctrl[irq_pnd][11]_i_7_n_0\ : STD_LOGIC;
-  signal \trap_ctrl[irq_pnd][11]_i_8_n_0\ : STD_LOGIC;
 begin
-  Q(31 downto 0) <= \^q\(31 downto 0);
+  Q(15 downto 0) <= \^q\(15 downto 0);
 \bus_rsp_o[data][0]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"CAFFCAF0CA0FCA00"
@@ -29359,7 +28812,7 @@ begin
     )
         port map (
       I0 => \irq_pol_reg_n_0_[10]\,
-      I1 => p_20_in,
+      I1 => \irq_pend_reg_n_0_[10]\,
       I2 => \dev_00_req_o[addr]\(1),
       I3 => \dev_00_req_o[addr]\(0),
       I4 => \irq_typ_reg_n_0_[10]\,
@@ -29385,7 +28838,7 @@ begin
     )
         port map (
       I0 => \irq_pol_reg_n_0_[12]\,
-      I1 => \irq_pend_reg_n_0_[12]\,
+      I1 => p_2_in,
       I2 => \dev_00_req_o[addr]\(1),
       I3 => \dev_00_req_o[addr]\(0),
       I4 => \irq_typ_reg_n_0_[12]\,
@@ -29398,7 +28851,7 @@ begin
     )
         port map (
       I0 => \irq_pol_reg_n_0_[13]\,
-      I1 => p_17_in,
+      I1 => p_1_in,
       I2 => \dev_00_req_o[addr]\(1),
       I3 => \dev_00_req_o[addr]\(0),
       I4 => \irq_typ_reg_n_0_[13]\,
@@ -29411,14 +28864,14 @@ begin
     )
         port map (
       I0 => \irq_pol_reg_n_0_[14]\,
-      I1 => \irq_pend_reg_n_0_[14]\,
+      I1 => p_0_in,
       I2 => \dev_00_req_o[addr]\(1),
       I3 => \dev_00_req_o[addr]\(0),
       I4 => \irq_typ_reg_n_0_[14]\,
       I5 => \irq_en_reg_n_0_[14]\,
       O => \irq_pol_reg[14]_0\
     );
-\bus_rsp_o[data][15]_i_2\: unisim.vcomponents.LUT6
+\bus_rsp_o[data][15]_i_4\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"CAFFCAF0CA0FCA00"
     )
@@ -29431,200 +28884,18 @@ begin
       I5 => \irq_en_reg_n_0_[15]\,
       O => \irq_pol_reg[15]_0\
     );
-\bus_rsp_o[data][16]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[16]\,
-      I1 => p_14_in,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[16]\,
-      I5 => \irq_en_reg_n_0_[16]\,
-      O => \irq_pol_reg[16]_0\
-    );
-\bus_rsp_o[data][17]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[17]\,
-      I1 => \irq_pend_reg_n_0_[17]\,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[17]\,
-      I5 => \irq_en_reg_n_0_[17]\,
-      O => \irq_pol_reg[17]_0\
-    );
-\bus_rsp_o[data][18]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[18]\,
-      I1 => \irq_pend_reg_n_0_[18]\,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[18]\,
-      I5 => \irq_en_reg_n_0_[18]\,
-      O => \irq_pol_reg[18]_0\
-    );
-\bus_rsp_o[data][19]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[19]\,
-      I1 => p_11_in,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[19]\,
-      I5 => \irq_en_reg_n_0_[19]\,
-      O => \irq_pol_reg[19]_0\
-    );
 \bus_rsp_o[data][1]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \irq_pol_reg_n_0_[1]\,
-      I1 => p_29_in,
+      I1 => \irq_pend_reg_n_0_[1]\,
       I2 => \dev_00_req_o[addr]\(1),
       I3 => \dev_00_req_o[addr]\(0),
       I4 => \irq_typ_reg_n_0_[1]\,
       I5 => \irq_en_reg_n_0_[1]\,
       O => \irq_pol_reg[1]_0\
-    );
-\bus_rsp_o[data][20]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[20]\,
-      I1 => \irq_pend_reg_n_0_[20]\,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[20]\,
-      I5 => \irq_en_reg_n_0_[20]\,
-      O => \irq_pol_reg[20]_0\
-    );
-\bus_rsp_o[data][21]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[21]\,
-      I1 => \irq_pend_reg_n_0_[21]\,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[21]\,
-      I5 => \irq_en_reg_n_0_[21]\,
-      O => \irq_pol_reg[21]_0\
-    );
-\bus_rsp_o[data][22]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[22]\,
-      I1 => p_8_in,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[22]\,
-      I5 => \irq_en_reg_n_0_[22]\,
-      O => \irq_pol_reg[22]_0\
-    );
-\bus_rsp_o[data][23]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[23]\,
-      I1 => \irq_pend_reg_n_0_[23]\,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[23]\,
-      I5 => \irq_en_reg_n_0_[23]\,
-      O => \irq_pol_reg[23]_0\
-    );
-\bus_rsp_o[data][24]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[24]\,
-      I1 => \irq_pend_reg_n_0_[24]\,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[24]\,
-      I5 => \irq_en_reg_n_0_[24]\,
-      O => \irq_pol_reg[24]_0\
-    );
-\bus_rsp_o[data][25]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[25]\,
-      I1 => p_5_in,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[25]\,
-      I5 => \irq_en_reg_n_0_[25]\,
-      O => \irq_pol_reg[25]_0\
-    );
-\bus_rsp_o[data][26]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => p_32_in(0),
-      I1 => \irq_pend_reg_n_0_[26]\,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => p_32_in(1),
-      I5 => \irq_en_reg_n_0_[26]\,
-      O => \irq_pol_reg[26]_0\
-    );
-\bus_rsp_o[data][27]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[27]\,
-      I1 => \irq_pend_reg_n_0_[27]\,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[27]\,
-      I5 => \irq_en_reg_n_0_[27]\,
-      O => \irq_pol_reg[27]_0\
-    );
-\bus_rsp_o[data][28]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[28]\,
-      I1 => p_2_in,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[28]\,
-      I5 => \irq_en_reg_n_0_[28]\,
-      O => \irq_pol_reg[28]_0\
-    );
-\bus_rsp_o[data][29]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[29]\,
-      I1 => \irq_pend_reg_n_0_[29]\,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[29]\,
-      I5 => \irq_en_reg_n_0_[29]\,
-      O => \irq_pol_reg[29]_0\
     );
 \bus_rsp_o[data][2]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -29639,39 +28910,13 @@ begin
       I5 => \irq_en_reg_n_0_[2]\,
       O => \irq_pol_reg[2]_0\
     );
-\bus_rsp_o[data][30]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[30]\,
-      I1 => \irq_pend_reg_n_0_[30]\,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[30]\,
-      I5 => \irq_en_reg_n_0_[30]\,
-      O => \irq_pol_reg[30]_0\
-    );
-\bus_rsp_o[data][31]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CAFFCAF0CA0FCA00"
-    )
-        port map (
-      I0 => \irq_pol_reg_n_0_[31]\,
-      I1 => \irq_pend_reg_n_0_[31]\,
-      I2 => \dev_00_req_o[addr]\(1),
-      I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[31]\,
-      I5 => \irq_en_reg_n_0_[31]\,
-      O => \irq_pol_reg[31]_0\
-    );
 \bus_rsp_o[data][3]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
       I0 => \irq_pol_reg_n_0_[3]\,
-      I1 => \irq_pend_reg_n_0_[3]\,
+      I1 => p_11_in,
       I2 => \dev_00_req_o[addr]\(1),
       I3 => \dev_00_req_o[addr]\(0),
       I4 => \irq_typ_reg_n_0_[3]\,
@@ -29683,11 +28928,11 @@ begin
       INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
-      I0 => \irq_pol_reg_n_0_[4]\,
-      I1 => p_26_in,
+      I0 => p_14_in(0),
+      I1 => \irq_pend_reg_n_0_[4]\,
       I2 => \dev_00_req_o[addr]\(1),
       I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[4]\,
+      I4 => p_14_in(1),
       I5 => \irq_en_reg_n_0_[4]\,
       O => \irq_pol_reg[4]_0\
     );
@@ -29696,11 +28941,11 @@ begin
       INIT => X"CAFFCAF0CA0FCA00"
     )
         port map (
-      I0 => \irq_pol_reg_n_0_[5]\,
+      I0 => p_17_in(0),
       I1 => \irq_pend_reg_n_0_[5]\,
       I2 => \dev_00_req_o[addr]\(1),
       I3 => \dev_00_req_o[addr]\(0),
-      I4 => \irq_typ_reg_n_0_[5]\,
+      I4 => p_17_in(1),
       I5 => \irq_en_reg_n_0_[5]\,
       O => \irq_pol_reg[5]_0\
     );
@@ -29710,7 +28955,7 @@ begin
     )
         port map (
       I0 => \irq_pol_reg_n_0_[6]\,
-      I1 => \irq_pend_reg_n_0_[6]\,
+      I1 => p_8_in,
       I2 => \dev_00_req_o[addr]\(1),
       I3 => \dev_00_req_o[addr]\(0),
       I4 => \irq_typ_reg_n_0_[6]\,
@@ -29723,7 +28968,7 @@ begin
     )
         port map (
       I0 => \irq_pol_reg_n_0_[7]\,
-      I1 => p_23_in,
+      I1 => \irq_pend_reg_n_0_[7]\,
       I2 => \dev_00_req_o[addr]\(1),
       I3 => \dev_00_req_o[addr]\(0),
       I4 => \irq_typ_reg_n_0_[7]\,
@@ -29749,7 +28994,7 @@ begin
     )
         port map (
       I0 => \irq_pol_reg_n_0_[9]\,
-      I1 => \irq_pend_reg_n_0_[9]\,
+      I1 => p_5_in,
       I2 => \dev_00_req_o[addr]\(1),
       I3 => \dev_00_req_o[addr]\(0),
       I4 => \irq_typ_reg_n_0_[9]\,
@@ -29769,263 +29014,135 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(0),
-      Q => \bus_rsp_o_reg[data][31]_0\(0)
+      D => \bus_rsp_o_reg[data][15]_1\(0),
+      Q => \bus_rsp_o_reg[data][15]_0\(0)
     );
 \bus_rsp_o_reg[data][10]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(10),
-      Q => \bus_rsp_o_reg[data][31]_0\(10)
+      D => \bus_rsp_o_reg[data][15]_1\(10),
+      Q => \bus_rsp_o_reg[data][15]_0\(10)
     );
 \bus_rsp_o_reg[data][11]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(11),
-      Q => \bus_rsp_o_reg[data][31]_0\(11)
+      D => \bus_rsp_o_reg[data][15]_1\(11),
+      Q => \bus_rsp_o_reg[data][15]_0\(11)
     );
 \bus_rsp_o_reg[data][12]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(12),
-      Q => \bus_rsp_o_reg[data][31]_0\(12)
+      D => \bus_rsp_o_reg[data][15]_1\(12),
+      Q => \bus_rsp_o_reg[data][15]_0\(12)
     );
 \bus_rsp_o_reg[data][13]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(13),
-      Q => \bus_rsp_o_reg[data][31]_0\(13)
+      D => \bus_rsp_o_reg[data][15]_1\(13),
+      Q => \bus_rsp_o_reg[data][15]_0\(13)
     );
 \bus_rsp_o_reg[data][14]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(14),
-      Q => \bus_rsp_o_reg[data][31]_0\(14)
+      D => \bus_rsp_o_reg[data][15]_1\(14),
+      Q => \bus_rsp_o_reg[data][15]_0\(14)
     );
 \bus_rsp_o_reg[data][15]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(15),
-      Q => \bus_rsp_o_reg[data][31]_0\(15)
-    );
-\bus_rsp_o_reg[data][16]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(16),
-      Q => \bus_rsp_o_reg[data][31]_0\(16)
-    );
-\bus_rsp_o_reg[data][17]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(17),
-      Q => \bus_rsp_o_reg[data][31]_0\(17)
-    );
-\bus_rsp_o_reg[data][18]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(18),
-      Q => \bus_rsp_o_reg[data][31]_0\(18)
-    );
-\bus_rsp_o_reg[data][19]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(19),
-      Q => \bus_rsp_o_reg[data][31]_0\(19)
+      D => \bus_rsp_o_reg[data][15]_1\(15),
+      Q => \bus_rsp_o_reg[data][15]_0\(15)
     );
 \bus_rsp_o_reg[data][1]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(1),
-      Q => \bus_rsp_o_reg[data][31]_0\(1)
-    );
-\bus_rsp_o_reg[data][20]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(20),
-      Q => \bus_rsp_o_reg[data][31]_0\(20)
-    );
-\bus_rsp_o_reg[data][21]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(21),
-      Q => \bus_rsp_o_reg[data][31]_0\(21)
-    );
-\bus_rsp_o_reg[data][22]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(22),
-      Q => \bus_rsp_o_reg[data][31]_0\(22)
-    );
-\bus_rsp_o_reg[data][23]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(23),
-      Q => \bus_rsp_o_reg[data][31]_0\(23)
-    );
-\bus_rsp_o_reg[data][24]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(24),
-      Q => \bus_rsp_o_reg[data][31]_0\(24)
-    );
-\bus_rsp_o_reg[data][25]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(25),
-      Q => \bus_rsp_o_reg[data][31]_0\(25)
-    );
-\bus_rsp_o_reg[data][26]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(26),
-      Q => \bus_rsp_o_reg[data][31]_0\(26)
-    );
-\bus_rsp_o_reg[data][27]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(27),
-      Q => \bus_rsp_o_reg[data][31]_0\(27)
-    );
-\bus_rsp_o_reg[data][28]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(28),
-      Q => \bus_rsp_o_reg[data][31]_0\(28)
-    );
-\bus_rsp_o_reg[data][29]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(29),
-      Q => \bus_rsp_o_reg[data][31]_0\(29)
+      D => \bus_rsp_o_reg[data][15]_1\(1),
+      Q => \bus_rsp_o_reg[data][15]_0\(1)
     );
 \bus_rsp_o_reg[data][2]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(2),
-      Q => \bus_rsp_o_reg[data][31]_0\(2)
-    );
-\bus_rsp_o_reg[data][30]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(30),
-      Q => \bus_rsp_o_reg[data][31]_0\(30)
-    );
-\bus_rsp_o_reg[data][31]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(31),
-      Q => \bus_rsp_o_reg[data][31]_0\(31)
+      D => \bus_rsp_o_reg[data][15]_1\(2),
+      Q => \bus_rsp_o_reg[data][15]_0\(2)
     );
 \bus_rsp_o_reg[data][3]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(3),
-      Q => \bus_rsp_o_reg[data][31]_0\(3)
+      D => \bus_rsp_o_reg[data][15]_1\(3),
+      Q => \bus_rsp_o_reg[data][15]_0\(3)
     );
 \bus_rsp_o_reg[data][4]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(4),
-      Q => \bus_rsp_o_reg[data][31]_0\(4)
+      D => \bus_rsp_o_reg[data][15]_1\(4),
+      Q => \bus_rsp_o_reg[data][15]_0\(4)
     );
 \bus_rsp_o_reg[data][5]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(5),
-      Q => \bus_rsp_o_reg[data][31]_0\(5)
+      D => \bus_rsp_o_reg[data][15]_1\(5),
+      Q => \bus_rsp_o_reg[data][15]_0\(5)
     );
 \bus_rsp_o_reg[data][6]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(6),
-      Q => \bus_rsp_o_reg[data][31]_0\(6)
+      D => \bus_rsp_o_reg[data][15]_1\(6),
+      Q => \bus_rsp_o_reg[data][15]_0\(6)
     );
 \bus_rsp_o_reg[data][7]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(7),
-      Q => \bus_rsp_o_reg[data][31]_0\(7)
+      D => \bus_rsp_o_reg[data][15]_1\(7),
+      Q => \bus_rsp_o_reg[data][15]_0\(7)
     );
 \bus_rsp_o_reg[data][8]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(8),
-      Q => \bus_rsp_o_reg[data][31]_0\(8)
+      D => \bus_rsp_o_reg[data][15]_1\(8),
+      Q => \bus_rsp_o_reg[data][15]_0\(8)
     );
 \bus_rsp_o_reg[data][9]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \bus_rsp_o_reg[data][31]_1\(9),
-      Q => \bus_rsp_o_reg[data][31]_0\(9)
+      D => \bus_rsp_o_reg[data][15]_1\(9),
+      Q => \bus_rsp_o_reg[data][15]_0\(9)
     );
 \irq_clrn_reg[0]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(0),
+      D => \irq_clrn_reg[15]_0\(0),
       Q => irq_clrn(0)
     );
 \irq_clrn_reg[10]\: unisim.vcomponents.FDCE
@@ -30033,7 +29150,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(10),
+      D => \irq_clrn_reg[15]_0\(10),
       Q => irq_clrn(10)
     );
 \irq_clrn_reg[11]\: unisim.vcomponents.FDCE
@@ -30041,7 +29158,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(11),
+      D => \irq_clrn_reg[15]_0\(11),
       Q => irq_clrn(11)
     );
 \irq_clrn_reg[12]\: unisim.vcomponents.FDCE
@@ -30049,7 +29166,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(12),
+      D => \irq_clrn_reg[15]_0\(12),
       Q => irq_clrn(12)
     );
 \irq_clrn_reg[13]\: unisim.vcomponents.FDCE
@@ -30057,7 +29174,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(13),
+      D => \irq_clrn_reg[15]_0\(13),
       Q => irq_clrn(13)
     );
 \irq_clrn_reg[14]\: unisim.vcomponents.FDCE
@@ -30065,7 +29182,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(14),
+      D => \irq_clrn_reg[15]_0\(14),
       Q => irq_clrn(14)
     );
 \irq_clrn_reg[15]\: unisim.vcomponents.FDCE
@@ -30073,159 +29190,31 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(15),
+      D => \irq_clrn_reg[15]_0\(15),
       Q => irq_clrn(15)
-    );
-\irq_clrn_reg[16]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(16),
-      Q => irq_clrn(16)
-    );
-\irq_clrn_reg[17]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(17),
-      Q => irq_clrn(17)
-    );
-\irq_clrn_reg[18]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(18),
-      Q => irq_clrn(18)
-    );
-\irq_clrn_reg[19]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(19),
-      Q => irq_clrn(19)
     );
 \irq_clrn_reg[1]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(1),
+      D => \irq_clrn_reg[15]_0\(1),
       Q => irq_clrn(1)
-    );
-\irq_clrn_reg[20]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(20),
-      Q => irq_clrn(20)
-    );
-\irq_clrn_reg[21]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(21),
-      Q => irq_clrn(21)
-    );
-\irq_clrn_reg[22]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(22),
-      Q => irq_clrn(22)
-    );
-\irq_clrn_reg[23]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(23),
-      Q => irq_clrn(23)
-    );
-\irq_clrn_reg[24]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(24),
-      Q => irq_clrn(24)
-    );
-\irq_clrn_reg[25]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(25),
-      Q => irq_clrn(25)
-    );
-\irq_clrn_reg[26]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(26),
-      Q => irq_clrn(26)
-    );
-\irq_clrn_reg[27]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(27),
-      Q => irq_clrn(27)
-    );
-\irq_clrn_reg[28]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(28),
-      Q => irq_clrn(28)
-    );
-\irq_clrn_reg[29]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(29),
-      Q => irq_clrn(29)
     );
 \irq_clrn_reg[2]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(2),
+      D => \irq_clrn_reg[15]_0\(2),
       Q => irq_clrn(2)
-    );
-\irq_clrn_reg[30]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(30),
-      Q => irq_clrn(30)
-    );
-\irq_clrn_reg[31]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(31),
-      Q => irq_clrn(31)
     );
 \irq_clrn_reg[3]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(3),
+      D => \irq_clrn_reg[15]_0\(3),
       Q => irq_clrn(3)
     );
 \irq_clrn_reg[4]\: unisim.vcomponents.FDCE
@@ -30233,7 +29222,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(4),
+      D => \irq_clrn_reg[15]_0\(4),
       Q => irq_clrn(4)
     );
 \irq_clrn_reg[5]\: unisim.vcomponents.FDCE
@@ -30241,7 +29230,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(5),
+      D => \irq_clrn_reg[15]_0\(5),
       Q => irq_clrn(5)
     );
 \irq_clrn_reg[6]\: unisim.vcomponents.FDCE
@@ -30249,7 +29238,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(6),
+      D => \irq_clrn_reg[15]_0\(6),
       Q => irq_clrn(6)
     );
 \irq_clrn_reg[7]\: unisim.vcomponents.FDCE
@@ -30257,7 +29246,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(7),
+      D => \irq_clrn_reg[15]_0\(7),
       Q => irq_clrn(7)
     );
 \irq_clrn_reg[8]\: unisim.vcomponents.FDCE
@@ -30265,7 +29254,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(8),
+      D => \irq_clrn_reg[15]_0\(8),
       Q => irq_clrn(8)
     );
 \irq_clrn_reg[9]\: unisim.vcomponents.FDCE
@@ -30273,13 +29262,13 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => \irq_clrn_reg[31]_0\(9),
+      D => \irq_clrn_reg[15]_0\(9),
       Q => irq_clrn(9)
     );
 \irq_en_reg[0]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(0),
       Q => \irq_en_reg_n_0_[0]\
@@ -30287,7 +29276,7 @@ begin
 \irq_en_reg[10]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(10),
       Q => \irq_en_reg_n_0_[10]\
@@ -30295,7 +29284,7 @@ begin
 \irq_en_reg[11]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(11),
       Q => \irq_en_reg_n_0_[11]\
@@ -30303,7 +29292,7 @@ begin
 \irq_en_reg[12]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(12),
       Q => \irq_en_reg_n_0_[12]\
@@ -30311,7 +29300,7 @@ begin
 \irq_en_reg[13]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(13),
       Q => \irq_en_reg_n_0_[13]\
@@ -30319,7 +29308,7 @@ begin
 \irq_en_reg[14]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(14),
       Q => \irq_en_reg_n_0_[14]\
@@ -30327,159 +29316,31 @@ begin
 \irq_en_reg[15]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(15),
       Q => \irq_en_reg_n_0_[15]\
     );
-\irq_en_reg[16]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(16),
-      Q => \irq_en_reg_n_0_[16]\
-    );
-\irq_en_reg[17]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(17),
-      Q => \irq_en_reg_n_0_[17]\
-    );
-\irq_en_reg[18]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(18),
-      Q => \irq_en_reg_n_0_[18]\
-    );
-\irq_en_reg[19]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(19),
-      Q => \irq_en_reg_n_0_[19]\
-    );
 \irq_en_reg[1]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(1),
       Q => \irq_en_reg_n_0_[1]\
     );
-\irq_en_reg[20]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(20),
-      Q => \irq_en_reg_n_0_[20]\
-    );
-\irq_en_reg[21]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(21),
-      Q => \irq_en_reg_n_0_[21]\
-    );
-\irq_en_reg[22]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(22),
-      Q => \irq_en_reg_n_0_[22]\
-    );
-\irq_en_reg[23]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(23),
-      Q => \irq_en_reg_n_0_[23]\
-    );
-\irq_en_reg[24]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(24),
-      Q => \irq_en_reg_n_0_[24]\
-    );
-\irq_en_reg[25]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(25),
-      Q => \irq_en_reg_n_0_[25]\
-    );
-\irq_en_reg[26]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(26),
-      Q => \irq_en_reg_n_0_[26]\
-    );
-\irq_en_reg[27]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(27),
-      Q => \irq_en_reg_n_0_[27]\
-    );
-\irq_en_reg[28]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(28),
-      Q => \irq_en_reg_n_0_[28]\
-    );
-\irq_en_reg[29]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(29),
-      Q => \irq_en_reg_n_0_[29]\
-    );
 \irq_en_reg[2]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(2),
       Q => \irq_en_reg_n_0_[2]\
     );
-\irq_en_reg[30]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(30),
-      Q => \irq_en_reg_n_0_[30]\
-    );
-\irq_en_reg[31]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_en_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(31),
-      Q => \irq_en_reg_n_0_[31]\
-    );
 \irq_en_reg[3]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(3),
       Q => \irq_en_reg_n_0_[3]\
@@ -30487,7 +29348,7 @@ begin
 \irq_en_reg[4]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(4),
       Q => \irq_en_reg_n_0_[4]\
@@ -30495,7 +29356,7 @@ begin
 \irq_en_reg[5]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(5),
       Q => \irq_en_reg_n_0_[5]\
@@ -30503,7 +29364,7 @@ begin
 \irq_en_reg[6]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(6),
       Q => \irq_en_reg_n_0_[6]\
@@ -30511,7 +29372,7 @@ begin
 \irq_en_reg[7]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(7),
       Q => \irq_en_reg_n_0_[7]\
@@ -30519,7 +29380,7 @@ begin
 \irq_en_reg[8]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(8),
       Q => \irq_en_reg_n_0_[8]\
@@ -30527,7 +29388,7 @@ begin
 \irq_en_reg[9]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_en_reg[31]_0\(0),
+      CE => \irq_en_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(9),
       Q => \irq_en_reg_n_0_[9]\
@@ -30561,7 +29422,7 @@ begin
     )
         port map (
       I0 => \irq_pend[10]_i_2_n_0\,
-      I1 => p_0_in57_in,
+      I1 => p_28_in,
       I2 => \irq_typ_reg_n_0_[10]\,
       I3 => \^q\(10),
       I4 => \irq_pol_reg_n_0_[10]\,
@@ -30574,7 +29435,7 @@ begin
     )
         port map (
       I0 => irq_clrn(10),
-      I1 => p_20_in,
+      I1 => \irq_pend_reg_n_0_[10]\,
       I2 => \irq_en_reg_n_0_[10]\,
       O => \irq_pend[10]_i_2_n_0\
     );
@@ -30584,7 +29445,7 @@ begin
     )
         port map (
       I0 => \irq_pend[11]_i_2_n_0\,
-      I1 => p_0_in63_in,
+      I1 => p_26_in,
       I2 => \irq_typ_reg_n_0_[11]\,
       I3 => \^q\(11),
       I4 => \irq_pol_reg_n_0_[11]\,
@@ -30607,7 +29468,7 @@ begin
     )
         port map (
       I0 => \irq_pend[12]_i_2_n_0\,
-      I1 => p_0_in69_in,
+      I1 => p_24_in,
       I2 => \irq_typ_reg_n_0_[12]\,
       I3 => \^q\(12),
       I4 => \irq_pol_reg_n_0_[12]\,
@@ -30620,7 +29481,7 @@ begin
     )
         port map (
       I0 => irq_clrn(12),
-      I1 => \irq_pend_reg_n_0_[12]\,
+      I1 => p_2_in,
       I2 => \irq_en_reg_n_0_[12]\,
       O => \irq_pend[12]_i_2_n_0\
     );
@@ -30630,7 +29491,7 @@ begin
     )
         port map (
       I0 => \irq_pend[13]_i_2_n_0\,
-      I1 => p_0_in75_in,
+      I1 => p_22_in,
       I2 => \irq_typ_reg_n_0_[13]\,
       I3 => \^q\(13),
       I4 => \irq_pol_reg_n_0_[13]\,
@@ -30643,7 +29504,7 @@ begin
     )
         port map (
       I0 => irq_clrn(13),
-      I1 => p_17_in,
+      I1 => p_1_in,
       I2 => \irq_en_reg_n_0_[13]\,
       O => \irq_pend[13]_i_2_n_0\
     );
@@ -30653,7 +29514,7 @@ begin
     )
         port map (
       I0 => \irq_pend[14]_i_2_n_0\,
-      I1 => p_0_in81_in,
+      I1 => p_20_in,
       I2 => \irq_typ_reg_n_0_[14]\,
       I3 => \^q\(14),
       I4 => \irq_pol_reg_n_0_[14]\,
@@ -30666,7 +29527,7 @@ begin
     )
         port map (
       I0 => irq_clrn(14),
-      I1 => \irq_pend_reg_n_0_[14]\,
+      I1 => p_0_in,
       I2 => \irq_en_reg_n_0_[14]\,
       O => \irq_pend[14]_i_2_n_0\
     );
@@ -30676,7 +29537,7 @@ begin
     )
         port map (
       I0 => \irq_pend[15]_i_2_n_0\,
-      I1 => p_0_in87_in,
+      I1 => p_18_in,
       I2 => \irq_typ_reg_n_0_[15]\,
       I3 => \^q\(15),
       I4 => \irq_pol_reg_n_0_[15]\,
@@ -30693,105 +29554,13 @@ begin
       I2 => \irq_en_reg_n_0_[15]\,
       O => \irq_pend[15]_i_2_n_0\
     );
-\irq_pend[16]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[16]_i_2_n_0\,
-      I1 => p_0_in93_in,
-      I2 => \irq_typ_reg_n_0_[16]\,
-      I3 => \^q\(16),
-      I4 => \irq_pol_reg_n_0_[16]\,
-      I5 => \irq_en_reg_n_0_[16]\,
-      O => irq_pend0(16)
-    );
-\irq_pend[16]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(16),
-      I1 => p_14_in,
-      I2 => \irq_en_reg_n_0_[16]\,
-      O => \irq_pend[16]_i_2_n_0\
-    );
-\irq_pend[17]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[17]_i_2_n_0\,
-      I1 => p_3_in,
-      I2 => \irq_typ_reg_n_0_[17]\,
-      I3 => \^q\(17),
-      I4 => \irq_pol_reg_n_0_[17]\,
-      I5 => \irq_en_reg_n_0_[17]\,
-      O => irq_pend0(17)
-    );
-\irq_pend[17]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(17),
-      I1 => \irq_pend_reg_n_0_[17]\,
-      I2 => \irq_en_reg_n_0_[17]\,
-      O => \irq_pend[17]_i_2_n_0\
-    );
-\irq_pend[18]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[18]_i_2_n_0\,
-      I1 => p_6_in,
-      I2 => \irq_typ_reg_n_0_[18]\,
-      I3 => \^q\(18),
-      I4 => \irq_pol_reg_n_0_[18]\,
-      I5 => \irq_en_reg_n_0_[18]\,
-      O => irq_pend0(18)
-    );
-\irq_pend[18]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(18),
-      I1 => \irq_pend_reg_n_0_[18]\,
-      I2 => \irq_en_reg_n_0_[18]\,
-      O => \irq_pend[18]_i_2_n_0\
-    );
-\irq_pend[19]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[19]_i_2_n_0\,
-      I1 => p_9_in,
-      I2 => \irq_typ_reg_n_0_[19]\,
-      I3 => \^q\(19),
-      I4 => \irq_pol_reg_n_0_[19]\,
-      I5 => \irq_en_reg_n_0_[19]\,
-      O => irq_pend0(19)
-    );
-\irq_pend[19]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(19),
-      I1 => p_11_in,
-      I2 => \irq_en_reg_n_0_[19]\,
-      O => \irq_pend[19]_i_2_n_0\
-    );
 \irq_pend[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"BFAAAAEFAAAAAAAA"
     )
         port map (
       I0 => \irq_pend[1]_i_2_n_0\,
-      I1 => p_0_in,
+      I1 => p_3_in,
       I2 => \irq_typ_reg_n_0_[1]\,
       I3 => \^q\(1),
       I4 => \irq_pol_reg_n_0_[1]\,
@@ -30804,239 +29573,9 @@ begin
     )
         port map (
       I0 => irq_clrn(1),
-      I1 => p_29_in,
+      I1 => \irq_pend_reg_n_0_[1]\,
       I2 => \irq_en_reg_n_0_[1]\,
       O => \irq_pend[1]_i_2_n_0\
-    );
-\irq_pend[20]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[20]_i_2_n_0\,
-      I1 => p_12_in,
-      I2 => \irq_typ_reg_n_0_[20]\,
-      I3 => \^q\(20),
-      I4 => \irq_pol_reg_n_0_[20]\,
-      I5 => \irq_en_reg_n_0_[20]\,
-      O => irq_pend0(20)
-    );
-\irq_pend[20]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(20),
-      I1 => \irq_pend_reg_n_0_[20]\,
-      I2 => \irq_en_reg_n_0_[20]\,
-      O => \irq_pend[20]_i_2_n_0\
-    );
-\irq_pend[21]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[21]_i_2_n_0\,
-      I1 => p_15_in,
-      I2 => \irq_typ_reg_n_0_[21]\,
-      I3 => \^q\(21),
-      I4 => \irq_pol_reg_n_0_[21]\,
-      I5 => \irq_en_reg_n_0_[21]\,
-      O => irq_pend0(21)
-    );
-\irq_pend[21]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(21),
-      I1 => \irq_pend_reg_n_0_[21]\,
-      I2 => \irq_en_reg_n_0_[21]\,
-      O => \irq_pend[21]_i_2_n_0\
-    );
-\irq_pend[22]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[22]_i_2_n_0\,
-      I1 => p_18_in,
-      I2 => \irq_typ_reg_n_0_[22]\,
-      I3 => \^q\(22),
-      I4 => \irq_pol_reg_n_0_[22]\,
-      I5 => \irq_en_reg_n_0_[22]\,
-      O => irq_pend0(22)
-    );
-\irq_pend[22]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(22),
-      I1 => p_8_in,
-      I2 => \irq_en_reg_n_0_[22]\,
-      O => \irq_pend[22]_i_2_n_0\
-    );
-\irq_pend[23]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[23]_i_2_n_0\,
-      I1 => p_21_in,
-      I2 => \irq_typ_reg_n_0_[23]\,
-      I3 => \^q\(23),
-      I4 => \irq_pol_reg_n_0_[23]\,
-      I5 => \irq_en_reg_n_0_[23]\,
-      O => irq_pend0(23)
-    );
-\irq_pend[23]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(23),
-      I1 => \irq_pend_reg_n_0_[23]\,
-      I2 => \irq_en_reg_n_0_[23]\,
-      O => \irq_pend[23]_i_2_n_0\
-    );
-\irq_pend[24]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[24]_i_2_n_0\,
-      I1 => p_24_in,
-      I2 => \irq_typ_reg_n_0_[24]\,
-      I3 => \^q\(24),
-      I4 => \irq_pol_reg_n_0_[24]\,
-      I5 => \irq_en_reg_n_0_[24]\,
-      O => irq_pend0(24)
-    );
-\irq_pend[24]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(24),
-      I1 => \irq_pend_reg_n_0_[24]\,
-      I2 => \irq_en_reg_n_0_[24]\,
-      O => \irq_pend[24]_i_2_n_0\
-    );
-\irq_pend[25]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[25]_i_2_n_0\,
-      I1 => p_27_in,
-      I2 => \irq_typ_reg_n_0_[25]\,
-      I3 => \^q\(25),
-      I4 => \irq_pol_reg_n_0_[25]\,
-      I5 => \irq_en_reg_n_0_[25]\,
-      O => irq_pend0(25)
-    );
-\irq_pend[25]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(25),
-      I1 => p_5_in,
-      I2 => \irq_en_reg_n_0_[25]\,
-      O => \irq_pend[25]_i_2_n_0\
-    );
-\irq_pend[26]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[26]_i_2_n_0\,
-      I1 => p_30_in,
-      I2 => p_32_in(1),
-      I3 => \^q\(26),
-      I4 => p_32_in(0),
-      I5 => \irq_en_reg_n_0_[26]\,
-      O => irq_pend0(26)
-    );
-\irq_pend[26]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(26),
-      I1 => \irq_pend_reg_n_0_[26]\,
-      I2 => \irq_en_reg_n_0_[26]\,
-      O => \irq_pend[26]_i_2_n_0\
-    );
-\irq_pend[27]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[27]_i_2_n_0\,
-      I1 => p_41_in,
-      I2 => \irq_typ_reg_n_0_[27]\,
-      I3 => \^q\(27),
-      I4 => \irq_pol_reg_n_0_[27]\,
-      I5 => \irq_en_reg_n_0_[27]\,
-      O => irq_pend0(27)
-    );
-\irq_pend[27]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(27),
-      I1 => \irq_pend_reg_n_0_[27]\,
-      I2 => \irq_en_reg_n_0_[27]\,
-      O => \irq_pend[27]_i_2_n_0\
-    );
-\irq_pend[28]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[28]_i_2_n_0\,
-      I1 => p_39_in,
-      I2 => \irq_typ_reg_n_0_[28]\,
-      I3 => \^q\(28),
-      I4 => \irq_pol_reg_n_0_[28]\,
-      I5 => \irq_en_reg_n_0_[28]\,
-      O => irq_pend0(28)
-    );
-\irq_pend[28]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(28),
-      I1 => p_2_in,
-      I2 => \irq_en_reg_n_0_[28]\,
-      O => \irq_pend[28]_i_2_n_0\
-    );
-\irq_pend[29]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[29]_i_2_n_0\,
-      I1 => p_37_in,
-      I2 => \irq_typ_reg_n_0_[29]\,
-      I3 => \^q\(29),
-      I4 => \irq_pol_reg_n_0_[29]\,
-      I5 => \irq_en_reg_n_0_[29]\,
-      O => irq_pend0(29)
-    );
-\irq_pend[29]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(29),
-      I1 => \irq_pend_reg_n_0_[29]\,
-      I2 => \irq_en_reg_n_0_[29]\,
-      O => \irq_pend[29]_i_2_n_0\
     );
 \irq_pend[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -31044,7 +29583,7 @@ begin
     )
         port map (
       I0 => \irq_pend[2]_i_2_n_0\,
-      I1 => p_0_in9_in,
+      I1 => p_6_in,
       I2 => \irq_typ_reg_n_0_[2]\,
       I3 => \^q\(2),
       I4 => \irq_pol_reg_n_0_[2]\,
@@ -31061,59 +29600,13 @@ begin
       I2 => \irq_en_reg_n_0_[2]\,
       O => \irq_pend[2]_i_2_n_0\
     );
-\irq_pend[30]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[30]_i_2_n_0\,
-      I1 => p_35_in,
-      I2 => \irq_typ_reg_n_0_[30]\,
-      I3 => \^q\(30),
-      I4 => \irq_pol_reg_n_0_[30]\,
-      I5 => \irq_en_reg_n_0_[30]\,
-      O => irq_pend0(30)
-    );
-\irq_pend[30]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(30),
-      I1 => \irq_pend_reg_n_0_[30]\,
-      I2 => \irq_en_reg_n_0_[30]\,
-      O => \irq_pend[30]_i_2_n_0\
-    );
-\irq_pend[31]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFAAAAEFAAAAAAAA"
-    )
-        port map (
-      I0 => \irq_pend[31]_i_2_n_0\,
-      I1 => p_33_in,
-      I2 => \irq_typ_reg_n_0_[31]\,
-      I3 => \^q\(31),
-      I4 => \irq_pol_reg_n_0_[31]\,
-      I5 => \irq_en_reg_n_0_[31]\,
-      O => irq_pend0(31)
-    );
-\irq_pend[31]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => irq_clrn(31),
-      I1 => \irq_pend_reg_n_0_[31]\,
-      I2 => \irq_en_reg_n_0_[31]\,
-      O => \irq_pend[31]_i_2_n_0\
-    );
 \irq_pend[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"BFAAAAEFAAAAAAAA"
     )
         port map (
       I0 => \irq_pend[3]_i_2_n_0\,
-      I1 => p_0_in15_in,
+      I1 => p_9_in,
       I2 => \irq_typ_reg_n_0_[3]\,
       I3 => \^q\(3),
       I4 => \irq_pol_reg_n_0_[3]\,
@@ -31126,7 +29619,7 @@ begin
     )
         port map (
       I0 => irq_clrn(3),
-      I1 => \irq_pend_reg_n_0_[3]\,
+      I1 => p_11_in,
       I2 => \irq_en_reg_n_0_[3]\,
       O => \irq_pend[3]_i_2_n_0\
     );
@@ -31136,10 +29629,10 @@ begin
     )
         port map (
       I0 => \irq_pend[4]_i_2_n_0\,
-      I1 => p_0_in21_in,
-      I2 => \irq_typ_reg_n_0_[4]\,
+      I1 => p_12_in,
+      I2 => p_14_in(1),
       I3 => \^q\(4),
-      I4 => \irq_pol_reg_n_0_[4]\,
+      I4 => p_14_in(0),
       I5 => \irq_en_reg_n_0_[4]\,
       O => irq_pend0(4)
     );
@@ -31149,7 +29642,7 @@ begin
     )
         port map (
       I0 => irq_clrn(4),
-      I1 => p_26_in,
+      I1 => \irq_pend_reg_n_0_[4]\,
       I2 => \irq_en_reg_n_0_[4]\,
       O => \irq_pend[4]_i_2_n_0\
     );
@@ -31159,10 +29652,10 @@ begin
     )
         port map (
       I0 => \irq_pend[5]_i_2_n_0\,
-      I1 => p_0_in27_in,
-      I2 => \irq_typ_reg_n_0_[5]\,
+      I1 => p_15_in,
+      I2 => p_17_in(1),
       I3 => \^q\(5),
-      I4 => \irq_pol_reg_n_0_[5]\,
+      I4 => p_17_in(0),
       I5 => \irq_en_reg_n_0_[5]\,
       O => irq_pend0(5)
     );
@@ -31182,7 +29675,7 @@ begin
     )
         port map (
       I0 => \irq_pend[6]_i_2_n_0\,
-      I1 => p_0_in33_in,
+      I1 => p_36_in,
       I2 => \irq_typ_reg_n_0_[6]\,
       I3 => \^q\(6),
       I4 => \irq_pol_reg_n_0_[6]\,
@@ -31195,7 +29688,7 @@ begin
     )
         port map (
       I0 => irq_clrn(6),
-      I1 => \irq_pend_reg_n_0_[6]\,
+      I1 => p_8_in,
       I2 => \irq_en_reg_n_0_[6]\,
       O => \irq_pend[6]_i_2_n_0\
     );
@@ -31205,7 +29698,7 @@ begin
     )
         port map (
       I0 => \irq_pend[7]_i_2_n_0\,
-      I1 => p_0_in39_in,
+      I1 => p_34_in,
       I2 => \irq_typ_reg_n_0_[7]\,
       I3 => \^q\(7),
       I4 => \irq_pol_reg_n_0_[7]\,
@@ -31218,7 +29711,7 @@ begin
     )
         port map (
       I0 => irq_clrn(7),
-      I1 => p_23_in,
+      I1 => \irq_pend_reg_n_0_[7]\,
       I2 => \irq_en_reg_n_0_[7]\,
       O => \irq_pend[7]_i_2_n_0\
     );
@@ -31228,7 +29721,7 @@ begin
     )
         port map (
       I0 => \irq_pend[8]_i_2_n_0\,
-      I1 => p_0_in45_in,
+      I1 => p_32_in,
       I2 => \irq_typ_reg_n_0_[8]\,
       I3 => \^q\(8),
       I4 => \irq_pol_reg_n_0_[8]\,
@@ -31251,7 +29744,7 @@ begin
     )
         port map (
       I0 => \irq_pend[9]_i_2_n_0\,
-      I1 => p_0_in51_in,
+      I1 => p_30_in,
       I2 => \irq_typ_reg_n_0_[9]\,
       I3 => \^q\(9),
       I4 => \irq_pol_reg_n_0_[9]\,
@@ -31264,7 +29757,7 @@ begin
     )
         port map (
       I0 => irq_clrn(9),
-      I1 => \irq_pend_reg_n_0_[9]\,
+      I1 => p_5_in,
       I2 => \irq_en_reg_n_0_[9]\,
       O => \irq_pend[9]_i_2_n_0\
     );
@@ -31282,7 +29775,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => irq_pend0(10),
-      Q => p_20_in
+      Q => \irq_pend_reg_n_0_[10]\
     );
 \irq_pend_reg[11]\: unisim.vcomponents.FDCE
      port map (
@@ -31298,7 +29791,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => irq_pend0(12),
-      Q => \irq_pend_reg_n_0_[12]\
+      Q => p_2_in
     );
 \irq_pend_reg[13]\: unisim.vcomponents.FDCE
      port map (
@@ -31306,7 +29799,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => irq_pend0(13),
-      Q => p_17_in
+      Q => p_1_in
     );
 \irq_pend_reg[14]\: unisim.vcomponents.FDCE
      port map (
@@ -31314,7 +29807,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => irq_pend0(14),
-      Q => \irq_pend_reg_n_0_[14]\
+      Q => p_0_in
     );
 \irq_pend_reg[15]\: unisim.vcomponents.FDCE
      port map (
@@ -31324,125 +29817,13 @@ begin
       D => irq_pend0(15),
       Q => \irq_pend_reg_n_0_[15]\
     );
-\irq_pend_reg[16]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(16),
-      Q => p_14_in
-    );
-\irq_pend_reg[17]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(17),
-      Q => \irq_pend_reg_n_0_[17]\
-    );
-\irq_pend_reg[18]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(18),
-      Q => \irq_pend_reg_n_0_[18]\
-    );
-\irq_pend_reg[19]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(19),
-      Q => p_11_in
-    );
 \irq_pend_reg[1]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
       D => irq_pend0(1),
-      Q => p_29_in
-    );
-\irq_pend_reg[20]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(20),
-      Q => \irq_pend_reg_n_0_[20]\
-    );
-\irq_pend_reg[21]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(21),
-      Q => \irq_pend_reg_n_0_[21]\
-    );
-\irq_pend_reg[22]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(22),
-      Q => p_8_in
-    );
-\irq_pend_reg[23]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(23),
-      Q => \irq_pend_reg_n_0_[23]\
-    );
-\irq_pend_reg[24]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(24),
-      Q => \irq_pend_reg_n_0_[24]\
-    );
-\irq_pend_reg[25]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(25),
-      Q => p_5_in
-    );
-\irq_pend_reg[26]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(26),
-      Q => \irq_pend_reg_n_0_[26]\
-    );
-\irq_pend_reg[27]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(27),
-      Q => \irq_pend_reg_n_0_[27]\
-    );
-\irq_pend_reg[28]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(28),
-      Q => p_2_in
-    );
-\irq_pend_reg[29]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(29),
-      Q => \irq_pend_reg_n_0_[29]\
+      Q => \irq_pend_reg_n_0_[1]\
     );
 \irq_pend_reg[2]\: unisim.vcomponents.FDCE
      port map (
@@ -31452,29 +29833,13 @@ begin
       D => irq_pend0(2),
       Q => \irq_pend_reg_n_0_[2]\
     );
-\irq_pend_reg[30]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(30),
-      Q => \irq_pend_reg_n_0_[30]\
-    );
-\irq_pend_reg[31]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => irq_pend0(31),
-      Q => \irq_pend_reg_n_0_[31]\
-    );
 \irq_pend_reg[3]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
       CLR => rstn_sys,
       D => irq_pend0(3),
-      Q => \irq_pend_reg_n_0_[3]\
+      Q => p_11_in
     );
 \irq_pend_reg[4]\: unisim.vcomponents.FDCE
      port map (
@@ -31482,7 +29847,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => irq_pend0(4),
-      Q => p_26_in
+      Q => \irq_pend_reg_n_0_[4]\
     );
 \irq_pend_reg[5]\: unisim.vcomponents.FDCE
      port map (
@@ -31498,7 +29863,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => irq_pend0(6),
-      Q => \irq_pend_reg_n_0_[6]\
+      Q => p_8_in
     );
 \irq_pend_reg[7]\: unisim.vcomponents.FDCE
      port map (
@@ -31506,7 +29871,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => irq_pend0(7),
-      Q => p_23_in
+      Q => \irq_pend_reg_n_0_[7]\
     );
 \irq_pend_reg[8]\: unisim.vcomponents.FDCE
      port map (
@@ -31522,12 +29887,12 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => irq_pend0(9),
-      Q => \irq_pend_reg_n_0_[9]\
+      Q => p_5_in
     );
 \irq_pol_reg[0]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(0),
       Q => \irq_pol_reg_n_0_[0]\
@@ -31535,7 +29900,7 @@ begin
 \irq_pol_reg[10]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(10),
       Q => \irq_pol_reg_n_0_[10]\
@@ -31543,7 +29908,7 @@ begin
 \irq_pol_reg[11]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(11),
       Q => \irq_pol_reg_n_0_[11]\
@@ -31551,7 +29916,7 @@ begin
 \irq_pol_reg[12]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(12),
       Q => \irq_pol_reg_n_0_[12]\
@@ -31559,7 +29924,7 @@ begin
 \irq_pol_reg[13]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(13),
       Q => \irq_pol_reg_n_0_[13]\
@@ -31567,7 +29932,7 @@ begin
 \irq_pol_reg[14]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(14),
       Q => \irq_pol_reg_n_0_[14]\
@@ -31575,159 +29940,31 @@ begin
 \irq_pol_reg[15]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(15),
       Q => \irq_pol_reg_n_0_[15]\
     );
-\irq_pol_reg[16]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(16),
-      Q => \irq_pol_reg_n_0_[16]\
-    );
-\irq_pol_reg[17]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(17),
-      Q => \irq_pol_reg_n_0_[17]\
-    );
-\irq_pol_reg[18]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(18),
-      Q => \irq_pol_reg_n_0_[18]\
-    );
-\irq_pol_reg[19]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(19),
-      Q => \irq_pol_reg_n_0_[19]\
-    );
 \irq_pol_reg[1]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(1),
       Q => \irq_pol_reg_n_0_[1]\
     );
-\irq_pol_reg[20]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(20),
-      Q => \irq_pol_reg_n_0_[20]\
-    );
-\irq_pol_reg[21]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(21),
-      Q => \irq_pol_reg_n_0_[21]\
-    );
-\irq_pol_reg[22]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(22),
-      Q => \irq_pol_reg_n_0_[22]\
-    );
-\irq_pol_reg[23]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(23),
-      Q => \irq_pol_reg_n_0_[23]\
-    );
-\irq_pol_reg[24]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(24),
-      Q => \irq_pol_reg_n_0_[24]\
-    );
-\irq_pol_reg[25]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(25),
-      Q => \irq_pol_reg_n_0_[25]\
-    );
-\irq_pol_reg[26]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(26),
-      Q => p_32_in(0)
-    );
-\irq_pol_reg[27]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(27),
-      Q => \irq_pol_reg_n_0_[27]\
-    );
-\irq_pol_reg[28]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(28),
-      Q => \irq_pol_reg_n_0_[28]\
-    );
-\irq_pol_reg[29]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(29),
-      Q => \irq_pol_reg_n_0_[29]\
-    );
 \irq_pol_reg[2]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(2),
       Q => \irq_pol_reg_n_0_[2]\
     );
-\irq_pol_reg[30]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(30),
-      Q => \irq_pol_reg_n_0_[30]\
-    );
-\irq_pol_reg[31]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
-      CLR => rstn_sys,
-      D => D(31),
-      Q => \irq_pol_reg_n_0_[31]\
-    );
 \irq_pol_reg[3]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(3),
       Q => \irq_pol_reg_n_0_[3]\
@@ -31735,23 +29972,23 @@ begin
 \irq_pol_reg[4]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(4),
-      Q => \irq_pol_reg_n_0_[4]\
+      Q => p_14_in(0)
     );
 \irq_pol_reg[5]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(5),
-      Q => \irq_pol_reg_n_0_[5]\
+      Q => p_17_in(0)
     );
 \irq_pol_reg[6]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(6),
       Q => \irq_pol_reg_n_0_[6]\
@@ -31759,7 +29996,7 @@ begin
 \irq_pol_reg[7]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(7),
       Q => \irq_pol_reg_n_0_[7]\
@@ -31767,7 +30004,7 @@ begin
 \irq_pol_reg[8]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(8),
       Q => \irq_pol_reg_n_0_[8]\
@@ -31775,7 +30012,7 @@ begin
 \irq_pol_reg[9]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_pol_reg[31]_1\(0),
+      CE => \irq_pol_reg[15]_1\(0),
       CLR => rstn_sys,
       D => D(9),
       Q => \irq_pol_reg_n_0_[9]\
@@ -31783,7 +30020,7 @@ begin
 \irq_typ_reg[0]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(0),
       Q => \irq_typ_reg_n_0_[0]\
@@ -31791,7 +30028,7 @@ begin
 \irq_typ_reg[10]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(10),
       Q => \irq_typ_reg_n_0_[10]\
@@ -31799,7 +30036,7 @@ begin
 \irq_typ_reg[11]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(11),
       Q => \irq_typ_reg_n_0_[11]\
@@ -31807,7 +30044,7 @@ begin
 \irq_typ_reg[12]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(12),
       Q => \irq_typ_reg_n_0_[12]\
@@ -31815,7 +30052,7 @@ begin
 \irq_typ_reg[13]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(13),
       Q => \irq_typ_reg_n_0_[13]\
@@ -31823,7 +30060,7 @@ begin
 \irq_typ_reg[14]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(14),
       Q => \irq_typ_reg_n_0_[14]\
@@ -31831,159 +30068,31 @@ begin
 \irq_typ_reg[15]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(15),
       Q => \irq_typ_reg_n_0_[15]\
     );
-\irq_typ_reg[16]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(16),
-      Q => \irq_typ_reg_n_0_[16]\
-    );
-\irq_typ_reg[17]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(17),
-      Q => \irq_typ_reg_n_0_[17]\
-    );
-\irq_typ_reg[18]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(18),
-      Q => \irq_typ_reg_n_0_[18]\
-    );
-\irq_typ_reg[19]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(19),
-      Q => \irq_typ_reg_n_0_[19]\
-    );
 \irq_typ_reg[1]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(1),
       Q => \irq_typ_reg_n_0_[1]\
     );
-\irq_typ_reg[20]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(20),
-      Q => \irq_typ_reg_n_0_[20]\
-    );
-\irq_typ_reg[21]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(21),
-      Q => \irq_typ_reg_n_0_[21]\
-    );
-\irq_typ_reg[22]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(22),
-      Q => \irq_typ_reg_n_0_[22]\
-    );
-\irq_typ_reg[23]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(23),
-      Q => \irq_typ_reg_n_0_[23]\
-    );
-\irq_typ_reg[24]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(24),
-      Q => \irq_typ_reg_n_0_[24]\
-    );
-\irq_typ_reg[25]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(25),
-      Q => \irq_typ_reg_n_0_[25]\
-    );
-\irq_typ_reg[26]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(26),
-      Q => p_32_in(1)
-    );
-\irq_typ_reg[27]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(27),
-      Q => \irq_typ_reg_n_0_[27]\
-    );
-\irq_typ_reg[28]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(28),
-      Q => \irq_typ_reg_n_0_[28]\
-    );
-\irq_typ_reg[29]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(29),
-      Q => \irq_typ_reg_n_0_[29]\
-    );
 \irq_typ_reg[2]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(2),
       Q => \irq_typ_reg_n_0_[2]\
     );
-\irq_typ_reg[30]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(30),
-      Q => \irq_typ_reg_n_0_[30]\
-    );
-\irq_typ_reg[31]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
-      CLR => rstn_sys,
-      D => D(31),
-      Q => \irq_typ_reg_n_0_[31]\
-    );
 \irq_typ_reg[3]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(3),
       Q => \irq_typ_reg_n_0_[3]\
@@ -31991,23 +30100,23 @@ begin
 \irq_typ_reg[4]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(4),
-      Q => \irq_typ_reg_n_0_[4]\
+      Q => p_14_in(1)
     );
 \irq_typ_reg[5]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(5),
-      Q => \irq_typ_reg_n_0_[5]\
+      Q => p_17_in(1)
     );
 \irq_typ_reg[6]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(6),
       Q => \irq_typ_reg_n_0_[6]\
@@ -32015,7 +30124,7 @@ begin
 \irq_typ_reg[7]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(7),
       Q => \irq_typ_reg_n_0_[7]\
@@ -32023,7 +30132,7 @@ begin
 \irq_typ_reg[8]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(8),
       Q => \irq_typ_reg_n_0_[8]\
@@ -32031,7 +30140,7 @@ begin
 \irq_typ_reg[9]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \irq_typ_reg[31]_0\(0),
+      CE => \irq_typ_reg[15]_0\(0),
       CLR => rstn_sys,
       D => D(9),
       Q => \irq_typ_reg_n_0_[9]\
@@ -32050,7 +30159,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(10),
-      Q => p_0_in57_in
+      Q => p_28_in
     );
 \port_in2_reg[11]\: unisim.vcomponents.FDCE
      port map (
@@ -32058,7 +30167,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(11),
-      Q => p_0_in63_in
+      Q => p_26_in
     );
 \port_in2_reg[12]\: unisim.vcomponents.FDCE
      port map (
@@ -32066,7 +30175,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(12),
-      Q => p_0_in69_in
+      Q => p_24_in
     );
 \port_in2_reg[13]\: unisim.vcomponents.FDCE
      port map (
@@ -32074,7 +30183,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(13),
-      Q => p_0_in75_in
+      Q => p_22_in
     );
 \port_in2_reg[14]\: unisim.vcomponents.FDCE
      port map (
@@ -32082,7 +30191,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(14),
-      Q => p_0_in81_in
+      Q => p_20_in
     );
 \port_in2_reg[15]\: unisim.vcomponents.FDCE
      port map (
@@ -32090,39 +30199,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(15),
-      Q => p_0_in87_in
-    );
-\port_in2_reg[16]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(16),
-      Q => p_0_in93_in
-    );
-\port_in2_reg[17]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(17),
-      Q => p_3_in
-    );
-\port_in2_reg[18]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(18),
-      Q => p_6_in
-    );
-\port_in2_reg[19]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(19),
-      Q => p_9_in
+      Q => p_18_in
     );
 \port_in2_reg[1]\: unisim.vcomponents.FDCE
      port map (
@@ -32130,87 +30207,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(1),
-      Q => p_0_in
-    );
-\port_in2_reg[20]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(20),
-      Q => p_12_in
-    );
-\port_in2_reg[21]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(21),
-      Q => p_15_in
-    );
-\port_in2_reg[22]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(22),
-      Q => p_18_in
-    );
-\port_in2_reg[23]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(23),
-      Q => p_21_in
-    );
-\port_in2_reg[24]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(24),
-      Q => p_24_in
-    );
-\port_in2_reg[25]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(25),
-      Q => p_27_in
-    );
-\port_in2_reg[26]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(26),
-      Q => p_30_in
-    );
-\port_in2_reg[27]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(27),
-      Q => p_41_in
-    );
-\port_in2_reg[28]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(28),
-      Q => p_39_in
-    );
-\port_in2_reg[29]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(29),
-      Q => p_37_in
+      Q => p_3_in
     );
 \port_in2_reg[2]\: unisim.vcomponents.FDCE
      port map (
@@ -32218,23 +30215,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(2),
-      Q => p_0_in9_in
-    );
-\port_in2_reg[30]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(30),
-      Q => p_35_in
-    );
-\port_in2_reg[31]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => \^q\(31),
-      Q => p_33_in
+      Q => p_6_in
     );
 \port_in2_reg[3]\: unisim.vcomponents.FDCE
      port map (
@@ -32242,7 +30223,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(3),
-      Q => p_0_in15_in
+      Q => p_9_in
     );
 \port_in2_reg[4]\: unisim.vcomponents.FDCE
      port map (
@@ -32250,7 +30231,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(4),
-      Q => p_0_in21_in
+      Q => p_12_in
     );
 \port_in2_reg[5]\: unisim.vcomponents.FDCE
      port map (
@@ -32258,7 +30239,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(5),
-      Q => p_0_in27_in
+      Q => p_15_in
     );
 \port_in2_reg[6]\: unisim.vcomponents.FDCE
      port map (
@@ -32266,7 +30247,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(6),
-      Q => p_0_in33_in
+      Q => p_36_in
     );
 \port_in2_reg[7]\: unisim.vcomponents.FDCE
      port map (
@@ -32274,7 +30255,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(7),
-      Q => p_0_in39_in
+      Q => p_34_in
     );
 \port_in2_reg[8]\: unisim.vcomponents.FDCE
      port map (
@@ -32282,7 +30263,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(8),
-      Q => p_0_in45_in
+      Q => p_32_in
     );
 \port_in2_reg[9]\: unisim.vcomponents.FDCE
      port map (
@@ -32290,7 +30271,7 @@ begin
       CE => '1',
       CLR => rstn_sys,
       D => \^q\(9),
-      Q => p_0_in51_in
+      Q => p_30_in
     );
 \port_in_reg[0]\: unisim.vcomponents.FDCE
      port map (
@@ -32348,38 +30329,6 @@ begin
       D => gpio_i(15),
       Q => \^q\(15)
     );
-\port_in_reg[16]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(16),
-      Q => \^q\(16)
-    );
-\port_in_reg[17]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(17),
-      Q => \^q\(17)
-    );
-\port_in_reg[18]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(18),
-      Q => \^q\(18)
-    );
-\port_in_reg[19]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(19),
-      Q => \^q\(19)
-    );
 \port_in_reg[1]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
@@ -32388,86 +30337,6 @@ begin
       D => gpio_i(1),
       Q => \^q\(1)
     );
-\port_in_reg[20]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(20),
-      Q => \^q\(20)
-    );
-\port_in_reg[21]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(21),
-      Q => \^q\(21)
-    );
-\port_in_reg[22]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(22),
-      Q => \^q\(22)
-    );
-\port_in_reg[23]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(23),
-      Q => \^q\(23)
-    );
-\port_in_reg[24]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(24),
-      Q => \^q\(24)
-    );
-\port_in_reg[25]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(25),
-      Q => \^q\(25)
-    );
-\port_in_reg[26]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(26),
-      Q => \^q\(26)
-    );
-\port_in_reg[27]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(27),
-      Q => \^q\(27)
-    );
-\port_in_reg[28]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(28),
-      Q => \^q\(28)
-    );
-\port_in_reg[29]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(29),
-      Q => \^q\(29)
-    );
 \port_in_reg[2]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
@@ -32475,22 +30344,6 @@ begin
       CLR => rstn_sys,
       D => gpio_i(2),
       Q => \^q\(2)
-    );
-\port_in_reg[30]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(30),
-      Q => \^q\(30)
-    );
-\port_in_reg[31]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => '1',
-      CLR => rstn_sys,
-      D => gpio_i(31),
-      Q => \^q\(31)
     );
 \port_in_reg[3]\: unisim.vcomponents.FDCE
      port map (
@@ -32554,7 +30407,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(0),
-      Q => \port_out_reg[31]_0\(0)
+      Q => gpio_o(0)
     );
 \port_out_reg[10]\: unisim.vcomponents.FDCE
      port map (
@@ -32562,7 +30415,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(10),
-      Q => \port_out_reg[31]_0\(10)
+      Q => gpio_o(10)
     );
 \port_out_reg[11]\: unisim.vcomponents.FDCE
      port map (
@@ -32570,7 +30423,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(11),
-      Q => \port_out_reg[31]_0\(11)
+      Q => gpio_o(11)
     );
 \port_out_reg[12]\: unisim.vcomponents.FDCE
      port map (
@@ -32578,7 +30431,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(12),
-      Q => \port_out_reg[31]_0\(12)
+      Q => gpio_o(12)
     );
 \port_out_reg[13]\: unisim.vcomponents.FDCE
      port map (
@@ -32586,7 +30439,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(13),
-      Q => \port_out_reg[31]_0\(13)
+      Q => gpio_o(13)
     );
 \port_out_reg[14]\: unisim.vcomponents.FDCE
      port map (
@@ -32594,7 +30447,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(14),
-      Q => \port_out_reg[31]_0\(14)
+      Q => gpio_o(14)
     );
 \port_out_reg[15]\: unisim.vcomponents.FDCE
      port map (
@@ -32602,39 +30455,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(15),
-      Q => \port_out_reg[31]_0\(15)
-    );
-\port_out_reg[16]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(16),
-      Q => \port_out_reg[31]_0\(16)
-    );
-\port_out_reg[17]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(17),
-      Q => \port_out_reg[31]_0\(17)
-    );
-\port_out_reg[18]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(18),
-      Q => \port_out_reg[31]_0\(18)
-    );
-\port_out_reg[19]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(19),
-      Q => \port_out_reg[31]_0\(19)
+      Q => gpio_o(15)
     );
 \port_out_reg[1]\: unisim.vcomponents.FDCE
      port map (
@@ -32642,87 +30463,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(1),
-      Q => \port_out_reg[31]_0\(1)
-    );
-\port_out_reg[20]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(20),
-      Q => \port_out_reg[31]_0\(20)
-    );
-\port_out_reg[21]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(21),
-      Q => \port_out_reg[31]_0\(21)
-    );
-\port_out_reg[22]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(22),
-      Q => \port_out_reg[31]_0\(22)
-    );
-\port_out_reg[23]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(23),
-      Q => \port_out_reg[31]_0\(23)
-    );
-\port_out_reg[24]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(24),
-      Q => \port_out_reg[31]_0\(24)
-    );
-\port_out_reg[25]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(25),
-      Q => \port_out_reg[31]_0\(25)
-    );
-\port_out_reg[26]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(26),
-      Q => \port_out_reg[31]_0\(26)
-    );
-\port_out_reg[27]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(27),
-      Q => \port_out_reg[31]_0\(27)
-    );
-\port_out_reg[28]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(28),
-      Q => \port_out_reg[31]_0\(28)
-    );
-\port_out_reg[29]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(29),
-      Q => \port_out_reg[31]_0\(29)
+      Q => gpio_o(1)
     );
 \port_out_reg[2]\: unisim.vcomponents.FDCE
      port map (
@@ -32730,23 +30471,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(2),
-      Q => \port_out_reg[31]_0\(2)
-    );
-\port_out_reg[30]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(30),
-      Q => \port_out_reg[31]_0\(30)
-    );
-\port_out_reg[31]\: unisim.vcomponents.FDCE
-     port map (
-      C => clk,
-      CE => E(0),
-      CLR => rstn_sys,
-      D => D(31),
-      Q => \port_out_reg[31]_0\(31)
+      Q => gpio_o(2)
     );
 \port_out_reg[3]\: unisim.vcomponents.FDCE
      port map (
@@ -32754,7 +30479,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(3),
-      Q => \port_out_reg[31]_0\(3)
+      Q => gpio_o(3)
     );
 \port_out_reg[4]\: unisim.vcomponents.FDCE
      port map (
@@ -32762,7 +30487,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(4),
-      Q => \port_out_reg[31]_0\(4)
+      Q => gpio_o(4)
     );
 \port_out_reg[5]\: unisim.vcomponents.FDCE
      port map (
@@ -32770,7 +30495,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(5),
-      Q => \port_out_reg[31]_0\(5)
+      Q => gpio_o(5)
     );
 \port_out_reg[6]\: unisim.vcomponents.FDCE
      port map (
@@ -32778,7 +30503,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(6),
-      Q => \port_out_reg[31]_0\(6)
+      Q => gpio_o(6)
     );
 \port_out_reg[7]\: unisim.vcomponents.FDCE
      port map (
@@ -32786,7 +30511,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(7),
-      Q => \port_out_reg[31]_0\(7)
+      Q => gpio_o(7)
     );
 \port_out_reg[8]\: unisim.vcomponents.FDCE
      port map (
@@ -32794,7 +30519,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(8),
-      Q => \port_out_reg[31]_0\(8)
+      Q => gpio_o(8)
     );
 \port_out_reg[9]\: unisim.vcomponents.FDCE
      port map (
@@ -32802,7 +30527,7 @@ begin
       CE => E(0),
       CLR => rstn_sys,
       D => D(9),
-      Q => \port_out_reg[31]_0\(9)
+      Q => gpio_o(9)
     );
 \trap_ctrl[irq_pnd][11]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -32810,94 +30535,46 @@ begin
     )
         port map (
       I0 => \trap_ctrl[irq_pnd][11]_i_2_n_0\,
-      I1 => \trap_ctrl[irq_pnd][11]_i_3_n_0\,
-      I2 => \irq_pend_reg_n_0_[24]\,
-      I3 => \irq_pend_reg_n_0_[23]\,
-      I4 => p_8_in,
-      I5 => \irq_pend_reg_n_0_[21]\,
+      I1 => p_0_in,
+      I2 => p_1_in,
+      I3 => p_2_in,
+      I4 => \irq_pend_reg_n_0_[11]\,
+      I5 => \trap_ctrl[irq_pnd][11]_i_3_n_0\,
       O => irq_fast_i(0)
     );
-\trap_ctrl[irq_pnd][11]_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => \trap_ctrl[irq_pnd][11]_i_4_n_0\,
-      I1 => p_5_in,
-      I2 => \irq_pend_reg_n_0_[26]\,
-      I3 => \irq_pend_reg_n_0_[27]\,
-      I4 => p_2_in,
-      O => \trap_ctrl[irq_pnd][11]_i_2_n_0\
-    );
-\trap_ctrl[irq_pnd][11]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
-    )
-        port map (
-      I0 => p_14_in,
-      I1 => \irq_pend_reg_n_0_[15]\,
-      I2 => \trap_ctrl[irq_pnd][11]_i_5_n_0\,
-      I3 => \trap_ctrl[irq_pnd][11]_i_6_n_0\,
-      I4 => \trap_ctrl[irq_pnd][11]_i_7_n_0\,
-      I5 => \trap_ctrl[irq_pnd][11]_i_8_n_0\,
-      O => \trap_ctrl[irq_pnd][11]_i_3_n_0\
-    );
-\trap_ctrl[irq_pnd][11]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
-    )
-        port map (
-      I0 => \irq_pend_reg_n_0_[17]\,
-      I1 => \irq_pend_reg_n_0_[18]\,
-      I2 => p_11_in,
-      I3 => \irq_pend_reg_n_0_[20]\,
-      I4 => \irq_pend_reg_n_0_[30]\,
-      I5 => \irq_pend_reg_n_0_[29]\,
-      O => \trap_ctrl[irq_pnd][11]_i_4_n_0\
-    );
-\trap_ctrl[irq_pnd][11]_i_5\: unisim.vcomponents.LUT4
+\trap_ctrl[irq_pnd][11]_i_2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
         port map (
-      I0 => \irq_pend_reg_n_0_[6]\,
-      I1 => \irq_pend_reg_n_0_[5]\,
-      I2 => p_26_in,
-      I3 => \irq_pend_reg_n_0_[3]\,
-      O => \trap_ctrl[irq_pnd][11]_i_5_n_0\
+      I0 => \irq_pend_reg_n_0_[10]\,
+      I1 => p_5_in,
+      I2 => \irq_pend_reg_n_0_[8]\,
+      I3 => \irq_pend_reg_n_0_[7]\,
+      O => \trap_ctrl[irq_pnd][11]_i_2_n_0\
     );
-\trap_ctrl[irq_pnd][11]_i_6\: unisim.vcomponents.LUT4
+\trap_ctrl[irq_pnd][11]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFFFE"
+    )
+        port map (
+      I0 => p_11_in,
+      I1 => \irq_pend_reg_n_0_[4]\,
+      I2 => \irq_pend_reg_n_0_[5]\,
+      I3 => p_8_in,
+      I4 => \trap_ctrl[irq_pnd][11]_i_4_n_0\,
+      O => \trap_ctrl[irq_pnd][11]_i_3_n_0\
+    );
+\trap_ctrl[irq_pnd][11]_i_4\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
         port map (
       I0 => \irq_pend_reg_n_0_[2]\,
-      I1 => p_29_in,
+      I1 => \irq_pend_reg_n_0_[1]\,
       I2 => \irq_pend_reg_n_0_[0]\,
-      I3 => \irq_pend_reg_n_0_[31]\,
-      O => \trap_ctrl[irq_pnd][11]_i_6_n_0\
-    );
-\trap_ctrl[irq_pnd][11]_i_7\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \irq_pend_reg_n_0_[14]\,
-      I1 => p_17_in,
-      I2 => \irq_pend_reg_n_0_[12]\,
-      I3 => \irq_pend_reg_n_0_[11]\,
-      O => \trap_ctrl[irq_pnd][11]_i_7_n_0\
-    );
-\trap_ctrl[irq_pnd][11]_i_8\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => p_20_in,
-      I1 => \irq_pend_reg_n_0_[9]\,
-      I2 => \irq_pend_reg_n_0_[8]\,
-      I3 => p_23_in,
-      O => \trap_ctrl[irq_pnd][11]_i_8_n_0\
+      I3 => \irq_pend_reg_n_0_[15]\,
+      O => \trap_ctrl[irq_pnd][11]_i_4_n_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -32993,18 +30670,18 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_prim_fifo is
   attribute ram_slice_begin of \fifo_memory_large.fifo_reg_0_63_6_7\ : label is 6;
   attribute ram_slice_end of \fifo_memory_large.fifo_reg_0_63_6_7\ : label is 7;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \fifo_status_large.avail_i_1__0\ : label is "soft_lutpair253";
-  attribute SOFT_HLUTNM of \r_pnt[1]_i_1__0\ : label is "soft_lutpair250";
-  attribute SOFT_HLUTNM of \r_pnt[2]_i_1\ : label is "soft_lutpair250";
-  attribute SOFT_HLUTNM of \r_pnt[5]_i_1\ : label is "soft_lutpair249";
-  attribute SOFT_HLUTNM of \r_pnt[6]_i_2__0\ : label is "soft_lutpair249";
-  attribute SOFT_HLUTNM of rx_overrun_i_1 : label is "soft_lutpair254";
-  attribute SOFT_HLUTNM of uart_rtsn_o_i_1 : label is "soft_lutpair254";
-  attribute SOFT_HLUTNM of uart_rtsn_o_i_2 : label is "soft_lutpair253";
-  attribute SOFT_HLUTNM of \w_pnt[1]_i_1__0\ : label is "soft_lutpair251";
-  attribute SOFT_HLUTNM of \w_pnt[2]_i_1\ : label is "soft_lutpair251";
-  attribute SOFT_HLUTNM of \w_pnt[5]_i_1\ : label is "soft_lutpair252";
-  attribute SOFT_HLUTNM of \w_pnt[6]_i_2\ : label is "soft_lutpair252";
+  attribute SOFT_HLUTNM of \fifo_status_large.avail_i_1__0\ : label is "soft_lutpair254";
+  attribute SOFT_HLUTNM of \r_pnt[1]_i_1__0\ : label is "soft_lutpair251";
+  attribute SOFT_HLUTNM of \r_pnt[2]_i_1\ : label is "soft_lutpair251";
+  attribute SOFT_HLUTNM of \r_pnt[5]_i_1\ : label is "soft_lutpair250";
+  attribute SOFT_HLUTNM of \r_pnt[6]_i_2__0\ : label is "soft_lutpair250";
+  attribute SOFT_HLUTNM of rx_overrun_i_1 : label is "soft_lutpair255";
+  attribute SOFT_HLUTNM of uart_rtsn_o_i_1 : label is "soft_lutpair255";
+  attribute SOFT_HLUTNM of uart_rtsn_o_i_2 : label is "soft_lutpair254";
+  attribute SOFT_HLUTNM of \w_pnt[1]_i_1__0\ : label is "soft_lutpair252";
+  attribute SOFT_HLUTNM of \w_pnt[2]_i_1\ : label is "soft_lutpair252";
+  attribute SOFT_HLUTNM of \w_pnt[5]_i_1\ : label is "soft_lutpair253";
+  attribute SOFT_HLUTNM of \w_pnt[6]_i_2\ : label is "soft_lutpair253";
 begin
   \r_pnt_reg[6]_0\ <= \^r_pnt_reg[6]_0\;
   re0 <= \^re0\;
@@ -33611,7 +31288,7 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3 is
   signal \NLW_fifo_memory_large.fifo_reg_0_63_6_7_DOC_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_fifo_memory_large.fifo_reg_0_63_6_7_DOD_UNCONNECTED\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \bus_rsp_o[data][19]_i_2__0\ : label is "soft_lutpair259";
+  attribute SOFT_HLUTNM of \bus_rsp_o[data][19]_i_2\ : label is "soft_lutpair260";
   attribute METHODOLOGY_DRC_VIOS : string;
   attribute METHODOLOGY_DRC_VIOS of \fifo_memory_large.fifo_reg_0_63_0_2\ : label is "";
   attribute RTL_RAM_BITS : integer;
@@ -33652,30 +31329,30 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_prim_fifo_3 is
   attribute ram_offset of \fifo_memory_large.fifo_reg_0_63_6_7\ : label is 0;
   attribute ram_slice_begin of \fifo_memory_large.fifo_reg_0_63_6_7\ : label is 6;
   attribute ram_slice_end of \fifo_memory_large.fifo_reg_0_63_6_7\ : label is 7;
-  attribute SOFT_HLUTNM of \fifo_status_large.avail_i_1\ : label is "soft_lutpair259";
-  attribute SOFT_HLUTNM of \r_pnt[0]_i_1__0\ : label is "soft_lutpair260";
-  attribute SOFT_HLUTNM of \r_pnt[1]_i_1__1\ : label is "soft_lutpair256";
-  attribute SOFT_HLUTNM of \r_pnt[2]_i_1__0\ : label is "soft_lutpair256";
-  attribute SOFT_HLUTNM of \r_pnt[5]_i_1__0\ : label is "soft_lutpair255";
-  attribute SOFT_HLUTNM of \r_pnt[6]_i_2\ : label is "soft_lutpair255";
-  attribute SOFT_HLUTNM of \tx_engine[sreg][1]_i_1\ : label is "soft_lutpair264";
-  attribute SOFT_HLUTNM of \tx_engine[sreg][2]_i_1\ : label is "soft_lutpair264";
-  attribute SOFT_HLUTNM of \tx_engine[sreg][3]_i_1\ : label is "soft_lutpair263";
-  attribute SOFT_HLUTNM of \tx_engine[sreg][4]_i_1\ : label is "soft_lutpair263";
-  attribute SOFT_HLUTNM of \tx_engine[sreg][5]_i_1\ : label is "soft_lutpair262";
-  attribute SOFT_HLUTNM of \tx_engine[sreg][6]_i_1\ : label is "soft_lutpair262";
-  attribute SOFT_HLUTNM of \tx_engine[sreg][7]_i_1\ : label is "soft_lutpair261";
-  attribute SOFT_HLUTNM of \tx_engine[sreg][8]_i_1\ : label is "soft_lutpair261";
-  attribute SOFT_HLUTNM of \w_pnt[1]_i_1__1\ : label is "soft_lutpair257";
-  attribute SOFT_HLUTNM of \w_pnt[2]_i_1__0\ : label is "soft_lutpair257";
-  attribute SOFT_HLUTNM of \w_pnt[4]_i_2\ : label is "soft_lutpair260";
-  attribute SOFT_HLUTNM of \w_pnt[5]_i_1__0\ : label is "soft_lutpair258";
-  attribute SOFT_HLUTNM of \w_pnt[6]_i_2__0\ : label is "soft_lutpair258";
+  attribute SOFT_HLUTNM of \fifo_status_large.avail_i_1\ : label is "soft_lutpair260";
+  attribute SOFT_HLUTNM of \r_pnt[0]_i_1__0\ : label is "soft_lutpair261";
+  attribute SOFT_HLUTNM of \r_pnt[1]_i_1__1\ : label is "soft_lutpair257";
+  attribute SOFT_HLUTNM of \r_pnt[2]_i_1__0\ : label is "soft_lutpair257";
+  attribute SOFT_HLUTNM of \r_pnt[5]_i_1__0\ : label is "soft_lutpair256";
+  attribute SOFT_HLUTNM of \r_pnt[6]_i_2\ : label is "soft_lutpair256";
+  attribute SOFT_HLUTNM of \tx_engine[sreg][1]_i_1\ : label is "soft_lutpair265";
+  attribute SOFT_HLUTNM of \tx_engine[sreg][2]_i_1\ : label is "soft_lutpair265";
+  attribute SOFT_HLUTNM of \tx_engine[sreg][3]_i_1\ : label is "soft_lutpair264";
+  attribute SOFT_HLUTNM of \tx_engine[sreg][4]_i_1\ : label is "soft_lutpair264";
+  attribute SOFT_HLUTNM of \tx_engine[sreg][5]_i_1\ : label is "soft_lutpair263";
+  attribute SOFT_HLUTNM of \tx_engine[sreg][6]_i_1\ : label is "soft_lutpair263";
+  attribute SOFT_HLUTNM of \tx_engine[sreg][7]_i_1\ : label is "soft_lutpair262";
+  attribute SOFT_HLUTNM of \tx_engine[sreg][8]_i_1\ : label is "soft_lutpair262";
+  attribute SOFT_HLUTNM of \w_pnt[1]_i_1__1\ : label is "soft_lutpair258";
+  attribute SOFT_HLUTNM of \w_pnt[2]_i_1__0\ : label is "soft_lutpair258";
+  attribute SOFT_HLUTNM of \w_pnt[4]_i_2\ : label is "soft_lutpair261";
+  attribute SOFT_HLUTNM of \w_pnt[5]_i_1__0\ : label is "soft_lutpair259";
+  attribute SOFT_HLUTNM of \w_pnt[6]_i_2__0\ : label is "soft_lutpair259";
 begin
   \ctrl_reg[enable]\ <= \^ctrl_reg[enable]\;
   \r_pnt_reg[6]_0\ <= \^r_pnt_reg[6]_0\;
   \tx_fifo[avail]\ <= \^tx_fifo[avail]\;
-\bus_rsp_o[data][19]_i_2__0\: unisim.vcomponents.LUT3
+\bus_rsp_o[data][19]_i_2\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"EB"
     )
@@ -34411,20 +32088,20 @@ architecture STRUCTURE of \system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__param
   signal \w_pnt[0]_i_1_n_0\ : STD_LOGIC;
   signal \^w_pnt_reg[0]_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \irq_o_i_1__1\ : label is "soft_lutpair234";
-  attribute SOFT_HLUTNM of \rtx_engine[cs_ctrl][0]_i_1\ : label is "soft_lutpair239";
-  attribute SOFT_HLUTNM of \rtx_engine[cs_ctrl][1]_i_1\ : label is "soft_lutpair239";
-  attribute SOFT_HLUTNM of \rtx_engine[cs_ctrl][2]_i_1\ : label is "soft_lutpair240";
-  attribute SOFT_HLUTNM of \rtx_engine[cs_ctrl][3]_i_2\ : label is "soft_lutpair240";
-  attribute SOFT_HLUTNM of \rtx_engine[sreg][0]_i_1\ : label is "soft_lutpair235";
-  attribute SOFT_HLUTNM of \rtx_engine[sreg][1]_i_1\ : label is "soft_lutpair235";
-  attribute SOFT_HLUTNM of \rtx_engine[sreg][2]_i_1\ : label is "soft_lutpair236";
-  attribute SOFT_HLUTNM of \rtx_engine[sreg][3]_i_1\ : label is "soft_lutpair236";
-  attribute SOFT_HLUTNM of \rtx_engine[sreg][4]_i_1\ : label is "soft_lutpair237";
-  attribute SOFT_HLUTNM of \rtx_engine[sreg][5]_i_1\ : label is "soft_lutpair237";
-  attribute SOFT_HLUTNM of \rtx_engine[sreg][6]_i_1\ : label is "soft_lutpair238";
-  attribute SOFT_HLUTNM of \rtx_engine[sreg][7]_i_2\ : label is "soft_lutpair238";
-  attribute SOFT_HLUTNM of \rtx_engine[sreg][7]_i_3\ : label is "soft_lutpair234";
+  attribute SOFT_HLUTNM of \irq_o_i_1__1\ : label is "soft_lutpair235";
+  attribute SOFT_HLUTNM of \rtx_engine[cs_ctrl][0]_i_1\ : label is "soft_lutpair240";
+  attribute SOFT_HLUTNM of \rtx_engine[cs_ctrl][1]_i_1\ : label is "soft_lutpair240";
+  attribute SOFT_HLUTNM of \rtx_engine[cs_ctrl][2]_i_1\ : label is "soft_lutpair241";
+  attribute SOFT_HLUTNM of \rtx_engine[cs_ctrl][3]_i_2\ : label is "soft_lutpair241";
+  attribute SOFT_HLUTNM of \rtx_engine[sreg][0]_i_1\ : label is "soft_lutpair236";
+  attribute SOFT_HLUTNM of \rtx_engine[sreg][1]_i_1\ : label is "soft_lutpair236";
+  attribute SOFT_HLUTNM of \rtx_engine[sreg][2]_i_1\ : label is "soft_lutpair237";
+  attribute SOFT_HLUTNM of \rtx_engine[sreg][3]_i_1\ : label is "soft_lutpair237";
+  attribute SOFT_HLUTNM of \rtx_engine[sreg][4]_i_1\ : label is "soft_lutpair238";
+  attribute SOFT_HLUTNM of \rtx_engine[sreg][5]_i_1\ : label is "soft_lutpair238";
+  attribute SOFT_HLUTNM of \rtx_engine[sreg][6]_i_1\ : label is "soft_lutpair239";
+  attribute SOFT_HLUTNM of \rtx_engine[sreg][7]_i_2\ : label is "soft_lutpair239";
+  attribute SOFT_HLUTNM of \rtx_engine[sreg][7]_i_3\ : label is "soft_lutpair235";
 begin
   empty <= \^empty\;
   \r_pnt_reg[0]_0\ <= \^r_pnt_reg[0]_0\;
@@ -34899,8 +32576,8 @@ architecture STRUCTURE of \system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__param
   signal \w_pnt[0]_i_1__0_n_0\ : STD_LOGIC;
   signal we : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of s1_axis_tready_INST_0 : label is "soft_lutpair232";
-  attribute SOFT_HLUTNM of \w_pnt[0]_i_1__0\ : label is "soft_lutpair232";
+  attribute SOFT_HLUTNM of s1_axis_tready_INST_0 : label is "soft_lutpair233";
+  attribute SOFT_HLUTNM of \w_pnt[0]_i_1__0\ : label is "soft_lutpair233";
 begin
   r_pnt <= \^r_pnt\;
   w_pnt <= \^w_pnt\;
@@ -35311,8 +32988,8 @@ architecture STRUCTURE of \system_neorv32_vivado_ip_0_0_neorv32_prim_fifo__param
   signal \^w_pnt_reg[0]_0\ : STD_LOGIC;
   signal \^w_pnt_reg[0]_1\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \r_pnt[0]_i_1__0\ : label is "soft_lutpair233";
-  attribute SOFT_HLUTNM of s0_axis_tvalid_INST_0 : label is "soft_lutpair233";
+  attribute SOFT_HLUTNM of \r_pnt[0]_i_1__0\ : label is "soft_lutpair234";
+  attribute SOFT_HLUTNM of s0_axis_tvalid_INST_0 : label is "soft_lutpair234";
 begin
   \r_pnt_reg[0]_0\ <= \^r_pnt_reg[0]_0\;
   \w_pnt_reg[0]_0\ <= \^w_pnt_reg[0]_0\;
@@ -46052,8 +43729,8 @@ entity system_neorv32_vivado_ip_0_0_neorv32_sysinfo is
     rstn_sys : in STD_LOGIC;
     \bus_rsp_o_reg[err]_0\ : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \dev_12_req_o[data]\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    D : in STD_LOGIC_VECTOR ( 31 downto 0 )
+    D : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    \bus_rsp_o_reg[data][31]_1\ : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_neorv32_vivado_ip_0_0_neorv32_sysinfo : entity is "neorv32_sysinfo";
@@ -46074,7 +43751,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(0),
+      D => \bus_rsp_o_reg[data][31]_1\(0),
       Q => \bus_rsp_o_reg[data][31]_0\(0)
     );
 \bus_rsp_o_reg[data][10]\: unisim.vcomponents.FDCE
@@ -46082,7 +43759,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(10),
+      D => \bus_rsp_o_reg[data][31]_1\(10),
       Q => \bus_rsp_o_reg[data][31]_0\(10)
     );
 \bus_rsp_o_reg[data][11]\: unisim.vcomponents.FDCE
@@ -46090,7 +43767,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(11),
+      D => \bus_rsp_o_reg[data][31]_1\(11),
       Q => \bus_rsp_o_reg[data][31]_0\(11)
     );
 \bus_rsp_o_reg[data][12]\: unisim.vcomponents.FDCE
@@ -46098,7 +43775,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(12),
+      D => \bus_rsp_o_reg[data][31]_1\(12),
       Q => \bus_rsp_o_reg[data][31]_0\(12)
     );
 \bus_rsp_o_reg[data][13]\: unisim.vcomponents.FDCE
@@ -46106,7 +43783,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(13),
+      D => \bus_rsp_o_reg[data][31]_1\(13),
       Q => \bus_rsp_o_reg[data][31]_0\(13)
     );
 \bus_rsp_o_reg[data][14]\: unisim.vcomponents.FDCE
@@ -46114,7 +43791,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(14),
+      D => \bus_rsp_o_reg[data][31]_1\(14),
       Q => \bus_rsp_o_reg[data][31]_0\(14)
     );
 \bus_rsp_o_reg[data][15]\: unisim.vcomponents.FDCE
@@ -46122,7 +43799,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(15),
+      D => \bus_rsp_o_reg[data][31]_1\(15),
       Q => \bus_rsp_o_reg[data][31]_0\(15)
     );
 \bus_rsp_o_reg[data][16]\: unisim.vcomponents.FDCE
@@ -46130,7 +43807,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(16),
+      D => \bus_rsp_o_reg[data][31]_1\(16),
       Q => \bus_rsp_o_reg[data][31]_0\(16)
     );
 \bus_rsp_o_reg[data][17]\: unisim.vcomponents.FDCE
@@ -46138,7 +43815,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(17),
+      D => \bus_rsp_o_reg[data][31]_1\(17),
       Q => \bus_rsp_o_reg[data][31]_0\(17)
     );
 \bus_rsp_o_reg[data][18]\: unisim.vcomponents.FDCE
@@ -46146,7 +43823,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(18),
+      D => \bus_rsp_o_reg[data][31]_1\(18),
       Q => \bus_rsp_o_reg[data][31]_0\(18)
     );
 \bus_rsp_o_reg[data][19]\: unisim.vcomponents.FDCE
@@ -46154,7 +43831,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(19),
+      D => \bus_rsp_o_reg[data][31]_1\(19),
       Q => \bus_rsp_o_reg[data][31]_0\(19)
     );
 \bus_rsp_o_reg[data][1]\: unisim.vcomponents.FDCE
@@ -46162,7 +43839,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(1),
+      D => \bus_rsp_o_reg[data][31]_1\(1),
       Q => \bus_rsp_o_reg[data][31]_0\(1)
     );
 \bus_rsp_o_reg[data][20]\: unisim.vcomponents.FDCE
@@ -46170,7 +43847,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(20),
+      D => \bus_rsp_o_reg[data][31]_1\(20),
       Q => \bus_rsp_o_reg[data][31]_0\(20)
     );
 \bus_rsp_o_reg[data][21]\: unisim.vcomponents.FDCE
@@ -46178,7 +43855,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(21),
+      D => \bus_rsp_o_reg[data][31]_1\(21),
       Q => \bus_rsp_o_reg[data][31]_0\(21)
     );
 \bus_rsp_o_reg[data][22]\: unisim.vcomponents.FDCE
@@ -46186,7 +43863,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(22),
+      D => \bus_rsp_o_reg[data][31]_1\(22),
       Q => \bus_rsp_o_reg[data][31]_0\(22)
     );
 \bus_rsp_o_reg[data][23]\: unisim.vcomponents.FDCE
@@ -46194,7 +43871,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(23),
+      D => \bus_rsp_o_reg[data][31]_1\(23),
       Q => \bus_rsp_o_reg[data][31]_0\(23)
     );
 \bus_rsp_o_reg[data][24]\: unisim.vcomponents.FDCE
@@ -46202,7 +43879,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(24),
+      D => \bus_rsp_o_reg[data][31]_1\(24),
       Q => \bus_rsp_o_reg[data][31]_0\(24)
     );
 \bus_rsp_o_reg[data][25]\: unisim.vcomponents.FDCE
@@ -46210,7 +43887,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(25),
+      D => \bus_rsp_o_reg[data][31]_1\(25),
       Q => \bus_rsp_o_reg[data][31]_0\(25)
     );
 \bus_rsp_o_reg[data][26]\: unisim.vcomponents.FDCE
@@ -46218,7 +43895,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(26),
+      D => \bus_rsp_o_reg[data][31]_1\(26),
       Q => \bus_rsp_o_reg[data][31]_0\(26)
     );
 \bus_rsp_o_reg[data][27]\: unisim.vcomponents.FDCE
@@ -46226,7 +43903,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(27),
+      D => \bus_rsp_o_reg[data][31]_1\(27),
       Q => \bus_rsp_o_reg[data][31]_0\(27)
     );
 \bus_rsp_o_reg[data][28]\: unisim.vcomponents.FDCE
@@ -46234,7 +43911,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(28),
+      D => \bus_rsp_o_reg[data][31]_1\(28),
       Q => \bus_rsp_o_reg[data][31]_0\(28)
     );
 \bus_rsp_o_reg[data][29]\: unisim.vcomponents.FDCE
@@ -46242,7 +43919,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(29),
+      D => \bus_rsp_o_reg[data][31]_1\(29),
       Q => \bus_rsp_o_reg[data][31]_0\(29)
     );
 \bus_rsp_o_reg[data][2]\: unisim.vcomponents.FDCE
@@ -46250,7 +43927,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(2),
+      D => \bus_rsp_o_reg[data][31]_1\(2),
       Q => \bus_rsp_o_reg[data][31]_0\(2)
     );
 \bus_rsp_o_reg[data][30]\: unisim.vcomponents.FDCE
@@ -46258,7 +43935,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(30),
+      D => \bus_rsp_o_reg[data][31]_1\(30),
       Q => \bus_rsp_o_reg[data][31]_0\(30)
     );
 \bus_rsp_o_reg[data][31]\: unisim.vcomponents.FDCE
@@ -46266,7 +43943,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(31),
+      D => \bus_rsp_o_reg[data][31]_1\(31),
       Q => \bus_rsp_o_reg[data][31]_0\(31)
     );
 \bus_rsp_o_reg[data][3]\: unisim.vcomponents.FDCE
@@ -46274,7 +43951,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(3),
+      D => \bus_rsp_o_reg[data][31]_1\(3),
       Q => \bus_rsp_o_reg[data][31]_0\(3)
     );
 \bus_rsp_o_reg[data][4]\: unisim.vcomponents.FDCE
@@ -46282,7 +43959,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(4),
+      D => \bus_rsp_o_reg[data][31]_1\(4),
       Q => \bus_rsp_o_reg[data][31]_0\(4)
     );
 \bus_rsp_o_reg[data][5]\: unisim.vcomponents.FDCE
@@ -46290,7 +43967,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(5),
+      D => \bus_rsp_o_reg[data][31]_1\(5),
       Q => \bus_rsp_o_reg[data][31]_0\(5)
     );
 \bus_rsp_o_reg[data][6]\: unisim.vcomponents.FDCE
@@ -46298,7 +43975,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(6),
+      D => \bus_rsp_o_reg[data][31]_1\(6),
       Q => \bus_rsp_o_reg[data][31]_0\(6)
     );
 \bus_rsp_o_reg[data][7]\: unisim.vcomponents.FDCE
@@ -46306,7 +43983,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(7),
+      D => \bus_rsp_o_reg[data][31]_1\(7),
       Q => \bus_rsp_o_reg[data][31]_0\(7)
     );
 \bus_rsp_o_reg[data][8]\: unisim.vcomponents.FDCE
@@ -46314,7 +43991,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(8),
+      D => \bus_rsp_o_reg[data][31]_1\(8),
       Q => \bus_rsp_o_reg[data][31]_0\(8)
     );
 \bus_rsp_o_reg[data][9]\: unisim.vcomponents.FDCE
@@ -46322,7 +43999,7 @@ begin
       C => clk,
       CE => '1',
       CLR => rstn_sys,
-      D => D(9),
+      D => \bus_rsp_o_reg[data][31]_1\(9),
       Q => \bus_rsp_o_reg[data][31]_0\(9)
     );
 \bus_rsp_o_reg[err]\: unisim.vcomponents.FDCE
@@ -46338,7 +44015,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(0),
+      D => D(0),
       Q => Q(0)
     );
 \sysinfo_reg[0][10]\: unisim.vcomponents.FDCE
@@ -46346,7 +44023,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(10),
+      D => D(10),
       Q => Q(10)
     );
 \sysinfo_reg[0][11]\: unisim.vcomponents.FDCE
@@ -46354,7 +44031,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(11),
+      D => D(11),
       Q => Q(11)
     );
 \sysinfo_reg[0][12]\: unisim.vcomponents.FDCE
@@ -46362,14 +44039,14 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(12),
+      D => D(12),
       Q => Q(12)
     );
 \sysinfo_reg[0][13]\: unisim.vcomponents.FDPE
      port map (
       C => clk,
       CE => E(0),
-      D => \dev_12_req_o[data]\(13),
+      D => D(13),
       PRE => rstn_sys,
       Q => Q(13)
     );
@@ -46377,7 +44054,7 @@ begin
      port map (
       C => clk,
       CE => E(0),
-      D => \dev_12_req_o[data]\(14),
+      D => D(14),
       PRE => rstn_sys,
       Q => Q(14)
     );
@@ -46385,7 +44062,7 @@ begin
      port map (
       C => clk,
       CE => E(0),
-      D => \dev_12_req_o[data]\(15),
+      D => D(15),
       PRE => rstn_sys,
       Q => Q(15)
     );
@@ -46393,7 +44070,7 @@ begin
      port map (
       C => clk,
       CE => E(0),
-      D => \dev_12_req_o[data]\(16),
+      D => D(16),
       PRE => rstn_sys,
       Q => Q(16)
     );
@@ -46402,14 +44079,14 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(17),
+      D => D(17),
       Q => Q(17)
     );
 \sysinfo_reg[0][18]\: unisim.vcomponents.FDPE
      port map (
       C => clk,
       CE => E(0),
-      D => \dev_12_req_o[data]\(18),
+      D => D(18),
       PRE => rstn_sys,
       Q => Q(18)
     );
@@ -46418,7 +44095,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(19),
+      D => D(19),
       Q => Q(19)
     );
 \sysinfo_reg[0][1]\: unisim.vcomponents.FDCE
@@ -46426,14 +44103,14 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(1),
+      D => D(1),
       Q => Q(1)
     );
 \sysinfo_reg[0][20]\: unisim.vcomponents.FDPE
      port map (
       C => clk,
       CE => E(0),
-      D => \dev_12_req_o[data]\(20),
+      D => D(20),
       PRE => rstn_sys,
       Q => Q(20)
     );
@@ -46441,7 +44118,7 @@ begin
      port map (
       C => clk,
       CE => E(0),
-      D => \dev_12_req_o[data]\(21),
+      D => D(21),
       PRE => rstn_sys,
       Q => Q(21)
     );
@@ -46449,7 +44126,7 @@ begin
      port map (
       C => clk,
       CE => E(0),
-      D => \dev_12_req_o[data]\(22),
+      D => D(22),
       PRE => rstn_sys,
       Q => Q(22)
     );
@@ -46457,7 +44134,7 @@ begin
      port map (
       C => clk,
       CE => E(0),
-      D => \dev_12_req_o[data]\(23),
+      D => D(23),
       PRE => rstn_sys,
       Q => Q(23)
     );
@@ -46465,7 +44142,7 @@ begin
      port map (
       C => clk,
       CE => E(0),
-      D => \dev_12_req_o[data]\(24),
+      D => D(24),
       PRE => rstn_sys,
       Q => Q(24)
     );
@@ -46474,14 +44151,14 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(25),
+      D => D(25),
       Q => Q(25)
     );
 \sysinfo_reg[0][26]\: unisim.vcomponents.FDPE
      port map (
       C => clk,
       CE => E(0),
-      D => \dev_12_req_o[data]\(26),
+      D => D(26),
       PRE => rstn_sys,
       Q => Q(26)
     );
@@ -46490,7 +44167,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(27),
+      D => D(27),
       Q => Q(27)
     );
 \sysinfo_reg[0][28]\: unisim.vcomponents.FDCE
@@ -46498,7 +44175,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(28),
+      D => D(28),
       Q => Q(28)
     );
 \sysinfo_reg[0][29]\: unisim.vcomponents.FDCE
@@ -46506,7 +44183,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(29),
+      D => D(29),
       Q => Q(29)
     );
 \sysinfo_reg[0][2]\: unisim.vcomponents.FDCE
@@ -46514,7 +44191,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(2),
+      D => D(2),
       Q => Q(2)
     );
 \sysinfo_reg[0][30]\: unisim.vcomponents.FDCE
@@ -46522,7 +44199,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(30),
+      D => D(30),
       Q => Q(30)
     );
 \sysinfo_reg[0][31]\: unisim.vcomponents.FDCE
@@ -46530,7 +44207,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(31),
+      D => D(31),
       Q => Q(31)
     );
 \sysinfo_reg[0][3]\: unisim.vcomponents.FDCE
@@ -46538,7 +44215,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(3),
+      D => D(3),
       Q => Q(3)
     );
 \sysinfo_reg[0][4]\: unisim.vcomponents.FDCE
@@ -46546,7 +44223,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(4),
+      D => D(4),
       Q => Q(4)
     );
 \sysinfo_reg[0][5]\: unisim.vcomponents.FDCE
@@ -46554,7 +44231,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(5),
+      D => D(5),
       Q => Q(5)
     );
 \sysinfo_reg[0][6]\: unisim.vcomponents.FDCE
@@ -46562,7 +44239,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(6),
+      D => D(6),
       Q => Q(6)
     );
 \sysinfo_reg[0][7]\: unisim.vcomponents.FDCE
@@ -46570,14 +44247,14 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(7),
+      D => D(7),
       Q => Q(7)
     );
 \sysinfo_reg[0][8]\: unisim.vcomponents.FDPE
      port map (
       C => clk,
       CE => E(0),
-      D => \dev_12_req_o[data]\(8),
+      D => D(8),
       PRE => rstn_sys,
       Q => Q(8)
     );
@@ -46586,7 +44263,7 @@ begin
       C => clk,
       CE => E(0),
       CLR => rstn_sys,
-      D => \dev_12_req_o[data]\(9),
+      D => D(9),
       Q => Q(9)
     );
 end STRUCTURE;
@@ -46742,7 +44419,7 @@ entity system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch is
     \iodev_req[11][stb]\ : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     \iodev_req[2][stb]\ : out STD_LOGIC;
-    D : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 15 downto 0 );
     \iodev_req[4][stb]\ : out STD_LOGIC;
     \dev_12_req_o[data]\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
     \request_reg_enabled.device_req_o_reg[rw]\ : out STD_LOGIC_VECTOR ( 25 downto 0 );
@@ -46755,7 +44432,7 @@ entity system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch is
     \request_reg_enabled.device_req_o_reg[addr][3]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \request_reg_enabled.device_req_o_reg[addr][3]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \request_reg_enabled.device_req_o_reg[addr][4]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \port_in_reg[31]\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    \port_in_reg[15]\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
     \request_reg_enabled.device_req_o_reg[data][0]\ : out STD_LOGIC;
     \iodev_req[8][stb]\ : out STD_LOGIC;
     \request_reg_enabled.device_req_o_reg[data][1]\ : out STD_LOGIC;
@@ -46794,8 +44471,8 @@ entity system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch is
     \w_pnt_reg[0]\ : in STD_LOGIC;
     \w_pnt_reg[0]_0\ : in STD_LOGIC;
     p_1_in : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \bus_rsp_o_reg[data][31]_0\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    \bus_rsp_o_reg[data][31]_1\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    \bus_rsp_o_reg[data][15]_0\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    gpio_o : in STD_LOGIC_VECTOR ( 15 downto 0 );
     \bus_rsp_o_reg[data][0]\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][1]\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][2]\ : in STD_LOGIC;
@@ -46811,39 +44488,23 @@ entity system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch is
     \bus_rsp_o_reg[data][12]\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][13]\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][14]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][15]_0\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][16]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][17]_0\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][18]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][19]_0\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][20]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][21]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][22]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][23]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][24]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][25]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][26]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][27]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][28]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][29]\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][30]_0\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][31]_2\ : in STD_LOGIC;
+    \bus_rsp_o_reg[data][15]_1\ : in STD_LOGIC;
     \ctrl_reg[enable]__0_0\ : in STD_LOGIC;
     \ctrl_reg[cpha]__0\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][2]_0\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \bus_rsp_o_reg[data][5]_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \bus_rsp_o_reg[data][9]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \bus_rsp_o_reg[data][16]\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][16]_0\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][16]_1\ : in STD_LOGIC;
     r_pnt : in STD_LOGIC;
     w_pnt : in STD_LOGIC;
-    \bus_rsp_o_reg[data][30]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \bus_rsp_o_reg[data][30]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     empty : in STD_LOGIC;
-    \bus_rsp_o_reg[data][31]_3\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][31]_4\ : in STD_LOGIC;
+    \bus_rsp_o_reg[data][31]_0\ : in STD_LOGIC;
+    \bus_rsp_o_reg[data][31]_1\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][0]_0\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][31]_5\ : in STD_LOGIC_VECTOR ( 30 downto 0 );
+    \bus_rsp_o_reg[data][31]_2\ : in STD_LOGIC_VECTOR ( 30 downto 0 );
     \bus_rsp_o_reg[data][3]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \bus_rsp_o_reg[data][9]_1\ : in STD_LOGIC;
     \bus_rsp_o_reg[data][11]_0\ : in STD_LOGIC;
@@ -46852,7 +44513,7 @@ entity system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch is
     \ctrl_reg[irq_rx_full]__0_2\ : in STD_LOGIC;
     \ctrl_reg[irq_tx_empty]__0_3\ : in STD_LOGIC;
     \ctrl_reg[irq_tx_nfull]__0_4\ : in STD_LOGIC;
-    \bus_rsp_o_reg[data][31]_6\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    \bus_rsp_o_reg[data][31]_3\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \iodev_rsp[2][ack]\ : in STD_LOGIC;
     \bus_rsp_o[ack]\ : in STD_LOGIC;
     \iodev_rsp[11][ack]\ : in STD_LOGIC;
@@ -46862,9 +44523,9 @@ entity system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch is
     \response_reg_enabled.host_rsp_o_reg[data][31]\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     DOADO : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \response_reg_enabled.host_rsp_o_reg[data][31]_0\ : in STD_LOGIC_VECTOR ( 14 downto 0 );
+    \response_reg_enabled.host_rsp_o_reg[data][15]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     \response_reg_enabled.host_rsp_o_reg[data][31]_1\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    \response_reg_enabled.host_rsp_o_reg[data][31]_2\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    \response_reg_enabled.host_rsp_o_reg[data][31]_3\ : in STD_LOGIC_VECTOR ( 25 downto 0 );
+    \response_reg_enabled.host_rsp_o_reg[data][31]_2\ : in STD_LOGIC_VECTOR ( 25 downto 0 );
     clk : in STD_LOGIC;
     rstn_sys : in STD_LOGIC;
     \dev_30_rsp_i[err]\ : in STD_LOGIC;
@@ -46881,13 +44542,8 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch is
   signal \main_rsp[ack]\ : STD_LOGIC;
   signal \main_rsp[data]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \response_reg_enabled.host_rsp_o[data][0]_i_2_n_0\ : STD_LOGIC;
-  signal \response_reg_enabled.host_rsp_o[data][16]_i_2_n_0\ : STD_LOGIC;
-  signal \response_reg_enabled.host_rsp_o[data][17]_i_2_n_0\ : STD_LOGIC;
-  signal \response_reg_enabled.host_rsp_o[data][18]_i_2_n_0\ : STD_LOGIC;
   signal \response_reg_enabled.host_rsp_o[data][1]_i_2_n_0\ : STD_LOGIC;
   signal \response_reg_enabled.host_rsp_o[data][2]_i_2_n_0\ : STD_LOGIC;
-  signal \response_reg_enabled.host_rsp_o[data][30]_i_2_n_0\ : STD_LOGIC;
-  signal \response_reg_enabled.host_rsp_o[data][31]_i_2_n_0\ : STD_LOGIC;
   signal \response_reg_enabled.host_rsp_o[data][3]_i_2_n_0\ : STD_LOGIC;
   signal \response_reg_enabled.host_rsp_o[data][4]_i_2_n_0\ : STD_LOGIC;
   signal \response_reg_enabled.host_rsp_o[data][5]_i_2_n_0\ : STD_LOGIC;
@@ -46911,7 +44567,7 @@ begin
     );
 neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
      port map (
-      D(31 downto 0) => D(31 downto 0),
+      D(15 downto 0) => D(15 downto 0),
       E(0) => E(0),
       I48 => I48,
       Q(7 downto 0) => Q(7 downto 0),
@@ -46926,39 +44582,22 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
       \bus_rsp_o_reg[data][13]\ => \bus_rsp_o_reg[data][13]\,
       \bus_rsp_o_reg[data][14]\ => \bus_rsp_o_reg[data][14]\,
       \bus_rsp_o_reg[data][15]\(9 downto 0) => \bus_rsp_o_reg[data][15]\(9 downto 0),
-      \bus_rsp_o_reg[data][15]_0\ => \bus_rsp_o_reg[data][15]_0\,
+      \bus_rsp_o_reg[data][15]_0\(15 downto 0) => \bus_rsp_o_reg[data][15]_0\(15 downto 0),
+      \bus_rsp_o_reg[data][15]_1\ => \bus_rsp_o_reg[data][15]_1\,
       \bus_rsp_o_reg[data][16]\ => \bus_rsp_o_reg[data][16]\,
       \bus_rsp_o_reg[data][16]_0\ => \bus_rsp_o_reg[data][16]_0\,
-      \bus_rsp_o_reg[data][16]_1\ => \bus_rsp_o_reg[data][16]_1\,
       \bus_rsp_o_reg[data][17]\ => \bus_rsp_o_reg[data][17]\,
-      \bus_rsp_o_reg[data][17]_0\ => \bus_rsp_o_reg[data][17]_0\,
-      \bus_rsp_o_reg[data][18]\ => \bus_rsp_o_reg[data][18]\,
       \bus_rsp_o_reg[data][19]\ => \bus_rsp_o_reg[data][19]\,
-      \bus_rsp_o_reg[data][19]_0\ => \bus_rsp_o_reg[data][19]_0\,
       \bus_rsp_o_reg[data][1]\ => \bus_rsp_o_reg[data][1]\,
-      \bus_rsp_o_reg[data][20]\ => \bus_rsp_o_reg[data][20]\,
-      \bus_rsp_o_reg[data][21]\ => \bus_rsp_o_reg[data][21]\,
-      \bus_rsp_o_reg[data][22]\ => \bus_rsp_o_reg[data][22]\,
-      \bus_rsp_o_reg[data][23]\ => \bus_rsp_o_reg[data][23]\,
-      \bus_rsp_o_reg[data][24]\ => \bus_rsp_o_reg[data][24]\,
-      \bus_rsp_o_reg[data][25]\ => \bus_rsp_o_reg[data][25]\,
-      \bus_rsp_o_reg[data][26]\ => \bus_rsp_o_reg[data][26]\,
-      \bus_rsp_o_reg[data][27]\ => \bus_rsp_o_reg[data][27]\,
-      \bus_rsp_o_reg[data][28]\ => \bus_rsp_o_reg[data][28]\,
-      \bus_rsp_o_reg[data][29]\ => \bus_rsp_o_reg[data][29]\,
       \bus_rsp_o_reg[data][2]\ => \bus_rsp_o_reg[data][2]\,
       \bus_rsp_o_reg[data][2]_0\ => \bus_rsp_o_reg[data][2]_0\,
       \bus_rsp_o_reg[data][30]\ => \bus_rsp_o_reg[data][30]\,
-      \bus_rsp_o_reg[data][30]_0\ => \bus_rsp_o_reg[data][30]_0\,
-      \bus_rsp_o_reg[data][30]_1\(0) => \bus_rsp_o_reg[data][30]_1\(0),
+      \bus_rsp_o_reg[data][30]_0\(0) => \bus_rsp_o_reg[data][30]_0\(0),
       \bus_rsp_o_reg[data][31]\ => \bus_rsp_o_reg[data][31]\,
-      \bus_rsp_o_reg[data][31]_0\(31 downto 0) => \bus_rsp_o_reg[data][31]_0\(31 downto 0),
-      \bus_rsp_o_reg[data][31]_1\(31 downto 0) => \bus_rsp_o_reg[data][31]_1\(31 downto 0),
-      \bus_rsp_o_reg[data][31]_2\ => \bus_rsp_o_reg[data][31]_2\,
-      \bus_rsp_o_reg[data][31]_3\ => \bus_rsp_o_reg[data][31]_3\,
-      \bus_rsp_o_reg[data][31]_4\ => \bus_rsp_o_reg[data][31]_4\,
-      \bus_rsp_o_reg[data][31]_5\(30 downto 0) => \bus_rsp_o_reg[data][31]_5\(30 downto 0),
-      \bus_rsp_o_reg[data][31]_6\(31 downto 0) => \bus_rsp_o_reg[data][31]_6\(31 downto 0),
+      \bus_rsp_o_reg[data][31]_0\ => \bus_rsp_o_reg[data][31]_0\,
+      \bus_rsp_o_reg[data][31]_1\ => \bus_rsp_o_reg[data][31]_1\,
+      \bus_rsp_o_reg[data][31]_2\(30 downto 0) => \bus_rsp_o_reg[data][31]_2\(30 downto 0),
+      \bus_rsp_o_reg[data][31]_3\(31 downto 0) => \bus_rsp_o_reg[data][31]_3\(31 downto 0),
       \bus_rsp_o_reg[data][3]\ => \bus_rsp_o_reg[data][3]\,
       \bus_rsp_o_reg[data][3]_0\(2 downto 0) => \bus_rsp_o_reg[data][3]_0\(2 downto 0),
       \bus_rsp_o_reg[data][4]\ => \bus_rsp_o_reg[data][4]\,
@@ -46994,13 +44633,14 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
       \device_rsp_i[ack]\ => \main_rsp[ack]\,
       \device_rsp_i[data]\(31 downto 0) => \main_rsp[data]\(31 downto 0),
       empty => empty,
+      gpio_o(15 downto 0) => gpio_o(15 downto 0),
       \main_req_i[addr]\(14 downto 0) => \main_req_i[addr]\(14 downto 0),
       \main_req_i[data]\(31 downto 0) => \main_req_i[data]\(31 downto 0),
       \main_rsp_o[ack]\ => \main_rsp_o[ack]\,
       \main_rsp_o[data]\(31 downto 0) => \main_rsp_o[data]\(31 downto 0),
       \main_rsp_o[err]\ => \main_rsp_o[err]\,
       p_1_in(0) => p_1_in(0),
-      \port_in_reg[31]\(31 downto 0) => \port_in_reg[31]\(31 downto 0),
+      \port_in_reg[15]\(15 downto 0) => \port_in_reg[15]\(15 downto 0),
       r_pnt => r_pnt,
       re0 => re0,
       \request_reg_enabled.device_req_o_reg[addr][16]_0\ => \iodev_req[4][stb]\,
@@ -47055,9 +44695,9 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(0),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(0),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(0),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(0),
+      I1 => \response_reg_enabled.host_rsp_o_reg[data][15]\(0),
+      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(0),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(0),
       O => \response_reg_enabled.host_rsp_o[data][0]_i_2_n_0\
     );
 \response_reg_enabled.host_rsp_o[data][10]_i_1\: unisim.vcomponents.LUT6
@@ -47068,9 +44708,9 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(10),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(10),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(10),
-      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(10),
-      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(10),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(10),
+      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(10),
+      I5 => \response_reg_enabled.host_rsp_o_reg[data][15]\(10),
       O => \main_rsp[data]\(10)
     );
 \response_reg_enabled.host_rsp_o[data][11]_i_1\: unisim.vcomponents.LUT6
@@ -47081,9 +44721,9 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(11),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(11),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(11),
-      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(11),
-      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(11),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(11),
+      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(11),
+      I5 => \response_reg_enabled.host_rsp_o_reg[data][15]\(11),
       O => \main_rsp[data]\(11)
     );
 \response_reg_enabled.host_rsp_o[data][12]_i_1\: unisim.vcomponents.LUT6
@@ -47094,9 +44734,9 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(12),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(12),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(12),
-      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(12),
-      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(12),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(12),
+      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(12),
+      I5 => \response_reg_enabled.host_rsp_o_reg[data][15]\(12),
       O => \main_rsp[data]\(12)
     );
 \response_reg_enabled.host_rsp_o[data][13]_i_1\: unisim.vcomponents.LUT6
@@ -47107,9 +44747,9 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(13),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(13),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(13),
-      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(13),
-      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(13),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(13),
+      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(13),
+      I5 => \response_reg_enabled.host_rsp_o_reg[data][15]\(13),
       O => \main_rsp[data]\(13)
     );
 \response_reg_enabled.host_rsp_o[data][14]_i_1\: unisim.vcomponents.LUT6
@@ -47120,9 +44760,9 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(14),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(14),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(14),
-      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(14),
-      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(14),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(14),
+      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(14),
+      I5 => \response_reg_enabled.host_rsp_o_reg[data][15]\(14),
       O => \main_rsp[data]\(14)
     );
 \response_reg_enabled.host_rsp_o[data][15]_i_1\: unisim.vcomponents.LUT6
@@ -47133,88 +44773,60 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(15),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(15),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(15),
-      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(15),
-      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(15),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(15),
+      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(15),
+      I5 => \response_reg_enabled.host_rsp_o_reg[data][15]\(15),
       O => \main_rsp[data]\(15)
     );
-\response_reg_enabled.host_rsp_o[data][16]_i_1\: unisim.vcomponents.LUT4
+\response_reg_enabled.host_rsp_o[data][16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEA"
+      INIT => X"FFFFFFFFFFFFFFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(16),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(16),
-      I3 => \response_reg_enabled.host_rsp_o[data][16]_i_2_n_0\,
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(16),
+      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(16),
+      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(10),
       O => \main_rsp[data]\(16)
     );
-\response_reg_enabled.host_rsp_o[data][16]_i_2\: unisim.vcomponents.LUT4
+\response_reg_enabled.host_rsp_o[data][17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(10),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(16),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(16),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(16),
-      O => \response_reg_enabled.host_rsp_o[data][16]_i_2_n_0\
-    );
-\response_reg_enabled.host_rsp_o[data][17]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFEA"
+      INIT => X"FFFFFFFFFFFFFFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(17),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(17),
-      I3 => \response_reg_enabled.host_rsp_o[data][17]_i_2_n_0\,
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(17),
+      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(17),
+      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(11),
       O => \main_rsp[data]\(17)
     );
-\response_reg_enabled.host_rsp_o[data][17]_i_2\: unisim.vcomponents.LUT4
+\response_reg_enabled.host_rsp_o[data][18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(11),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(17),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(17),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(17),
-      O => \response_reg_enabled.host_rsp_o[data][17]_i_2_n_0\
-    );
-\response_reg_enabled.host_rsp_o[data][18]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFEA"
+      INIT => X"FFFFFFFFFFFFFFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(18),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(18),
-      I3 => \response_reg_enabled.host_rsp_o[data][18]_i_2_n_0\,
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(18),
+      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(18),
+      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(12),
       O => \main_rsp[data]\(18)
     );
-\response_reg_enabled.host_rsp_o[data][18]_i_2\: unisim.vcomponents.LUT4
+\response_reg_enabled.host_rsp_o[data][19]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(12),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(18),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(18),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(18),
-      O => \response_reg_enabled.host_rsp_o[data][18]_i_2_n_0\
-    );
-\response_reg_enabled.host_rsp_o[data][19]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFEA"
+      INIT => X"FFFFFFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(19),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(19),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(19),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(19),
       I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(19),
-      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(19),
       O => \main_rsp[data]\(19)
     );
 \response_reg_enabled.host_rsp_o[data][1]_i_1\: unisim.vcomponents.LUT4
@@ -47234,133 +44846,123 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(1),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(1),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(1),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(1),
+      I1 => \response_reg_enabled.host_rsp_o_reg[data][15]\(1),
+      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(1),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(1),
       O => \response_reg_enabled.host_rsp_o[data][1]_i_2_n_0\
     );
-\response_reg_enabled.host_rsp_o[data][20]_i_1\: unisim.vcomponents.LUT6
+\response_reg_enabled.host_rsp_o[data][20]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFFFFFFFFEA"
+      INIT => X"FFFFFFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(20),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(20),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(20),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(20),
       I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(20),
-      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(20),
       O => \main_rsp[data]\(20)
     );
-\response_reg_enabled.host_rsp_o[data][21]_i_1\: unisim.vcomponents.LUT6
+\response_reg_enabled.host_rsp_o[data][21]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFFFFFFFFEA"
+      INIT => X"FFFFFFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(21),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(21),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(21),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(21),
       I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(21),
-      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(21),
       O => \main_rsp[data]\(21)
     );
-\response_reg_enabled.host_rsp_o[data][22]_i_1\: unisim.vcomponents.LUT6
+\response_reg_enabled.host_rsp_o[data][22]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFFFFFFFFEA"
+      INIT => X"FFFFFFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(22),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(22),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(22),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(22),
       I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(22),
-      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(22),
       O => \main_rsp[data]\(22)
     );
-\response_reg_enabled.host_rsp_o[data][23]_i_1\: unisim.vcomponents.LUT6
+\response_reg_enabled.host_rsp_o[data][23]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFFFFFFFFEA"
+      INIT => X"FFFFFFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(23),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(23),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(23),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(23),
       I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(23),
-      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(23),
       O => \main_rsp[data]\(23)
     );
-\response_reg_enabled.host_rsp_o[data][24]_i_1\: unisim.vcomponents.LUT5
+\response_reg_enabled.host_rsp_o[data][24]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFEA"
+      INIT => X"FFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(24),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(24),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(24),
-      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(24),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(24),
       O => \main_rsp[data]\(24)
     );
-\response_reg_enabled.host_rsp_o[data][25]_i_1\: unisim.vcomponents.LUT5
+\response_reg_enabled.host_rsp_o[data][25]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFEA"
+      INIT => X"FFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(25),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(25),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(25),
-      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(25),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(25),
       O => \main_rsp[data]\(25)
     );
-\response_reg_enabled.host_rsp_o[data][26]_i_1\: unisim.vcomponents.LUT5
+\response_reg_enabled.host_rsp_o[data][26]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFEA"
+      INIT => X"FFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(26),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(26),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(26),
-      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(26),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(26),
       O => \main_rsp[data]\(26)
     );
-\response_reg_enabled.host_rsp_o[data][27]_i_1\: unisim.vcomponents.LUT5
+\response_reg_enabled.host_rsp_o[data][27]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFEA"
+      INIT => X"FFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(27),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(27),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(27),
-      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(27),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(27),
       O => \main_rsp[data]\(27)
     );
-\response_reg_enabled.host_rsp_o[data][28]_i_1\: unisim.vcomponents.LUT5
+\response_reg_enabled.host_rsp_o[data][28]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFEA"
+      INIT => X"FFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(28),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(28),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(28),
-      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(28),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(28),
       O => \main_rsp[data]\(28)
     );
-\response_reg_enabled.host_rsp_o[data][29]_i_1\: unisim.vcomponents.LUT5
+\response_reg_enabled.host_rsp_o[data][29]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFEA"
+      INIT => X"FFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(29),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(29),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(29),
-      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(29),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(29),
       O => \main_rsp[data]\(29)
     );
 \response_reg_enabled.host_rsp_o[data][2]_i_1\: unisim.vcomponents.LUT4
@@ -47380,54 +44982,36 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(2),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(2),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(2),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(2),
+      I1 => \response_reg_enabled.host_rsp_o_reg[data][15]\(2),
+      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(2),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(2),
       O => \response_reg_enabled.host_rsp_o[data][2]_i_2_n_0\
     );
-\response_reg_enabled.host_rsp_o[data][30]_i_1\: unisim.vcomponents.LUT4
+\response_reg_enabled.host_rsp_o[data][30]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEA"
+      INIT => X"FFFFFFFFFFFFFFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(30),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(30),
-      I3 => \response_reg_enabled.host_rsp_o[data][30]_i_2_n_0\,
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(24),
+      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(30),
+      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(13),
       O => \main_rsp[data]\(30)
     );
-\response_reg_enabled.host_rsp_o[data][30]_i_2\: unisim.vcomponents.LUT4
+\response_reg_enabled.host_rsp_o[data][31]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(13),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(30),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(30),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(24),
-      O => \response_reg_enabled.host_rsp_o[data][30]_i_2_n_0\
-    );
-\response_reg_enabled.host_rsp_o[data][31]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFEA"
+      INIT => X"FFFFFFFFFFFFFFEA"
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]\(31),
       I1 => \bus_rsp_o[ack]\,
       I2 => DOADO(31),
-      I3 => \response_reg_enabled.host_rsp_o[data][31]_i_2_n_0\,
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(25),
+      I4 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(31),
+      I5 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(14),
       O => \main_rsp[data]\(31)
-    );
-\response_reg_enabled.host_rsp_o[data][31]_i_2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(14),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(31),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(31),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(25),
-      O => \response_reg_enabled.host_rsp_o[data][31]_i_2_n_0\
     );
 \response_reg_enabled.host_rsp_o[data][3]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -47446,9 +45030,9 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(3),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(3),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(3),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(3),
+      I1 => \response_reg_enabled.host_rsp_o_reg[data][15]\(3),
+      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(3),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(3),
       O => \response_reg_enabled.host_rsp_o[data][3]_i_2_n_0\
     );
 \response_reg_enabled.host_rsp_o[data][4]_i_1\: unisim.vcomponents.LUT4
@@ -47468,9 +45052,9 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(4),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(4),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(4),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(4),
+      I1 => \response_reg_enabled.host_rsp_o_reg[data][15]\(4),
+      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(4),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(4),
       O => \response_reg_enabled.host_rsp_o[data][4]_i_2_n_0\
     );
 \response_reg_enabled.host_rsp_o[data][5]_i_1\: unisim.vcomponents.LUT4
@@ -47490,9 +45074,9 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(5),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(5),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(5),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(5),
+      I1 => \response_reg_enabled.host_rsp_o_reg[data][15]\(5),
+      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(5),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(5),
       O => \response_reg_enabled.host_rsp_o[data][5]_i_2_n_0\
     );
 \response_reg_enabled.host_rsp_o[data][6]_i_1\: unisim.vcomponents.LUT4
@@ -47512,9 +45096,9 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(6),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(6),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(6),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(6),
+      I1 => \response_reg_enabled.host_rsp_o_reg[data][15]\(6),
+      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(6),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(6),
       O => \response_reg_enabled.host_rsp_o[data][6]_i_2_n_0\
     );
 \response_reg_enabled.host_rsp_o[data][7]_i_1\: unisim.vcomponents.LUT4
@@ -47534,9 +45118,9 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(7),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(7),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(7),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(7),
+      I1 => \response_reg_enabled.host_rsp_o_reg[data][15]\(7),
+      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(7),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(7),
       O => \response_reg_enabled.host_rsp_o[data][7]_i_2_n_0\
     );
 \response_reg_enabled.host_rsp_o[data][8]_i_1\: unisim.vcomponents.LUT4
@@ -47556,9 +45140,9 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(8),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(8),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(8),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(8),
+      I1 => \response_reg_enabled.host_rsp_o_reg[data][15]\(8),
+      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(8),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(8),
       O => \response_reg_enabled.host_rsp_o[data][8]_i_2_n_0\
     );
 \response_reg_enabled.host_rsp_o[data][9]_i_1\: unisim.vcomponents.LUT4
@@ -47578,9 +45162,9 @@ neorv32_bus_reg_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_reg_5
     )
         port map (
       I0 => \response_reg_enabled.host_rsp_o_reg[data][31]_0\(9),
-      I1 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(9),
-      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(9),
-      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_3\(9),
+      I1 => \response_reg_enabled.host_rsp_o_reg[data][15]\(9),
+      I2 => \response_reg_enabled.host_rsp_o_reg[data][31]_1\(9),
+      I3 => \response_reg_enabled.host_rsp_o_reg[data][31]_2\(9),
       O => \response_reg_enabled.host_rsp_o[data][9]_i_2_n_0\
     );
 end STRUCTURE;
@@ -50817,22 +48401,22 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_spi is
   signal tx_fifo_inst_n_8 : STD_LOGIC;
   signal tx_fifo_inst_n_9 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \cdiv_cnt[1]_i_1\ : label is "soft_lutpair242";
-  attribute SOFT_HLUTNM of \cdiv_cnt[2]_i_1\ : label is "soft_lutpair242";
-  attribute SOFT_HLUTNM of \rtx_engine[bitcnt][0]_i_1\ : label is "soft_lutpair248";
-  attribute SOFT_HLUTNM of \rtx_engine[bitcnt][1]_i_1\ : label is "soft_lutpair248";
-  attribute SOFT_HLUTNM of \rtx_engine[bitcnt][2]_i_1\ : label is "soft_lutpair243";
-  attribute SOFT_HLUTNM of \rtx_engine[bitcnt][3]_i_2\ : label is "soft_lutpair243";
-  attribute SOFT_HLUTNM of \rtx_engine[done]_i_1\ : label is "soft_lutpair241";
-  attribute SOFT_HLUTNM of \rtx_engine[state][1]_i_1\ : label is "soft_lutpair241";
-  attribute SOFT_HLUTNM of \spi_csn_o[0]_i_1\ : label is "soft_lutpair245";
-  attribute SOFT_HLUTNM of \spi_csn_o[1]_i_1\ : label is "soft_lutpair245";
-  attribute SOFT_HLUTNM of \spi_csn_o[2]_i_1\ : label is "soft_lutpair246";
-  attribute SOFT_HLUTNM of \spi_csn_o[3]_i_1\ : label is "soft_lutpair244";
-  attribute SOFT_HLUTNM of \spi_csn_o[4]_i_1\ : label is "soft_lutpair247";
-  attribute SOFT_HLUTNM of \spi_csn_o[5]_i_1\ : label is "soft_lutpair247";
-  attribute SOFT_HLUTNM of \spi_csn_o[6]_i_1\ : label is "soft_lutpair246";
-  attribute SOFT_HLUTNM of \spi_csn_o[7]_i_1\ : label is "soft_lutpair244";
+  attribute SOFT_HLUTNM of \cdiv_cnt[1]_i_1\ : label is "soft_lutpair243";
+  attribute SOFT_HLUTNM of \cdiv_cnt[2]_i_1\ : label is "soft_lutpair243";
+  attribute SOFT_HLUTNM of \rtx_engine[bitcnt][0]_i_1\ : label is "soft_lutpair249";
+  attribute SOFT_HLUTNM of \rtx_engine[bitcnt][1]_i_1\ : label is "soft_lutpair249";
+  attribute SOFT_HLUTNM of \rtx_engine[bitcnt][2]_i_1\ : label is "soft_lutpair244";
+  attribute SOFT_HLUTNM of \rtx_engine[bitcnt][3]_i_2\ : label is "soft_lutpair244";
+  attribute SOFT_HLUTNM of \rtx_engine[done]_i_1\ : label is "soft_lutpair242";
+  attribute SOFT_HLUTNM of \rtx_engine[state][1]_i_1\ : label is "soft_lutpair242";
+  attribute SOFT_HLUTNM of \spi_csn_o[0]_i_1\ : label is "soft_lutpair246";
+  attribute SOFT_HLUTNM of \spi_csn_o[1]_i_1\ : label is "soft_lutpair246";
+  attribute SOFT_HLUTNM of \spi_csn_o[2]_i_1\ : label is "soft_lutpair247";
+  attribute SOFT_HLUTNM of \spi_csn_o[3]_i_1\ : label is "soft_lutpair245";
+  attribute SOFT_HLUTNM of \spi_csn_o[4]_i_1\ : label is "soft_lutpair248";
+  attribute SOFT_HLUTNM of \spi_csn_o[5]_i_1\ : label is "soft_lutpair248";
+  attribute SOFT_HLUTNM of \spi_csn_o[6]_i_1\ : label is "soft_lutpair247";
+  attribute SOFT_HLUTNM of \spi_csn_o[7]_i_1\ : label is "soft_lutpair245";
 begin
   Q(0) <= \^q\(0);
   \ctrl_reg[cdiv][3]_0\(3 downto 0) <= \^ctrl_reg[cdiv][3]_0\(3 downto 0);
@@ -51828,22 +49412,22 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_uart is
   signal uart_rtsn_o0 : STD_LOGIC;
   signal uart_txd_o_i_1_n_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \rx_engine[baudcnt][2]_i_2\ : label is "soft_lutpair271";
-  attribute SOFT_HLUTNM of \rx_engine[baudcnt][3]_i_2\ : label is "soft_lutpair271";
-  attribute SOFT_HLUTNM of \rx_engine[baudcnt][4]_i_2\ : label is "soft_lutpair268";
-  attribute SOFT_HLUTNM of \rx_engine[baudcnt][5]_i_2\ : label is "soft_lutpair268";
-  attribute SOFT_HLUTNM of \rx_engine[bitcnt][1]_i_1\ : label is "soft_lutpair272";
-  attribute SOFT_HLUTNM of \rx_engine[bitcnt][2]_i_1\ : label is "soft_lutpair272";
-  attribute SOFT_HLUTNM of \rx_engine[bitcnt][3]_i_2\ : label is "soft_lutpair265";
-  attribute SOFT_HLUTNM of \rx_engine[state][0]_i_2\ : label is "soft_lutpair265";
-  attribute SOFT_HLUTNM of \tx_engine[baudcnt][7]_i_1\ : label is "soft_lutpair266";
-  attribute SOFT_HLUTNM of \tx_engine[baudcnt][9]_i_4\ : label is "soft_lutpair266";
-  attribute SOFT_HLUTNM of \tx_engine[bitcnt][0]_i_1\ : label is "soft_lutpair269";
-  attribute SOFT_HLUTNM of \tx_engine[bitcnt][1]_i_1\ : label is "soft_lutpair270";
-  attribute SOFT_HLUTNM of \tx_engine[bitcnt][2]_i_1\ : label is "soft_lutpair270";
-  attribute SOFT_HLUTNM of \tx_engine[bitcnt][3]_i_2\ : label is "soft_lutpair267";
-  attribute SOFT_HLUTNM of \tx_engine[state][0]_i_2\ : label is "soft_lutpair269";
-  attribute SOFT_HLUTNM of \tx_engine[state][0]_i_3\ : label is "soft_lutpair267";
+  attribute SOFT_HLUTNM of \rx_engine[baudcnt][2]_i_2\ : label is "soft_lutpair272";
+  attribute SOFT_HLUTNM of \rx_engine[baudcnt][3]_i_2\ : label is "soft_lutpair272";
+  attribute SOFT_HLUTNM of \rx_engine[baudcnt][4]_i_2\ : label is "soft_lutpair269";
+  attribute SOFT_HLUTNM of \rx_engine[baudcnt][5]_i_2\ : label is "soft_lutpair269";
+  attribute SOFT_HLUTNM of \rx_engine[bitcnt][1]_i_1\ : label is "soft_lutpair273";
+  attribute SOFT_HLUTNM of \rx_engine[bitcnt][2]_i_1\ : label is "soft_lutpair273";
+  attribute SOFT_HLUTNM of \rx_engine[bitcnt][3]_i_2\ : label is "soft_lutpair266";
+  attribute SOFT_HLUTNM of \rx_engine[state][0]_i_2\ : label is "soft_lutpair266";
+  attribute SOFT_HLUTNM of \tx_engine[baudcnt][7]_i_1\ : label is "soft_lutpair267";
+  attribute SOFT_HLUTNM of \tx_engine[baudcnt][9]_i_4\ : label is "soft_lutpair267";
+  attribute SOFT_HLUTNM of \tx_engine[bitcnt][0]_i_1\ : label is "soft_lutpair270";
+  attribute SOFT_HLUTNM of \tx_engine[bitcnt][1]_i_1\ : label is "soft_lutpair271";
+  attribute SOFT_HLUTNM of \tx_engine[bitcnt][2]_i_1\ : label is "soft_lutpair271";
+  attribute SOFT_HLUTNM of \tx_engine[bitcnt][3]_i_2\ : label is "soft_lutpair268";
+  attribute SOFT_HLUTNM of \tx_engine[state][0]_i_2\ : label is "soft_lutpair270";
+  attribute SOFT_HLUTNM of \tx_engine[state][0]_i_3\ : label is "soft_lutpair268";
 begin
   Q(9 downto 0) <= \^q\(9 downto 0);
   \ctrl_reg[enable]__0\ <= \^ctrl_reg[enable]__0\;
@@ -57819,7 +55403,7 @@ entity system_neorv32_vivado_ip_0_0_neorv32_top is
     m_axi_awready : in STD_LOGIC;
     m_axi_wvalid : in STD_LOGIC;
     m_axi_wready : in STD_LOGIC;
-    gpio_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    gpio_i : in STD_LOGIC_VECTOR ( 15 downto 0 );
     spi_dat_i : in STD_LOGIC;
     s1_axis_tvalid : in STD_LOGIC;
     s0_axis_tready : in STD_LOGIC;
@@ -57835,6 +55419,7 @@ end system_neorv32_vivado_ip_0_0_neorv32_top;
 architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_top is
   signal \amo_rsp[ack]\ : STD_LOGIC;
   signal \amo_rsp[data]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal \bus_rsp_o[data]0_out\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \cache_o[stat]\ : STD_LOGIC;
   signal \core_complex_gen[0].neorv32_core_bus_switch_inst_n_1\ : STD_LOGIC;
   signal \core_complex_gen[0].neorv32_core_bus_switch_inst_n_2\ : STD_LOGIC;
@@ -57918,16 +55503,16 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_top is
   signal \ctrl_reg[buf_req]__0\ : STD_LOGIC;
   signal \ctrl_reg[cpha]__0\ : STD_LOGIC;
   signal \ctrl_reg[enable]__0\ : STD_LOGIC;
-  signal \ctrl_reg[enable]__0_9\ : STD_LOGIC;
+  signal \ctrl_reg[enable]__0_8\ : STD_LOGIC;
   signal \ctrl_reg[hwfc_en]__0\ : STD_LOGIC;
   signal \ctrl_reg[irq_rx_full]__0\ : STD_LOGIC;
-  signal \ctrl_reg[irq_rx_full]__0_7\ : STD_LOGIC;
+  signal \ctrl_reg[irq_rx_full]__0_6\ : STD_LOGIC;
   signal \ctrl_reg[irq_rx_nempty]__0\ : STD_LOGIC;
-  signal \ctrl_reg[irq_rx_nempty]__0_8\ : STD_LOGIC;
+  signal \ctrl_reg[irq_rx_nempty]__0_7\ : STD_LOGIC;
   signal \ctrl_reg[irq_tx_empty]__0\ : STD_LOGIC;
-  signal \ctrl_reg[irq_tx_empty]__0_6\ : STD_LOGIC;
+  signal \ctrl_reg[irq_tx_empty]__0_5\ : STD_LOGIC;
   signal \ctrl_reg[irq_tx_nfull]__0\ : STD_LOGIC;
-  signal \ctrl_reg[irq_tx_nfull]__0_5\ : STD_LOGIC;
+  signal \ctrl_reg[irq_tx_nfull]__0_4\ : STD_LOGIC;
   signal \ctrl_reg[sim_mode]__0\ : STD_LOGIC;
   signal data_o : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \dcache_req[0][addr]\ : STD_LOGIC_VECTOR ( 7 downto 6 );
@@ -57947,17 +55532,7 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_top is
   signal \io_rsp[data]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \io_rsp[err]\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_0\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_100\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_101\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_102\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_103\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_104\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_105\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_106\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_107\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_109\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_115\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_116\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_117\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_118\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_119\ : STD_LOGIC;
@@ -57976,8 +55551,6 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_top is
   signal \io_system.neorv32_bus_io_switch_inst_n_131\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_132\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_133\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_134\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_135\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_136\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_137\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_138\ : STD_LOGIC;
@@ -57990,6 +55563,7 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_top is
   signal \io_system.neorv32_bus_io_switch_inst_n_145\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_146\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_147\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_148\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_149\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_150\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_151\ : STD_LOGIC;
@@ -58007,39 +55581,25 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_top is
   signal \io_system.neorv32_bus_io_switch_inst_n_163\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_164\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_165\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_168\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_169\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_170\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_171\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_172\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_173\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_174\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_175\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_176\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_177\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_178\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_179\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_180\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_181\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_182\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_183\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_184\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_185\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_186\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_187\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_188\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_189\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_190\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_191\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_192\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_193\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_194\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_195\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_196\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_197\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_198\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_199\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_237\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_166\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_167\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_205\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_64\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_65\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_66\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_67\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_68\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_69\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_70\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_71\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_72\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_73\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_74\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_75\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_76\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_77\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_78\ : STD_LOGIC;
+  signal \io_system.neorv32_bus_io_switch_inst_n_79\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_80\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_81\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_82\ : STD_LOGIC;
@@ -58052,14 +55612,7 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_top is
   signal \io_system.neorv32_bus_io_switch_inst_n_89\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_90\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_91\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_92\ : STD_LOGIC;
   signal \io_system.neorv32_bus_io_switch_inst_n_93\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_94\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_95\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_96\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_97\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_98\ : STD_LOGIC;
-  signal \io_system.neorv32_bus_io_switch_inst_n_99\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_1\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_10\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_11\ : STD_LOGIC;
@@ -58068,46 +55621,14 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_top is
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_14\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_15\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_16\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_17\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_18\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_19\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_2\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_20\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_21\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_22\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_23\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_24\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_25\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_26\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_27\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_28\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_29\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_3\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_30\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_31\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_32\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_4\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_5\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_6\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_64\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_66\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_67\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_68\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_69\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_7\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_70\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_71\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_72\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_73\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_74\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_75\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_76\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_77\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_78\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_79\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_8\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_80\ : STD_LOGIC;
-  signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_81\ : STD_LOGIC;
   signal \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_9\ : STD_LOGIC;
   signal \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_0\ : STD_LOGIC;
   signal \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_10\ : STD_LOGIC;
@@ -58209,7 +55730,7 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_top is
   signal \iodev_rsp[2][data]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \iodev_rsp[2][err]\ : STD_LOGIC;
   signal \iodev_rsp[4][ack]\ : STD_LOGIC;
-  signal \iodev_rsp[4][data]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal \iodev_rsp[4][data]\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \iodev_rsp[8][ack]\ : STD_LOGIC;
   signal \iodev_rsp[8][data]\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal irq_en : STD_LOGIC;
@@ -58257,41 +55778,25 @@ architecture STRUCTURE of system_neorv32_vivado_ip_0_0_neorv32_top is
   signal \neorv32_cpu_frontend_inst/we_i\ : STD_LOGIC;
   signal \neorv32_cpu_lsu_inst/misaligned\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal p_0_in_10 : STD_LOGIC;
-  signal \p_0_in__0\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal p_0_in_9 : STD_LOGIC;
+  signal \p_0_in__0\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal p_10_in : STD_LOGIC;
   signal p_13_in : STD_LOGIC;
   signal p_16_in : STD_LOGIC;
   signal p_19_in : STD_LOGIC;
   signal p_1_in : STD_LOGIC;
-  signal p_1_in13_in : STD_LOGIC;
-  signal p_1_in19_in : STD_LOGIC;
-  signal p_1_in25_in : STD_LOGIC;
-  signal p_1_in31_in : STD_LOGIC;
-  signal p_1_in37_in : STD_LOGIC;
-  signal p_1_in43_in : STD_LOGIC;
-  signal p_1_in49_in : STD_LOGIC;
-  signal p_1_in55_in : STD_LOGIC;
-  signal p_1_in61_in : STD_LOGIC;
-  signal p_1_in67_in : STD_LOGIC;
-  signal p_1_in73_in : STD_LOGIC;
-  signal p_1_in79_in : STD_LOGIC;
-  signal p_1_in7_in : STD_LOGIC;
-  signal p_1_in85_in : STD_LOGIC;
-  signal p_1_in91_in : STD_LOGIC;
-  signal p_1_in_2 : STD_LOGIC;
-  signal p_1_in_3 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal p_1_in_4 : STD_LOGIC;
+  signal p_1_in_2 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal p_1_in_3 : STD_LOGIC;
   signal p_1_out : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal p_22_in : STD_LOGIC;
+  signal p_21_in : STD_LOGIC;
+  signal p_23_in : STD_LOGIC;
   signal p_25_in : STD_LOGIC;
-  signal p_28_in : STD_LOGIC;
+  signal p_27_in : STD_LOGIC;
+  signal p_29_in : STD_LOGIC;
   signal p_31_in : STD_LOGIC;
-  signal p_34_in : STD_LOGIC;
-  signal p_36_in : STD_LOGIC;
-  signal p_38_in : STD_LOGIC;
-  signal p_40_in : STD_LOGIC;
-  signal p_42_in : STD_LOGIC;
+  signal p_33_in : STD_LOGIC;
+  signal p_35_in : STD_LOGIC;
+  signal p_37_in : STD_LOGIC;
   signal p_4_in : STD_LOGIC;
   signal p_7_in : STD_LOGIC;
   signal port_out : STD_LOGIC;
@@ -58578,7 +56083,7 @@ begin
 \io_system.neorv32_boot_rom_enabled.neorv32_boot_rom_inst\: entity work.system_neorv32_vivado_ip_0_0_neorv32_boot_rom
      port map (
       DOADO(31 downto 0) => rdata_reg(31 downto 0),
-      I48 => \io_system.neorv32_bus_io_switch_inst_n_109\,
+      I48 => \io_system.neorv32_bus_io_switch_inst_n_93\,
       \bus_req_i[stb]\ => \iodev_req[0][stb]\,
       \bus_rsp_o[ack]\ => \iodev_rsp[0][ack]\,
       clk => clk,
@@ -58589,10 +56094,10 @@ begin
     );
 \io_system.neorv32_bus_io_switch_inst\: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_io_switch
      port map (
-      D(31 downto 0) => \p_0_in__0\(31 downto 0),
+      D(15 downto 0) => \p_0_in__0\(15 downto 0),
       DOADO(31 downto 0) => rdata_reg(31 downto 0),
       E(0) => \io_system.neorv32_bus_io_switch_inst_n_13\,
-      I48 => \io_system.neorv32_bus_io_switch_inst_n_109\,
+      I48 => \io_system.neorv32_bus_io_switch_inst_n_93\,
       Q(7) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_31\,
       Q(6) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_32\,
       Q(5) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_33\,
@@ -58622,116 +56127,67 @@ begin
       \bus_rsp_o_reg[data][15]\(2) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_24\,
       \bus_rsp_o_reg[data][15]\(1) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_25\,
       \bus_rsp_o_reg[data][15]\(0) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_26\,
-      \bus_rsp_o_reg[data][15]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_16\,
-      \bus_rsp_o_reg[data][16]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_17\,
-      \bus_rsp_o_reg[data][16]_0\ => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_11\,
-      \bus_rsp_o_reg[data][16]_1\ => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_12\,
+      \bus_rsp_o_reg[data][15]_0\(15) => p_19_in,
+      \bus_rsp_o_reg[data][15]_0\(14) => p_21_in,
+      \bus_rsp_o_reg[data][15]_0\(13) => p_23_in,
+      \bus_rsp_o_reg[data][15]_0\(12) => p_25_in,
+      \bus_rsp_o_reg[data][15]_0\(11) => p_27_in,
+      \bus_rsp_o_reg[data][15]_0\(10) => p_29_in,
+      \bus_rsp_o_reg[data][15]_0\(9) => p_31_in,
+      \bus_rsp_o_reg[data][15]_0\(8) => p_33_in,
+      \bus_rsp_o_reg[data][15]_0\(7) => p_35_in,
+      \bus_rsp_o_reg[data][15]_0\(6) => p_37_in,
+      \bus_rsp_o_reg[data][15]_0\(5) => p_16_in,
+      \bus_rsp_o_reg[data][15]_0\(4) => p_13_in,
+      \bus_rsp_o_reg[data][15]_0\(3) => p_10_in,
+      \bus_rsp_o_reg[data][15]_0\(2) => p_7_in,
+      \bus_rsp_o_reg[data][15]_0\(1) => p_4_in,
+      \bus_rsp_o_reg[data][15]_0\(0) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_32\,
+      \bus_rsp_o_reg[data][15]_1\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_16\,
+      \bus_rsp_o_reg[data][16]\ => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_11\,
+      \bus_rsp_o_reg[data][16]_0\ => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_12\,
       \bus_rsp_o_reg[data][17]\ => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_16\,
-      \bus_rsp_o_reg[data][17]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_18\,
-      \bus_rsp_o_reg[data][18]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_19\,
       \bus_rsp_o_reg[data][19]\ => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_15\,
-      \bus_rsp_o_reg[data][19]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_20\,
       \bus_rsp_o_reg[data][1]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_2\,
-      \bus_rsp_o_reg[data][20]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_21\,
-      \bus_rsp_o_reg[data][21]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_22\,
-      \bus_rsp_o_reg[data][22]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_23\,
-      \bus_rsp_o_reg[data][23]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_24\,
-      \bus_rsp_o_reg[data][24]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_25\,
-      \bus_rsp_o_reg[data][25]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_26\,
-      \bus_rsp_o_reg[data][26]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_27\,
-      \bus_rsp_o_reg[data][27]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_28\,
-      \bus_rsp_o_reg[data][28]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_29\,
-      \bus_rsp_o_reg[data][29]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_30\,
       \bus_rsp_o_reg[data][2]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_3\,
       \bus_rsp_o_reg[data][2]_0\ => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_3\,
       \bus_rsp_o_reg[data][30]\ => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_30\,
-      \bus_rsp_o_reg[data][30]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_31\,
-      \bus_rsp_o_reg[data][30]_1\(0) => p_1_in_4,
+      \bus_rsp_o_reg[data][30]_0\(0) => p_1_in_3,
       \bus_rsp_o_reg[data][31]\ => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_14\,
-      \bus_rsp_o_reg[data][31]_0\(31) => p_34_in,
-      \bus_rsp_o_reg[data][31]_0\(30) => p_36_in,
-      \bus_rsp_o_reg[data][31]_0\(29) => p_38_in,
-      \bus_rsp_o_reg[data][31]_0\(28) => p_40_in,
-      \bus_rsp_o_reg[data][31]_0\(27) => p_42_in,
-      \bus_rsp_o_reg[data][31]_0\(26) => p_31_in,
-      \bus_rsp_o_reg[data][31]_0\(25) => p_28_in,
-      \bus_rsp_o_reg[data][31]_0\(24) => p_25_in,
-      \bus_rsp_o_reg[data][31]_0\(23) => p_22_in,
-      \bus_rsp_o_reg[data][31]_0\(22) => p_19_in,
-      \bus_rsp_o_reg[data][31]_0\(21) => p_16_in,
-      \bus_rsp_o_reg[data][31]_0\(20) => p_13_in,
-      \bus_rsp_o_reg[data][31]_0\(19) => p_10_in,
-      \bus_rsp_o_reg[data][31]_0\(18) => p_7_in,
-      \bus_rsp_o_reg[data][31]_0\(17) => p_4_in,
-      \bus_rsp_o_reg[data][31]_0\(16) => p_1_in91_in,
-      \bus_rsp_o_reg[data][31]_0\(15) => p_1_in85_in,
-      \bus_rsp_o_reg[data][31]_0\(14) => p_1_in79_in,
-      \bus_rsp_o_reg[data][31]_0\(13) => p_1_in73_in,
-      \bus_rsp_o_reg[data][31]_0\(12) => p_1_in67_in,
-      \bus_rsp_o_reg[data][31]_0\(11) => p_1_in61_in,
-      \bus_rsp_o_reg[data][31]_0\(10) => p_1_in55_in,
-      \bus_rsp_o_reg[data][31]_0\(9) => p_1_in49_in,
-      \bus_rsp_o_reg[data][31]_0\(8) => p_1_in43_in,
-      \bus_rsp_o_reg[data][31]_0\(7) => p_1_in37_in,
-      \bus_rsp_o_reg[data][31]_0\(6) => p_1_in31_in,
-      \bus_rsp_o_reg[data][31]_0\(5) => p_1_in25_in,
-      \bus_rsp_o_reg[data][31]_0\(4) => p_1_in19_in,
-      \bus_rsp_o_reg[data][31]_0\(3) => p_1_in13_in,
-      \bus_rsp_o_reg[data][31]_0\(2) => p_1_in7_in,
-      \bus_rsp_o_reg[data][31]_0\(1) => p_1_in_2,
-      \bus_rsp_o_reg[data][31]_0\(0) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_64\,
-      \bus_rsp_o_reg[data][31]_1\(31) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_66\,
-      \bus_rsp_o_reg[data][31]_1\(30) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_67\,
-      \bus_rsp_o_reg[data][31]_1\(29) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_68\,
-      \bus_rsp_o_reg[data][31]_1\(28) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_69\,
-      \bus_rsp_o_reg[data][31]_1\(27) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_70\,
-      \bus_rsp_o_reg[data][31]_1\(26) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_71\,
-      \bus_rsp_o_reg[data][31]_1\(25) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_72\,
-      \bus_rsp_o_reg[data][31]_1\(24) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_73\,
-      \bus_rsp_o_reg[data][31]_1\(23) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_74\,
-      \bus_rsp_o_reg[data][31]_1\(22) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_75\,
-      \bus_rsp_o_reg[data][31]_1\(21) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_76\,
-      \bus_rsp_o_reg[data][31]_1\(20) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_77\,
-      \bus_rsp_o_reg[data][31]_1\(19) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_78\,
-      \bus_rsp_o_reg[data][31]_1\(18) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_79\,
-      \bus_rsp_o_reg[data][31]_1\(17) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_80\,
-      \bus_rsp_o_reg[data][31]_1\(16) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_81\,
-      \bus_rsp_o_reg[data][31]_1\(15 downto 0) => \^gpio_o\(15 downto 0),
-      \bus_rsp_o_reg[data][31]_2\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_32\,
-      \bus_rsp_o_reg[data][31]_3\ => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_5\,
-      \bus_rsp_o_reg[data][31]_4\ => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_6\,
-      \bus_rsp_o_reg[data][31]_5\(30) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_54\,
-      \bus_rsp_o_reg[data][31]_5\(29) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_55\,
-      \bus_rsp_o_reg[data][31]_5\(28) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_56\,
-      \bus_rsp_o_reg[data][31]_5\(27) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_57\,
-      \bus_rsp_o_reg[data][31]_5\(26) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_58\,
-      \bus_rsp_o_reg[data][31]_5\(25) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_59\,
-      \bus_rsp_o_reg[data][31]_5\(24) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_60\,
-      \bus_rsp_o_reg[data][31]_5\(23) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_61\,
-      \bus_rsp_o_reg[data][31]_5\(22) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_62\,
-      \bus_rsp_o_reg[data][31]_5\(21) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_63\,
-      \bus_rsp_o_reg[data][31]_5\(20) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_64\,
-      \bus_rsp_o_reg[data][31]_5\(19) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_65\,
-      \bus_rsp_o_reg[data][31]_5\(18) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_66\,
-      \bus_rsp_o_reg[data][31]_5\(17) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_67\,
-      \bus_rsp_o_reg[data][31]_5\(16) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_68\,
-      \bus_rsp_o_reg[data][31]_5\(15) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_69\,
-      \bus_rsp_o_reg[data][31]_5\(14) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_70\,
-      \bus_rsp_o_reg[data][31]_5\(13) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_71\,
-      \bus_rsp_o_reg[data][31]_5\(12) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_72\,
-      \bus_rsp_o_reg[data][31]_5\(11) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_73\,
-      \bus_rsp_o_reg[data][31]_5\(10) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_74\,
-      \bus_rsp_o_reg[data][31]_5\(9) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_75\,
-      \bus_rsp_o_reg[data][31]_5\(8) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_76\,
-      \bus_rsp_o_reg[data][31]_5\(7) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_77\,
-      \bus_rsp_o_reg[data][31]_5\(6) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_78\,
-      \bus_rsp_o_reg[data][31]_5\(5) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_79\,
-      \bus_rsp_o_reg[data][31]_5\(4) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_80\,
-      \bus_rsp_o_reg[data][31]_5\(3) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_81\,
-      \bus_rsp_o_reg[data][31]_5\(2) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_82\,
-      \bus_rsp_o_reg[data][31]_5\(1) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_83\,
-      \bus_rsp_o_reg[data][31]_5\(0) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_84\,
-      \bus_rsp_o_reg[data][31]_6\(31 downto 0) => \sysinfo_reg[0]_0\(31 downto 0),
+      \bus_rsp_o_reg[data][31]_0\ => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_5\,
+      \bus_rsp_o_reg[data][31]_1\ => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_6\,
+      \bus_rsp_o_reg[data][31]_2\(30) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_54\,
+      \bus_rsp_o_reg[data][31]_2\(29) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_55\,
+      \bus_rsp_o_reg[data][31]_2\(28) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_56\,
+      \bus_rsp_o_reg[data][31]_2\(27) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_57\,
+      \bus_rsp_o_reg[data][31]_2\(26) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_58\,
+      \bus_rsp_o_reg[data][31]_2\(25) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_59\,
+      \bus_rsp_o_reg[data][31]_2\(24) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_60\,
+      \bus_rsp_o_reg[data][31]_2\(23) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_61\,
+      \bus_rsp_o_reg[data][31]_2\(22) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_62\,
+      \bus_rsp_o_reg[data][31]_2\(21) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_63\,
+      \bus_rsp_o_reg[data][31]_2\(20) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_64\,
+      \bus_rsp_o_reg[data][31]_2\(19) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_65\,
+      \bus_rsp_o_reg[data][31]_2\(18) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_66\,
+      \bus_rsp_o_reg[data][31]_2\(17) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_67\,
+      \bus_rsp_o_reg[data][31]_2\(16) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_68\,
+      \bus_rsp_o_reg[data][31]_2\(15) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_69\,
+      \bus_rsp_o_reg[data][31]_2\(14) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_70\,
+      \bus_rsp_o_reg[data][31]_2\(13) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_71\,
+      \bus_rsp_o_reg[data][31]_2\(12) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_72\,
+      \bus_rsp_o_reg[data][31]_2\(11) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_73\,
+      \bus_rsp_o_reg[data][31]_2\(10) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_74\,
+      \bus_rsp_o_reg[data][31]_2\(9) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_75\,
+      \bus_rsp_o_reg[data][31]_2\(8) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_76\,
+      \bus_rsp_o_reg[data][31]_2\(7) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_77\,
+      \bus_rsp_o_reg[data][31]_2\(6) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_78\,
+      \bus_rsp_o_reg[data][31]_2\(5) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_79\,
+      \bus_rsp_o_reg[data][31]_2\(4) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_80\,
+      \bus_rsp_o_reg[data][31]_2\(3) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_81\,
+      \bus_rsp_o_reg[data][31]_2\(2) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_82\,
+      \bus_rsp_o_reg[data][31]_2\(1) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_83\,
+      \bus_rsp_o_reg[data][31]_2\(0) => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_84\,
+      \bus_rsp_o_reg[data][31]_3\(31 downto 0) => \sysinfo_reg[0]_0\(31 downto 0),
       \bus_rsp_o_reg[data][3]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_4\,
       \bus_rsp_o_reg[data][3]_0\(2 downto 0) => rx_route(3 downto 1),
       \bus_rsp_o_reg[data][4]\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_5\,
@@ -58762,16 +56218,16 @@ begin
       clk => clk,
       \ctrl[enable]\ => \ctrl[enable]\,
       \ctrl_reg[cpha]__0\ => \ctrl_reg[cpha]__0\,
-      \ctrl_reg[enable]__0\ => \ctrl_reg[enable]__0_9\,
+      \ctrl_reg[enable]__0\ => \ctrl_reg[enable]__0_8\,
       \ctrl_reg[enable]__0_0\ => \ctrl_reg[enable]__0\,
       \ctrl_reg[hwfc_en]__0\ => \ctrl_reg[hwfc_en]__0\,
-      \ctrl_reg[irq_rx_full]__0\ => \ctrl_reg[irq_rx_full]__0_7\,
+      \ctrl_reg[irq_rx_full]__0\ => \ctrl_reg[irq_rx_full]__0_6\,
       \ctrl_reg[irq_rx_full]__0_2\ => \ctrl_reg[irq_rx_full]__0\,
-      \ctrl_reg[irq_rx_nempty]__0\ => \ctrl_reg[irq_rx_nempty]__0_8\,
+      \ctrl_reg[irq_rx_nempty]__0\ => \ctrl_reg[irq_rx_nempty]__0_7\,
       \ctrl_reg[irq_rx_nempty]__0_1\ => \ctrl_reg[irq_rx_nempty]__0\,
-      \ctrl_reg[irq_tx_empty]__0\ => \ctrl_reg[irq_tx_empty]__0_6\,
+      \ctrl_reg[irq_tx_empty]__0\ => \ctrl_reg[irq_tx_empty]__0_5\,
       \ctrl_reg[irq_tx_empty]__0_3\ => \ctrl_reg[irq_tx_empty]__0\,
-      \ctrl_reg[irq_tx_nfull]__0\ => \ctrl_reg[irq_tx_nfull]__0_5\,
+      \ctrl_reg[irq_tx_nfull]__0\ => \ctrl_reg[irq_tx_nfull]__0_4\,
       \ctrl_reg[irq_tx_nfull]__0_4\ => \ctrl_reg[irq_tx_nfull]__0\,
       \ctrl_reg[sim_mode]__0\ => \ctrl_reg[sim_mode]__0\,
       \dev_00_req_o[addr]\(9 downto 3) => \iodev_req[0][addr]\(11 downto 5),
@@ -58781,6 +56237,7 @@ begin
       \dev_12_req_o[rw]\ => \iodev_req[17][rw]\,
       \dev_30_rsp_i[err]\ => \iodev_rsp[2][err]\,
       empty => empty,
+      gpio_o(15 downto 0) => \^gpio_o\(15 downto 0),
       \iodev_req[11][stb]\ => \iodev_req[11][stb]\,
       \iodev_req[17][stb]\ => \iodev_req[17][stb]\,
       \iodev_req[2][stb]\ => \iodev_req[2][stb]\,
@@ -58797,39 +56254,8 @@ begin
       \main_rsp_o[ack]\ => \io_rsp[ack]\,
       \main_rsp_o[data]\(31 downto 0) => \io_rsp[data]\(31 downto 0),
       \main_rsp_o[err]\ => \io_rsp[err]\,
-      p_1_in(0) => p_1_in_3(0),
-      \port_in_reg[31]\(31) => \io_system.neorv32_bus_io_switch_inst_n_115\,
-      \port_in_reg[31]\(30) => \io_system.neorv32_bus_io_switch_inst_n_116\,
-      \port_in_reg[31]\(29) => \io_system.neorv32_bus_io_switch_inst_n_117\,
-      \port_in_reg[31]\(28) => \io_system.neorv32_bus_io_switch_inst_n_118\,
-      \port_in_reg[31]\(27) => \io_system.neorv32_bus_io_switch_inst_n_119\,
-      \port_in_reg[31]\(26) => \io_system.neorv32_bus_io_switch_inst_n_120\,
-      \port_in_reg[31]\(25) => \io_system.neorv32_bus_io_switch_inst_n_121\,
-      \port_in_reg[31]\(24) => \io_system.neorv32_bus_io_switch_inst_n_122\,
-      \port_in_reg[31]\(23) => \io_system.neorv32_bus_io_switch_inst_n_123\,
-      \port_in_reg[31]\(22) => \io_system.neorv32_bus_io_switch_inst_n_124\,
-      \port_in_reg[31]\(21) => \io_system.neorv32_bus_io_switch_inst_n_125\,
-      \port_in_reg[31]\(20) => \io_system.neorv32_bus_io_switch_inst_n_126\,
-      \port_in_reg[31]\(19) => \io_system.neorv32_bus_io_switch_inst_n_127\,
-      \port_in_reg[31]\(18) => \io_system.neorv32_bus_io_switch_inst_n_128\,
-      \port_in_reg[31]\(17) => \io_system.neorv32_bus_io_switch_inst_n_129\,
-      \port_in_reg[31]\(16) => \io_system.neorv32_bus_io_switch_inst_n_130\,
-      \port_in_reg[31]\(15) => \io_system.neorv32_bus_io_switch_inst_n_131\,
-      \port_in_reg[31]\(14) => \io_system.neorv32_bus_io_switch_inst_n_132\,
-      \port_in_reg[31]\(13) => \io_system.neorv32_bus_io_switch_inst_n_133\,
-      \port_in_reg[31]\(12) => \io_system.neorv32_bus_io_switch_inst_n_134\,
-      \port_in_reg[31]\(11) => \io_system.neorv32_bus_io_switch_inst_n_135\,
-      \port_in_reg[31]\(10) => \io_system.neorv32_bus_io_switch_inst_n_136\,
-      \port_in_reg[31]\(9) => \io_system.neorv32_bus_io_switch_inst_n_137\,
-      \port_in_reg[31]\(8) => \io_system.neorv32_bus_io_switch_inst_n_138\,
-      \port_in_reg[31]\(7) => \io_system.neorv32_bus_io_switch_inst_n_139\,
-      \port_in_reg[31]\(6) => \io_system.neorv32_bus_io_switch_inst_n_140\,
-      \port_in_reg[31]\(5) => \io_system.neorv32_bus_io_switch_inst_n_141\,
-      \port_in_reg[31]\(4) => \io_system.neorv32_bus_io_switch_inst_n_142\,
-      \port_in_reg[31]\(3) => \io_system.neorv32_bus_io_switch_inst_n_143\,
-      \port_in_reg[31]\(2) => \io_system.neorv32_bus_io_switch_inst_n_144\,
-      \port_in_reg[31]\(1) => \io_system.neorv32_bus_io_switch_inst_n_145\,
-      \port_in_reg[31]\(0) => \io_system.neorv32_bus_io_switch_inst_n_146\,
+      p_1_in(0) => p_1_in_2(0),
+      \port_in_reg[15]\(15 downto 0) => \bus_rsp_o[data]0_out\(15 downto 0),
       r_pnt => r_pnt,
       re0 => \rx_engine_fifo_inst/re0\,
       \request_reg_enabled.device_req_o_reg[addr][2]\ => \io_system.neorv32_bus_io_switch_inst_n_0\,
@@ -58841,96 +56267,96 @@ begin
       \request_reg_enabled.device_req_o_reg[addr][3]_1\(0) => \rx_fifo[re]\,
       \request_reg_enabled.device_req_o_reg[addr][3]_2\(31 downto 0) => p_0_in(31 downto 0),
       \request_reg_enabled.device_req_o_reg[addr][4]\(0) => port_out,
-      \request_reg_enabled.device_req_o_reg[data][0]\ => \io_system.neorv32_bus_io_switch_inst_n_147\,
-      \request_reg_enabled.device_req_o_reg[data][1]\ => \io_system.neorv32_bus_io_switch_inst_n_149\,
-      \request_reg_enabled.device_req_o_reg[data][2]\ => \io_system.neorv32_bus_io_switch_inst_n_150\,
-      \request_reg_enabled.device_req_o_reg[rw]\(25) => \io_system.neorv32_bus_io_switch_inst_n_80\,
-      \request_reg_enabled.device_req_o_reg[rw]\(24) => \io_system.neorv32_bus_io_switch_inst_n_81\,
-      \request_reg_enabled.device_req_o_reg[rw]\(23) => \io_system.neorv32_bus_io_switch_inst_n_82\,
-      \request_reg_enabled.device_req_o_reg[rw]\(22) => \io_system.neorv32_bus_io_switch_inst_n_83\,
-      \request_reg_enabled.device_req_o_reg[rw]\(21) => \io_system.neorv32_bus_io_switch_inst_n_84\,
-      \request_reg_enabled.device_req_o_reg[rw]\(20) => \io_system.neorv32_bus_io_switch_inst_n_85\,
-      \request_reg_enabled.device_req_o_reg[rw]\(19) => \io_system.neorv32_bus_io_switch_inst_n_86\,
-      \request_reg_enabled.device_req_o_reg[rw]\(18) => \io_system.neorv32_bus_io_switch_inst_n_87\,
-      \request_reg_enabled.device_req_o_reg[rw]\(17) => \io_system.neorv32_bus_io_switch_inst_n_88\,
-      \request_reg_enabled.device_req_o_reg[rw]\(16) => \io_system.neorv32_bus_io_switch_inst_n_89\,
-      \request_reg_enabled.device_req_o_reg[rw]\(15) => \io_system.neorv32_bus_io_switch_inst_n_90\,
-      \request_reg_enabled.device_req_o_reg[rw]\(14) => \io_system.neorv32_bus_io_switch_inst_n_91\,
-      \request_reg_enabled.device_req_o_reg[rw]\(13) => \io_system.neorv32_bus_io_switch_inst_n_92\,
-      \request_reg_enabled.device_req_o_reg[rw]\(12) => \io_system.neorv32_bus_io_switch_inst_n_93\,
-      \request_reg_enabled.device_req_o_reg[rw]\(11) => \io_system.neorv32_bus_io_switch_inst_n_94\,
-      \request_reg_enabled.device_req_o_reg[rw]\(10) => \io_system.neorv32_bus_io_switch_inst_n_95\,
-      \request_reg_enabled.device_req_o_reg[rw]\(9) => \io_system.neorv32_bus_io_switch_inst_n_96\,
-      \request_reg_enabled.device_req_o_reg[rw]\(8) => \io_system.neorv32_bus_io_switch_inst_n_97\,
-      \request_reg_enabled.device_req_o_reg[rw]\(7) => \io_system.neorv32_bus_io_switch_inst_n_98\,
-      \request_reg_enabled.device_req_o_reg[rw]\(6) => \io_system.neorv32_bus_io_switch_inst_n_99\,
-      \request_reg_enabled.device_req_o_reg[rw]\(5) => \io_system.neorv32_bus_io_switch_inst_n_100\,
-      \request_reg_enabled.device_req_o_reg[rw]\(4) => \io_system.neorv32_bus_io_switch_inst_n_101\,
-      \request_reg_enabled.device_req_o_reg[rw]\(3) => \io_system.neorv32_bus_io_switch_inst_n_102\,
-      \request_reg_enabled.device_req_o_reg[rw]\(2) => \io_system.neorv32_bus_io_switch_inst_n_103\,
-      \request_reg_enabled.device_req_o_reg[rw]\(1) => \io_system.neorv32_bus_io_switch_inst_n_104\,
-      \request_reg_enabled.device_req_o_reg[rw]\(0) => \io_system.neorv32_bus_io_switch_inst_n_105\,
-      \request_reg_enabled.device_req_o_reg[rw]_0\ => \io_system.neorv32_bus_io_switch_inst_n_106\,
-      \request_reg_enabled.device_req_o_reg[rw]_1\ => \io_system.neorv32_bus_io_switch_inst_n_107\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(14) => \io_system.neorv32_bus_io_switch_inst_n_151\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(13) => \io_system.neorv32_bus_io_switch_inst_n_152\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(12) => \io_system.neorv32_bus_io_switch_inst_n_153\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(11) => \io_system.neorv32_bus_io_switch_inst_n_154\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(10) => \io_system.neorv32_bus_io_switch_inst_n_155\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(9) => \io_system.neorv32_bus_io_switch_inst_n_156\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(8) => \io_system.neorv32_bus_io_switch_inst_n_157\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(7) => \io_system.neorv32_bus_io_switch_inst_n_158\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(6) => \io_system.neorv32_bus_io_switch_inst_n_159\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(5) => \io_system.neorv32_bus_io_switch_inst_n_160\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(4) => \io_system.neorv32_bus_io_switch_inst_n_161\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(3) => \io_system.neorv32_bus_io_switch_inst_n_162\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(2) => \io_system.neorv32_bus_io_switch_inst_n_163\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(1) => \io_system.neorv32_bus_io_switch_inst_n_164\,
-      \request_reg_enabled.device_req_o_reg[rw]_2\(0) => \io_system.neorv32_bus_io_switch_inst_n_165\,
+      \request_reg_enabled.device_req_o_reg[data][0]\ => \io_system.neorv32_bus_io_switch_inst_n_115\,
+      \request_reg_enabled.device_req_o_reg[data][1]\ => \io_system.neorv32_bus_io_switch_inst_n_117\,
+      \request_reg_enabled.device_req_o_reg[data][2]\ => \io_system.neorv32_bus_io_switch_inst_n_118\,
+      \request_reg_enabled.device_req_o_reg[rw]\(25) => \io_system.neorv32_bus_io_switch_inst_n_64\,
+      \request_reg_enabled.device_req_o_reg[rw]\(24) => \io_system.neorv32_bus_io_switch_inst_n_65\,
+      \request_reg_enabled.device_req_o_reg[rw]\(23) => \io_system.neorv32_bus_io_switch_inst_n_66\,
+      \request_reg_enabled.device_req_o_reg[rw]\(22) => \io_system.neorv32_bus_io_switch_inst_n_67\,
+      \request_reg_enabled.device_req_o_reg[rw]\(21) => \io_system.neorv32_bus_io_switch_inst_n_68\,
+      \request_reg_enabled.device_req_o_reg[rw]\(20) => \io_system.neorv32_bus_io_switch_inst_n_69\,
+      \request_reg_enabled.device_req_o_reg[rw]\(19) => \io_system.neorv32_bus_io_switch_inst_n_70\,
+      \request_reg_enabled.device_req_o_reg[rw]\(18) => \io_system.neorv32_bus_io_switch_inst_n_71\,
+      \request_reg_enabled.device_req_o_reg[rw]\(17) => \io_system.neorv32_bus_io_switch_inst_n_72\,
+      \request_reg_enabled.device_req_o_reg[rw]\(16) => \io_system.neorv32_bus_io_switch_inst_n_73\,
+      \request_reg_enabled.device_req_o_reg[rw]\(15) => \io_system.neorv32_bus_io_switch_inst_n_74\,
+      \request_reg_enabled.device_req_o_reg[rw]\(14) => \io_system.neorv32_bus_io_switch_inst_n_75\,
+      \request_reg_enabled.device_req_o_reg[rw]\(13) => \io_system.neorv32_bus_io_switch_inst_n_76\,
+      \request_reg_enabled.device_req_o_reg[rw]\(12) => \io_system.neorv32_bus_io_switch_inst_n_77\,
+      \request_reg_enabled.device_req_o_reg[rw]\(11) => \io_system.neorv32_bus_io_switch_inst_n_78\,
+      \request_reg_enabled.device_req_o_reg[rw]\(10) => \io_system.neorv32_bus_io_switch_inst_n_79\,
+      \request_reg_enabled.device_req_o_reg[rw]\(9) => \io_system.neorv32_bus_io_switch_inst_n_80\,
+      \request_reg_enabled.device_req_o_reg[rw]\(8) => \io_system.neorv32_bus_io_switch_inst_n_81\,
+      \request_reg_enabled.device_req_o_reg[rw]\(7) => \io_system.neorv32_bus_io_switch_inst_n_82\,
+      \request_reg_enabled.device_req_o_reg[rw]\(6) => \io_system.neorv32_bus_io_switch_inst_n_83\,
+      \request_reg_enabled.device_req_o_reg[rw]\(5) => \io_system.neorv32_bus_io_switch_inst_n_84\,
+      \request_reg_enabled.device_req_o_reg[rw]\(4) => \io_system.neorv32_bus_io_switch_inst_n_85\,
+      \request_reg_enabled.device_req_o_reg[rw]\(3) => \io_system.neorv32_bus_io_switch_inst_n_86\,
+      \request_reg_enabled.device_req_o_reg[rw]\(2) => \io_system.neorv32_bus_io_switch_inst_n_87\,
+      \request_reg_enabled.device_req_o_reg[rw]\(1) => \io_system.neorv32_bus_io_switch_inst_n_88\,
+      \request_reg_enabled.device_req_o_reg[rw]\(0) => \io_system.neorv32_bus_io_switch_inst_n_89\,
+      \request_reg_enabled.device_req_o_reg[rw]_0\ => \io_system.neorv32_bus_io_switch_inst_n_90\,
+      \request_reg_enabled.device_req_o_reg[rw]_1\ => \io_system.neorv32_bus_io_switch_inst_n_91\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(14) => \io_system.neorv32_bus_io_switch_inst_n_119\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(13) => \io_system.neorv32_bus_io_switch_inst_n_120\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(12) => \io_system.neorv32_bus_io_switch_inst_n_121\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(11) => \io_system.neorv32_bus_io_switch_inst_n_122\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(10) => \io_system.neorv32_bus_io_switch_inst_n_123\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(9) => \io_system.neorv32_bus_io_switch_inst_n_124\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(8) => \io_system.neorv32_bus_io_switch_inst_n_125\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(7) => \io_system.neorv32_bus_io_switch_inst_n_126\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(6) => \io_system.neorv32_bus_io_switch_inst_n_127\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(5) => \io_system.neorv32_bus_io_switch_inst_n_128\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(4) => \io_system.neorv32_bus_io_switch_inst_n_129\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(3) => \io_system.neorv32_bus_io_switch_inst_n_130\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(2) => \io_system.neorv32_bus_io_switch_inst_n_131\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(1) => \io_system.neorv32_bus_io_switch_inst_n_132\,
+      \request_reg_enabled.device_req_o_reg[rw]_2\(0) => \io_system.neorv32_bus_io_switch_inst_n_133\,
       \request_reg_enabled.device_req_o_reg[rw]_3\(0) => \tx_fifo_inst/we_1\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(31) => \io_system.neorv32_bus_io_switch_inst_n_168\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(30) => \io_system.neorv32_bus_io_switch_inst_n_169\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(29) => \io_system.neorv32_bus_io_switch_inst_n_170\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(28) => \io_system.neorv32_bus_io_switch_inst_n_171\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(27) => \io_system.neorv32_bus_io_switch_inst_n_172\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(26) => \io_system.neorv32_bus_io_switch_inst_n_173\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(25) => \io_system.neorv32_bus_io_switch_inst_n_174\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(24) => \io_system.neorv32_bus_io_switch_inst_n_175\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(23) => \io_system.neorv32_bus_io_switch_inst_n_176\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(22) => \io_system.neorv32_bus_io_switch_inst_n_177\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(21) => \io_system.neorv32_bus_io_switch_inst_n_178\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(20) => \io_system.neorv32_bus_io_switch_inst_n_179\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(19) => \io_system.neorv32_bus_io_switch_inst_n_180\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(18) => \io_system.neorv32_bus_io_switch_inst_n_181\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(17) => \io_system.neorv32_bus_io_switch_inst_n_182\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(16) => \io_system.neorv32_bus_io_switch_inst_n_183\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(15) => \io_system.neorv32_bus_io_switch_inst_n_184\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(14) => \io_system.neorv32_bus_io_switch_inst_n_185\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(13) => \io_system.neorv32_bus_io_switch_inst_n_186\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(12) => \io_system.neorv32_bus_io_switch_inst_n_187\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(11) => \io_system.neorv32_bus_io_switch_inst_n_188\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(10) => \io_system.neorv32_bus_io_switch_inst_n_189\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(9) => \io_system.neorv32_bus_io_switch_inst_n_190\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(8) => \io_system.neorv32_bus_io_switch_inst_n_191\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(7) => \io_system.neorv32_bus_io_switch_inst_n_192\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(6) => \io_system.neorv32_bus_io_switch_inst_n_193\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(5) => \io_system.neorv32_bus_io_switch_inst_n_194\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(4) => \io_system.neorv32_bus_io_switch_inst_n_195\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(3) => \io_system.neorv32_bus_io_switch_inst_n_196\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(2) => \io_system.neorv32_bus_io_switch_inst_n_197\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(1) => \io_system.neorv32_bus_io_switch_inst_n_198\,
-      \request_reg_enabled.device_req_o_reg[rw]_4\(0) => \io_system.neorv32_bus_io_switch_inst_n_199\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(31) => \io_system.neorv32_bus_io_switch_inst_n_136\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(30) => \io_system.neorv32_bus_io_switch_inst_n_137\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(29) => \io_system.neorv32_bus_io_switch_inst_n_138\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(28) => \io_system.neorv32_bus_io_switch_inst_n_139\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(27) => \io_system.neorv32_bus_io_switch_inst_n_140\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(26) => \io_system.neorv32_bus_io_switch_inst_n_141\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(25) => \io_system.neorv32_bus_io_switch_inst_n_142\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(24) => \io_system.neorv32_bus_io_switch_inst_n_143\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(23) => \io_system.neorv32_bus_io_switch_inst_n_144\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(22) => \io_system.neorv32_bus_io_switch_inst_n_145\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(21) => \io_system.neorv32_bus_io_switch_inst_n_146\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(20) => \io_system.neorv32_bus_io_switch_inst_n_147\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(19) => \io_system.neorv32_bus_io_switch_inst_n_148\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(18) => \io_system.neorv32_bus_io_switch_inst_n_149\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(17) => \io_system.neorv32_bus_io_switch_inst_n_150\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(16) => \io_system.neorv32_bus_io_switch_inst_n_151\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(15) => \io_system.neorv32_bus_io_switch_inst_n_152\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(14) => \io_system.neorv32_bus_io_switch_inst_n_153\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(13) => \io_system.neorv32_bus_io_switch_inst_n_154\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(12) => \io_system.neorv32_bus_io_switch_inst_n_155\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(11) => \io_system.neorv32_bus_io_switch_inst_n_156\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(10) => \io_system.neorv32_bus_io_switch_inst_n_157\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(9) => \io_system.neorv32_bus_io_switch_inst_n_158\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(8) => \io_system.neorv32_bus_io_switch_inst_n_159\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(7) => \io_system.neorv32_bus_io_switch_inst_n_160\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(6) => \io_system.neorv32_bus_io_switch_inst_n_161\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(5) => \io_system.neorv32_bus_io_switch_inst_n_162\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(4) => \io_system.neorv32_bus_io_switch_inst_n_163\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(3) => \io_system.neorv32_bus_io_switch_inst_n_164\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(2) => \io_system.neorv32_bus_io_switch_inst_n_165\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(1) => \io_system.neorv32_bus_io_switch_inst_n_166\,
+      \request_reg_enabled.device_req_o_reg[rw]_4\(0) => \io_system.neorv32_bus_io_switch_inst_n_167\,
       \request_reg_enabled.device_req_o_reg[rw]_5\(0) => \tx_fifo_inst/we\,
-      \request_reg_enabled.device_req_o_reg[rw]_6\ => \io_system.neorv32_bus_io_switch_inst_n_237\,
+      \request_reg_enabled.device_req_o_reg[rw]_6\ => \io_system.neorv32_bus_io_switch_inst_n_205\,
       \request_reg_enabled.device_req_o_reg[rw]_7\(0) => \io_req[stb]\,
+      \response_reg_enabled.host_rsp_o_reg[data][15]\(15 downto 0) => \iodev_rsp[4][data]\(15 downto 0),
       \response_reg_enabled.host_rsp_o_reg[data][31]\(31 downto 0) => \iodev_rsp[2][data]\(31 downto 0),
       \response_reg_enabled.host_rsp_o_reg[data][31]_0\(14 downto 13) => \iodev_rsp[8][data]\(31 downto 30),
       \response_reg_enabled.host_rsp_o_reg[data][31]_0\(12 downto 10) => \iodev_rsp[8][data]\(18 downto 16),
       \response_reg_enabled.host_rsp_o_reg[data][31]_0\(9 downto 0) => \iodev_rsp[8][data]\(9 downto 0),
-      \response_reg_enabled.host_rsp_o_reg[data][31]_1\(31 downto 0) => \iodev_rsp[4][data]\(31 downto 0),
-      \response_reg_enabled.host_rsp_o_reg[data][31]_2\(31 downto 0) => \iodev_rsp[17][data]\(31 downto 0),
-      \response_reg_enabled.host_rsp_o_reg[data][31]_3\(25 downto 24) => \iodev_rsp[11][data]\(31 downto 30),
-      \response_reg_enabled.host_rsp_o_reg[data][31]_3\(23 downto 0) => \iodev_rsp[11][data]\(23 downto 0),
+      \response_reg_enabled.host_rsp_o_reg[data][31]_1\(31 downto 0) => \iodev_rsp[17][data]\(31 downto 0),
+      \response_reg_enabled.host_rsp_o_reg[data][31]_2\(25 downto 24) => \iodev_rsp[11][data]\(31 downto 30),
+      \response_reg_enabled.host_rsp_o_reg[data][31]_2\(23 downto 0) => \iodev_rsp[11][data]\(23 downto 0),
       rstn_sys => rstn_sys,
       \rx_fifo[avail]\ => \rx_fifo[avail]\,
       rx_last => rx_last,
@@ -58942,80 +56368,34 @@ begin
     );
 \io_system.neorv32_gpio_enabled.neorv32_gpio_inst\: entity work.system_neorv32_vivado_ip_0_0_neorv32_gpio
      port map (
-      D(31 downto 0) => \iodev_req[17][data]\(31 downto 0),
+      D(15 downto 0) => \iodev_req[17][data]\(15 downto 0),
       E(0) => port_out,
-      Q(31) => p_34_in,
-      Q(30) => p_36_in,
-      Q(29) => p_38_in,
-      Q(28) => p_40_in,
-      Q(27) => p_42_in,
-      Q(26) => p_31_in,
-      Q(25) => p_28_in,
-      Q(24) => p_25_in,
-      Q(23) => p_22_in,
-      Q(22) => p_19_in,
-      Q(21) => p_16_in,
-      Q(20) => p_13_in,
-      Q(19) => p_10_in,
-      Q(18) => p_7_in,
-      Q(17) => p_4_in,
-      Q(16) => p_1_in91_in,
-      Q(15) => p_1_in85_in,
-      Q(14) => p_1_in79_in,
-      Q(13) => p_1_in73_in,
-      Q(12) => p_1_in67_in,
-      Q(11) => p_1_in61_in,
-      Q(10) => p_1_in55_in,
-      Q(9) => p_1_in49_in,
-      Q(8) => p_1_in43_in,
-      Q(7) => p_1_in37_in,
-      Q(6) => p_1_in31_in,
-      Q(5) => p_1_in25_in,
-      Q(4) => p_1_in19_in,
-      Q(3) => p_1_in13_in,
-      Q(2) => p_1_in7_in,
-      Q(1) => p_1_in_2,
-      Q(0) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_64\,
-      \bus_rsp_o_reg[data][31]_0\(31 downto 0) => \iodev_rsp[4][data]\(31 downto 0),
-      \bus_rsp_o_reg[data][31]_1\(31) => \io_system.neorv32_bus_io_switch_inst_n_115\,
-      \bus_rsp_o_reg[data][31]_1\(30) => \io_system.neorv32_bus_io_switch_inst_n_116\,
-      \bus_rsp_o_reg[data][31]_1\(29) => \io_system.neorv32_bus_io_switch_inst_n_117\,
-      \bus_rsp_o_reg[data][31]_1\(28) => \io_system.neorv32_bus_io_switch_inst_n_118\,
-      \bus_rsp_o_reg[data][31]_1\(27) => \io_system.neorv32_bus_io_switch_inst_n_119\,
-      \bus_rsp_o_reg[data][31]_1\(26) => \io_system.neorv32_bus_io_switch_inst_n_120\,
-      \bus_rsp_o_reg[data][31]_1\(25) => \io_system.neorv32_bus_io_switch_inst_n_121\,
-      \bus_rsp_o_reg[data][31]_1\(24) => \io_system.neorv32_bus_io_switch_inst_n_122\,
-      \bus_rsp_o_reg[data][31]_1\(23) => \io_system.neorv32_bus_io_switch_inst_n_123\,
-      \bus_rsp_o_reg[data][31]_1\(22) => \io_system.neorv32_bus_io_switch_inst_n_124\,
-      \bus_rsp_o_reg[data][31]_1\(21) => \io_system.neorv32_bus_io_switch_inst_n_125\,
-      \bus_rsp_o_reg[data][31]_1\(20) => \io_system.neorv32_bus_io_switch_inst_n_126\,
-      \bus_rsp_o_reg[data][31]_1\(19) => \io_system.neorv32_bus_io_switch_inst_n_127\,
-      \bus_rsp_o_reg[data][31]_1\(18) => \io_system.neorv32_bus_io_switch_inst_n_128\,
-      \bus_rsp_o_reg[data][31]_1\(17) => \io_system.neorv32_bus_io_switch_inst_n_129\,
-      \bus_rsp_o_reg[data][31]_1\(16) => \io_system.neorv32_bus_io_switch_inst_n_130\,
-      \bus_rsp_o_reg[data][31]_1\(15) => \io_system.neorv32_bus_io_switch_inst_n_131\,
-      \bus_rsp_o_reg[data][31]_1\(14) => \io_system.neorv32_bus_io_switch_inst_n_132\,
-      \bus_rsp_o_reg[data][31]_1\(13) => \io_system.neorv32_bus_io_switch_inst_n_133\,
-      \bus_rsp_o_reg[data][31]_1\(12) => \io_system.neorv32_bus_io_switch_inst_n_134\,
-      \bus_rsp_o_reg[data][31]_1\(11) => \io_system.neorv32_bus_io_switch_inst_n_135\,
-      \bus_rsp_o_reg[data][31]_1\(10) => \io_system.neorv32_bus_io_switch_inst_n_136\,
-      \bus_rsp_o_reg[data][31]_1\(9) => \io_system.neorv32_bus_io_switch_inst_n_137\,
-      \bus_rsp_o_reg[data][31]_1\(8) => \io_system.neorv32_bus_io_switch_inst_n_138\,
-      \bus_rsp_o_reg[data][31]_1\(7) => \io_system.neorv32_bus_io_switch_inst_n_139\,
-      \bus_rsp_o_reg[data][31]_1\(6) => \io_system.neorv32_bus_io_switch_inst_n_140\,
-      \bus_rsp_o_reg[data][31]_1\(5) => \io_system.neorv32_bus_io_switch_inst_n_141\,
-      \bus_rsp_o_reg[data][31]_1\(4) => \io_system.neorv32_bus_io_switch_inst_n_142\,
-      \bus_rsp_o_reg[data][31]_1\(3) => \io_system.neorv32_bus_io_switch_inst_n_143\,
-      \bus_rsp_o_reg[data][31]_1\(2) => \io_system.neorv32_bus_io_switch_inst_n_144\,
-      \bus_rsp_o_reg[data][31]_1\(1) => \io_system.neorv32_bus_io_switch_inst_n_145\,
-      \bus_rsp_o_reg[data][31]_1\(0) => \io_system.neorv32_bus_io_switch_inst_n_146\,
+      Q(15) => p_19_in,
+      Q(14) => p_21_in,
+      Q(13) => p_23_in,
+      Q(12) => p_25_in,
+      Q(11) => p_27_in,
+      Q(10) => p_29_in,
+      Q(9) => p_31_in,
+      Q(8) => p_33_in,
+      Q(7) => p_35_in,
+      Q(6) => p_37_in,
+      Q(5) => p_16_in,
+      Q(4) => p_13_in,
+      Q(3) => p_10_in,
+      Q(2) => p_7_in,
+      Q(1) => p_4_in,
+      Q(0) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_32\,
+      \bus_rsp_o_reg[data][15]_0\(15 downto 0) => \iodev_rsp[4][data]\(15 downto 0),
+      \bus_rsp_o_reg[data][15]_1\(15 downto 0) => \bus_rsp_o[data]0_out\(15 downto 0),
       clk => clk,
       \dev_00_req_o[addr]\(1 downto 0) => \iodev_req[17][addr]\(3 downto 2),
-      gpio_i(31 downto 0) => gpio_i(31 downto 0),
+      gpio_i(15 downto 0) => gpio_i(15 downto 0),
+      gpio_o(15 downto 0) => \^gpio_o\(15 downto 0),
       \iodev_req[4][stb]\ => \iodev_req[4][stb]\,
       \iodev_rsp[4][ack]\ => \iodev_rsp[4][ack]\,
-      \irq_clrn_reg[31]_0\(31 downto 0) => \p_0_in__0\(31 downto 0),
-      \irq_en_reg[31]_0\(0) => irq_en,
+      \irq_clrn_reg[15]_0\(15 downto 0) => \p_0_in__0\(15 downto 0),
+      \irq_en_reg[15]_0\(0) => irq_en,
       irq_fast_i(0) => cpu_firq(8),
       \irq_pol_reg[0]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_1\,
       \irq_pol_reg[10]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_11\,
@@ -59024,25 +56404,9 @@ begin
       \irq_pol_reg[13]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_14\,
       \irq_pol_reg[14]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_15\,
       \irq_pol_reg[15]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_16\,
-      \irq_pol_reg[16]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_17\,
-      \irq_pol_reg[17]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_18\,
-      \irq_pol_reg[18]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_19\,
-      \irq_pol_reg[19]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_20\,
+      \irq_pol_reg[15]_1\(0) => irq_pol,
       \irq_pol_reg[1]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_2\,
-      \irq_pol_reg[20]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_21\,
-      \irq_pol_reg[21]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_22\,
-      \irq_pol_reg[22]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_23\,
-      \irq_pol_reg[23]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_24\,
-      \irq_pol_reg[24]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_25\,
-      \irq_pol_reg[25]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_26\,
-      \irq_pol_reg[26]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_27\,
-      \irq_pol_reg[27]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_28\,
-      \irq_pol_reg[28]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_29\,
-      \irq_pol_reg[29]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_30\,
       \irq_pol_reg[2]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_3\,
-      \irq_pol_reg[30]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_31\,
-      \irq_pol_reg[31]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_32\,
-      \irq_pol_reg[31]_1\(0) => irq_pol,
       \irq_pol_reg[3]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_4\,
       \irq_pol_reg[4]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_5\,
       \irq_pol_reg[5]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_6\,
@@ -59050,24 +56414,7 @@ begin
       \irq_pol_reg[7]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_8\,
       \irq_pol_reg[8]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_9\,
       \irq_pol_reg[9]_0\ => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_10\,
-      \irq_typ_reg[31]_0\(0) => irq_typ,
-      \port_out_reg[31]_0\(31) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_66\,
-      \port_out_reg[31]_0\(30) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_67\,
-      \port_out_reg[31]_0\(29) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_68\,
-      \port_out_reg[31]_0\(28) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_69\,
-      \port_out_reg[31]_0\(27) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_70\,
-      \port_out_reg[31]_0\(26) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_71\,
-      \port_out_reg[31]_0\(25) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_72\,
-      \port_out_reg[31]_0\(24) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_73\,
-      \port_out_reg[31]_0\(23) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_74\,
-      \port_out_reg[31]_0\(22) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_75\,
-      \port_out_reg[31]_0\(21) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_76\,
-      \port_out_reg[31]_0\(20) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_77\,
-      \port_out_reg[31]_0\(19) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_78\,
-      \port_out_reg[31]_0\(18) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_79\,
-      \port_out_reg[31]_0\(17) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_80\,
-      \port_out_reg[31]_0\(16) => \io_system.neorv32_gpio_enabled.neorv32_gpio_inst_n_81\,
-      \port_out_reg[31]_0\(15 downto 0) => \^gpio_o\(15 downto 0),
+      \irq_typ_reg[15]_0\(0) => irq_typ,
       rstn_sys => rstn_sys
     );
 \io_system.neorv32_slink_enabled.neorv32_slink_inst\: entity work.system_neorv32_vivado_ip_0_0_neorv32_slink
@@ -59076,38 +56423,38 @@ begin
       E(0) => \rx_fifo[re]\,
       Q(2 downto 0) => rx_route(3 downto 1),
       \bus_rsp_o_reg[data][31]_0\(31 downto 0) => \iodev_rsp[17][data]\(31 downto 0),
-      \bus_rsp_o_reg[data][31]_1\(31) => \io_system.neorv32_bus_io_switch_inst_n_168\,
-      \bus_rsp_o_reg[data][31]_1\(30) => \io_system.neorv32_bus_io_switch_inst_n_169\,
-      \bus_rsp_o_reg[data][31]_1\(29) => \io_system.neorv32_bus_io_switch_inst_n_170\,
-      \bus_rsp_o_reg[data][31]_1\(28) => \io_system.neorv32_bus_io_switch_inst_n_171\,
-      \bus_rsp_o_reg[data][31]_1\(27) => \io_system.neorv32_bus_io_switch_inst_n_172\,
-      \bus_rsp_o_reg[data][31]_1\(26) => \io_system.neorv32_bus_io_switch_inst_n_173\,
-      \bus_rsp_o_reg[data][31]_1\(25) => \io_system.neorv32_bus_io_switch_inst_n_174\,
-      \bus_rsp_o_reg[data][31]_1\(24) => \io_system.neorv32_bus_io_switch_inst_n_175\,
-      \bus_rsp_o_reg[data][31]_1\(23) => \io_system.neorv32_bus_io_switch_inst_n_176\,
-      \bus_rsp_o_reg[data][31]_1\(22) => \io_system.neorv32_bus_io_switch_inst_n_177\,
-      \bus_rsp_o_reg[data][31]_1\(21) => \io_system.neorv32_bus_io_switch_inst_n_178\,
-      \bus_rsp_o_reg[data][31]_1\(20) => \io_system.neorv32_bus_io_switch_inst_n_179\,
-      \bus_rsp_o_reg[data][31]_1\(19) => \io_system.neorv32_bus_io_switch_inst_n_180\,
-      \bus_rsp_o_reg[data][31]_1\(18) => \io_system.neorv32_bus_io_switch_inst_n_181\,
-      \bus_rsp_o_reg[data][31]_1\(17) => \io_system.neorv32_bus_io_switch_inst_n_182\,
-      \bus_rsp_o_reg[data][31]_1\(16) => \io_system.neorv32_bus_io_switch_inst_n_183\,
-      \bus_rsp_o_reg[data][31]_1\(15) => \io_system.neorv32_bus_io_switch_inst_n_184\,
-      \bus_rsp_o_reg[data][31]_1\(14) => \io_system.neorv32_bus_io_switch_inst_n_185\,
-      \bus_rsp_o_reg[data][31]_1\(13) => \io_system.neorv32_bus_io_switch_inst_n_186\,
-      \bus_rsp_o_reg[data][31]_1\(12) => \io_system.neorv32_bus_io_switch_inst_n_187\,
-      \bus_rsp_o_reg[data][31]_1\(11) => \io_system.neorv32_bus_io_switch_inst_n_188\,
-      \bus_rsp_o_reg[data][31]_1\(10) => \io_system.neorv32_bus_io_switch_inst_n_189\,
-      \bus_rsp_o_reg[data][31]_1\(9) => \io_system.neorv32_bus_io_switch_inst_n_190\,
-      \bus_rsp_o_reg[data][31]_1\(8) => \io_system.neorv32_bus_io_switch_inst_n_191\,
-      \bus_rsp_o_reg[data][31]_1\(7) => \io_system.neorv32_bus_io_switch_inst_n_192\,
-      \bus_rsp_o_reg[data][31]_1\(6) => \io_system.neorv32_bus_io_switch_inst_n_193\,
-      \bus_rsp_o_reg[data][31]_1\(5) => \io_system.neorv32_bus_io_switch_inst_n_194\,
-      \bus_rsp_o_reg[data][31]_1\(4) => \io_system.neorv32_bus_io_switch_inst_n_195\,
-      \bus_rsp_o_reg[data][31]_1\(3) => \io_system.neorv32_bus_io_switch_inst_n_196\,
-      \bus_rsp_o_reg[data][31]_1\(2) => \io_system.neorv32_bus_io_switch_inst_n_197\,
-      \bus_rsp_o_reg[data][31]_1\(1) => \io_system.neorv32_bus_io_switch_inst_n_198\,
-      \bus_rsp_o_reg[data][31]_1\(0) => \io_system.neorv32_bus_io_switch_inst_n_199\,
+      \bus_rsp_o_reg[data][31]_1\(31) => \io_system.neorv32_bus_io_switch_inst_n_136\,
+      \bus_rsp_o_reg[data][31]_1\(30) => \io_system.neorv32_bus_io_switch_inst_n_137\,
+      \bus_rsp_o_reg[data][31]_1\(29) => \io_system.neorv32_bus_io_switch_inst_n_138\,
+      \bus_rsp_o_reg[data][31]_1\(28) => \io_system.neorv32_bus_io_switch_inst_n_139\,
+      \bus_rsp_o_reg[data][31]_1\(27) => \io_system.neorv32_bus_io_switch_inst_n_140\,
+      \bus_rsp_o_reg[data][31]_1\(26) => \io_system.neorv32_bus_io_switch_inst_n_141\,
+      \bus_rsp_o_reg[data][31]_1\(25) => \io_system.neorv32_bus_io_switch_inst_n_142\,
+      \bus_rsp_o_reg[data][31]_1\(24) => \io_system.neorv32_bus_io_switch_inst_n_143\,
+      \bus_rsp_o_reg[data][31]_1\(23) => \io_system.neorv32_bus_io_switch_inst_n_144\,
+      \bus_rsp_o_reg[data][31]_1\(22) => \io_system.neorv32_bus_io_switch_inst_n_145\,
+      \bus_rsp_o_reg[data][31]_1\(21) => \io_system.neorv32_bus_io_switch_inst_n_146\,
+      \bus_rsp_o_reg[data][31]_1\(20) => \io_system.neorv32_bus_io_switch_inst_n_147\,
+      \bus_rsp_o_reg[data][31]_1\(19) => \io_system.neorv32_bus_io_switch_inst_n_148\,
+      \bus_rsp_o_reg[data][31]_1\(18) => \io_system.neorv32_bus_io_switch_inst_n_149\,
+      \bus_rsp_o_reg[data][31]_1\(17) => \io_system.neorv32_bus_io_switch_inst_n_150\,
+      \bus_rsp_o_reg[data][31]_1\(16) => \io_system.neorv32_bus_io_switch_inst_n_151\,
+      \bus_rsp_o_reg[data][31]_1\(15) => \io_system.neorv32_bus_io_switch_inst_n_152\,
+      \bus_rsp_o_reg[data][31]_1\(14) => \io_system.neorv32_bus_io_switch_inst_n_153\,
+      \bus_rsp_o_reg[data][31]_1\(13) => \io_system.neorv32_bus_io_switch_inst_n_154\,
+      \bus_rsp_o_reg[data][31]_1\(12) => \io_system.neorv32_bus_io_switch_inst_n_155\,
+      \bus_rsp_o_reg[data][31]_1\(11) => \io_system.neorv32_bus_io_switch_inst_n_156\,
+      \bus_rsp_o_reg[data][31]_1\(10) => \io_system.neorv32_bus_io_switch_inst_n_157\,
+      \bus_rsp_o_reg[data][31]_1\(9) => \io_system.neorv32_bus_io_switch_inst_n_158\,
+      \bus_rsp_o_reg[data][31]_1\(8) => \io_system.neorv32_bus_io_switch_inst_n_159\,
+      \bus_rsp_o_reg[data][31]_1\(7) => \io_system.neorv32_bus_io_switch_inst_n_160\,
+      \bus_rsp_o_reg[data][31]_1\(6) => \io_system.neorv32_bus_io_switch_inst_n_161\,
+      \bus_rsp_o_reg[data][31]_1\(5) => \io_system.neorv32_bus_io_switch_inst_n_162\,
+      \bus_rsp_o_reg[data][31]_1\(4) => \io_system.neorv32_bus_io_switch_inst_n_163\,
+      \bus_rsp_o_reg[data][31]_1\(3) => \io_system.neorv32_bus_io_switch_inst_n_164\,
+      \bus_rsp_o_reg[data][31]_1\(2) => \io_system.neorv32_bus_io_switch_inst_n_165\,
+      \bus_rsp_o_reg[data][31]_1\(1) => \io_system.neorv32_bus_io_switch_inst_n_166\,
+      \bus_rsp_o_reg[data][31]_1\(0) => \io_system.neorv32_bus_io_switch_inst_n_167\,
       clk => clk,
       \ctrl[enable]\ => \ctrl[enable]\,
       \ctrl_reg[enable]_0\ => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_13\,
@@ -59154,7 +56501,7 @@ begin
       \iodev_req[17][stb]\ => \iodev_req[17][stb]\,
       \iodev_rsp[17][ack]\ => \iodev_rsp[17][ack]\,
       irq_fast_i(0) => cpu_firq(14),
-      p_1_in(0) => p_1_in_3(0),
+      p_1_in(0) => p_1_in_2(0),
       \r_pnt_reg[0]\ => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_11\,
       rstn_sys => rstn_sys,
       rx_last => rx_last,
@@ -59165,43 +56512,43 @@ begin
       \w_pnt_reg[0]\ => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_0\,
       \w_pnt_reg[0]_0\ => \^w_pnt_reg[0]\,
       \w_pnt_reg[0]_1\ => \io_system.neorv32_slink_enabled.neorv32_slink_inst_n_10\,
-      \w_pnt_reg[0]_2\ => \io_system.neorv32_bus_io_switch_inst_n_107\
+      \w_pnt_reg[0]_2\ => \io_system.neorv32_bus_io_switch_inst_n_91\
     );
 \io_system.neorv32_spi_enabled.neorv32_spi_inst\: entity work.system_neorv32_vivado_ip_0_0_neorv32_spi
      port map (
       D(10) => \iodev_req[17][data]\(31),
       D(9 downto 0) => \iodev_req[17][data]\(9 downto 0),
       E(0) => \tx_fifo_inst/we_1\,
-      Q(0) => p_1_in_4,
+      Q(0) => p_1_in_3,
       \bus_rsp_o_reg[data][31]_0\(14 downto 13) => \iodev_rsp[8][data]\(31 downto 30),
       \bus_rsp_o_reg[data][31]_0\(12 downto 10) => \iodev_rsp[8][data]\(18 downto 16),
       \bus_rsp_o_reg[data][31]_0\(9 downto 0) => \iodev_rsp[8][data]\(9 downto 0),
-      \bus_rsp_o_reg[data][31]_1\(14) => \io_system.neorv32_bus_io_switch_inst_n_151\,
-      \bus_rsp_o_reg[data][31]_1\(13) => \io_system.neorv32_bus_io_switch_inst_n_152\,
-      \bus_rsp_o_reg[data][31]_1\(12) => \io_system.neorv32_bus_io_switch_inst_n_153\,
-      \bus_rsp_o_reg[data][31]_1\(11) => \io_system.neorv32_bus_io_switch_inst_n_154\,
-      \bus_rsp_o_reg[data][31]_1\(10) => \io_system.neorv32_bus_io_switch_inst_n_155\,
-      \bus_rsp_o_reg[data][31]_1\(9) => \io_system.neorv32_bus_io_switch_inst_n_156\,
-      \bus_rsp_o_reg[data][31]_1\(8) => \io_system.neorv32_bus_io_switch_inst_n_157\,
-      \bus_rsp_o_reg[data][31]_1\(7) => \io_system.neorv32_bus_io_switch_inst_n_158\,
-      \bus_rsp_o_reg[data][31]_1\(6) => \io_system.neorv32_bus_io_switch_inst_n_159\,
-      \bus_rsp_o_reg[data][31]_1\(5) => \io_system.neorv32_bus_io_switch_inst_n_160\,
-      \bus_rsp_o_reg[data][31]_1\(4) => \io_system.neorv32_bus_io_switch_inst_n_161\,
-      \bus_rsp_o_reg[data][31]_1\(3) => \io_system.neorv32_bus_io_switch_inst_n_162\,
-      \bus_rsp_o_reg[data][31]_1\(2) => \io_system.neorv32_bus_io_switch_inst_n_163\,
-      \bus_rsp_o_reg[data][31]_1\(1) => \io_system.neorv32_bus_io_switch_inst_n_164\,
-      \bus_rsp_o_reg[data][31]_1\(0) => \io_system.neorv32_bus_io_switch_inst_n_165\,
+      \bus_rsp_o_reg[data][31]_1\(14) => \io_system.neorv32_bus_io_switch_inst_n_119\,
+      \bus_rsp_o_reg[data][31]_1\(13) => \io_system.neorv32_bus_io_switch_inst_n_120\,
+      \bus_rsp_o_reg[data][31]_1\(12) => \io_system.neorv32_bus_io_switch_inst_n_121\,
+      \bus_rsp_o_reg[data][31]_1\(11) => \io_system.neorv32_bus_io_switch_inst_n_122\,
+      \bus_rsp_o_reg[data][31]_1\(10) => \io_system.neorv32_bus_io_switch_inst_n_123\,
+      \bus_rsp_o_reg[data][31]_1\(9) => \io_system.neorv32_bus_io_switch_inst_n_124\,
+      \bus_rsp_o_reg[data][31]_1\(8) => \io_system.neorv32_bus_io_switch_inst_n_125\,
+      \bus_rsp_o_reg[data][31]_1\(7) => \io_system.neorv32_bus_io_switch_inst_n_126\,
+      \bus_rsp_o_reg[data][31]_1\(6) => \io_system.neorv32_bus_io_switch_inst_n_127\,
+      \bus_rsp_o_reg[data][31]_1\(5) => \io_system.neorv32_bus_io_switch_inst_n_128\,
+      \bus_rsp_o_reg[data][31]_1\(4) => \io_system.neorv32_bus_io_switch_inst_n_129\,
+      \bus_rsp_o_reg[data][31]_1\(3) => \io_system.neorv32_bus_io_switch_inst_n_130\,
+      \bus_rsp_o_reg[data][31]_1\(2) => \io_system.neorv32_bus_io_switch_inst_n_131\,
+      \bus_rsp_o_reg[data][31]_1\(1) => \io_system.neorv32_bus_io_switch_inst_n_132\,
+      \bus_rsp_o_reg[data][31]_1\(0) => \io_system.neorv32_bus_io_switch_inst_n_133\,
       \cdiv_cnt_reg[0]_0\(0) => \soc_generators.neorv32_sys_clock_inst_n_0\,
       clk => clk,
       \ctrl_reg[cdiv][3]_0\(3) => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_13\,
       \ctrl_reg[cdiv][3]_0\(2) => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_14\,
       \ctrl_reg[cdiv][3]_0\(1) => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_15\,
       \ctrl_reg[cdiv][3]_0\(0) => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_16\,
-      \ctrl_reg[cpha]_0\ => \io_system.neorv32_bus_io_switch_inst_n_149\,
+      \ctrl_reg[cpha]_0\ => \io_system.neorv32_bus_io_switch_inst_n_117\,
       \ctrl_reg[cpha]__0\ => \ctrl_reg[cpha]__0\,
       \ctrl_reg[cpol]_0\ => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_3\,
-      \ctrl_reg[cpol]_1\ => \io_system.neorv32_bus_io_switch_inst_n_150\,
-      \ctrl_reg[enable]_0\ => \io_system.neorv32_bus_io_switch_inst_n_147\,
+      \ctrl_reg[cpol]_1\ => \io_system.neorv32_bus_io_switch_inst_n_118\,
+      \ctrl_reg[enable]_0\ => \io_system.neorv32_bus_io_switch_inst_n_115\,
       \ctrl_reg[enable]__0\ => \ctrl_reg[enable]__0\,
       \ctrl_reg[prsc][2]_0\(2) => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_18\,
       \ctrl_reg[prsc][2]_0\(1) => \io_system.neorv32_spi_enabled.neorv32_spi_inst_n_19\,
@@ -59236,13 +56583,13 @@ begin
     );
 \io_system.neorv32_sysinfo_enabled.neorv32_sysinfo_inst\: entity work.system_neorv32_vivado_ip_0_0_neorv32_sysinfo
      port map (
-      D(31 downto 0) => p_0_in(31 downto 0),
+      D(31 downto 0) => \iodev_req[17][data]\(31 downto 0),
       E(0) => \io_system.neorv32_bus_io_switch_inst_n_13\,
       Q(31 downto 0) => \sysinfo_reg[0]_0\(31 downto 0),
       \bus_rsp_o_reg[data][31]_0\(31 downto 0) => \iodev_rsp[2][data]\(31 downto 0),
-      \bus_rsp_o_reg[err]_0\ => \io_system.neorv32_bus_io_switch_inst_n_237\,
+      \bus_rsp_o_reg[data][31]_1\(31 downto 0) => p_0_in(31 downto 0),
+      \bus_rsp_o_reg[err]_0\ => \io_system.neorv32_bus_io_switch_inst_n_205\,
       clk => clk,
-      \dev_12_req_o[data]\(31 downto 0) => \iodev_req[17][data]\(31 downto 0),
       \dev_30_rsp_i[err]\ => \iodev_rsp[2][err]\,
       \iodev_req[2][stb]\ => \iodev_req[2][stb]\,
       \iodev_rsp[2][ack]\ => \iodev_rsp[2][ack]\,
@@ -59250,32 +56597,32 @@ begin
     );
 \io_system.neorv32_uart0_enabled.neorv32_uart0_inst\: entity work.system_neorv32_vivado_ip_0_0_neorv32_uart
      port map (
-      D(25) => \io_system.neorv32_bus_io_switch_inst_n_80\,
-      D(24) => \io_system.neorv32_bus_io_switch_inst_n_81\,
-      D(23) => \io_system.neorv32_bus_io_switch_inst_n_82\,
-      D(22) => \io_system.neorv32_bus_io_switch_inst_n_83\,
-      D(21) => \io_system.neorv32_bus_io_switch_inst_n_84\,
-      D(20) => \io_system.neorv32_bus_io_switch_inst_n_85\,
-      D(19) => \io_system.neorv32_bus_io_switch_inst_n_86\,
-      D(18) => \io_system.neorv32_bus_io_switch_inst_n_87\,
-      D(17) => \io_system.neorv32_bus_io_switch_inst_n_88\,
-      D(16) => \io_system.neorv32_bus_io_switch_inst_n_89\,
-      D(15) => \io_system.neorv32_bus_io_switch_inst_n_90\,
-      D(14) => \io_system.neorv32_bus_io_switch_inst_n_91\,
-      D(13) => \io_system.neorv32_bus_io_switch_inst_n_92\,
-      D(12) => \io_system.neorv32_bus_io_switch_inst_n_93\,
-      D(11) => \io_system.neorv32_bus_io_switch_inst_n_94\,
-      D(10) => \io_system.neorv32_bus_io_switch_inst_n_95\,
-      D(9) => \io_system.neorv32_bus_io_switch_inst_n_96\,
-      D(8) => \io_system.neorv32_bus_io_switch_inst_n_97\,
-      D(7) => \io_system.neorv32_bus_io_switch_inst_n_98\,
-      D(6) => \io_system.neorv32_bus_io_switch_inst_n_99\,
-      D(5) => \io_system.neorv32_bus_io_switch_inst_n_100\,
-      D(4) => \io_system.neorv32_bus_io_switch_inst_n_101\,
-      D(3) => \io_system.neorv32_bus_io_switch_inst_n_102\,
-      D(2) => \io_system.neorv32_bus_io_switch_inst_n_103\,
-      D(1) => \io_system.neorv32_bus_io_switch_inst_n_104\,
-      D(0) => \io_system.neorv32_bus_io_switch_inst_n_105\,
+      D(25) => \io_system.neorv32_bus_io_switch_inst_n_64\,
+      D(24) => \io_system.neorv32_bus_io_switch_inst_n_65\,
+      D(23) => \io_system.neorv32_bus_io_switch_inst_n_66\,
+      D(22) => \io_system.neorv32_bus_io_switch_inst_n_67\,
+      D(21) => \io_system.neorv32_bus_io_switch_inst_n_68\,
+      D(20) => \io_system.neorv32_bus_io_switch_inst_n_69\,
+      D(19) => \io_system.neorv32_bus_io_switch_inst_n_70\,
+      D(18) => \io_system.neorv32_bus_io_switch_inst_n_71\,
+      D(17) => \io_system.neorv32_bus_io_switch_inst_n_72\,
+      D(16) => \io_system.neorv32_bus_io_switch_inst_n_73\,
+      D(15) => \io_system.neorv32_bus_io_switch_inst_n_74\,
+      D(14) => \io_system.neorv32_bus_io_switch_inst_n_75\,
+      D(13) => \io_system.neorv32_bus_io_switch_inst_n_76\,
+      D(12) => \io_system.neorv32_bus_io_switch_inst_n_77\,
+      D(11) => \io_system.neorv32_bus_io_switch_inst_n_78\,
+      D(10) => \io_system.neorv32_bus_io_switch_inst_n_79\,
+      D(9) => \io_system.neorv32_bus_io_switch_inst_n_80\,
+      D(8) => \io_system.neorv32_bus_io_switch_inst_n_81\,
+      D(7) => \io_system.neorv32_bus_io_switch_inst_n_82\,
+      D(6) => \io_system.neorv32_bus_io_switch_inst_n_83\,
+      D(5) => \io_system.neorv32_bus_io_switch_inst_n_84\,
+      D(4) => \io_system.neorv32_bus_io_switch_inst_n_85\,
+      D(3) => \io_system.neorv32_bus_io_switch_inst_n_86\,
+      D(2) => \io_system.neorv32_bus_io_switch_inst_n_87\,
+      D(1) => \io_system.neorv32_bus_io_switch_inst_n_88\,
+      D(0) => \io_system.neorv32_bus_io_switch_inst_n_89\,
       Q(9) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_17\,
       Q(8) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_18\,
       Q(7) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_19\,
@@ -59289,12 +56636,12 @@ begin
       \bus_rsp_o_reg[data][31]_0\(25 downto 24) => \iodev_rsp[11][data]\(31 downto 30),
       \bus_rsp_o_reg[data][31]_0\(23 downto 0) => \iodev_rsp[11][data]\(23 downto 0),
       clk => clk,
-      \ctrl_reg[enable]__0\ => \ctrl_reg[enable]__0_9\,
+      \ctrl_reg[enable]__0\ => \ctrl_reg[enable]__0_8\,
       \ctrl_reg[hwfc_en]__0\ => \ctrl_reg[hwfc_en]__0\,
-      \ctrl_reg[irq_rx_full]__0\ => \ctrl_reg[irq_rx_full]__0_7\,
-      \ctrl_reg[irq_rx_nempty]__0\ => \ctrl_reg[irq_rx_nempty]__0_8\,
-      \ctrl_reg[irq_tx_empty]__0\ => \ctrl_reg[irq_tx_empty]__0_6\,
-      \ctrl_reg[irq_tx_nfull]__0\ => \ctrl_reg[irq_tx_nfull]__0_5\,
+      \ctrl_reg[irq_rx_full]__0\ => \ctrl_reg[irq_rx_full]__0_6\,
+      \ctrl_reg[irq_rx_nempty]__0\ => \ctrl_reg[irq_rx_nempty]__0_7\,
+      \ctrl_reg[irq_tx_empty]__0\ => \ctrl_reg[irq_tx_empty]__0_5\,
+      \ctrl_reg[irq_tx_nfull]__0\ => \ctrl_reg[irq_tx_nfull]__0_4\,
       \ctrl_reg[prsc][2]_0\(2) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_27\,
       \ctrl_reg[prsc][2]_0\(1) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_28\,
       \ctrl_reg[prsc][2]_0\(0) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_29\,
@@ -59309,7 +56656,7 @@ begin
       irq_fast_i(0) => cpu_firq(2),
       \r_pnt_reg[6]\ => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_15\,
       \r_pnt_reg[6]_0\ => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_16\,
-      \r_pnt_reg[6]_1\ => \io_system.neorv32_bus_io_switch_inst_n_106\,
+      \r_pnt_reg[6]_1\ => \io_system.neorv32_bus_io_switch_inst_n_90\,
       rdata(7) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_31\,
       rdata(6) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_32\,
       rdata(5) => \io_system.neorv32_uart0_enabled.neorv32_uart0_inst_n_33\,
@@ -59335,7 +56682,7 @@ begin
      port map (
       D(0) => \core_req[0][meta]\(0),
       \FSM_onehot_keeper[state][2]_i_2\ => neorv32_bus_gateway_inst_n_3,
-      Q(0) => p_0_in_10,
+      Q(0) => p_0_in_9,
       addr_i(12 downto 0) => \core_req[0][addr]\(14 downto 2),
       \amo_rsp[ack]\ => \amo_rsp[ack]\,
       \bus_req_i[rw]\ => \core_complex_gen[0].neorv32_dcache_enabled.neorv32_dcache_inst_n_30\,
@@ -59441,7 +56788,7 @@ neorv32_bus_gateway_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_bus_g
       \FSM_onehot_keeper_reg[state][1]_0\ => neorv32_bus_gateway_inst_n_3,
       \FSM_onehot_keeper_reg[state][2]_0\ => neorv32_bus_gateway_inst_n_1,
       \FSM_onehot_keeper_reg[state][2]_1\ => \memory_system.neorv32_imem_enabled.neorv32_imem_inst_n_3\,
-      Q(0) => p_0_in_10,
+      Q(0) => p_0_in_9,
       \amo_rsp[data]\(31 downto 0) => \amo_rsp[data]\(31 downto 0),
       \bus_req_i[lock]\ => \core_req[0][lock]\,
       \bus_rsp_o[ack]\ => \xbus_rsp[ack]\,
@@ -59519,7 +56866,7 @@ entity system_neorv32_vivado_ip_0_0_neorv32_vivado_ip is
     msw_irq_i : in STD_LOGIC;
     m_axi_bvalid : in STD_LOGIC;
     m_axi_rvalid : in STD_LOGIC;
-    gpio_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    gpio_i : in STD_LOGIC_VECTOR ( 15 downto 0 );
     uart0_ctsn_i : in STD_LOGIC;
     uart0_rxd_i : in STD_LOGIC;
     spi_dat_i : in STD_LOGIC;
@@ -59593,7 +56940,7 @@ neorv32_top_inst: entity work.system_neorv32_vivado_ip_0_0_neorv32_top
       arvalid_reg => \axi4_bridge.axi4_bridge_inst_n_4\,
       awvalid => awvalid,
       clk => clk,
-      gpio_i(31 downto 0) => gpio_i(31 downto 0),
+      gpio_i(15 downto 0) => gpio_i(15 downto 0),
       gpio_o(15 downto 0) => gpio_o(15 downto 0),
       m_axi_arready => m_axi_arready,
       m_axi_arvalid => \^m_axi_arvalid\,
@@ -59679,7 +57026,7 @@ entity system_neorv32_vivado_ip_0_0 is
     s1_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s1_axis_tlast : in STD_LOGIC;
     gpio_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    gpio_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    gpio_i : in STD_LOGIC_VECTOR ( 15 downto 0 );
     uart0_txd_o : out STD_LOGIC;
     uart0_rxd_i : in STD_LOGIC;
     uart0_rtsn_o : out STD_LOGIC;
@@ -59817,7 +57164,7 @@ GND: unisim.vcomponents.GND
 U0: entity work.system_neorv32_vivado_ip_0_0_neorv32_vivado_ip
      port map (
       clk => clk,
-      gpio_i(31 downto 0) => gpio_i(31 downto 0),
+      gpio_i(15 downto 0) => gpio_i(15 downto 0),
       gpio_o(15 downto 0) => gpio_o(15 downto 0),
       m_axi_arlen(0) => \^m_axi_arlen\(0),
       m_axi_arready => m_axi_arready,

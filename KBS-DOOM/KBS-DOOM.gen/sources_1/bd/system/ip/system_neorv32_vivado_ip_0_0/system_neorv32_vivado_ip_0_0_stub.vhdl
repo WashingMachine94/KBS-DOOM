@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
--- Date        : Thu Dec  4 18:05:21 2025
+-- Date        : Thu Dec 11 09:43:39 2025
 -- Host        : LAPTOP-61978DQ3 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/system_neorv32_vivado_ip_0_0_stub.vhdl
+--               c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/system_neorv32_vivado_ip_0_0_stub.vhdl
 -- Design      : system_neorv32_vivado_ip_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1
@@ -57,7 +57,7 @@ entity system_neorv32_vivado_ip_0_0 is
     s1_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s1_axis_tlast : in STD_LOGIC;
     gpio_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    gpio_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    gpio_i : in STD_LOGIC_VECTOR ( 15 downto 0 );
     uart0_txd_o : out STD_LOGIC;
     uart0_rxd_i : in STD_LOGIC;
     uart0_rtsn_o : out STD_LOGIC;
@@ -83,7 +83,7 @@ architecture stub of system_neorv32_vivado_ip_0_0 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "clk,resetn,m_axi_awaddr[31:0],m_axi_awlen[7:0],m_axi_awsize[2:0],m_axi_awburst[1:0],m_axi_awcache[3:0],m_axi_awprot[2:0],m_axi_awvalid,m_axi_awready,m_axi_wdata[31:0],m_axi_wstrb[3:0],m_axi_wlast,m_axi_wvalid,m_axi_wready,m_axi_araddr[31:0],m_axi_arlen[7:0],m_axi_arsize[2:0],m_axi_arburst[1:0],m_axi_arcache[3:0],m_axi_arprot[2:0],m_axi_arvalid,m_axi_arready,m_axi_rdata[31:0],m_axi_rresp[1:0],m_axi_rlast,m_axi_rvalid,m_axi_rready,m_axi_bresp[1:0],m_axi_bvalid,m_axi_bready,s0_axis_tdest[3:0],s0_axis_tvalid,s0_axis_tready,s0_axis_tdata[31:0],s0_axis_tlast,s1_axis_tid[3:0],s1_axis_tvalid,s1_axis_tready,s1_axis_tdata[31:0],s1_axis_tlast,gpio_o[15:0],gpio_i[31:0],uart0_txd_o,uart0_rxd_i,uart0_rtsn_o,uart0_ctsn_i,spi_clk_o,spi_dat_o,spi_dat_i,spi_csn_o[7:0],mtime_irq_i,msw_irq_i,mext_irq_i";
+  attribute black_box_pad_pin of stub : architecture is "clk,resetn,m_axi_awaddr[31:0],m_axi_awlen[7:0],m_axi_awsize[2:0],m_axi_awburst[1:0],m_axi_awcache[3:0],m_axi_awprot[2:0],m_axi_awvalid,m_axi_awready,m_axi_wdata[31:0],m_axi_wstrb[3:0],m_axi_wlast,m_axi_wvalid,m_axi_wready,m_axi_araddr[31:0],m_axi_arlen[7:0],m_axi_arsize[2:0],m_axi_arburst[1:0],m_axi_arcache[3:0],m_axi_arprot[2:0],m_axi_arvalid,m_axi_arready,m_axi_rdata[31:0],m_axi_rresp[1:0],m_axi_rlast,m_axi_rvalid,m_axi_rready,m_axi_bresp[1:0],m_axi_bvalid,m_axi_bready,s0_axis_tdest[3:0],s0_axis_tvalid,s0_axis_tready,s0_axis_tdata[31:0],s0_axis_tlast,s1_axis_tid[3:0],s1_axis_tvalid,s1_axis_tready,s1_axis_tdata[31:0],s1_axis_tlast,gpio_o[15:0],gpio_i[15:0],uart0_txd_o,uart0_rxd_i,uart0_rtsn_o,uart0_ctsn_i,spi_clk_o,spi_dat_o,spi_dat_i,spi_csn_o[7:0],mtime_irq_i,msw_irq_i,mext_irq_i";
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute x_interface_mode : string;

@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.runs/system_neorv32_vivado_ip_0_0_synth_1'
+HD_PWD='C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/system_neorv32_vivado_ip_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log system_neorv32_vivado_ip_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_neorv32_vivado_ip_0_0.tcl
+# EAStep vivado -log system_neorv32_vivado_ip_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_neorv32_vivado_ip_0_0.tcl

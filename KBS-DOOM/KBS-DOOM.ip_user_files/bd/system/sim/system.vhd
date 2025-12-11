@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
---Date        : Wed Dec 10 20:44:09 2025
+--Date        : Thu Dec 11 09:40:44 2025
 --Host        : LAPTOP-61978DQ3 running 64-bit major release  (build 9200)
 --Command     : generate_target system.bd
 --Design      : system
@@ -14,11 +14,10 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity system is
   port (
-    BTNL : in STD_LOGIC;
-    BTNR : in STD_LOGIC;
     CLK100MHZ : in STD_LOGIC;
     CPU_RESETN : in STD_LOGIC;
-    SW : in STD_LOGIC_VECTOR ( 0 to 15 );
+    PS2_CLK : in STD_LOGIC;
+    PS2_DATA : in STD_LOGIC;
     VGA_B : out STD_LOGIC_VECTOR ( 3 downto 0 );
     VGA_G : out STD_LOGIC_VECTOR ( 3 downto 0 );
     VGA_HS : out STD_LOGIC;
@@ -47,7 +46,7 @@ entity system is
     uart0_txd_o_0 : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=18,numReposBlks=18,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=2,da_clkrst_cnt=2,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=19,numReposBlks=19,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=2,da_clkrst_cnt=2,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of system : entity is "system.hwdef";
 end system;
@@ -97,7 +96,7 @@ architecture STRUCTURE of system is
     s1_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s1_axis_tlast : in STD_LOGIC;
     gpio_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    gpio_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    gpio_i : in STD_LOGIC_VECTOR ( 15 downto 0 );
     uart0_txd_o : out STD_LOGIC;
     uart0_rxd_i : in STD_LOGIC;
     uart0_rtsn_o : out STD_LOGIC;
@@ -299,14 +298,6 @@ architecture STRUCTURE of system is
     M03_AXI_rready : out STD_LOGIC
   );
   end component system_smartconnect_0_1;
-  component system_xlconcat_0_0 is
-  port (
-    In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    In2 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    dout : out STD_LOGIC_VECTOR ( 17 downto 0 )
-  );
-  end component system_xlconcat_0_0;
   component system_axi_bram_ctrl_0_0 is
   port (
     s_axi_aclk : in STD_LOGIC;
@@ -612,6 +603,24 @@ architecture STRUCTURE of system is
     rsta_busy : out STD_LOGIC
   );
   end component system_blk_mem_gen_2_0;
+  component system_PS2Receiver_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    kclk : in STD_LOGIC;
+    kdata : in STD_LOGIC;
+    keycode : out STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  end component system_PS2Receiver_0_0;
+  component system_ps2_sync_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    ps2_clk : in STD_LOGIC;
+    ps2_data : in STD_LOGIC;
+    clk_fall : out STD_LOGIC;
+    data_sync : out STD_LOGIC
+  );
+  end component system_ps2_sync_0_0;
+  signal PS2Receiver_0_keycode : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal axi_bram_ctrl_0_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 16 downto 0 );
   signal axi_bram_ctrl_0_BRAM_PORTA_CLK : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_DIN : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -679,6 +688,8 @@ architecture STRUCTURE of system is
   signal neorv32_vivado_ip_0_s0_axis_TREADY : STD_LOGIC;
   signal neorv32_vivado_ip_0_s0_axis_TVALID : STD_LOGIC;
   signal proc_sys_reset_0_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal ps2_sync_0_clk_fall : STD_LOGIC;
+  signal ps2_sync_0_data_sync : STD_LOGIC;
   signal smartconnect_0_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 26 downto 0 );
   signal smartconnect_0_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal smartconnect_0_M00_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -811,7 +822,6 @@ architecture STRUCTURE of system is
   signal vga_display_0_addrb : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal vga_display_0_enPalette : STD_LOGIC;
   signal vga_display_0_enb : STD_LOGIC;
-  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 17 downto 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axis_data_fifo_0_m_axis_tdest_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_blk_mem_gen_0_rsta_busy_UNCONNECTED : STD_LOGIC;
@@ -841,6 +851,8 @@ architecture STRUCTURE of system is
   attribute X_INTERFACE_INFO of CLK100MHZ : signal is "xilinx.com:signal:clock:1.0 CLK.CLK100MHZ CLK";
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of CLK100MHZ : signal is "XIL_INTERFACENAME CLK.CLK100MHZ, CLK_DOMAIN system_CLK100MHZ, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_INFO of PS2_CLK : signal is "xilinx.com:signal:clock:1.0 CLK.PS2_CLK CLK";
+  attribute X_INTERFACE_PARAMETER of PS2_CLK : signal is "XIL_INTERFACENAME CLK.PS2_CLK, CLK_DOMAIN system_PS2_CLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of ddr2_sdram_cas_n : signal is "xilinx.com:interface:ddrx:1.0 ddr2_sdram CAS_N";
   attribute X_INTERFACE_INFO of ddr2_sdram_ras_n : signal is "xilinx.com:interface:ddrx:1.0 ddr2_sdram RAS_N";
   attribute X_INTERFACE_INFO of ddr2_sdram_we_n : signal is "xilinx.com:interface:ddrx:1.0 ddr2_sdram WE_N";
@@ -859,6 +871,13 @@ architecture STRUCTURE of system is
   attribute X_INTERFACE_INFO of ddr2_sdram_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 ddr2_sdram DQS_P";
   attribute X_INTERFACE_INFO of ddr2_sdram_odt : signal is "xilinx.com:interface:ddrx:1.0 ddr2_sdram ODT";
 begin
+PS2Receiver_0: component system_PS2Receiver_0_0
+     port map (
+      clk => CLK100MHZ,
+      kclk => ps2_sync_0_clk_fall,
+      kdata => ps2_sync_0_data_sync,
+      keycode(15 downto 0) => PS2Receiver_0_keycode(15 downto 0)
+    );
 axi_bram_ctrl_0: component system_axi_bram_ctrl_0_0
      port map (
       bram_addr_a(16 downto 0) => axi_bram_ctrl_0_BRAM_PORTA_ADDR(16 downto 0),
@@ -1129,8 +1148,7 @@ mig_7series_0: component system_mig_7series_0_0
 neorv32_vivado_ip_0: component system_neorv32_vivado_ip_0_0
      port map (
       clk => util_ds_buf_0_BUFG_O(0),
-      gpio_i(31 downto 18) => B"00000000000000",
-      gpio_i(17 downto 0) => xlconcat_0_dout(17 downto 0),
+      gpio_i(15 downto 0) => PS2Receiver_0_keycode(15 downto 0),
       gpio_o(15 downto 0) => gpio_o_0(15 downto 0),
       m_axi_araddr(31 downto 0) => neorv32_vivado_ip_0_m_axi_ARADDR(31 downto 0),
       m_axi_arburst(1 downto 0) => neorv32_vivado_ip_0_m_axi_ARBURST(1 downto 0),
@@ -1196,6 +1214,14 @@ proc_sys_reset_0: component system_proc_sys_reset_0_0
       peripheral_aresetn(0) => proc_sys_reset_0_peripheral_aresetn(0),
       peripheral_reset(0) => NLW_proc_sys_reset_0_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => util_ds_buf_0_BUFG_O(0)
+    );
+ps2_sync_0: component system_ps2_sync_0_0
+     port map (
+      clk => CLK100MHZ,
+      clk_fall => ps2_sync_0_clk_fall,
+      data_sync => ps2_sync_0_data_sync,
+      ps2_clk => PS2_CLK,
+      ps2_data => PS2_DATA
     );
 smartconnect_0: component system_smartconnect_0_1
      port map (
@@ -1394,28 +1420,6 @@ vga_display_0: component system_vga_display_0_0
       enPalette => vga_display_0_enPalette,
       enb => vga_display_0_enb,
       pixel_clk => clk_wiz_0_VGA_CLK
-    );
-xlconcat_0: component system_xlconcat_0_0
-     port map (
-      In0(0) => BTNL,
-      In1(0) => BTNR,
-      In2(15) => SW(0),
-      In2(14) => SW(1),
-      In2(13) => SW(2),
-      In2(12) => SW(3),
-      In2(11) => SW(4),
-      In2(10) => SW(5),
-      In2(9) => SW(6),
-      In2(8) => SW(7),
-      In2(7) => SW(8),
-      In2(6) => SW(9),
-      In2(5) => SW(10),
-      In2(4) => SW(11),
-      In2(3) => SW(12),
-      In2(2) => SW(13),
-      In2(1) => SW(14),
-      In2(0) => SW(15),
-      dout(17 downto 0) => xlconcat_0_dout(17 downto 0)
     );
 xlconstant_0: component system_xlconstant_0_0
      port map (

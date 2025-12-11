@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Wed Dec 10 20:45:45 2025
-# Process ID         : 36620
+# Start of session at: Thu Dec 11 09:43:43 2025
+# Process ID         : 40400
 # Current directory  : C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1
 # Command line       : vivado.exe -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
 # Log file           : C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.runs/synth_1/system_wrapper.vds
@@ -19,6 +19,6 @@
 # Host memory        : 16476 MB
 # Swap memory        : 28991 MB
 # Total Virtual      : 45467 MB
-# Available Virtual  : 15010 MB
+# Available Virtual  : 17010 MB
 #-----------------------------------------------------------
 source system_wrapper.tcl -notrace

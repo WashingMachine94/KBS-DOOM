@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Wed Dec 10 20:46:30 2025
+| Date         : Thu Dec 11 09:44:49 2025
 | Host         : LAPTOP-61978DQ3 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
 | Design       : system_wrapper
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   63 |     0 |          0 |       210 | 30.00 |
+| Bonded IOB                  |   47 |     0 |          0 |       210 | 22.38 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -150,7 +150,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | OBUF     |   41 |                  IO |
-| IBUF     |   22 |                  IO |
+| IBUF     |    6 |                  IO |
 +----------+------+---------------------+
 
 
@@ -164,6 +164,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | system_util_vector_logic_0_0 |    1 |
 | system_util_ds_buf_0_0       |    1 |
 | system_smartconnect_0_1      |    1 |
+| system_ps2_sync_0_0          |    1 |
 | system_proc_sys_reset_0_0    |    1 |
 | system_neorv32_vivado_ip_0_0 |    1 |
 | system_mig_7series_0_0       |    1 |
@@ -175,6 +176,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | system_axi_bram_ctrl_2_0     |    1 |
 | system_axi_bram_ctrl_1_0     |    1 |
 | system_axi_bram_ctrl_0_0     |    1 |
+| system_PS2Receiver_0_0       |    1 |
 +------------------------------+------+
 
 

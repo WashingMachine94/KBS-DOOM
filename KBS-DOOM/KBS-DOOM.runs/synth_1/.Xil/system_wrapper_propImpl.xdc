@@ -125,3 +125,7 @@ set_property src_info {type:XDC file:1 line:251 export:INPUT save:INPUT read:REA
 set_property -dict { PACKAGE_PIN C4    IOSTANDARD LVCMOS33 } [get_ports { uart0_rxd_i_0 }]; #IO_L11N_T1_SRCC_35 Sch=uart_rxd_out
 set_property src_info {type:XDC file:1 line:252 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports { uart0_txd_o_0 }]; #IO_L7P_T1_AD6P_35 Sch=uart_txd_in
+set_property src_info {type:XDC file:1 line:261 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN F4    IOSTANDARD LVCMOS33 } [get_ports { PS2_CLK }]; #IO_L13P_T2_MRCC_35 Sch=ps2_clk
+set_property src_info {type:XDC file:1 line:262 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN B2    IOSTANDARD LVCMOS33 } [get_ports { PS2_DATA }]; #IO_L10N_T1_AD15N_35 Sch=ps2_data

@@ -97,7 +97,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL-1065} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -107,7 +107,7 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 4
   set_param general.usePosixSpawnForFork 1
-  set_param xicom.use_bs_reader 1
+  set_param bd.open.in_stealth_mode 1
   set_param runs.launchOptions { -jobs 16  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
@@ -119,7 +119,10 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.cache/wt [current_project]
   set_property parent.project_path C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.xpr [current_project]
-  set_property ip_repo_paths C:/Users/lucas/Documents/GitHub/KBS-DOOM/IP [current_project]
+  set_property ip_repo_paths {
+  c:/Users/lucas/Documents/GitHub/KBS-DOOM/IP
+  C:/Users/lucas/Documents/GitHub/KBS-DOOM
+} [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

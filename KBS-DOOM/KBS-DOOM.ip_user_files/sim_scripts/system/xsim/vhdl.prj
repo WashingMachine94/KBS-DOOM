@@ -66,6 +66,8 @@ vhdl xil_defaultlib  \
 "../../../bd/system/ip/system_vga_display_0_0/sim/system_vga_display_0_0.vhd" \
 "../../../bd/system/ip/system_axi_bram_ctrl_2_0/sim/system_axi_bram_ctrl_2_0.vhd" \
 "../../../bd/system/sim/system.vhd" \
+"../../../bd/system/ip/system_PS2Receiver_0_0/sim/system_PS2Receiver_0_0.vhd" \
+"../../../bd/system/ip/system_ps2_sync_0_0/sim/system_ps2_sync_0_0.vhd" \
 
 # Do not sort compile order
 nosort

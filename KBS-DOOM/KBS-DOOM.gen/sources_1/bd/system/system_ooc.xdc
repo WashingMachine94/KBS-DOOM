@@ -7,5 +7,6 @@
 # of Vivado)
 ################################################################################
 create_clock -name CLK100MHZ -period 10 [get_ports CLK100MHZ]
+create_clock -name PS2_CLK -period 10 [get_ports PS2_CLK]
 
 ################################################################################

@@ -1,91 +1,92 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.87129",
-   "Default View_TopLeft":"990,-234",
+   "Default View_TopLeft":"-306,-429",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port ddr2_sdram -pg 1 -lvl 10 -x 3270 -y -490 -defaultsOSRD
+preplace port ddr2_sdram -pg 1 -lvl 11 -x 3270 -y -490 -defaultsOSRD
 preplace port port-id_CLK100MHZ -pg 1 -lvl 0 -x -160 -y 250 -defaultsOSRD
 preplace port port-id_CPU_RESETN -pg 1 -lvl 0 -x -160 -y -30 -defaultsOSRD
-preplace port port-id_BTNL -pg 1 -lvl 0 -x -160 -y -490 -defaultsOSRD
-preplace port port-id_BTNR -pg 1 -lvl 0 -x -160 -y -400 -defaultsOSRD
 preplace port port-id_uart0_rxd_i_0 -pg 1 -lvl 0 -x -160 -y 290 -defaultsOSRD
-preplace port port-id_uart0_txd_o_0 -pg 1 -lvl 10 -x 3270 -y -10 -defaultsOSRD
-preplace port port-id_spi_clk_o_0 -pg 1 -lvl 10 -x 3270 -y 20 -defaultsOSRD
-preplace port port-id_spi_dat_o_0 -pg 1 -lvl 10 -x 3270 -y 40 -defaultsOSRD
-preplace port port-id_spi_dat_i_0 -pg 1 -lvl 0 -x -160 -y 20 -defaultsOSRD
-preplace port port-id_VGA_HS -pg 1 -lvl 10 -x 3270 -y 310 -defaultsOSRD
-preplace port port-id_VGA_VS -pg 1 -lvl 10 -x 3270 -y 340 -defaultsOSRD
-preplace portBus SW -pg 1 -lvl 0 -x -160 -y -200 -defaultsOSRD
-preplace portBus spi_csn_o_0 -pg 1 -lvl 10 -x 3270 -y -200 -defaultsOSRD
-preplace portBus gpio_o_0 -pg 1 -lvl 10 -x 3270 -y -40 -defaultsOSRD
-preplace portBus VGA_R -pg 1 -lvl 10 -x 3270 -y 250 -defaultsOSRD
-preplace portBus VGA_G -pg 1 -lvl 10 -x 3270 -y 270 -defaultsOSRD
-preplace portBus VGA_B -pg 1 -lvl 10 -x 3270 -y 290 -defaultsOSRD
-preplace inst neorv32_vivado_ip_0 -pg 1 -lvl 6 -x 1770 -y -10 -defaultsOSRD -resize 264 270
-preplace inst axis_data_fifo_0 -pg 1 -lvl 4 -x 1000 -y -200 -defaultsOSRD
-preplace inst smartconnect_0 -pg 1 -lvl 7 -x 2200 -y -240 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 1 -x 10 -y -180 -defaultsOSRD
-preplace inst axi_bram_ctrl_0 -pg 1 -lvl 8 -x 2620 -y -140 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 9 -x 3060 -y -20 -defaultsOSRD
-preplace inst axi_bram_ctrl_1 -pg 1 -lvl 8 -x 2620 -y 300 -defaultsOSRD
-preplace inst blk_mem_gen_1 -pg 1 -lvl 9 -x 3060 -y 340 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 5 -x 1320 -y 200 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 4 -x 1000 -y 220 -defaultsOSRD
-preplace inst util_ds_buf_0 -pg 1 -lvl 2 -x 250 -y 80 -defaultsOSRD
-preplace inst ilconstant_0 -pg 1 -lvl 5 -x 1320 -y 50 -defaultsOSRD
-preplace inst mig_7series_0 -pg 1 -lvl 9 -x 3060 -y -500 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 730 -y -240 -defaultsOSRD
-preplace inst util_vector_logic_0 -pg 1 -lvl 9 -x 3060 -y -270 -defaultsOSRD
-preplace inst vga_display_0 -pg 1 -lvl 8 -x 2620 -y 80 -defaultsOSRD
-preplace inst axi_bram_ctrl_2 -pg 1 -lvl 8 -x 2620 -y 490 -defaultsOSRD
-preplace inst blk_mem_gen_2 -pg 1 -lvl 9 -x 3060 -y 490 -defaultsOSRD
-preplace netloc BTNC_1 1 0 5 NJ -30 N -30 620 -20 N -20 1140
-preplace netloc BTNL_1 1 0 1 -120 -490n
-preplace netloc BTNR_1 1 0 1 -130 -400n
-preplace netloc CLK100MHZ_1 1 0 2 NJ 250 110
-preplace netloc SW_1 1 0 1 -140 -200n
-preplace netloc blk_mem_gen_0_doutb 1 7 2 2460 400 2850J
-preplace netloc clk_wiz_0_clk_out1 1 3 6 830 -500 NJ -500 NJ -500 NJ -500 N -500 NJ
-preplace netloc ilconstant_0_dout 1 5 1 1510 0n
-preplace netloc mig_7series_0_ui_clk 1 6 4 2060 -600 N -600 NJ -600 3210
-preplace netloc mig_7series_0_ui_clk_sync_rst 1 8 2 2910 -400 3220
-preplace netloc neorv32_vivado_ip_0_gpio_o 1 6 4 2040J -330 NJ -330 NJ -330 3230J
-preplace netloc neorv32_vivado_ip_0_spi_clk_o 1 6 4 NJ 20 2360J 380 2840J 90 3220J
-preplace netloc neorv32_vivado_ip_0_spi_csn_o 1 6 4 2020J -360 NJ -360 NJ -360 3250J
-preplace netloc neorv32_vivado_ip_0_spi_dat_o 1 6 4 NJ 40 2340J 390 2800J 100 3250J
-preplace netloc neorv32_vivado_ip_0_uart0_txd_o 1 6 4 2030J -350 2460 -340 NJ -340 3240J
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 3 6 880 -280 N -280 1500 -280 2000J -380 2410 -520 N
-preplace netloc spi_dat_i_0_1 1 0 6 NJ 20 NJ 20 NJ 20 NJ 20 1130J 300 1520J
-preplace netloc uart0_rxd_i_0_1 1 0 6 -120J 10 NJ 10 N 10 860 -10 NJ -10 1520
-preplace netloc util_ds_buf_0_BUFG_O 1 2 7 630 -160 850 -110 1150 -110 1610 -250 2010 -370 2440 -480 N
-preplace netloc util_vector_logic_0_Res 1 8 2 2900 -390 3210
-preplace netloc vga_display_0_VGA_B 1 8 2 NJ 140 3240J
-preplace netloc vga_display_0_VGA_G 1 8 2 NJ 120 3250J
-preplace netloc vga_display_0_VGA_HS 1 8 2 2820J 200 3220J
-preplace netloc vga_display_0_VGA_R 1 8 2 2790J 210 3230J
-preplace netloc vga_display_0_VGA_VS 1 8 2 2780J 220 3210J
-preplace netloc vga_display_0_addrb 1 8 1 2850 -30n
-preplace netloc vga_display_0_enb 1 8 1 2910 20n
-preplace netloc xlconcat_0_dout 1 1 5 NJ -180 370 -100 N -100 N -100 1490
-preplace netloc xlconstant_0_dout 1 4 1 1120 220n
-preplace netloc blk_mem_gen_1_doutb 1 7 2 2450 410 2880
-preplace netloc vga_display_0_enPalette 1 8 1 2810 80n
-preplace netloc vga_display_0_addrPalette 1 8 1 2830 40n
-preplace netloc clk_wiz_0_VGA_CLK 1 3 6 840J -340 NJ -340 NJ -340 NJ -340 2450 -220 2890
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 8 1 2900 -140n
-preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 8 1 2860 290n
-preplace netloc axis_data_fifo_0_M_AXIS 1 4 2 NJ -200 1510
-preplace netloc mig_7series_0_DDR2 1 9 1 3250 -540n
-preplace netloc neorv32_vivado_ip_0_m_axi 1 6 1 2050 -270n
-preplace netloc neorv32_vivado_ip_0_s0_axis 1 3 4 870 -290 NJ -290 NJ -290 1930
-preplace netloc smartconnect_0_M00_AXI 1 7 2 2350 -540 NJ
-preplace netloc smartconnect_0_M01_AXI 1 7 1 2420 -250n
-preplace netloc smartconnect_0_M02_AXI 1 7 1 2430 -230n
-preplace netloc axi_bram_ctrl_2_BRAM_PORTA 1 8 1 N 490
-preplace netloc smartconnect_0_M03_AXI 1 7 1 2350 -210n
-levelinfo -pg 1 -160 10 250 730 1000 1320 1770 2200 2620 3060 3270
+preplace port port-id_uart0_txd_o_0 -pg 1 -lvl 11 -x 3270 -y -10 -defaultsOSRD
+preplace port port-id_spi_clk_o_0 -pg 1 -lvl 11 -x 3270 -y 20 -defaultsOSRD
+preplace port port-id_spi_dat_o_0 -pg 1 -lvl 11 -x 3270 -y 40 -defaultsOSRD
+preplace port port-id_spi_dat_i_0 -pg 1 -lvl 0 -x -160 -y 60 -defaultsOSRD
+preplace port port-id_VGA_HS -pg 1 -lvl 11 -x 3270 -y 310 -defaultsOSRD
+preplace port port-id_VGA_VS -pg 1 -lvl 11 -x 3270 -y 340 -defaultsOSRD
+preplace port port-id_PS2_CLK -pg 1 -lvl 0 -x -160 -y 20 -defaultsOSRD
+preplace port port-id_PS2_DATA -pg 1 -lvl 0 -x -160 -y 40 -defaultsOSRD
+preplace portBus spi_csn_o_0 -pg 1 -lvl 11 -x 3270 -y -200 -defaultsOSRD
+preplace portBus gpio_o_0 -pg 1 -lvl 11 -x 3270 -y -40 -defaultsOSRD
+preplace portBus VGA_R -pg 1 -lvl 11 -x 3270 -y 250 -defaultsOSRD
+preplace portBus VGA_G -pg 1 -lvl 11 -x 3270 -y 270 -defaultsOSRD
+preplace portBus VGA_B -pg 1 -lvl 11 -x 3270 -y 290 -defaultsOSRD
+preplace inst neorv32_vivado_ip_0 -pg 1 -lvl 7 -x 1770 -y -10 -defaultsOSRD -resize 264 270
+preplace inst axis_data_fifo_0 -pg 1 -lvl 5 -x 1000 -y -200 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 8 -x 2200 -y -240 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 9 -x 2620 -y -140 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 10 -x 3060 -y -20 -defaultsOSRD
+preplace inst axi_bram_ctrl_1 -pg 1 -lvl 9 -x 2620 -y 300 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 10 -x 3060 -y 340 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 6 -x 1320 -y 200 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 5 -x 1000 -y 220 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 2 -x 230 -y 230 -defaultsOSRD
+preplace inst ilconstant_0 -pg 1 -lvl 6 -x 1320 -y 50 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 10 -x 3060 -y -500 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 4 -x 740 -y -240 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 10 -x 3060 -y -270 -defaultsOSRD
+preplace inst vga_display_0 -pg 1 -lvl 9 -x 2620 -y 80 -defaultsOSRD
+preplace inst axi_bram_ctrl_2 -pg 1 -lvl 9 -x 2620 -y 490 -defaultsOSRD
+preplace inst blk_mem_gen_2 -pg 1 -lvl 10 -x 3060 -y 490 -defaultsOSRD
+preplace inst PS2Receiver_0 -pg 1 -lvl 3 -x 500 -y 30 -defaultsOSRD
+preplace inst ps2_sync_0 -pg 1 -lvl 2 -x 230 -y 20 -defaultsOSRD
+preplace netloc BTNC_1 1 0 6 NJ -30 0 -70 N -70 640 -60 N -60 1140
+preplace netloc CLK100MHZ_1 1 0 3 NJ 250 110 100 380
+preplace netloc blk_mem_gen_0_doutb 1 8 2 2460 400 2840J
+preplace netloc blk_mem_gen_1_doutb 1 8 2 2450 410 2880
+preplace netloc clk_wiz_0_VGA_CLK 1 4 6 850J -340 NJ -340 NJ -340 NJ -340 2450 -220 2890
+preplace netloc clk_wiz_0_clk_out1 1 4 6 840 -500 NJ -500 NJ -500 NJ -500 N -500 NJ
+preplace netloc ilconstant_0_dout 1 6 1 1500 0n
+preplace netloc mig_7series_0_ui_clk 1 7 4 2060 -600 N -600 NJ -600 3210
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 9 2 2910 -400 3220
+preplace netloc neorv32_vivado_ip_0_gpio_o 1 7 4 2040J -330 NJ -330 NJ -330 3230J
+preplace netloc neorv32_vivado_ip_0_spi_clk_o 1 7 4 NJ 20 2360J 380 2850J 100 3220J
+preplace netloc neorv32_vivado_ip_0_spi_csn_o 1 7 4 2020J -360 NJ -360 NJ -360 3250J
+preplace netloc neorv32_vivado_ip_0_spi_dat_o 1 7 4 NJ 40 2340J 390 2790J 90 3250J
+preplace netloc neorv32_vivado_ip_0_uart0_txd_o 1 7 4 2030J -350 2460 -340 NJ -340 3240J
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 4 6 880 -280 N -280 1490 -280 2000J -380 2410 -520 N
+preplace netloc spi_dat_i_0_1 1 0 7 NJ 60 0J 110 NJ 110 630 160 NJ 160 1130J 300 1510J
+preplace netloc uart0_rxd_i_0_1 1 0 7 -140J -20 10J -60 N -60 620 -50 N -50 NJ -50 1510
+preplace netloc util_ds_buf_0_BUFG_O 1 2 8 360 -80 630 -80 850 -80 1150 -80 1610 -250 2010 -370 2440 -480 N
+preplace netloc util_vector_logic_0_Res 1 9 2 2900 -390 3210
+preplace netloc vga_display_0_VGA_B 1 9 2 NJ 140 3240J
+preplace netloc vga_display_0_VGA_G 1 9 2 NJ 120 3250J
+preplace netloc vga_display_0_VGA_HS 1 9 2 2810J 200 3220J
+preplace netloc vga_display_0_VGA_R 1 9 2 2820J 210 3230J
+preplace netloc vga_display_0_VGA_VS 1 9 2 2780J 220 3210J
+preplace netloc vga_display_0_addrPalette 1 9 1 2830 40n
+preplace netloc vga_display_0_addrb 1 9 1 2840 -30n
+preplace netloc vga_display_0_enPalette 1 9 1 2800 80n
+preplace netloc vga_display_0_enb 1 9 1 2910 20n
+preplace netloc xlconstant_0_dout 1 5 1 1120 220n
+preplace netloc PS2_CLK_1 1 0 2 NJ 20 N
+preplace netloc PS2_DATA_1 1 0 2 NJ 40 N
+preplace netloc ps2_sync_0_clk_fall 1 2 1 370 10n
+preplace netloc ps2_sync_0_data_sync 1 2 1 350 30n
+preplace netloc PS2Receiver_0_keycode 1 3 4 620 -40 NJ -40 NJ -40 NJ
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 9 1 2900 -140n
+preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 9 1 2860 290n
+preplace netloc axi_bram_ctrl_2_BRAM_PORTA 1 9 1 N 490
+preplace netloc axis_data_fifo_0_M_AXIS 1 5 2 NJ -200 1500
+preplace netloc mig_7series_0_DDR2 1 10 1 3250 -540n
+preplace netloc neorv32_vivado_ip_0_m_axi 1 7 1 2050 -270n
+preplace netloc neorv32_vivado_ip_0_s0_axis 1 4 4 870 -290 NJ -290 NJ -290 1930
+preplace netloc smartconnect_0_M00_AXI 1 8 2 2350 -540 NJ
+preplace netloc smartconnect_0_M01_AXI 1 8 1 2420 -250n
+preplace netloc smartconnect_0_M02_AXI 1 8 1 2430 -230n
+preplace netloc smartconnect_0_M03_AXI 1 8 1 2350 -210n
+levelinfo -pg 1 -160 -20 230 500 740 1000 1320 1770 2200 2620 3060 3270
 pagesize -pg 1 -db -bbox -sgen -310 -770 3450 790
 "
 }

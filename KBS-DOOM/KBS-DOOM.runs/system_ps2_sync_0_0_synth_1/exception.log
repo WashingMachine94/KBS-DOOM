@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\Users\lucas\Documents\GitHub\KBS-DOOM\KBS-DOOM\KBS-DOOM.runs\system_ps2_sync_0_0_synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permission denied

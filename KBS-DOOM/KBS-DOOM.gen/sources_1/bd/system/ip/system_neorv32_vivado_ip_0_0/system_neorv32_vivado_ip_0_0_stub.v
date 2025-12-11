@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-// Date        : Thu Dec  4 18:05:21 2025
+// Date        : Thu Dec 11 09:43:39 2025
 // Host        : LAPTOP-61978DQ3 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Users/lucas/Documents/GitHub/block/ddr2_test/ddr2_test.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/system_neorv32_vivado_ip_0_0_stub.v
+//               c:/Users/lucas/Documents/GitHub/KBS-DOOM/KBS-DOOM/KBS-DOOM.gen/sources_1/bd/system/ip/system_neorv32_vivado_ip_0_0/system_neorv32_vivado_ip_0_0_stub.v
 // Design      : system_neorv32_vivado_ip_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1
@@ -25,7 +25,7 @@ module system_neorv32_vivado_ip_0_0(clk, resetn, m_axi_awaddr, m_axi_awlen,
   s1_axis_tid, s1_axis_tvalid, s1_axis_tready, s1_axis_tdata, s1_axis_tlast, gpio_o, gpio_i, 
   uart0_txd_o, uart0_rxd_i, uart0_rtsn_o, uart0_ctsn_i, spi_clk_o, spi_dat_o, spi_dat_i, 
   spi_csn_o, mtime_irq_i, msw_irq_i, mext_irq_i)
-/* synthesis syn_black_box black_box_pad_pin="resetn,m_axi_awaddr[31:0],m_axi_awlen[7:0],m_axi_awsize[2:0],m_axi_awburst[1:0],m_axi_awcache[3:0],m_axi_awprot[2:0],m_axi_awvalid,m_axi_awready,m_axi_wdata[31:0],m_axi_wstrb[3:0],m_axi_wlast,m_axi_wvalid,m_axi_wready,m_axi_araddr[31:0],m_axi_arlen[7:0],m_axi_arsize[2:0],m_axi_arburst[1:0],m_axi_arcache[3:0],m_axi_arprot[2:0],m_axi_arvalid,m_axi_arready,m_axi_rdata[31:0],m_axi_rresp[1:0],m_axi_rlast,m_axi_rvalid,m_axi_rready,m_axi_bresp[1:0],m_axi_bvalid,m_axi_bready,s0_axis_tdest[3:0],s0_axis_tvalid,s0_axis_tready,s0_axis_tdata[31:0],s0_axis_tlast,s1_axis_tid[3:0],s1_axis_tvalid,s1_axis_tready,s1_axis_tdata[31:0],s1_axis_tlast,gpio_o[15:0],gpio_i[31:0],uart0_txd_o,uart0_rxd_i,uart0_rtsn_o,uart0_ctsn_i,spi_clk_o,spi_dat_o,spi_dat_i,spi_csn_o[7:0],mtime_irq_i,msw_irq_i,mext_irq_i" */
+/* synthesis syn_black_box black_box_pad_pin="resetn,m_axi_awaddr[31:0],m_axi_awlen[7:0],m_axi_awsize[2:0],m_axi_awburst[1:0],m_axi_awcache[3:0],m_axi_awprot[2:0],m_axi_awvalid,m_axi_awready,m_axi_wdata[31:0],m_axi_wstrb[3:0],m_axi_wlast,m_axi_wvalid,m_axi_wready,m_axi_araddr[31:0],m_axi_arlen[7:0],m_axi_arsize[2:0],m_axi_arburst[1:0],m_axi_arcache[3:0],m_axi_arprot[2:0],m_axi_arvalid,m_axi_arready,m_axi_rdata[31:0],m_axi_rresp[1:0],m_axi_rlast,m_axi_rvalid,m_axi_rready,m_axi_bresp[1:0],m_axi_bvalid,m_axi_bready,s0_axis_tdest[3:0],s0_axis_tvalid,s0_axis_tready,s0_axis_tdata[31:0],s0_axis_tlast,s1_axis_tid[3:0],s1_axis_tvalid,s1_axis_tready,s1_axis_tdata[31:0],s1_axis_tlast,gpio_o[15:0],gpio_i[15:0],uart0_txd_o,uart0_rxd_i,uart0_rtsn_o,uart0_ctsn_i,spi_clk_o,spi_dat_o,spi_dat_i,spi_csn_o[7:0],mtime_irq_i,msw_irq_i,mext_irq_i" */
 /* synthesis syn_force_seq_prim="clk" */;
   (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_mode = "slave clk" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF s0_axis:s1_axis:m_axi, ASSOCIATED_RESET resetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN system_CLK100MHZ, INSERT_VIP 0" *) input clk /* synthesis syn_isclock = 1 */;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 resetn RST" *) (* x_interface_mode = "slave resetn" *) (* x_interface_parameter = "XIL_INTERFACENAME resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input resetn;
@@ -69,7 +69,7 @@ module system_neorv32_vivado_ip_0_0(clk, resetn, m_axi_awaddr, m_axi_awlen,
   (* x_interface_info = "xilinx.com:interface:axis:1.0 s1_axis TDATA" *) input [31:0]s1_axis_tdata;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 s1_axis TLAST" *) input s1_axis_tlast;
   output [15:0]gpio_o;
-  input [31:0]gpio_i;
+  input [15:0]gpio_i;
   output uart0_txd_o;
   input uart0_rxd_i;
   output uart0_rtsn_o;
